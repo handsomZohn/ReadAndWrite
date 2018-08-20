@@ -17,6 +17,7 @@ public class HashMapNewWrite {
             put("name", "张三");// 不可重复
             put("age", "20");
             put("birthday", "1995-01-30");
+            put(null,"123");
         }};
 
         // 遍历map
@@ -47,6 +48,12 @@ public class HashMapNewWrite {
             System.out.println(v);
         }
 
+        //
+        System.out.println("获取key为null的值：");
+        String key = null;
+        if (hashMap.containsKey(key)){
+            System.out.println("Value:" + hashMap.get(key));
+        }
         if (true)
                 ;
             else

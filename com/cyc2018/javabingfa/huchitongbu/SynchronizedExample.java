@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
  */
 public class SynchronizedExample {
     public void func1() {
-        synchronized (this) { // synchronized只作用于同一个对象 如果调用两个对象上的同步代码块 进步会进行同步
+        synchronized (this) { // synchronized只作用于同一个对象 如果调用两个对象上的同步代码块 不会进行同步
             for (int i = 0; i < 100; i++) {
                 System.out.print(i + " ");
             }

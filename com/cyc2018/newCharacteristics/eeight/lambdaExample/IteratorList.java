@@ -22,6 +22,6 @@ public class IteratorList {
         list.forEach(str -> System.out.println(list));
         list.forEach(str -> System.out.println(str));
         // 方法引用
-        list.forEach(System.out::println);
+        list.forEach(System.out::print);
     }
 }

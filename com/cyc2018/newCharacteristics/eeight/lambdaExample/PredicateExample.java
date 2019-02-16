@@ -15,7 +15,7 @@ public class PredicateExample {
     public static void main(String[] args) {
         List<String> language = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
         System.out.println("Language which start with J:");
-        // filter(language, (str) -> str.s);
+        // filter(language, (str) -> str.);
     }
 
     public static void filter(List<String> names, Predicate condition){

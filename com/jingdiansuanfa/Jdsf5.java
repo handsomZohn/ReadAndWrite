@@ -12,7 +12,7 @@ public class Jdsf5 {
 	 */
 	public static void main(String[] args) {
 		String str = "";
-		str = JOptionPane.showInputDialog("请输入分数值(输入exit退出):");
+		str = JOptionPane.showInputDialog("请输入分数值(输入exit退出):");// java弹输入框让输入
 		int mark = 0;
 		try {
 			

@@ -5,11 +5,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- *@Description  使用Java 8 lambda表达式进行事件处理 用lambda表达式写出更好的事件监听代码
- *@CreateDate   18/07/19 10:36
- *@Author        zohn
- *@Version       1.0
- *
+ * @Description 使用Java 8 lambda表达式进行事件处理 用lambda表达式写出更好的事件监听代码
+ * @CreateDate 18/07/19 10:36
+ * @Author zohn
+ * @Version 1.0
  */
 public class EventProcessing {
     public static void main(String[] args) {
@@ -22,7 +21,9 @@ public class EventProcessing {
             }
         });
         // 1.8之后
-        button.addActionListener((e) -> {System.out.println("Light, Camera, Action !! Lambda expressions Rocks");});
+        button.addActionListener((e) -> {
+            System.out.println("Light, Camera, Action !! Lambda expressions Rocks");
+        });
     }
     // Java开发者经常使用匿名类的另一个地方是为 Collections.sort() 定制 Comparator。
     // 在Java 8中，你可以用更可读的lambda表达式换掉丑陋的匿名类。

@@ -1,4 +1,4 @@
-package com.yuyuansuan;
+package com.yuyunsuan;
 
 
 public class YuTest{

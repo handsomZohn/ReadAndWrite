@@ -5,11 +5,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- *@Description  复制不同的值，创建一个子列表 本例展示了如何利用流的 distinct() 方法来对集合进行去重。
- *@CreateDate   18/07/19 17:28
- *@Author        zohn
- *@Version       1.0
- *
+ * @Description 复制不同的值，创建一个子列表 本例展示了如何利用流的 distinct() 方法来对集合进行去重。
+ * @CreateDate 18/07/19 17:28
+ * @Author zohn
+ * @Version 1.0
  */
 public class CreateSeedList {
     public static void main(String[] args) {

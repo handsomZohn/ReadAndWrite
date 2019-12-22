@@ -1,7 +1,5 @@
 package com.打包解包;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
@@ -12,7 +10,6 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 import com.sx.conf.SysConfig;
-import com.sx.conf.UploadConfig;
 
 /**
  * 
@@ -24,30 +21,24 @@ import com.sx.conf.UploadConfig;
  * @author Administrator
  * @version 1.0
  */
-public class PictureCopy {
+public class PictureCopyV01 {
 	
 	// 关键字
 	static String pType01 = ".jpg", pType02 = ".png";
 	// 存放遍历的文件  这个是全部文件
 	static List fileList = new ArrayList();
-	// 存放copy的文件 这个里面存的是图片的name
-	static List pictureList = new ArrayList();
-	
 	
 	/**
 	 * 
-	 * @param dwbh 单位编号
+	 * @param unRarFilePath 解压后文件路径
 	 * @throws Exception
 	 */
-	public void pCopy(String dwbh) throws Exception{
+	public void pCopy(String unRarFilePath) throws Exception{
 		
-		
-		String filePath = SysConfig.getROOT_REAL_PATH() + SysConfig.getFILESEPARATOR()
-				+ UploadConfig.getFILE_PATH() + SysConfig.getFILESEPARATOR()
-				+ "rlzyfwxk" + SysConfig.getFILESEPARATOR() + dwbh + SysConfig.getFILESEPARATOR();
 		
 		// 源目录
-		String srcFile = filePath;
+		String srcFile = unRarFilePath;
+		// E:\workspace\myeclipse2014\bjldlsc\root\\\sysfiles\rlzyfwxk\fb33a3b3651800\
 		
 		ArrayList fileList02 = new ArrayList();
 		
@@ -62,19 +53,18 @@ public class PictureCopy {
 		
 		// 再创建一个放图片的文件夹
 		// 图片copy至目录
-		String dstDirPath = filePath + "tpyl" + SysConfig.getFILESEPARATOR();
+		String dstDirPath = unRarFilePath + "tpyl" + SysConfig.getFILESEPARATOR();
 		File dstDir = new File(dstDirPath);
 		if (!dstDir.exists() && !dstDir.isDirectory()) {
 			dstDir.mkdirs();
 		}
-		pictureList.clear();
 		readAndWritePicture(fileList, pType01, pType02, dstDirPath);
 		
 	}
 	
 	/**
-	 * 遍历filePath所有文件
-	 * @param fileList02 指的是filePath的所有文件【包括文件夹以及文件】
+	 * 遍历unRarFilePath所有文件
+	 * @param fileList02 指的是unRarFilePath的所有文件【包括文件夹以及文件】
 	 */
 	public void searchDir(List fileList02){
 		// 一级目录
@@ -124,13 +114,8 @@ public class PictureCopy {
 				if (isJpg || isPng) {
 					// 把文件写到指定文件夹
 					try {
-						// ImageIO读取JPEG图片时，有时会添加红色蒙层
-						// BufferedImage img = ImageIO.read(new File(file.toString()));
-						// 用Toolkit中方法加以封装 不会出现红色蒙层
-						Image image = Toolkit.getDefaultToolkit().getImage(file.toString());
-						BufferedImage img = BufferedImageBuilder.toBufferedImage(image);
+						BufferedImage img = ImageIO.read(new File(file.toString()));
 						ImageIO.write(img, isJpg ? "jpg" : "png", new File(dstDirPath + file.getName()));
-						pictureList.add(file.getName());
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

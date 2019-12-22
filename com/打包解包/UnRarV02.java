@@ -6,7 +6,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.github.junrar.Archive;
-import com.github.junrar.impl.FileVolumeManager;
 import com.github.junrar.rarfile.FileHeader;
 import com.sx.conf.SysConfig;
 import com.sx.conf.UploadConfig;
@@ -23,11 +22,10 @@ import com.sx.ldlsc.rlzyfwxk.common.StringHelper;
  * @author Administrator
  * @version 1.0
  */
-public class UnRar {
+public class UnRarV02 {
 	
 	/**
-	 * 此方法接收名字、拼接路径
-	 * 下面重载方法为解压缩
+	 * 解压缩 
 	 * @param scclfwqwjmc 上传材料服务器文件名字
 	 */
 	public void unRar(String scclfwqwjmc) {
@@ -38,23 +36,31 @@ public class UnRar {
 			// rar文件名字前缀
 			String prefix = "";
 			// 解压缩后文件存放路径=filePath + rar文件前缀 
-			String unRarFilePath = "";
+			String unRARFilePath = "";
 			try {
 				if (scclfwqwjmc.lastIndexOf(".") != -1) {
 					prefix = scclfwqwjmc.substring(0, scclfwqwjmc.indexOf("."));
-					unRarFilePath = filePath + prefix + SysConfig.getFILESEPARATOR();
-					// unRar(filePath + scclfwqwjmc, unRarFilePath);
-					ZipTools zipTools = new ZipTools();
-					zipTools.unZip(filePath + scclfwqwjmc, unRarFilePath);
+					unRARFilePath = filePath + prefix + SysConfig.getFILESEPARATOR();
+					// unRar(filePath + scclfwqwjmc, unRARFilePath);
+					// 解压缩
+					// unRARFilePath==E:\workspace\myeclipse2014\bjldlsc\root\\\sysfiles\rlzyfwxk\fb33a3b3651800\
+					boolean unZip = new ZipTools().unZip(filePath + scclfwqwjmc, unRARFilePath);
+					// 将解完压缩的文件中的图片提取出来放入单独文件夹，做图片预览文件夹统一命名为“tpyl”
+					if (unZip) {
+						new PictureCopy().pCopy(unRARFilePath);
+					}
 				}
 			} catch (Exception e) {
-				System.out.println("=============文件解压缩异常==============");
+				System.out.println("=============文件操作异常==============");
 				e.printStackTrace();
 			}
 		}
 	}
 	
+
 	/**
+	 * 因需要引入com.github.junrar，多余
+	 * 此方法作废
 	 * 解压缩
 	 * @param srcRarPath 源文件路径 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900.rar
 	 * @param dstDirectorPath 解压至目录 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900\

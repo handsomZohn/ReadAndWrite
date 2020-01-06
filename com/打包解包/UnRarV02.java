@@ -7,10 +7,10 @@ import java.util.regex.Pattern;
 
 import com.github.junrar.Archive;
 import com.github.junrar.rarfile.FileHeader;
+import com.helper.stringhelper.StringHelper;
 import com.sx.conf.SysConfig;
 import com.sx.conf.UploadConfig;
-import com.sx.ldlsc.common.ZipTools;
-import com.sx.ldlsc.rlzyfwxk.common.StringHelper;
+
 
 /**
  * 
@@ -47,7 +47,7 @@ public class UnRarV02 {
 					boolean unZip = new ZipTools().unZip(filePath + scclfwqwjmc, unRARFilePath);
 					// 将解完压缩的文件中的图片提取出来放入单独文件夹，做图片预览文件夹统一命名为“tpyl”
 					if (unZip) {
-						new PictureCopy().pCopy(unRARFilePath);
+						new PictureCopyV01().pCopy(unRARFilePath);
 					}
 				}
 			} catch (Exception e) {
@@ -63,7 +63,7 @@ public class UnRarV02 {
 	 * 此方法作废
 	 * 解压缩
 	 * @param srcRarPath 源文件路径 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900.rar
-	 * @param dstDirectorPath 解压至目录 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900\
+	 * @param dstDirectoryPath 解压至目录 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900\
 	 * @throws Exception
 	 */
 	public void unRar(String srcRarPath, String dstDirectoryPath) throws Exception{

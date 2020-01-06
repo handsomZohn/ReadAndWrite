@@ -11,6 +11,7 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 
+import com.BufferedImageBuilder;
 import com.sx.conf.SysConfig;
 import com.sx.conf.UploadConfig;
 

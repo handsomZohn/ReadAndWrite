@@ -1,0 +1,28 @@
+
+
+一步一步变为lambda
+
+https://mp.weixin.qq.com/s/Ww17lhNowmMO9cGWHKqXfA
+
+
+关于lambda用的比较多的就是：
+
+
+
+a.过滤
+// 过滤掉与登录人信息不匹配的项[身份证和姓名必须一致]
+    List<ZyjnpxEntity> zyjnpxEntityList = Arrays.asList(zyjnpxEntities).stream().filter(x -> baseEntity.getXm().equals(x.getXm())).collect(Collectors.toList());
+
+b.求和
+// 岗位剩余数求和
+    if (gwsysList != null && gwsysList.size() > 0)
+        gwsys = gwsysList.stream().mapToInt(Integer::intValue).sum();
+
+c.循环赋值
+
+            zyjnpxEntityList.stream().forEach(x -> {
+                StringHelper.ntos(x);
+                x.setDzdadbh(x.getSfzhm());// 冗余字段
+                x.setDwmc("");// 冗余字段
+                x.setPxsj(DateHelper.dateFmt(x.getPxsj(), "yyyyMMddHHmmss", "yyyy-MM-dd"));
+            });

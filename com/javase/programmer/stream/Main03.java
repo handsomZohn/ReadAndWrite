@@ -70,6 +70,9 @@ public class Main03 {
                 System.out.println("======^_^======变量map值为: " + map + ", " + "当前类以及方法名字是: Main03.outPutAsMap()");
     }
 
+    /**
+     * 分组输出
+     */
     static void outPutByGroup () {
         List<String> strings = Arrays.asList("Apple", "Banana", "Blackberry", "Coconut", "Avocado", "Cherry", "Apricots");
         Map<String, List<String>> collect = strings.stream().collect(Collectors.groupingBy(s -> s.substring(0, 1), Collectors.toList()));

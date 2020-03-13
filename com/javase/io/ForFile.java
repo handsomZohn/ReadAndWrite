@@ -1,5 +1,7 @@
 package com.javase.io;
 
+import org.junit.Test;
+
 import java.io.*;
 import java.nio.channels.FileChannel;
 
@@ -62,5 +64,33 @@ public class ForFile {
 
         }
     }
+
+    /**
+     * @Description try-with-resource  需要关闭的资源只要实现了java.lang.AutoCloseable，就可以?动被关闭
+     * try()??可以定义多个资源，它们的关闭顺序是最后在try()定义的资源先关闭
+     * Ctrl + Alt + U 查看一个类的所有继承关系
+     * @Author zohn
+     * @Date 2020\3\13 0013 10:55
+     * @Param []
+     * @Return void
+     */
+    @Test
+    public void copyFile(){
+        try (
+                FileInputStream fis = new FileInputStream("d:/practice.txt");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                FileOutputStream fos = new FileOutputStream("e:/practice.txt");
+                BufferedOutputStream bos = new BufferedOutputStream(fos);
+        ) {
+            int size;
+            byte[] buf = new byte[1024];
+            while ((size = bis.read(buf)) != -1) {
+                bos.write(buf, 0, size);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

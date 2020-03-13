@@ -3,12 +3,13 @@ package com.test.tools;
 import com.tools.helper.datehelper.DateHelper;
 import org.junit.Test;
 
+import java.util.Date;
+
 /**
- *@Description  
- *@CreateDate   18/08/14 11:44
- *@Author        zohn
- *@Version       1.0
- *
+ *@Description DateHelper测试类
+ *@CreateDate 2020\3\13 0013 10:23
+ *@Author zohn
+ *@Version 1.0
  */
 public class DateHelperTest {
 
@@ -22,5 +23,11 @@ public class DateHelperTest {
         String rq = DateHelper.getBeforDate(dqsj, -rqzl * 24);
 
         System.out.println("当前日期：" + dqsj + "当前日期的后一天：" + rq);
+    }
+
+    @Test
+    public void getBeforeOrAfterDay(){
+        String after2Days = DateHelper.getBeforeOrAfterDay(-2);
+        System.out.println("======^_^======变量after2Days值为: " + after2Days + ", " + "当前类以及方法名字是: DateHelperTest.getBeforeOrAfterDay()");
     }
 }

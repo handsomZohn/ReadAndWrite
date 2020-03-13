@@ -4,6 +4,7 @@ import com.tools.helper.stringhelper.StringHelper;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -219,4 +220,16 @@ public class DateHelper extends DateTools { // 烧茄子盖饭 尖叫腊肉盖饭
         return dateFmt(rq, "yyyy-MM", "yyyyMMdd") + "235959";
     }
 
+    /**
+     * 得到 几天后(几天前的日期)的 日期
+     * 方法描述: 几天后num为正数，几天前num为负数
+     * @参数类型:@return
+     * @返回值:String
+     */
+    public static String getBeforeOrAfterDay(int num){
+        Calendar c = Calendar.getInstance();
+        c.add(Calendar.DAY_OF_MONTH, num);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        return sdf.format(c.getTime());
+    }
 }

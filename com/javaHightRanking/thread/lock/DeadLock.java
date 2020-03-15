@@ -1,4 +1,4 @@
-package com.javaHightRanking.thread;
+package com.javaHightRanking.thread.lock;
 /**
  *@Description
  *@CreateDate   18/10/19 10:19

@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.github.junrar.Archive;
+import com.github.junrar.VolumeManager;
 import com.github.junrar.rarfile.FileHeader;
 import com.tools.helper.stringhelper.StringHelper;
 import com.sx.conf.SysConfig;
@@ -82,7 +83,7 @@ public class UnRarV02 {
 		File fol = null, out = null;
 		Archive archive = null;
 		try {
-			archive = new Archive(new File(srcRarPath));
+			archive = new Archive((VolumeManager) new File(srcRarPath));
 			if (archive != null) {
 				// 打印文件信息
 				// archive.getMainHeader().print();

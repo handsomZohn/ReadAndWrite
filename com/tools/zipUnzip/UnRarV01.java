@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.github.junrar.Archive;
+import com.github.junrar.VolumeManager;
 import com.github.junrar.rarfile.FileHeader;
 import com.tools.helper.stringhelper.StringHelper;
 import com.sx.conf.SysConfig;
@@ -57,7 +58,7 @@ public class UnRarV01 {
 	/**
 	 * 解压缩
 	 * @param srcRarPath 源文件路径 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900.rar
-	 * @param dstDirectorPath 解压至目录 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900\
+	 * @param dstDirectoryPath 解压至目录 e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900\
 	 * @throws Exception
 	 */
 	public void unRar(String srcRarPath, String dstDirectoryPath) throws Exception{
@@ -76,7 +77,7 @@ public class UnRarV01 {
 		File fol = null, out = null;
 		Archive archive = null;
 		try {
-			archive = new Archive(new File(srcRarPath));
+			archive = new Archive((VolumeManager) new File(srcRarPath));
 			if (archive != null) {
 				// 打印文件信息
 				// archive.getMainHeader().print();

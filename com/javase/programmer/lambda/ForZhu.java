@@ -45,7 +45,7 @@ public class ForZhu {
         System.out.println("======^_^======变量j值为: " + j + ", " + "当前类以及方法名字是: ForZhu.main()");
 
         // sort 排序
-        List<Student> studentList = students.stream().sorted(Comparator.comparing(Student::getGrade).reversed().thenComparing(Student::getId)).collect(Collectors.toList());//
+        List<Student> studentList = students.stream().sorted(Comparator.comparing(Student::getGrade).reversed().thenComparing(Student::getId)).collect(Collectors.toList());
         String s = studentList.toString();
         System.out.println("======^_^======变量s值为: " + s + ", " + "当前类以及方法名字是: ForZhu.main()");
 

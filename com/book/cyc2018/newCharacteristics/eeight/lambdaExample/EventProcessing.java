@@ -17,7 +17,7 @@ public class EventProcessing {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Event handing without lambda is boring");
+                System.out.println("Event handing without zlambda is boring");
             }
         });
         // 1.8Ö®ºó

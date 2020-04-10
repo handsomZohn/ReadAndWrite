@@ -1,7 +1,5 @@
 package com.javase.map;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -22,9 +20,14 @@ public class IteratorHashMapExample {
             put(5, "Hibernate ORM framework");
         }};
 
+        String EntrySet = "EntrySet";
+        System.out.println("======^_^======variable EntrySet value is : " + EntrySet + ", " + " current method and class name is : IteratorHashMapExample.main()");
+
         // 通过EntrySet遍历
         iteratorByEntrySet(hashMap);
 
+        String KeySet = "KeySet";
+        System.out.println("======^_^======variable KeySet value is : " + KeySet + ", " + " current method and class name is : IteratorHashMapExample.main()");
         // 通过KeySet遍历
         iteratorByKeySet(hashMap);
 
@@ -45,7 +48,7 @@ public class IteratorHashMapExample {
      * @Param [hashMap]
      * @Return void
      */
-    static void iteratorByEntrySet(@NotNull HashMap<Integer, String> hashMap) {
+    static void iteratorByEntrySet(HashMap<Integer, String> hashMap) {
         Iterator<Map.Entry<Integer, String>> iterator = hashMap.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<Integer, String> entry = iterator.next();

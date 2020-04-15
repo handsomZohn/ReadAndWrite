@@ -1,12 +1,19 @@
 package com.javase.array;
 
-// -- 冒泡排序的变种
 
+import java.util.Arrays;
+
+/**
+ *@Description 冒泡排序的变种
+ *@CreateDate 2020/4/15 22:41
+ *@Author zz
+ *@Version 1.0
+ */
 public class 二维数组排序 {
     public static void main(String[] args) {
 
         // 二维数组排序--原数组
-        String[][] strs = {{"12", "Java"},{"25", "Ruby"},{"55", "Python"}};
+        String[][] strs = {{"12", "Java"},{"25", "Ruby"},{"55", "Python"},{"30", "Golang"},{"7", "JavaScript"}};
         // 新建数组
         int[] arr = new int[strs.length];
         for (int i = 0; i < arr.length; i++) {
@@ -28,5 +35,8 @@ public class 二维数组排序 {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(strs[i][0]);
         }
+
+
+        // Arrays.stream(strs).
     }
 }

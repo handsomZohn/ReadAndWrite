@@ -50,6 +50,12 @@ public class TransientTest {
 
 }
 
+/**
+ * 对于不想序列化的变量，使用transient关键字修饰
+ * 当对象被序列化是：阻止实例中那些用此关键字修饰的变量序列化
+ * 当对象被反序列化时，被transient修饰的变量值不会被持久化和恢复
+ * tranient只能修饰变量，不能修改时类和方法。
+ */
 class User implements Serializable{
 	/**
 	 * 

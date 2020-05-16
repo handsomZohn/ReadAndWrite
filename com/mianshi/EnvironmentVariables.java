@@ -29,5 +29,9 @@ public class EnvironmentVariables {
 
         System.out.println("======^_^======variable java_home value is : " + java_home + ", " + " current method and class name is : EnvironmentVariables.main()");
 
+        // remember reboot
+        String mall_mysql_password = System.getenv("MALL_MYSQL_PASSWORD");
+        
+        System.out.println("======^_^======variable mall_mysql_password value is : " + mall_mysql_password + ", " + " current method and class name is : EnvironmentVariables.main()");
     }
 }

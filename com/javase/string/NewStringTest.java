@@ -1,7 +1,12 @@
 package com.javase.string;
 
 
-// 涉及到的命令：：：javap -verbose NewStringTest.class
+/**
+ *@Description 涉及到的命令：：：javap -verbose NewStringTest.class
+ *@CreateDate 2020\5\18 0018 15:29
+ *@Author zz
+ *@Version 1.0
+ */
 
 public class NewStringTest {
     public static void main(String[] args) {

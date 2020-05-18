@@ -6,7 +6,7 @@ package org.fenixsoft.jvm.chapter4;
 public class ThreadDeadLockTestCase_2 {
 
     /**
-     * çº¿ç¨‹æ­»é”ç­‰å¾…æ¼”ç¤º
+     * Ïß³ÌËÀËøµÈ´ıÑİÊ¾
      */
     static class SynAddRunnalbe implements Runnable {
         int a, b;

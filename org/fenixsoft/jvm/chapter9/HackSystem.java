@@ -5,8 +5,8 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 /**
- * ä¸ºJavaclassåŠ«æŒjava.lang.Systemæä¾›æ”¯æŒ
- * é™¤äº†outå’Œerrå¤–ï¼Œå…¶ä½™çš„éƒ½ç›´æ¥è½¬å‘ç»™Systemå¤„ç†
+ * ÎªJavaclass½Ù³Öjava.lang.SystemÌá¹©Ö§³Ö
+ * ³ıÁËoutºÍerrÍâ£¬ÆäÓàµÄ¶¼Ö±½Ó×ª·¢¸øSystem´¦Àí
  *
  * @author zzm
  */
@@ -48,7 +48,7 @@ public class HackSystem {
         return System.identityHashCode(x);
     }
 
-    // ä¸‹é¢æ‰€æœ‰çš„æ–¹æ³•éƒ½ä¸java.lang.Systemçš„åç§°ä¸€æ ·
-    // å®ç°éƒ½æ˜¯å­—èŠ‚è½¬è°ƒSystemçš„å¯¹åº”æ–¹æ³•
-    // å› ç‰ˆé¢åŸå› ï¼Œçœç•¥äº†å…¶ä»–æ–¹æ³•
+    // ÏÂÃæËùÓĞµÄ·½·¨¶¼Óëjava.lang.SystemµÄÃû³ÆÒ»Ñù
+    // ÊµÏÖ¶¼ÊÇ×Ö½Ú×ªµ÷SystemµÄ¶ÔÓ¦·½·¨
+    // Òò°æÃæÔ­Òò£¬Ê¡ÂÔÁËÆäËû·½·¨
 }

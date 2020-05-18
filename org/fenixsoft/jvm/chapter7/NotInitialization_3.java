@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter7;
 
 /**
- * 闈炰富鍔ㄤ娇鐢ㄧ被瀛楁婕旂ず
+ * 非主动使用类字段演示
  **/
 public class NotInitialization_3 {
 

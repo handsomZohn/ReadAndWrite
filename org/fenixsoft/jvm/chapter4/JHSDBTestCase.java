@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter4;
 
 /**
- * staticObjã€instanceObjã€localObjå­˜æ”¾åœ¨å“ªé‡Œï¼Ÿ
+ * staticObj¡¢instanceObj¡¢localObj´æ·ÅÔÚÄÄÀï£¿
  */
 public class JHSDBTestCase {
 
@@ -11,7 +11,7 @@ public class JHSDBTestCase {
 
         void foo() {
             ObjectHolder localObj = new ObjectHolder();
-            System.out.println("done");    // è¿™é‡Œè®¾ä¸€ä¸ªæ–­ç‚¹
+            System.out.println("done");    // ÕâÀïÉèÒ»¸ö¶Ïµã
         }
     }
 

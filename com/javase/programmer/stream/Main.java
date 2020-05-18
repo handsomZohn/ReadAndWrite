@@ -14,6 +14,7 @@ public class Main {
 
 class NatualSupplier implements Supplier<Long> {
     long n = 0;
+    @Override
     public Long get(){
         n++;
         return n;

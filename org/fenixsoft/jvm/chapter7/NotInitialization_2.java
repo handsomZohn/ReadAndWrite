@@ -1,8 +1,8 @@
 package org.fenixsoft.jvm.chapter7;
 
 /**
- * è¢«åŠ¨ä½¿ç”¨ç±»å­—æ®µæ¼”ç¤ºäºŒï¼š
- * é€šè¿‡æ•°ç»„å®šä¹‰æ¥å¼•ç”¨ç±»ï¼Œä¸ä¼šè§¦å‘æ­¤ç±»çš„åˆå§‹åŒ–
+ * ±»¶¯Ê¹ÓÃÀà×Ö¶ÎÑÝÊ¾¶þ£º
+ * Í¨¹ýÊý×é¶¨ÒåÀ´ÒýÓÃÀà£¬²»»á´¥·¢´ËÀàµÄ³õÊ¼»¯
  **/
 public class NotInitialization_2 {
 

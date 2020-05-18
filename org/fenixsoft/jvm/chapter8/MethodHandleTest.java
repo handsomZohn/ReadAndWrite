@@ -6,7 +6,7 @@ import java.lang.invoke.MethodType;
 import static java.lang.invoke.MethodHandles.lookup;
 
 /**
- * JSR 292 MethodHandleåŸºç¡€ç”¨æ³•æ¼”ç¤º
+ * JSR 292 MethodHandle»ù´¡ÓÃ·¨ÑİÊ¾
  * @author zzm
  */
 public class MethodHandleTest {
@@ -19,15 +19,15 @@ public class MethodHandleTest {
 
     public static void main(String[] args) throws Throwable {
         Object obj = System.currentTimeMillis() % 2 == 0 ? System.out : new ClassA();
-        // æ— è®ºobjæœ€ç»ˆæ˜¯å“ªä¸ªå®ç°ç±»ï¼Œä¸‹é¢è¿™å¥éƒ½èƒ½æ­£ç¡®è°ƒç”¨åˆ°printlnæ–¹æ³•ã€‚
+        // ÎŞÂÛobj×îÖÕÊÇÄÄ¸öÊµÏÖÀà£¬ÏÂÃæÕâ¾ä¶¼ÄÜÕıÈ·µ÷ÓÃµ½println·½·¨¡£
         getPrintlnMH(obj).invokeExact("icyfenix");
     }
 
     private static MethodHandle getPrintlnMH(Object reveiver) throws Throwable {
-        // MethodTypeï¼šä»£è¡¨â€œæ–¹æ³•ç±»å‹â€ï¼ŒåŒ…å«äº†æ–¹æ³•çš„è¿”å›å€¼ï¼ˆmethodType()çš„ç¬¬ä¸€ä¸ªå‚æ•°ï¼‰å’Œå…·ä½“å‚æ•°ï¼ˆmethodType()ç¬¬äºŒä¸ªåŠä»¥åçš„å‚æ•°ï¼‰ã€‚
+        // MethodType£º´ú±í¡°·½·¨ÀàĞÍ¡±£¬°üº¬ÁË·½·¨µÄ·µ»ØÖµ£¨methodType()µÄµÚÒ»¸ö²ÎÊı£©ºÍ¾ßÌå²ÎÊı£¨methodType()µÚ¶ş¸ö¼°ÒÔºóµÄ²ÎÊı£©¡£
         MethodType mt = MethodType.methodType(void.class, String.class);
-        // lookup()æ–¹æ³•æ¥è‡ªäºMethodHandles.lookupï¼Œè¿™å¥çš„ä½œç”¨æ˜¯åœ¨æŒ‡å®šç±»ä¸­æŸ¥æ‰¾ç¬¦åˆç»™å®šçš„æ–¹æ³•åç§°ã€æ–¹æ³•ç±»å‹ï¼Œå¹¶ä¸”ç¬¦åˆè°ƒç”¨æƒé™çš„æ–¹æ³•å¥æŸ„ã€‚
-        // å› ä¸ºè¿™é‡Œè°ƒç”¨çš„æ˜¯ä¸€ä¸ªè™šæ–¹æ³•ï¼ŒæŒ‰ç…§Javaè¯­è¨€çš„è§„åˆ™ï¼Œæ–¹æ³•ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯éšå¼çš„ï¼Œä»£è¡¨è¯¥æ–¹æ³•çš„æ¥æ”¶è€…ï¼Œä¹Ÿå³æ˜¯thisæŒ‡å‘çš„å¯¹è±¡ï¼Œè¿™ä¸ªå‚æ•°ä»¥å‰æ˜¯æ”¾åœ¨å‚æ•°åˆ—è¡¨ä¸­è¿›è¡Œä¼ é€’ï¼Œç°åœ¨æä¾›äº†bindTo()æ–¹æ³•æ¥å®Œæˆè¿™ä»¶äº‹æƒ…ã€‚
+        // lookup()·½·¨À´×ÔÓÚMethodHandles.lookup£¬Õâ¾äµÄ×÷ÓÃÊÇÔÚÖ¸¶¨ÀàÖĞ²éÕÒ·ûºÏ¸ø¶¨µÄ·½·¨Ãû³Æ¡¢·½·¨ÀàĞÍ£¬²¢ÇÒ·ûºÏµ÷ÓÃÈ¨ÏŞµÄ·½·¨¾ä±ú¡£
+        // ÒòÎªÕâÀïµ÷ÓÃµÄÊÇÒ»¸öĞé·½·¨£¬°´ÕÕJavaÓïÑÔµÄ¹æÔò£¬·½·¨µÚÒ»¸ö²ÎÊıÊÇÒşÊ½µÄ£¬´ú±í¸Ã·½·¨µÄ½ÓÊÕÕß£¬Ò²¼´ÊÇthisÖ¸ÏòµÄ¶ÔÏó£¬Õâ¸ö²ÎÊıÒÔÇ°ÊÇ·ÅÔÚ²ÎÊıÁĞ±íÖĞ½øĞĞ´«µİ£¬ÏÖÔÚÌá¹©ÁËbindTo()·½·¨À´Íê³ÉÕâ¼şÊÂÇé¡£
         return lookup().findVirtual(reveiver.getClass(), "println", mt).bindTo(reveiver);
     }
 }

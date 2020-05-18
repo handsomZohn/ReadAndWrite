@@ -1,8 +1,8 @@
 package org.fenixsoft.jvm.chapter7;
 
 /**
- * è¢«åŠ¨ä½¿ç”¨ç±»å­—æ®µæ¼”ç¤ºä¸‰ï¼š
- * å¸¸é‡åœ¨ç¼–è¯‘é˜¶æ®µä¼šå­˜å…¥è°ƒç”¨ç±»çš„å¸¸é‡æ± ä¸­ï¼Œæœ¬è´¨ä¸Šæ²¡æœ‰ç›´æŽ¥å¼•ç”¨åˆ°å®šä¹‰å¸¸é‡çš„ç±»ï¼Œå› æ­¤ä¸ä¼šè§¦å‘å®šä¹‰å¸¸é‡çš„ç±»çš„åˆå§‹åŒ–ã€‚
+ * ±»¶¯Ê¹ÓÃÀà×Ö¶ÎÑÝÊ¾Èý£º
+ * ³£Á¿ÔÚ±àÒë½×¶Î»á´æÈëµ÷ÓÃÀàµÄ³£Á¿³ØÖÐ£¬±¾ÖÊÉÏÃ»ÓÐÖ±½ÓÒýÓÃµ½¶¨Òå³£Á¿µÄÀà£¬Òò´Ë²»»á´¥·¢¶¨Òå³£Á¿µÄÀàµÄ³õÊ¼»¯¡£
  **/
 public class ConstClass {
 

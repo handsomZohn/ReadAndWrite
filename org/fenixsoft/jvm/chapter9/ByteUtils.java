@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter9;
 
 /**
- * Bytes鏁扮粍澶勭悊宸ュ叿
+ * Bytes数组处理工具
  *
  * @author
  */

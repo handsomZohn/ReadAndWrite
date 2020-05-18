@@ -6,7 +6,7 @@ import java.util.List;
 public class JConsoleTestCase {
 
     /**
-     * å†…å­˜å ä½ç¬¦å¯¹è±¡ï¼Œä¸€ä¸ªOOMObjectå¤§çº¦å 64K
+     * ÄÚ´æÕ¼Î»·û¶ÔÏó£¬Ò»¸öOOMObject´óÔ¼Õ¼64K
      */
     static class OOMObject {
         public byte[] placeholder = new byte[64 * 1024];
@@ -15,7 +15,7 @@ public class JConsoleTestCase {
     public static void fillHeap(int num) throws InterruptedException {
         List<OOMObject> list = new ArrayList<OOMObject>();
         for (int i = 0; i < num; i++) {
-            // ç¨ä½œå»¶æ—¶ï¼Œä»¤ç›‘è§†æ›²çº¿çš„å˜åŒ–æ›´åŠ æ˜æ˜¾
+            // ÉÔ×÷ÑÓÊ±£¬Áî¼àÊÓÇúÏßµÄ±ä»¯¸ü¼ÓÃ÷ÏÔ
             Thread.sleep(50);
             list.add(new OOMObject());
         }

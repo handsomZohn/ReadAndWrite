@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter2;
 
 /**
- * VM Argsï¼š-Xss2M ï¼ˆè¿™æ—¶å€™ä¸å¦¨è®¾å¤§äº›ï¼Œè¯·åœ¨32ä½ç³»ç»Ÿä¸‹è¿è¡Œï¼‰
+ * VM Args£º-Xss2M £¨ÕâÊ±ºò²»·ÁÉè´óĞ©£¬ÇëÔÚ32Î»ÏµÍ³ÏÂÔËĞĞ£©
  *
  * @author zzm
  */

@@ -3,7 +3,7 @@ package org.fenixsoft.jvm.chapter13;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Atomic鍙橀噺鑷杩愮畻娴嬭瘯
+ * Atomic变量自增运算测试
  *
  * @author zzm
  */

@@ -15,18 +15,18 @@ import java.util.stream.Stream;
  */
 public class Main03 {
     public static void main(String[] args) {
-        // è¾“å‡ºä¸ºList
+        // Êä³öÎªList
         outputAsList();
-        // è¾“å‡ºä¸ºArr
+        // Êä³öÎªArr
         outputAsArr();
-        // è¾“å‡ºä¸ºmap
+        // Êä³öÎªmap
         outPutAsMap();
-        // åˆ†ç»„è¾“å‡º
+        // ·Ö×éÊä³ö
         outPutByGroup();
     }
 
     /**
-     * @Description è¾“å‡ºä¸ºlist
+     * @Description Êä³öÎªlist
      * @Author zohn
      * @Date 2020\1\17 0017 14:14
      * @Param []
@@ -35,11 +35,11 @@ public class Main03 {
     static void outputAsList () {
         Stream<String> stream = Stream.of("Apple", "Orange", "", null, "Pear", "   ", "banana");
         List<String> list = stream.filter(s -> s != null && !s.isEmpty()).collect(Collectors.toList());
-        System.out.println("======^_^======å˜é‡listå€¼ä¸º: " + list + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Main03.main()");
+        System.out.println("======^_^======±äÁ¿listÖµÎª: " + list + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Main03.main()");
     }
 
     /**
-     * @Description è¾“å‡ºä¸ºæ•°ç»„
+     * @Description Êä³öÎªÊı×é
      * @Author zohn
      * @Date 2020\1\17 0017 14:15
      * @Param []
@@ -49,12 +49,12 @@ public class Main03 {
         List<String> list = Arrays.asList("Apple", "Banana", "Orange");
         String[] strings = list.stream().toArray(String[]::new);
 
-        Arrays.stream(strings).forEach(x -> System.out.println("======^_^======å˜é‡xå€¼ä¸º: " + x + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Main03.outputAsArr()"));
-        // System.out.println("======^_^======å˜é‡stringså€¼ä¸º: " + strings + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Main03.outputAsArr()");
+        Arrays.stream(strings).forEach(x -> System.out.println("======^_^======±äÁ¿xÖµÎª: " + x + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Main03.outputAsArr()"));
+        // System.out.println("======^_^======±äÁ¿stringsÖµÎª: " + strings + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Main03.outputAsArr()");
     }
 
     /**
-     * @Description è¾“å‡ºä¸ºmap
+     * @Description Êä³öÎªmap
      * @Author zohn
      * @Date 2020/1/26 19:46
      * @Param []
@@ -63,19 +63,19 @@ public class Main03 {
     static void outPutAsMap(){
         Stream<String> stream = Stream.of("APPL:Apple", "MSFT:Microsoft");
         Map<String, String> map = stream.collect(Collectors.toMap(
-           // æŠŠå…ƒç´ sæ˜ å°„ä¸ºkey
+           // °ÑÔªËØsÓ³ÉäÎªkey
                 s -> s.substring(0,s.indexOf(":")),
-                // æŠŠå…ƒç´ sæ˜ å°„ä¸ºkey
+                // °ÑÔªËØsÓ³ÉäÎªkey
                 s -> s.substring(s.indexOf(":") + 1)));
-                System.out.println("======^_^======å˜é‡mapå€¼ä¸º: " + map + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Main03.outPutAsMap()");
+                System.out.println("======^_^======±äÁ¿mapÖµÎª: " + map + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Main03.outPutAsMap()");
     }
 
     /**
-     * åˆ†ç»„è¾“å‡º
+     * ·Ö×éÊä³ö
      */
     static void outPutByGroup () {
         List<String> strings = Arrays.asList("Apple", "Banana", "Blackberry", "Coconut", "Avocado", "Cherry", "Apricots");
         Map<String, List<String>> collect = strings.stream().collect(Collectors.groupingBy(s -> s.substring(0, 1), Collectors.toList()));
-        System.out.println("======^_^======å˜é‡collectå€¼ä¸º: " + collect + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Main03.outPutByGroup()");
+        System.out.println("======^_^======±äÁ¿collectÖµÎª: " + collect + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Main03.outPutByGroup()");
     }
 }

@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter3;
 
 /**
- * testGC()æ–¹æ³•æ‰§è¡Œåï¼ŒobjAå’ŒobjBä¼šä¸ä¼šè¢«GCå‘¢ï¼Ÿ
+ * testGC()·½·¨Ö´ĞĞºó£¬objAºÍobjB»á²»»á±»GCÄØ£¿
  *
  * @author zzm
  */
@@ -12,7 +12,7 @@ public class ReferenceCountingGC {
     private static final int _1MB = 1024 * 1024;
 
     /**
-     * è¿™ä¸ªæˆå‘˜å±æ€§çš„å”¯ä¸€æ„ä¹‰å°±æ˜¯å ç‚¹å†…å­˜ï¼Œä»¥ä¾¿åœ¨èƒ½åœ¨GCæ—¥å¿—ä¸­çœ‹æ¸…æ¥šæ˜¯å¦æœ‰å›æ”¶è¿‡
+     * Õâ¸ö³ÉÔ±ÊôĞÔµÄÎ¨Ò»ÒâÒå¾ÍÊÇÕ¼µãÄÚ´æ£¬ÒÔ±ãÔÚÄÜÔÚGCÈÕÖ¾ÖĞ¿´Çå³şÊÇ·ñÓĞ»ØÊÕ¹ı
      */
     private byte[] bigSize = new byte[2 * _1MB];
 
@@ -25,7 +25,7 @@ public class ReferenceCountingGC {
         objA = null;
         objB = null;
 
-        // å‡è®¾åœ¨è¿™è¡Œå‘ç”ŸGCï¼ŒobjAå’ŒobjBæ˜¯å¦èƒ½è¢«å›æ”¶ï¼Ÿ
+        // ¼ÙÉèÔÚÕâĞĞ·¢ÉúGC£¬objAºÍobjBÊÇ·ñÄÜ±»»ØÊÕ£¿
         System.gc();
     }
 }

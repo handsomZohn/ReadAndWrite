@@ -3,19 +3,19 @@ package org.fenixsoft.jvm.chapter9;
 import java.lang.reflect.Method;
 
 /**
- * Javaclassæ‰§è¡Œå·¥å…·
+ * JavaclassÖ´ĞĞ¹¤¾ß
  *
  * @author zzm
  */
 public class JavaclassExecuter {
 
     /**
-     * æ‰§è¡Œå¤–éƒ¨ä¼ è¿‡æ¥çš„ä»£è¡¨ä¸€ä¸ªJavaç±»çš„Byteæ•°ç»„<br>
-     * å°†è¾“å…¥ç±»çš„byteæ•°ç»„ä¸­ä»£è¡¨java.lang.Systemçš„CONSTANT_Utf8_infoå¸¸é‡ä¿®æ”¹ä¸ºåŠ«æŒåçš„HackSystemç±»
-     * æ‰§è¡Œæ–¹æ³•ä¸ºè¯¥ç±»çš„static main(String[] args)æ–¹æ³•ï¼Œè¾“å‡ºç»“æœä¸ºè¯¥ç±»å‘System.out/errè¾“å‡ºçš„ä¿¡æ¯
+     * Ö´ĞĞÍâ²¿´«¹ıÀ´µÄ´ú±íÒ»¸öJavaÀàµÄByteÊı×é<br>
+     * ½«ÊäÈëÀàµÄbyteÊı×éÖĞ´ú±íjava.lang.SystemµÄCONSTANT_Utf8_info³£Á¿ĞŞ¸ÄÎª½Ù³ÖºóµÄHackSystemÀà
+     * Ö´ĞĞ·½·¨Îª¸ÃÀàµÄstatic main(String[] args)·½·¨£¬Êä³ö½á¹ûÎª¸ÃÀàÏòSystem.out/errÊä³öµÄĞÅÏ¢
      *
-     * @param classByte ä»£è¡¨ä¸€ä¸ªJavaç±»çš„Byteæ•°ç»„
-     * @return æ‰§è¡Œç»“æœ
+     * @param classByte ´ú±íÒ»¸öJavaÀàµÄByteÊı×é
+     * @return Ö´ĞĞ½á¹û
      */
     public static String execute(byte[] classByte) {
         HackSystem.clearBuffer();

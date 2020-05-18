@@ -1,24 +1,24 @@
 package org.fenixsoft.jvm.chapter9;
 
 /**
- * ä¿®æ”¹Classæ–‡ä»¶ï¼Œæš‚æ—¶åªæä¾›ä¿®æ”¹å¸¸é‡æ± å¸¸é‡çš„åŠŸèƒ½
+ * ĞŞ¸ÄClassÎÄ¼ş£¬ÔİÊ±Ö»Ìá¹©ĞŞ¸Ä³£Á¿³Ø³£Á¿µÄ¹¦ÄÜ
  *
  * @author zzm
  */
 public class ClassModifier {
 
     /**
-     * Classæ–‡ä»¶ä¸­å¸¸é‡æ± çš„èµ·å§‹åç§»
+     * ClassÎÄ¼şÖĞ³£Á¿³ØµÄÆğÊ¼Æ«ÒÆ
      */
     private static final int CONSTANT_POOL_COUNT_INDEX = 8;
 
     /**
-     * CONSTANT_Utf8_infoå¸¸é‡çš„tagæ ‡å¿—
+     * CONSTANT_Utf8_info³£Á¿µÄtag±êÖ¾
      */
     private static final int CONSTANT_Utf8_info = 1;
 
     /**
-     * å¸¸é‡æ± ä¸­11ç§å¸¸é‡æ‰€å çš„é•¿åº¦ï¼ŒCONSTANT_Utf8_infoå‹å¸¸é‡é™¤å¤–ï¼Œå› ä¸ºå®ƒä¸æ˜¯å®šé•¿çš„
+     * ³£Á¿³ØÖĞ11ÖÖ³£Á¿ËùÕ¼µÄ³¤¶È£¬CONSTANT_Utf8_infoĞÍ³£Á¿³ıÍâ£¬ÒòÎªËü²»ÊÇ¶¨³¤µÄ
      */
     private static final int[] CONSTANT_ITEM_LENGTH = {-1, -1, -1, 5, 5, 9, 9, 3, 3, 5, 5, 5, 5};
 
@@ -32,11 +32,11 @@ public class ClassModifier {
     }
 
     /**
-     * ä¿®æ”¹å¸¸é‡æ± ä¸­CONSTANT_Utf8_infoå¸¸é‡çš„å†…å®¹
+     * ĞŞ¸Ä³£Á¿³ØÖĞCONSTANT_Utf8_info³£Á¿µÄÄÚÈİ
      *
-     * @param oldStr ä¿®æ”¹å‰çš„å­—ç¬¦ä¸²
-     * @param newStr ä¿®æ”¹åçš„å­—ç¬¦ä¸²
-     * @return ä¿®æ”¹ç»“æœ
+     * @param oldStr ĞŞ¸ÄÇ°µÄ×Ö·û´®
+     * @param newStr ĞŞ¸ÄºóµÄ×Ö·û´®
+     * @return ĞŞ¸Ä½á¹û
      */
     public byte[] modifyUTF8Constant(String oldStr, String newStr) {
         int cpc = getConstantPoolCount();
@@ -64,9 +64,9 @@ public class ClassModifier {
     }
 
     /**
-     * è·å–å¸¸é‡æ± ä¸­å¸¸é‡çš„æ•°é‡
+     * »ñÈ¡³£Á¿³ØÖĞ³£Á¿µÄÊıÁ¿
      *
-     * @return å¸¸é‡æ± æ•°é‡
+     * @return ³£Á¿³ØÊıÁ¿
      */
     public int getConstantPoolCount() {
         return ByteUtils.bytes2Int(classByte, CONSTANT_POOL_COUNT_INDEX, u2);

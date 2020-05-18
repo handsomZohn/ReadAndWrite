@@ -8,13 +8,13 @@ import java.io.InputStreamReader;
  */
 public class ThreadDeadLockTestCase_1 {
     /**
-     * çº¿ç¨‹æ­»å¾ªç¯æ¼”ç¤º
+     * Ïß³ÌËÀÑ­»·ÑİÊ¾
      */
     public static void createBusyThread() {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true)   // ç¬¬41è¡Œ
+                while (true)   // µÚ41ĞĞ
                     ;
             }
         }, "testBusyThread");
@@ -22,7 +22,7 @@ public class ThreadDeadLockTestCase_1 {
     }
 
     /**
-     * çº¿ç¨‹é”ç­‰å¾…æ¼”ç¤º
+     * Ïß³ÌËøµÈ´ıÑİÊ¾
      */
     public static void createLockThread(final Object lock) {
         Thread thread = new Thread(new Runnable() {

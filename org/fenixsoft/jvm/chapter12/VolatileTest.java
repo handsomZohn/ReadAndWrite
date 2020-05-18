@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter12;
 
 /**
- * volatile鍙橀噺鑷杩愮畻娴嬭瘯
+ * volatile变量自增运算测试
  *
  * @author zzm
  */
@@ -29,7 +29,7 @@ public class VolatileTest {
             threads[i].start();
         }
 
-        // 绛夊緟鎵�鏈夌疮鍔犵嚎绋嬮兘缁撴潫
+        // 等待所有累加线程都结束
         while (Thread.activeCount() > 1)
             Thread.yield();
 

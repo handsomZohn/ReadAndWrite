@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * ç±»åŠ è½½å™¨ä¸instanceofå…³é”®å­—æ¼”ç¤º
+ * Àà¼ÓÔØÆ÷Óëinstanceof¹Ø¼ü×ÖÑİÊ¾
  *
  * @author zzm
  */

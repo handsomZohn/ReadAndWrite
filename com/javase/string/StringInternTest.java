@@ -30,11 +30,12 @@ public class StringInternTest {
         String intern1 = str02.intern();
 
 
-        //
+        // false
         boolean b = str01 == str02;
 
         System.out.println("======^_^======variable b value is : " + b + ", " + " current method and class name is : StringInternTest.testStringIntern()");
 
+        // true
         boolean b1 = intern == intern1;
         
         System.out.println("======^_^======variable b1 value is : " + b1 + ", " + " current method and class name is : StringInternTest.testStringIntern()");

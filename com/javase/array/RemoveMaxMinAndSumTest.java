@@ -10,7 +10,7 @@ import java.util.*;
  * @Author z
  * @Version 1.0
  */
-public class RemoveMaxMinAndSum {
+public class RemoveMaxMinAndSumTest {
 
     @Test
     public void sum() {
@@ -23,6 +23,6 @@ public class RemoveMaxMinAndSum {
         List list1 = Arrays.asList(str.split(","));
         System.out.println(list1);
         int sum = list1.stream().mapToInt(r -> Integer.parseInt(r + "")).sum();
-        System.out.println("======^_^======variable sum value is : " + sum + ", " + " current method and class name is : RemoveMaxMinAndSum.sum()");
+        System.out.println("======^_^======variable sum value is : " + sum + ", " + " current method and class name is : RemoveMaxMinAndSumTest.sum()");
     }
 }

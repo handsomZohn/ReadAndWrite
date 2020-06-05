@@ -15,6 +15,8 @@ public class IfElseTest {
     }
 
     public void print(boolean flag) {
+        // 就会发现是调用了两次
+        System.out.println("flag");
         if (flag) {
             System.out.println("我是if语句的分支");
         } else {

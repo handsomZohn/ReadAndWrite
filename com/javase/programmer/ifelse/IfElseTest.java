@@ -14,6 +14,27 @@ public class IfElseTest {
         }}.equals(null));
     }
 
+    /**
+     * 　　　┏┓　　　┏┓
+     * 　　┏┛┻━━━┛┻┓
+     * 　　┃　　　　　　　┃
+     * 　　┃　　　━　　　┃
+     * 　　┃　┳┛　┗┳　┃
+     * 　　┃　　　　　　　┃
+     * 　　┃　　　┻　　　┃
+     * 　　┃　　　　　　　┃
+     * 　　┗━┓　　　┏━┛
+     * 　　　　┃　　　┃ 神兽保佑
+     *      * 　　　　┃　　　┃ 代码无BUG！
+     * 　　　　┃　　　┗━━━┓
+     * 　　　　┃　　　　　　　┣┓
+     * 　　　　┃　　　　　　　┏┛
+     * 　　　　┗┓┓┏━┳┓┏┛
+     * 　　　　　┃┫┫　┃┫┫
+     * 　　　　　┗┻┛　┗┻┛
+     *
+     * Created by zz on 2020\6\11 0011.
+     */
     public void print(boolean flag) {
         // 就会发现是调用了两次
         System.out.println("flag");

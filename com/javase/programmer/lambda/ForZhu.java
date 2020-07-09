@@ -27,7 +27,8 @@ public class ForZhu {
         Map<String, Student> packTaskOrderMap = students.stream().collect(Collectors.groupingBy(p -> p.getGrade(),
                 Collectors.collectingAndThen(Collectors.reducing((c1, c2) -> c1.getId() > c2.getId() ? c1 : c2), Optional::get)));
 
-        Student student = packTaskOrderMap.putIfAbsent("二年级", new Student());// 不存在new一个 存在
+        // 不存在new一个 存在
+        Student student = packTaskOrderMap.putIfAbsent("二年级", new Student());
 
         int i = 0;
         System.out.println("======^_^======变量i值为: " + i + ", " + "当前类以及方法名字是: ForZhu.main()");

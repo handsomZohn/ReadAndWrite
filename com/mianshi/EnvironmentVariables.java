@@ -13,6 +13,7 @@ public class EnvironmentVariables {
         Properties properties = new Properties();
         InputStream resourceAsStream = EnvironmentVariables.class.getResourceAsStream("./ev.properties");
         try {
+            Thread.sleep(1000 * 100);
             properties.load(new InputStreamReader(resourceAsStream, "utf-8"));
             String key = "pwd";
             if (properties.containsKey(key)) {

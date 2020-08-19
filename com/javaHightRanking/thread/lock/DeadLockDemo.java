@@ -1,5 +1,12 @@
 package com.javaHightRanking.thread.lock;
 
+/**
+ * @Description À¿À¯demo
+ * @Author z
+ * @Date 2020\8\19 0019 13:55
+ * @Param 
+ * @Return 
+ */
 public class DeadLockDemo {
     private static String locka = "locka";
     private static String lockb = "lockb";

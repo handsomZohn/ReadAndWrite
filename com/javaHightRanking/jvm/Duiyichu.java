@@ -12,7 +12,8 @@ public class Duiyichu {
     public static void main(String[] args) {
         ArrayList arrayList = new ArrayList();
         while (true) {
-            arrayList.add(new Duiyichu()); // java.lang.OutOfMemoryError: Java heap space
+            // java.lang.OutOfMemoryError: Java heap space
+            arrayList.add(new Duiyichu());
         }
     }
 }

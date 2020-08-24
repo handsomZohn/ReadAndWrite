@@ -19,8 +19,11 @@ public class JConsoleTestCase {
             Thread.sleep(50);
             list.add(new OOMObject());
         }
+        // 方法没有退出 不能回收掉全部的内存：：
         System.gc();
     }
+
+    // System.gc();
 
     public static void main(String[] args) throws Exception {
         fillHeap(1000);

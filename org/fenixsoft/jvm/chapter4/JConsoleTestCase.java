@@ -16,7 +16,7 @@ public class JConsoleTestCase {
         List<OOMObject> list = new ArrayList<OOMObject>();
         for (int i = 0; i < num; i++) {
             // 稍作延时，令监视曲线的变化更加明显
-            Thread.sleep(50);
+            Thread.sleep(100);
             list.add(new OOMObject());
         }
         // 方法没有退出 不能回收掉全部的内存：：
@@ -25,8 +25,15 @@ public class JConsoleTestCase {
 
     // System.gc();
 
+    /**
+     * @Description 以64kb/100ms的速度向java堆中填充数据，一共填充10w次
+     * @Author z
+     * @Date 2020/10/12 22:02
+     * @Param [args]
+     * @Return void
+     */
     public static void main(String[] args) throws Exception {
-        fillHeap(1000);
+        fillHeap(100000);
     }
 
 }

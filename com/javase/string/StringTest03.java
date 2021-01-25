@@ -26,6 +26,12 @@ public class StringTest03 {
 		
 		System.out.println("".equals(null));
 		// System.out.println(null.equals(""));
+
+		String str = "1000210004";
+		String str02 = "1000210000";
+		if (str02.endsWith("0000")) {
+			System.out.println(str02.substring(0,5));;
+		}
 	}
 	
 	

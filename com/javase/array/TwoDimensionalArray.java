@@ -9,7 +9,7 @@ import java.util.Arrays;
  *@Author zz
  *@Version 1.0
  */
-public class 二维数组排序 {
+public class TwoDimensionalArray {
     public static void main(String[] args) {
 
         // 二维数组排序--原数组

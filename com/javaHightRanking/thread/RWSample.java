@@ -5,6 +5,13 @@ import java.util.TreeMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+/**
+ * @Description ¶ÁËø Ð´Ëø Àý×Ó
+ * @Author z
+ * @Date 2021\2\1 0001 17:53
+ * @Param 
+ * @Return 
+ */
 public class RWSample {
     private final Map<String, String> map = new TreeMap<>();
     private final ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();

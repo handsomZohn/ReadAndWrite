@@ -1,7 +1,7 @@
 package com.javaHightRanking.jvm.classloaderandclassforname;
 
 /**
- *@Description  classloader ºÍ forNameµÄÇø±ğ
+ *@Description  classloader å’Œ forNameçš„åŒºåˆ«
  *@CreateDate   18/07/31 17:49
  *@Author        zohn
  *@Version       1.0
@@ -11,10 +11,10 @@ public class ClassLoaderAndForNameExample {
     public static void main(String[] args) throws ClassNotFoundException {
         String wholeNameLine = "com.jvm.classloaderandclassforname.Line";
         String wholeNamePoint = "com.jvm.classloaderandclassforname.Point";
-        System.out.println("ÏÂÃæÊÇ²âÊÔClassLoaderµÄĞ§¹û");
+        System.out.println("ä¸‹é¢æ˜¯æµ‹è¯•ClassLoaderçš„æ•ˆæœ");
         classLoaderTest(wholeNameLine,wholeNamePoint);
         System.out.println("-----------------------------------------------");
-        System.out.println("ÏÂÃæÊÇ²âÊÔclassForNameµÄĞ§¹û");
+        System.out.println("ä¸‹é¢æ˜¯æµ‹è¯•classForNameçš„æ•ˆæœ");
         classforNameTest(wholeNameLine,wholeNamePoint);
     }
 

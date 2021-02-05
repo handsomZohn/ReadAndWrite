@@ -58,5 +58,10 @@ public class ForZhu {
         // int sum02 = students.stream().mapToInt(Student::(Integer)getAge).sum();
         System.out.println("======^_^======变量sum值为: " + sum + ", " + "当前类以及方法名字是: ForZhu.main()");
 
+        // 把一个,隔开的字符串转换为集合
+        String[] str = {"1", "2", "3"};
+        List<String> stringList = Arrays.stream(str).collect(Collectors.toList());
+        // 不推荐使用的方法
+        // Arrays.asList(str);
     }
 }

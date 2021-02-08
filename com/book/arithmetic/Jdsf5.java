@@ -1,4 +1,4 @@
-package com.book.jingdiansuanfa;
+package com.book.arithmetic;
 
 import javax.swing.JOptionPane;
 

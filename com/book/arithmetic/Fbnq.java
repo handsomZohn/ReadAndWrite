@@ -1,4 +1,4 @@
-package com.book.jingdiansuanfa;
+package com.book.arithmetic;
 
 /**
  *@Description 求斐波那契的前n项的和

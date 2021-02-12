@@ -8,31 +8,31 @@ public class StringHelper extends StringTools {
     }
 
     /**
-     * È¥¶ÔÏó¿Õ¸ñ
+     * å»å¯¹è±¡ç©ºæ ¼
      */
     public static void ntos(Object obj) {
         try {
             Class dataBeanClass = obj.getClass();
             Field dataBeanField[] = dataBeanClass.getDeclaredFields();
-            String f_name;// ²ÎÊıÃû³Æ
-            String m_name;// ·½·¨Ãû³Æ
-            Method gmethod;// ·½·¨
-            Method smethod;// ·½·¨
-            String c_value;// Öµ
-            // ´¦Àí²åÈëµÄ½á¹¹ÁĞ
+            String f_name;// å‚æ•°åç§°
+            String m_name;// æ–¹æ³•åç§°
+            Method gmethod;// æ–¹æ³•
+            Method smethod;// æ–¹æ³•
+            String c_value;// å€¼
+            // å¤„ç†æ’å…¥çš„ç»“æ„åˆ—
             for (int i = 0; i < dataBeanField.length; i++) {
-                if (!(dataBeanField[i].getType().equals("test".getClass()))) {// Èç¹û²»ÊÇ×Ö·ûĞÍ
+                if (!(dataBeanField[i].getType().equals("test".getClass()))) {// å¦‚æœä¸æ˜¯å­—ç¬¦å‹
                     continue;
                 }
-                f_name = dataBeanField[i].getName();// ÁĞÃû
-                m_name = "get" + Character.toUpperCase(f_name.charAt(0)) + f_name.substring(1);// µÃµ½¸ÃÁĞµÄget·½·¨
+                f_name = dataBeanField[i].getName();// åˆ—å
+                m_name = "get" + Character.toUpperCase(f_name.charAt(0)) + f_name.substring(1);// å¾—åˆ°è¯¥åˆ—çš„getæ–¹æ³•
                 gmethod = obj.getClass().getMethod(m_name, null);
-                m_name = "set" + Character.toUpperCase(f_name.charAt(0)) + f_name.substring(1);// µÃµ½¸ÃÁĞµÄget·½·¨
+                m_name = "set" + Character.toUpperCase(f_name.charAt(0)) + f_name.substring(1);// å¾—åˆ°è¯¥åˆ—çš„getæ–¹æ³•
                 smethod = obj.getClass().getMethod(m_name,
                         new Class[] { dataBeanField[i].getType() });
-                c_value = (String) gmethod.invoke(obj, null);// È¡Öµ
+                c_value = (String) gmethod.invoke(obj, null);// å–å€¼
                 c_value = toTrim(c_value);
-                smethod.invoke(obj, new Object[] { c_value });// ·ûÖµ
+                smethod.invoke(obj, new Object[] { c_value });// ç¬¦å€¼
             }
         } catch (Exception e) {
             System.err.println(e);
@@ -40,7 +40,7 @@ public class StringHelper extends StringTools {
     }
 
     /**
-     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª·Ç¿Õ
+     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºéç©º
      * @param string
      * @return
      */
@@ -49,7 +49,7 @@ public class StringHelper extends StringTools {
     }
 
     /**
-     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
+     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
      * @param
      * @return
      */
@@ -62,7 +62,7 @@ public class StringHelper extends StringTools {
     }
 
     /**
-     * ÃèÊö£º½«Éí·İÖ¤ºÅÂë×îºóÒ»Î»×ÖÄ¸×ª»»³É´óĞ´
+     * æè¿°ï¼šå°†èº«ä»½è¯å·ç æœ€åä¸€ä½å­—æ¯è½¬æ¢æˆå¤§å†™
      */
     public static String formatSfzhm(String sfzhm) {
         if (isEmpty(sfzhm)) {
@@ -72,7 +72,7 @@ public class StringHelper extends StringTools {
     }
 
     /**
-     * ÓÃÍ¾£ºµ÷ÓÃ´Ë·½·¨¿É½«Ò³ÃæÖĞµÄ¿ÕÖµ£¨null,"","null"£©×ª»»Îª"&nbsp;"¡£
+     * ç”¨é€”ï¼šè°ƒç”¨æ­¤æ–¹æ³•å¯å°†é¡µé¢ä¸­çš„ç©ºå€¼ï¼ˆnull,"","null"ï¼‰è½¬æ¢ä¸º"&nbsp;"ã€‚
      */
     public static String vtoh(String temp) {
         if (toTrim(temp).equals("")) {
@@ -83,8 +83,8 @@ public class StringHelper extends StringTools {
 
     /**
      * <pre>
-     *     °ÑvalueBeanÖĞµÄËùÓĞ×Ö·ûÊôĞÔÖ´ĞĞstringtools.totrim()·½·¨
-     *     Õâ¸ö·½·¨°üÀ¨¼Ì³ĞµÃÀ´µÄÊôĞÔ
+     *     æŠŠvalueBeanä¸­çš„æ‰€æœ‰å­—ç¬¦å±æ€§æ‰§è¡Œstringtools.totrim()æ–¹æ³•
+     *     è¿™ä¸ªæ–¹æ³•åŒ…æ‹¬ç»§æ‰¿å¾—æ¥çš„å±æ€§
      * </pre>
      * @param obj
      */
@@ -92,25 +92,25 @@ public class StringHelper extends StringTools {
         try {
             Class dataBeanClass = obj.getClass();
             String temp;
-            Method[] dataMethod = dataBeanClass.getMethods();// µÃµ½ËùÓĞµÄ·½·¨
-            Method gmethod;// ¶ÔÏóµÄget·½·¨
-            String c_value;// Öµ
+            Method[] dataMethod = dataBeanClass.getMethods();// å¾—åˆ°æ‰€æœ‰çš„æ–¹æ³•
+            Method gmethod;// å¯¹è±¡çš„getæ–¹æ³•
+            String c_value;// å€¼
             for (int i = 0; i < dataMethod.length; i++) {
-                // Èç¹û²»ÊÇset·½·¨£¬¼ÌĞø
+                // å¦‚æœä¸æ˜¯setæ–¹æ³•ï¼Œç»§ç»­
                 if (dataMethod[i].getName().indexOf("set") == -1) {
                     continue;
                 }
-                // Èç¹û²»ÊÇ×Ö·ûÀàĞÍ£¬¼ÌĞø
+                // å¦‚æœä¸æ˜¯å­—ç¬¦ç±»å‹ï¼Œç»§ç»­
                 if (!dataMethod[i].getParameterTypes()[0].equals("test".getClass())) {
                     continue;
                 }
-                // ´Ó·½·¨Ãû³ÆÖĞµÃµ½setºóÃæµÄ×Ö·û
+                // ä»æ–¹æ³•åç§°ä¸­å¾—åˆ°setåé¢çš„å­—ç¬¦
                 temp = dataMethod[i].getName()
                         .substring(dataMethod[i].getName().indexOf("set") + 3);
                 gmethod = obj.getClass().getMethod("get" + temp, null);
-                c_value = (String) gmethod.invoke(obj, null);// È¡Öµ
+                c_value = (String) gmethod.invoke(obj, null);// å–å€¼
                 c_value = StringTools.toTrim(c_value);
-                dataMethod[i].invoke(obj, new Object[] { c_value });// ·ûÖµ
+                dataMethod[i].invoke(obj, new Object[] { c_value });// ç¬¦å€¼
             }
         } catch (Exception e) {
             System.err.println(e);
@@ -125,9 +125,9 @@ public class StringHelper extends StringTools {
     }
 
     /**
-     * ¹ØÓÚ×Ö·û³Å»µ±í¸ñµÄÎÊÌâ
-     * ss ×Ö·û´®
-     * dc Ö¸¶¨µÄ³¤¶È
+     * å…³äºå­—ç¬¦æ’‘åè¡¨æ ¼çš„é—®é¢˜
+     * ss å­—ç¬¦ä¸²
+     * dc æŒ‡å®šçš„é•¿åº¦
      * lx 2007-09-22
      */
     public static String strFormat(String ss, int dc) {
@@ -149,7 +149,7 @@ public class StringHelper extends StringTools {
     }
 
     /**
-     * °ÑÊäÈëµÄ×Ö·ûĞÍÊı×Ö³Ë100·µ»ØÕûÊı²¿·Ö
+     * æŠŠè¾“å…¥çš„å­—ç¬¦å‹æ•°å­—ä¹˜100è¿”å›æ•´æ•°éƒ¨åˆ†
      * @param temp
      * @return
      */

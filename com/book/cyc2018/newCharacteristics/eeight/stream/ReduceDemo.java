@@ -1,7 +1,6 @@
 package com.book.cyc2018.newCharacteristics.eeight.stream;
 
 
-
 import org.junit.Test;
 
 import java.util.ArrayList;

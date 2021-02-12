@@ -2,19 +2,19 @@ package com.book.datastructure.linkedlist;
 
 
 /**
- * @Description µ¥ÏòÁĞ±íjavaÊµÏÖ
+ * @Description å•å‘åˆ—è¡¨javaå®ç°
  * @CreateDate 2021\2\8 0008 14:00
  * @Author z
  * @Version 1.0
  */
 public class SingleLinkedList {
     /**
-     * Á´±í½ÚµãµÄ¸öÊı
+     * é“¾è¡¨èŠ‚ç‚¹çš„ä¸ªæ•°
      */
     private int length;
 
     /**
-     * Í·½Úµã
+     * å¤´èŠ‚ç‚¹
      */
     private Node head;
 
@@ -25,12 +25,12 @@ public class SingleLinkedList {
 
     private class Node {
         /**
-         * Ã¿¸ö½ÚµãµÄÊı¾İ
+         * æ¯ä¸ªèŠ‚ç‚¹çš„æ•°æ®
          */
         private Object data;
 
         /**
-         * Ã¿¸ö½ÚµãÖ¸ÏòÏÂÒ»¸ö½ÚµãµÄÁ´½Ó
+         * æ¯ä¸ªèŠ‚ç‚¹æŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„é“¾æ¥
          */
         private Node next;
 
@@ -40,30 +40,30 @@ public class SingleLinkedList {
     }
 
     /**
-     * Á´±íÖĞÌí¼ÓÊı¾İ
+     * é“¾è¡¨ä¸­æ·»åŠ æ•°æ®
      *
      * @param object
      * @return
      */
     public Object addHead(Object object) {
-        // µÚÒ»²½¶¨ÒåĞÂ½Úµã
+        // ç¬¬ä¸€æ­¥å®šä¹‰æ–°èŠ‚ç‚¹
         Node newHead = new Node(object);
 
-        // µÚ¶ş²½Èç¹ûÁ´±íÎª¿Õ£¬Ôò½«¸Ã½ÚµãÉèÖÃÎªÍ·²¿½Úµã
+        // ç¬¬äºŒæ­¥å¦‚æœé“¾è¡¨ä¸ºç©ºï¼Œåˆ™å°†è¯¥èŠ‚ç‚¹è®¾ç½®ä¸ºå¤´éƒ¨èŠ‚ç‚¹
         if (length == 0) {
             head = newHead;
         } else {
-            //  µÚÈı²½ ÉèÖÃµ±Ç°½ÚµãÎªÍ·²¿½Úµã£¬²¢½«µ±Ç°½ÚµãµÄÏÂÒ»¸ö½ÚµãÖ¸ÏòÔ­À´µÄÍ·²¿½Úµã
+            //  ç¬¬ä¸‰æ­¥ è®¾ç½®å½“å‰èŠ‚ç‚¹ä¸ºå¤´éƒ¨èŠ‚ç‚¹ï¼Œå¹¶å°†å½“å‰èŠ‚ç‚¹çš„ä¸‹ä¸€ä¸ªèŠ‚ç‚¹æŒ‡å‘åŸæ¥çš„å¤´éƒ¨èŠ‚ç‚¹
             head = newHead;
             newHead.next = head;
         }
-        // µÚËÄ²½ Á´±í³¤¶È+1
+        // ç¬¬å››æ­¥ é“¾è¡¨é•¿åº¦+1
         length++;
         return object;
     }
 
     /**
-     * É¾³ıÖ¸¶¨µÄÔªËØ Èç¹ûÉ¾³ı³É¹¦¾Í·µ»Øtrue
+     * åˆ é™¤æŒ‡å®šçš„å…ƒç´  å¦‚æœåˆ é™¤æˆåŠŸå°±è¿”å›true
      *
      * @param value
      * @return
@@ -84,11 +84,11 @@ public class SingleLinkedList {
             }
         }
 
-        // Èç¹ûÉ¾³ıµÄ½ÚµãÊÇÍ·½áµã
+        // å¦‚æœåˆ é™¤çš„èŠ‚ç‚¹æ˜¯å¤´ç»“ç‚¹
         if (current == head) {
             head = current.next;
             length--;
-        } else {// É¾³ıµÄ½Úµã²»ÊÇÍ·½Úµã
+        } else {// åˆ é™¤çš„èŠ‚ç‚¹ä¸æ˜¯å¤´èŠ‚ç‚¹
             previous.next = current.next;
             length--;
         }
@@ -96,7 +96,7 @@ public class SingleLinkedList {
     }
 
     /**
-     * ²éÕÒÖ¸¶¨µÄÔªËØ£¬ÈôÕÒµ½Ôò·µ»Ø£¬·ñÔò·µ»Ønull
+     * æŸ¥æ‰¾æŒ‡å®šçš„å…ƒç´ ï¼Œè‹¥æ‰¾åˆ°åˆ™è¿”å›ï¼Œå¦åˆ™è¿”å›null
      *
      * @param object
      * @return

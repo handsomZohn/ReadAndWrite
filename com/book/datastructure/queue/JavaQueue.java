@@ -1,42 +1,42 @@
 package com.book.datastructure.queue;
 
 /**
- *@Description ¶ÓÁĞµÄjavaÊµÏÖ°æ±¾
- *@CreateDate 2021\2\8 0008 13:32
- *@Author z
- *@Version 1.0
+ * @Description é˜Ÿåˆ—çš„javaå®ç°ç‰ˆæœ¬
+ * @CreateDate 2021\2\8 0008 13:32
+ * @Author z
+ * @Version 1.0
  */
 public class JavaQueue<E> {
     private Object[] data = null;
 
     /**
-     * ¶ÓÁĞµÄÈİÁ¿
+     * é˜Ÿåˆ—çš„å®¹é‡
      */
     private int maxSize;
 
     /**
-     * ¶ÓÁĞÍ· ÔÊĞí²åÈë
+     * é˜Ÿåˆ—å¤´ å…è®¸æ’å…¥
      */
     private int front;
 
     /**
-     * ¶ÔÁĞÎ² ÔÊĞíÉ¾³ı
+     * å¯¹åˆ—å°¾ å…è®¸åˆ é™¤
      */
     private int rear;
 
     /**
-     * @Description Ä¬ÈÏ´óĞ¡Îª10µÄ¶ÓÁĞ
+     * @Description é»˜è®¤å¤§å°ä¸º10çš„é˜Ÿåˆ—
      * @Author z
      * @Date 2021\2\8 0008 13:38
      * @Param []
      * @Return
      */
-    public JavaQueue(){
+    public JavaQueue() {
         this(10);
     }
 
     /**
-     * @Description ´ø²ÎÊı¹¹Ôì
+     * @Description å¸¦å‚æ•°æ„é€ 
      * @Author z
      * @Date 2021\2\8 0008 13:39
      * @Param [initialSize]
@@ -48,18 +48,19 @@ public class JavaQueue<E> {
             data = new Object[initialSize];
             front = rear = 0;
         } else {
-            throw new RuntimeException("³õÊ¼»¯´óĞ¡²»ÄÜĞ¡ÓÚ0£º" + initialSize);
+            throw new RuntimeException("åˆå§‹åŒ–å¤§å°ä¸èƒ½å°äº0ï¼š" + initialSize);
         }
     }
 
     /**
-     * ¶ÓÁĞÎ²²¿²åÈëÊı¾İ[Èë¶Ó²Ù×÷]
+     * é˜Ÿåˆ—å°¾éƒ¨æ’å…¥æ•°æ®[å…¥é˜Ÿæ“ä½œ]
+     *
      * @param e
      * @return
      */
-    public boolean add (E e) {
+    public boolean add(E e) {
         if (rear == maxSize) {
-            throw new RuntimeException("¶ÓÁĞÒÑÂú£¬ÎŞ·¨²åÈëĞÂµÄÔªËØ£¡");
+            throw new RuntimeException("é˜Ÿåˆ—å·²æ»¡ï¼Œæ— æ³•æ’å…¥æ–°çš„å…ƒç´ ï¼");
         } else {
             data[rear++] = e;
             return true;
@@ -67,14 +68,15 @@ public class JavaQueue<E> {
     }
 
     /**
-     * É¾³ı¶ÓÁĞÍ·²¿µÄÔªËØ£º[³ö¶Ó]
+     * åˆ é™¤é˜Ÿåˆ—å¤´éƒ¨çš„å…ƒç´ ï¼š[å‡ºé˜Ÿ]
+     *
      * @return
      */
     public E poll() {
         if (rear == 0) {
-            throw new RuntimeException("¿Õ¶ÓÁĞÒì³££¡");
+            throw new RuntimeException("ç©ºé˜Ÿåˆ—å¼‚å¸¸ï¼");
         } else {
-            // ¶ÓÁĞfront¶ËµÄÔªËØµÄÖµ
+            // é˜Ÿåˆ—frontç«¯çš„å…ƒç´ çš„å€¼
             E value = (E) data[front];
             data[front++] = null;
             return value;
@@ -82,13 +84,14 @@ public class JavaQueue<E> {
     }
 
     /**
-     * È¡³ö¶ÓÁĞÍ·²¿µÄÔªËØ£¬²»É¾³ı £¨²»³ö¶Ó£©
+     * å–å‡ºé˜Ÿåˆ—å¤´éƒ¨çš„å…ƒç´ ï¼Œä¸åˆ é™¤ ï¼ˆä¸å‡ºé˜Ÿï¼‰
+     *
      * @return
      */
     public E peek() {
         if (rear == 0) {
-            throw new RuntimeException("¿Õ¶ÓÁĞÒì³££¡");
-        } else{
+            throw new RuntimeException("ç©ºé˜Ÿåˆ—å¼‚å¸¸ï¼");
+        } else {
             return (E) data[front];
         }
 

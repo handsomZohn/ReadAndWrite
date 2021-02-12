@@ -3,27 +3,27 @@ package com.book.datastructure.linkedlist;
 import java.sql.DatabaseMetaData;
 
 /**
- *@Description  Ë«ÏòÁĞ±í java°æ±¾ÊµÏÖ
+ *@Description  åŒå‘åˆ—è¡¨ javaç‰ˆæœ¬å®ç°
  *@CreateDate 2021\2\9 0009 9:23
  *@Author z
  *@Version 1.0
  */
 public class TwoWayLinkedList {
 
-    // Á´±íÍ·²¿
+    // é“¾è¡¨å¤´éƒ¨
     private Node head;
-    // Á´±íÎ²²¿
+    // é“¾è¡¨å°¾éƒ¨
     private Node tail;
-    // Á´±í³¤¶È
+    // é“¾è¡¨é•¿åº¦
     private int size;
 
-    // ´æ´¢Êı¾İµÄ½Úµã
+    // å­˜å‚¨æ•°æ®çš„èŠ‚ç‚¹
     private class Node{
-        // ½ÚµãÊı¾İ
+        // èŠ‚ç‚¹æ•°æ®
         private Object data;
-        // ÏÂÒ»¸ö½Úµã
+        // ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
         private Node next;
-        // ÉÏÒ»¸ö½Úµã
+        // ä¸Šä¸€ä¸ªèŠ‚ç‚¹
         private Node prev;
         public Node(Object data) {
             this.data = data;
@@ -37,7 +37,7 @@ public class TwoWayLinkedList {
     }
 
     /**
-     * Á´±íÍ·²¿ ²åÈë½Úµã
+     * é“¾è¡¨å¤´éƒ¨ æ’å…¥èŠ‚ç‚¹
      * @param value
      */
     public void addHead(Object value) {
@@ -55,7 +55,7 @@ public class TwoWayLinkedList {
     }
 
     /**
-     * Á´±íÎ²²¿ Ôö¼Ó½Úµã
+     * é“¾è¡¨å°¾éƒ¨ å¢åŠ èŠ‚ç‚¹
      * @param value
      */
     public void addTail(Object value) {
@@ -72,7 +72,7 @@ public class TwoWayLinkedList {
     }
 
     /**
-     * É¾³ıÁ´±íµÄÍ·²¿½Úµã
+     * åˆ é™¤é“¾è¡¨çš„å¤´éƒ¨èŠ‚ç‚¹
      * @return
      */
     public Node deleteHead() {
@@ -88,7 +88,7 @@ public class TwoWayLinkedList {
     }
 
     /**
-     * É¾³ıÁ´±íµÄÎ²²¿½Úµã
+     * åˆ é™¤é“¾è¡¨çš„å°¾éƒ¨èŠ‚ç‚¹
      * @return
      */
     public Node deleteTail() {

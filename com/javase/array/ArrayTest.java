@@ -3,7 +3,7 @@ package com.javase.array;
 public class ArrayTest {
 
 	/**
-	 * Êı×é¶¨ÒåµÄÊ±ºò [] ¸ú×ÅÀàĞÍ×ß »¹ÊÇÃû×Ö×ßÕâÊÇÒ»¸öÎÊÌâ--
+	 * æ•°ç»„å®šä¹‰çš„æ—¶å€™ [] è·Ÿç€ç±»å‹èµ° è¿˜æ˜¯åå­—èµ°è¿™æ˜¯ä¸€ä¸ªé—®é¢˜--
 	 * @param args
 	 */
 	public static void main(String[] args) {

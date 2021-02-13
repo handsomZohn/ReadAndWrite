@@ -1,11 +1,11 @@
 package com.javase.array;
 public class Sort_Bubble {
 	public static void main(String[] args) {
-		yxdd(); // ÓÉĞ¡µ½´ó
-		yddx(); // ÓÉ´ódaoxi
+		yxdd(); // ç”±å°åˆ°å¤§
+		yddx(); // ç”±å¤§daoxi
 	}
 	
-	//ÓÉĞ¡µ½´ó
+	//ç”±å°åˆ°å¤§
 	public static void yxdd(){
 	int[] arr = {23,12,3,45,25,46,75,15,12,52};
 		
@@ -18,26 +18,26 @@ public class Sort_Bubble {
 				}
 			}
 		}
-//²é¿´½á¹û~~
+//æŸ¥çœ‹ç»“æœ~~
 		for(int i=0;i<arr.length;i++){
 			System.out.print(arr[i]+" ");
 		}
 		
 	}
 
-	//ÓÉ´óµ½Ğ¡
+	//ç”±å¤§åˆ°å°
 	public static void yddx(){
 		int[] arr = {23,12,3,45,25,46,75,15,12,52};
 		for(int i=0;i<=arr.length;i++){
 			for(int j=i+1;j<arr.length;j++){
-				if(arr[i]<arr[j]){     // ¸Ä±äÀ¨ºÅµÄ·½Ïò ¸Ä±ä ÅÅĞòµÄË³Ğò
+				if(arr[i]<arr[j]){     // æ”¹å˜æ‹¬å·çš„æ–¹å‘ æ”¹å˜ æ’åºçš„é¡ºåº
 					int temp = arr[i];
 					arr[i] = arr[j];
 					arr[j] = temp;
 				}
 			}
 		}
-//²é¿´½á¹û~~
+//æŸ¥çœ‹ç»“æœ~~
 		for(int i=0;i<arr.length;i++){
 			System.out.print(arr[i]+" ");
 		}

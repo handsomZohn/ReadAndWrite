@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 
  * <p>Title:</p>
- * <p>Description:ÅÅĞòstringÊı×é</p>
+ * <p>Description:æ’åºstringæ•°ç»„</p>
  * <p>Copyright: Copyright (c) 2017</p>
  * <p>Company: bksx</p>
  * <p>CreateDate:2017-6-7</p>

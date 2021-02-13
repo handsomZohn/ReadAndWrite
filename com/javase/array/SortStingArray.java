@@ -1,29 +1,29 @@
 package com.javase.array;
-/*Ò»¸ö²»È·¶¨ÊıÄ¿¼°²»È·¶¨ÅÅÁĞË³ĞòµÄ×Ö·û´®Êı×é£¬ÒÑÖª°üº¬ÕâËÄ¸öÔªËØ "admin" "viewer" "operator" "designer", 
-ÔÚÄãÊäÈëÒ»¸ö²»È·¶¨´óĞ¡ºÍË³ĞòµÄÊı×éºó(½ö°üº¬ÉÏÊöËÄ¸ö×Ö·ûµÄÈÎÒâÒ»¸öºÍ¼¸¸ö£¬ÔªËØ²»ÖØ¸´) £¬Ëã·¨»á°´ÕÕ 
-"admin" "viewer" "operator" "designer"Õâ¸öË³ĞòÖØĞÂÉú³ÉÊı×é£¬Èç£º 
+/*ä¸€ä¸ªä¸ç¡®å®šæ•°ç›®åŠä¸ç¡®å®šæ’åˆ—é¡ºåºçš„å­—ç¬¦ä¸²æ•°ç»„ï¼Œå·²çŸ¥åŒ…å«è¿™å››ä¸ªå…ƒç´  "admin" "viewer" "operator" "designer", 
+åœ¨ä½ è¾“å…¥ä¸€ä¸ªä¸ç¡®å®šå¤§å°å’Œé¡ºåºçš„æ•°ç»„å(ä»…åŒ…å«ä¸Šè¿°å››ä¸ªå­—ç¬¦çš„ä»»æ„ä¸€ä¸ªå’Œå‡ ä¸ªï¼Œå…ƒç´ ä¸é‡å¤) ï¼Œç®—æ³•ä¼šæŒ‰ç…§ 
+"admin" "viewer" "operator" "designer"è¿™ä¸ªé¡ºåºé‡æ–°ç”Ÿæˆæ•°ç»„ï¼Œå¦‚ï¼š 
 String[] a={ "viewer" ,"admin"} ---> String[] b={"admin", "viewer" } 
 designer operator --->operator designer 
 operator  viewer admin --->admin viewer  operator  
 viewer designer operator admin  --->admin  viewer operator designer 
-¾ÍÊÇ½ô°üº¬ÕâËÄ¸östring¶ÔÏóµÄ ĞÂµÄ+²»È·¶¨µÄÊı×é£¨ÔªËØ¾ÍÕâ¸öËÄ¸öÖĞµÄÒ»¸ö»òÕßÁ½¸ö£¬»òÕßÈı¸ö»òÕßËÄ¸ö£¬ÇÒ²»ÖØ¸´£©µÄÅÅĞò*/
+å°±æ˜¯ç´§åŒ…å«è¿™å››ä¸ªstringå¯¹è±¡çš„ æ–°çš„+ä¸ç¡®å®šçš„æ•°ç»„ï¼ˆå…ƒç´ å°±è¿™ä¸ªå››ä¸ªä¸­çš„ä¸€ä¸ªæˆ–è€…ä¸¤ä¸ªï¼Œæˆ–è€…ä¸‰ä¸ªæˆ–è€…å››ä¸ªï¼Œä¸”ä¸é‡å¤ï¼‰çš„æ’åº*/
 
 import java.util.Arrays;
 import java.util.List;
 
 public class SortStingArray {
 
-	//²ÎÕÕ±ê×¼ ĞòÁĞ
+	//å‚ç…§æ ‡å‡† åºåˆ—
 	private List<String> referList=Arrays.asList("admin", "viewer", "operator", "designer");
 	private String[] lscpvb = {"admin","viewer","operator","designer"};
-	//´ı´¦ÀíĞòÁĞ
+	//å¾…å¤„ç†åºåˆ—
 	private List<String> targetList;
 	
-	//¹¹Ôì·½·¨
+	//æ„é€ æ–¹æ³•
 	public SortStingArray(String[] array){
 		this.targetList=Arrays.asList(array);
 	}	
-	//ÅÅĞò
+	//æ’åº
 	public String[] sort(){
 		for(int i=this.referList.size()-1; i>=0 ;--i){
 			if(this.targetList.contains(this.referList.get(i))){
@@ -32,13 +32,13 @@ public class SortStingArray {
 		}
 		return (String[])this.referList.toArray();
 	}
-	//´òÓ¡º¯Êı
+	//æ‰“å°å‡½æ•°
 	public void print(){
 		for(String temp:this.targetList){
 			System.out.println(temp);
 		}
 	}
-	//²âÊÔ´úÂë
+	//æµ‹è¯•ä»£ç 
 	public static void main(String[] args) {
 		SortStingArray s=new SortStingArray(new String[]{"operator","viewer","admin"});
 		s.sort();

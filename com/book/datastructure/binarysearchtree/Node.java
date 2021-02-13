@@ -146,4 +146,17 @@ public class Node {
         }
         return false;
     }
+
+    public static void main(String[] args) {
+        // 新建节点
+        Node node = new Node(20);
+        for (int i = 0; i < 5; i++) {
+            node.insertBST(i);
+        }
+
+        boolean b = node.searchBST(0);
+
+        // true 表示查找成功
+        System.out.println(b);
+    }
 }

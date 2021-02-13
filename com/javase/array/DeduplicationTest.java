@@ -3,14 +3,14 @@ package com.javase.array;
 import java.util.*;
 
 /**
- * È¥ÖØ
+ * å»é‡
  *
  * @author Administrator
  */
 public class DeduplicationTest {
     /**
-     * Í¨¹ılist
-     * È¥ÖØ²»ÅÅĞò
+     * é€šè¿‡list
+     * å»é‡ä¸æ’åº
      *
      * @param ints
      */
@@ -26,8 +26,8 @@ public class DeduplicationTest {
     }
 
     /**
-     * Í¨¹ılistºÍHashSet
-     * È¥ÖØ²»ÅÅĞò
+     * é€šè¿‡listå’ŒHashSet
+     * å»é‡ä¸æ’åº
      *
      * @param ints
      */
@@ -41,8 +41,8 @@ public class DeduplicationTest {
     }
 
     /**
-     * Í¨¹ıHashSet
-     * È¥ÖØ²»ÅÅĞò
+     * é€šè¿‡HashSet
+     * å»é‡ä¸æ’åº
      *
      */
     public static void deduplicationButNoSort03() {
@@ -53,9 +53,9 @@ public class DeduplicationTest {
     }
 
     /**
-     * Í¨¹ıTreeSet
-     * È¥ÖØ,ÅÅĞò(ÕıĞò£¬µ¹Ğò)
-     * ×Ô¶¨ÒåÅÅĞò²Î¿¼Á¬½Ó
+     * é€šè¿‡TreeSet
+     * å»é‡,æ’åº(æ­£åºï¼Œå€’åº)
+     * è‡ªå®šä¹‰æ’åºå‚è€ƒè¿æ¥
      * https://www.cnblogs.com/DreamDrive/p/5487087.html
      */
     public static void deduplicationAndSort() {

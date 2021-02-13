@@ -14,33 +14,33 @@ public class Zsgzsxxg {
 	}
 
 	/**
-	 * Õ¹Ê¾¹¤ÖÖË³ÐòÐÞ¸Ä
+	 * å±•ç¤ºå·¥ç§é¡ºåºä¿®æ”¹
 	 */
 	public static void zsgzsxxg() {
-		String lscpvb = "RIA";// Ëã·¨
+		String lscpvb = "RIA";// ç®—æ³•
 		String[] ppzyvb = { "IRA", "RIE", "RIE", "RIE", "RIE", "RIE", "RIE",
 				"RIE", "RIE", "RIE", "IRA", "IRA", "IRA", "RIE", "RAI", "RAI",
 				"RIC", "RIC", "RIC", "RIC", "RIC", "RIC", "RIC", "RIC", "RI",
 				"RI", "RIC", "RI", "RIC", "RIC", "RIC", "RIC", "RIC", "RIC",
 				"RIC", "RIC", "RIC", "RIC", "RIC", "RIC", "RSI", "IRS", "IRS",
-				"ISA", "IRS", "IRS", "IRS", "IRS", "ISA", "SIA" };// ´øÅÅÐòÊý×é
-		// ×ÖµäË³ÐòÅÅÐò
+				"ISA", "IRS", "IRS", "IRS", "IRS", "ISA", "SIA" };// å¸¦æŽ’åºæ•°ç»„
+		// å­—å…¸é¡ºåºæŽ’åº
 		Arrays.sort(ppzyvb);
 
 		for (int i = 0; i < ppzyvb.length; i++) {
 			System.out.println(ppzyvb[i]);
 		}
 
-		System.out.println("------------·Ö¸îÏß------------");
+		System.out.println("------------åˆ†å‰²çº¿------------");
 
 		for (int i = 0; i < ppzyvb.length; i++) {
 			if (ppzyvb[i].equals(lscpvb)) {
-				//ÅÅÐòºóµÄµÚÒ»¶Î
+				//æŽ’åºåŽçš„ç¬¬ä¸€æ®µ
 				String[] copyOfRange = Arrays.copyOfRange(ppzyvb, i,
 						ppzyvb.length);
-				//ÅÅÐòºóµÄµÚ¶þ¶Î
+				//æŽ’åºåŽçš„ç¬¬äºŒæ®µ
 				String[] copyOfRange2 = Arrays.copyOfRange(ppzyvb, 0, i);
-				//À©ÈÝ
+				//æ‰©å®¹
 				copyOfRange = Arrays.copyOf(copyOfRange, ppzyvb.length);
 				System.arraycopy(copyOfRange2, 0, copyOfRange, ppzyvb.length-i, copyOfRange2.length);
 				for (int j = 0; j < copyOfRange.length; j++) {
@@ -48,12 +48,12 @@ public class Zsgzsxxg {
 				}
 				break;
 			} else if (ppzyvb[i].equals(lscpvb.substring(0, 2))) {
-				//ÅÅÐòºóµÄµÚÒ»¶Î
+				//æŽ’åºåŽçš„ç¬¬ä¸€æ®µ
 				String[] copyOfRange = Arrays.copyOfRange(ppzyvb, i,
 						ppzyvb.length);
-				//ÅÅÐòºóµÄµÚ¶þ¶Î
+				//æŽ’åºåŽçš„ç¬¬äºŒæ®µ
 				String[] copyOfRange2 = Arrays.copyOfRange(ppzyvb, 0, i);
-				//À©ÈÝ
+				//æ‰©å®¹
 				copyOfRange = Arrays.copyOf(copyOfRange, ppzyvb.length);
 				System.arraycopy(copyOfRange2, 0, copyOfRange, ppzyvb.length-i, copyOfRange2.length);
 				
@@ -70,9 +70,9 @@ public class Zsgzsxxg {
 			char c = charArray[i];
 			System.out.println(c);
 		}
-		// °´ÕÕÖ¸¶¨Ë³ÐòÅÅÐòÀàËÆÕâÑù
+		// æŒ‰ç…§æŒ‡å®šé¡ºåºæŽ’åºç±»ä¼¼è¿™æ ·
 		/**
-		 * RIA RI [Ö»ÓÐÁ½¸ö×ÖÄ¸] RI* [*´ú±íÒ»¸öÈÎÒâ×ÖÄ¸] R** [*´ú±íÒ»¸öÈÎÒâ×ÖÄ¸] *** [*´ú±íÒ»¸öÈÎÒâ×ÖÄ¸]
+		 * RIA RI [åªæœ‰ä¸¤ä¸ªå­—æ¯] RI* [*ä»£è¡¨ä¸€ä¸ªä»»æ„å­—æ¯] R** [*ä»£è¡¨ä¸€ä¸ªä»»æ„å­—æ¯] *** [*ä»£è¡¨ä¸€ä¸ªä»»æ„å­—æ¯]
 		 */
 	}
 	

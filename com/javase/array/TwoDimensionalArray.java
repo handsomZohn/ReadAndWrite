@@ -4,7 +4,7 @@ package com.javase.array;
 import java.util.Arrays;
 
 /**
- *@Description Ã°ÅİÅÅĞòµÄ±äÖÖ
+ *@Description å†’æ³¡æ’åºçš„å˜ç§
  *@CreateDate 2020/4/15 22:41
  *@Author zz
  *@Version 1.0
@@ -12,18 +12,18 @@ import java.util.Arrays;
 public class TwoDimensionalArray {
     public static void main(String[] args) {
 
-        // ¶şÎ¬Êı×éÅÅĞò--Ô­Êı×é
+        // äºŒç»´æ•°ç»„æ’åº--åŸæ•°ç»„
         String[][] strs = {{"12", "Java"},{"25", "Ruby"},{"55", "Python"},{"30", "Golang"},{"7", "JavaScript"}};
-        // ĞÂ½¨Êı×é
+        // æ–°å»ºæ•°ç»„
         int[] arr = new int[strs.length];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Integer.parseInt(strs[i][0]);
         }
-        //µÚÒ»´ÎÑ­»·£¬ÊÇÈ·¶¨Ò»¸öÊıÒÀ´ÎºÍºóÃæÊıµÄ±È½ÏµÄÊı¡£
+        //ç¬¬ä¸€æ¬¡å¾ªç¯ï¼Œæ˜¯ç¡®å®šä¸€ä¸ªæ•°ä¾æ¬¡å’Œåé¢æ•°çš„æ¯”è¾ƒçš„æ•°ã€‚
         for (int i = 0; i < arr.length -1 ; i++) {
-            //Õâ¸öÊÇºÍµÚÒ»¸öÊıµÄ±È½ÏµÄÊı
+            //è¿™ä¸ªæ˜¯å’Œç¬¬ä¸€ä¸ªæ•°çš„æ¯”è¾ƒçš„æ•°
             for (int j = i+1; j < arr.length; j++) {
-                //¶¨ÒåÒ»¸öÁÙÊ±µÄ±äÁ¿£¬ÓÃÀ´½»»»±äÁ¿½»»»µÄÊÇÔ­¶şÎ¬Êı×éµÄ±äÁ¿
+                //å®šä¹‰ä¸€ä¸ªä¸´æ—¶çš„å˜é‡ï¼Œç”¨æ¥äº¤æ¢å˜é‡äº¤æ¢çš„æ˜¯åŸäºŒç»´æ•°ç»„çš„å˜é‡
                 String[] temp;
                 if(arr[i]<arr[j]){
                     temp =  strs[i];

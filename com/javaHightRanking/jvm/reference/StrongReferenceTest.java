@@ -1,31 +1,31 @@
 package com.javaHightRanking.jvm.reference;
 
 /**
- * Ç¿ÒıÓÃÊ¾Àı
+ * å¼ºå¼•ç”¨ç¤ºä¾‹
  * @Author
  */
 public class StrongReferenceTest {
 
 
     public static void main(String[] args){
-        PrintlnMemory.printlnMemory("1.Ô­¿ÉÓÃÄÚ´æºÍ×ÜÄÚ´æ");
+        PrintlnMemory.printlnMemory("1.åŸå¯ç”¨å†…å­˜å’Œæ€»å†…å­˜");
 
-        //ÊµÀı»¯10MµÄÊı×é²¢ÓëstrongReference½¨Á¢Ç¿ÒıÓÃ
+        //å®ä¾‹åŒ–10Mçš„æ•°ç»„å¹¶ä¸strongReferenceå»ºç«‹å¼ºå¼•ç”¨
         byte[] strongReference = new byte[10*PrintlnMemory.M];
-        PrintlnMemory.printlnMemory("2.ÊµÀı»¯10MµÄÊı×é,²¢½¨Á¢Ç¿ÒıÓÃ");
+        PrintlnMemory.printlnMemory("2.å®ä¾‹åŒ–10Mçš„æ•°ç»„,å¹¶å»ºç«‹å¼ºå¼•ç”¨");
         System.out.println("strongReference : "+strongReference);
 
         System.gc();
-        PrintlnMemory.printlnMemory("3.GCºó");
+        PrintlnMemory.printlnMemory("3.GCå");
         System.out.println("strongReference : "+strongReference);
 
-        //strongReference = null;ºó,Ç¿ÒıÓÃ¶Ï¿ªÁË
+        //strongReference = null;å,å¼ºå¼•ç”¨æ–­å¼€äº†
         strongReference = null;
-        PrintlnMemory.printlnMemory("4.Ç¿ÒıÓÃ¶Ï¿ªºó");
+        PrintlnMemory.printlnMemory("4.å¼ºå¼•ç”¨æ–­å¼€å");
         System.out.println("strongReference : "+strongReference);
 
         System.gc();
-        PrintlnMemory.printlnMemory("5.GCºó");
+        PrintlnMemory.printlnMemory("5.GCå");
         System.out.println("strongReference : "+strongReference);
     }
 }

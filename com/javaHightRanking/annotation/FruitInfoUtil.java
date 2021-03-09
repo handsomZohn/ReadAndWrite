@@ -5,19 +5,19 @@ import java.lang.reflect.Field;
 
 /**
  * 
- * <p>Title:×¢½â´¦ÀíÆ÷</p>
+ * <p>Title:æ³¨è§£å¤„ç†å™¨</p>
  * <p>Description:</p>
  * <p>Copyright: Copyright (c) 2018</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2018Äê3ÔÂ26ÈÕ</p>
+ * <p>CreateDate:2018å¹´3æœˆ26æ—¥</p>
  * @author zohn
  * @version 1.0
  */
 public class FruitInfoUtil {
 	public static void getFruitInfo(Class<?> clazz) {
-		String strFruitName = "Ë®¹ûÃû³Æ:";
-		String strFruitColor = "Ë®¹ûÑÕÉ«:";
-		String strFruitProvicer = "Ë®¹û¹©Ó¦ÉÌ:";
+		String strFruitName = "æ°´æœåç§°:";
+		String strFruitColor = "æ°´æœé¢œè‰²:";
+		String strFruitProvicer = "æ°´æœä¾›åº”å•†:";
 		Field[] fields = clazz.getDeclaredFields();
 		for (Field field : fields) {
 			if (field.isAnnotationPresent(FruitName.class)) {
@@ -30,7 +30,7 @@ public class FruitInfoUtil {
 				System.out.println(strFruitColor);
 			} else if (field.isAnnotationPresent(FruitProvider.class)) {
 			    FruitProvider fruitProvider = field.getAnnotation(FruitProvider.class);
-			    strFruitProvicer = " ¹©Ó¦ÉÌ±àºÅ:" + fruitProvider.id() + ", ¹©Ó¦ÉÌÃû³Æ:" + fruitProvider.name() + ", ¹©Ó¦ÉÌµØÖ·:" + fruitProvider.address();
+			    strFruitProvicer = " ä¾›åº”å•†ç¼–å·:" + fruitProvider.id() + ", ä¾›åº”å•†åç§°:" + fruitProvider.name() + ", ä¾›åº”å•†åœ°å€:" + fruitProvider.address();
 			    System.out.println(strFruitProvicer);
 			}
 		}

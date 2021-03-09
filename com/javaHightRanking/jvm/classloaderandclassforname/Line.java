@@ -9,6 +9,6 @@ package com.javaHightRanking.jvm.classloaderandclassforname;
  */
 public class Line {
     static {
-        System.out.println("¾²Ì¬´úÂë¿éÖ´ĞĞ£ºloading line");
+        System.out.println("é™æ€ä»£ç å—æ‰§è¡Œï¼šloading line");
     }
 }

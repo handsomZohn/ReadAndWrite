@@ -3,27 +3,27 @@ package com.javaHightRanking.jvm.reference;
 import java.lang.ref.SoftReference;
 
 /**
- * ÈíÒıÓÃÊ¾Àı
+ * è½¯å¼•ç”¨ç¤ºä¾‹
  * @author Administrator
  */
 public class SoftReferenceTest {
 
     public static void main(String[] args){
-        PrintlnMemory.printlnMemory("1.Ô­¿ÉÓÃÄÚ´æºÍ×ÜÄÚ´æ");
+        PrintlnMemory.printlnMemory("1.åŸå¯ç”¨å†…å­˜å’Œæ€»å†…å­˜");
 
-        //½¨Á¢ÈíÒıÓÃ
+        //å»ºç«‹è½¯å¼•ç”¨
         SoftReference<Object> softRerference = new SoftReference<Object>(new byte[10*PrintlnMemory.M]);
-        PrintlnMemory.printlnMemory("2.ÊµÀı»¯10MµÄÊı×é,²¢½¨Á¢ÈíÒıÓÃ");
+        PrintlnMemory.printlnMemory("2.å®ä¾‹åŒ–10Mçš„æ•°ç»„,å¹¶å»ºç«‹è½¯å¼•ç”¨");
         System.out.println("softRerference.get() : "+softRerference.get());
 
         System.gc();
-        PrintlnMemory.printlnMemory("3.ÄÚ´æ¿ÉÓÃÈİÁ¿³ä×ã£¬GCºó");
+        PrintlnMemory.printlnMemory("3.å†…å­˜å¯ç”¨å®¹é‡å……è¶³ï¼ŒGCå");
         System.out.println("softRerference.get() : "+softRerference.get());
 
-        //ÊµÀı»¯Ò»¸ö4MµÄÊı×é,Ê¹ÄÚ´æ²»¹»ÓÃ,²¢½¨Á¢ÈíÒıÓÃ
-        //free=10M=4M+10M-4M,Ö¤Ã÷ÄÚ´æ¿ÉÓÃÁ¿²»×ãÊ±£¬GCºóbyte[10*m]±»»ØÊÕ
+        //å®ä¾‹åŒ–ä¸€ä¸ª4Mçš„æ•°ç»„,ä½¿å†…å­˜ä¸å¤Ÿç”¨,å¹¶å»ºç«‹è½¯å¼•ç”¨
+        //free=10M=4M+10M-4M,è¯æ˜å†…å­˜å¯ç”¨é‡ä¸è¶³æ—¶ï¼ŒGCåbyte[10*m]è¢«å›æ”¶
         SoftReference<Object> softRerference2 = new SoftReference<Object>(new byte[4*PrintlnMemory.M]);
-        PrintlnMemory.printlnMemory("4.ÊµÀı»¯Ò»¸ö4MµÄÊı×éºó");
+        PrintlnMemory.printlnMemory("4.å®ä¾‹åŒ–ä¸€ä¸ª4Mçš„æ•°ç»„å");
         System.out.println("softRerference.get() : "+softRerference.get());
         System.out.println("softRerference2.get() : "+softRerference2.get());
     }

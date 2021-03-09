@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
- * @Description Í¨¹ıCallableÊµÏÖ¶àÏß³Ì
+ * @Description é€šè¿‡Callableå®ç°å¤šçº¿ç¨‹
  * @CreateDate 2020\3\15 0015 12:41
  * @Author zohn
  * @Version 1.0
@@ -13,29 +13,29 @@ import java.util.concurrent.FutureTask;
 public class MyTask implements Callable<Object> {
     @Override
     public Object call() throws Exception {
-        System.out.println("Í¨¹ıCallableÊµÏÖ¶àÏß³Ì£¬Ãû ³Æ£º" + Thread.currentThread().getName());
-        return "ÕâÊÇ·µ»ØÖµ";
+        System.out.println("é€šè¿‡Callableå®ç°å¤šçº¿ç¨‹ï¼Œå ç§°ï¼š" + Thread.currentThread().getName());
+        return "è¿™æ˜¯è¿”å›å€¼";
     }
 
     public static void main(String[] args) {
         FutureTask<Object> futureTask = new FutureTask<>(() -> {
-            System.out.println("Í¨¹ıCallableÊµÏÖ¶àÏß³Ì£¬Ãû³Æ " + Thread.currentThread().getName());
-            return "ÕâÊÇ·µ»ØÖµ";
+            System.out.println("é€šè¿‡Callableå®ç°å¤šçº¿ç¨‹ï¼Œåç§° " + Thread.currentThread().getName());
+            return "è¿™æ˜¯è¿”å›å€¼";
         });
         // MyTask myTask = new MyTask();
         // FutureTask<Object> futureTask = new FutureTask<>(myTask);
-        //FutureTask¼Ì³ĞÁËRunnable£¬¿ÉÒÔ·ÅÔÚThreadÖĞÆô¶¯Ö´ĞĞ
+        //FutureTaskç»§æ‰¿äº†Runnableï¼Œå¯ä»¥æ”¾åœ¨Threadä¸­å¯åŠ¨æ‰§è¡Œ
         Thread thread = new Thread(futureTask);
         thread.setName("demo3");
         thread.start();
-        System.out.println("Ö÷Ïß³ÌÃû ³Æ:" + Thread.currentThread().getName());
+        System.out.println("ä¸»çº¿ç¨‹å ç§°:" + Thread.currentThread().getName());
         try {
             System.out.println(futureTask.get());
         } catch (InterruptedException e) {
-            //×èÈûµÈ´ıÖĞ±»ÖĞ¶Ï£¬ÔòÅ×³ö
+            //é˜»å¡ç­‰å¾…ä¸­è¢«ä¸­æ–­ï¼Œåˆ™æŠ›å‡º
             e.printStackTrace();
         } catch (ExecutionException e) {
-            //Ö´ĞĞ¹ı³Ì·¢ËÍÒì³£±»Å×³ö
+            //æ‰§è¡Œè¿‡ç¨‹å‘é€å¼‚å¸¸è¢«æŠ›å‡º
             e.printStackTrace();
         }
 

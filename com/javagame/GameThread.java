@@ -12,16 +12,16 @@ public class GameThread extends Thread {
     public void run() {
         while (true) {
             try {
-                //³ÌĞòÔËĞĞÔİÍ£ 0.01Ãë
+                //ç¨‹åºè¿è¡Œæš‚åœ 0.01ç§’
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            //Ñ­»·Âß¼­µÄÖ´ĞĞ
+            //å¾ªç¯é€»è¾‘çš„æ‰§è¡Œ
             panel.logic();
 
-            //Ò³ÃæË¢ĞÂ
+            //é¡µé¢åˆ·æ–°
             panel.repaint();
         }
     }

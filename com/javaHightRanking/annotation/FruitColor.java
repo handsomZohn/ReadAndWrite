@@ -8,11 +8,11 @@ import java.lang.annotation.Target;
 
 /**
  * 
- * <p>Title:Ë®¹ûÑÕÉ«</p>
+ * <p>Title:æ°´æžœé¢œè‰²</p>
  * <p>Description:</p>
  * <p>Copyright: Copyright (c) 2018</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2018Äê3ÔÂ26ÈÕ</p>
+ * <p>CreateDate:2018å¹´3æœˆ26æ—¥</p>
  * @author zohn
  * @version 1.0
  */
@@ -21,7 +21,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface FruitColor {
 	/*
-	 * ÑÕÉ«Ã¶¾Ù
+	 * é¢œè‰²æžšä¸¾
 	 */
 	public enum Color{
 		BLUE,
@@ -30,7 +30,7 @@ public @interface FruitColor {
 	}
 	
 	/*
-	 * ÑÕÉ«ÊôÐÔ
+	 * é¢œè‰²å±žæ€§
 	 */
 	Color fruitcolor() default Color.GREEN;
 	

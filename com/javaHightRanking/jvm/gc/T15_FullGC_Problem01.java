@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class T15_FullGC_Problem01 {
 
     /**
-     * @Description ÊµÌåÀà
+     * @Description å®žä½“ç±»
      * @Author zz
      * @Date 2020\4\21 0021 15:07
      * @Param
@@ -25,7 +25,7 @@ public class T15_FullGC_Problem01 {
      */
     private static class CardInfo {
         BigDecimal price = new BigDecimal(0.0);
-        String name = "ÕÅÈý";
+        String name = "å¼ ä¸‰";
         int age = 5;
         Date birthdate = new Date();
 

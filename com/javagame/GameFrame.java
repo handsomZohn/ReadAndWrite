@@ -6,32 +6,32 @@ public class GameFrame extends JFrame {
     private int width = 600, height = 400;
 
     public GameFrame() {
-        //ÉèÖÃ´°Ìå±êÌâ
-        this.setTitle("javaÓÎÏ·¿ª·¢ÔÓÌ¸-Ì¨¸ç³öÆ·");
+        //è®¾ç½®çª—ä½“æ ‡é¢˜
+        this.setTitle("javaæ¸¸æˆå¼€å‘æ‚è°ˆ-å°å“¥å‡ºå“");
 
-        //´´½¨Ò»¸ö»­²¼
+        //åˆ›å»ºä¸€ä¸ªç”»å¸ƒ
         GamePanel panel = new GamePanel(width, height);
-        //°Ñ»­²¼¼ÓÈëµ½´°ÌåÖĞ
+        //æŠŠç”»å¸ƒåŠ å…¥åˆ°çª—ä½“ä¸­
         getContentPane().add(panel, "Center");
 
-        //ÉèÖÃ´°Ìå´óĞ¡
+        //è®¾ç½®çª—ä½“å¤§å°
         this.setSize(width, height);
-        //ÉèÖÃÄÜ·ñµ÷Õû´°Ìå´óĞ¡
+        //è®¾ç½®èƒ½å¦è°ƒæ•´çª—ä½“å¤§å°
         this.setResizable(false);
-        //Õâ¾ä»áÊ¹µÃÔÚÆÁÄ»ÉÏ¾ÓÖĞÏÔÊ¾
+        //è¿™å¥ä¼šä½¿å¾—åœ¨å±å¹•ä¸Šå±…ä¸­æ˜¾ç¤º
         this.setLocationRelativeTo(null);
-        //µ±¹Ø±Õ´°ÌåµÄÊ±ºòÍË³ö³ÌĞò
+        //å½“å…³é—­çª—ä½“çš„æ—¶å€™é€€å‡ºç¨‹åº
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //°Ñ´°ÌåÏÔÊ¾³öÀ´
+        //æŠŠçª—ä½“æ˜¾ç¤ºå‡ºæ¥
         this.setVisible(true);
 
-        //¿ªÊ¼ÓÎÏ·Ïß³ÌµÄÑ­»·
+        //å¼€å§‹æ¸¸æˆçº¿ç¨‹çš„å¾ªç¯
         GameThread gt = new GameThread(panel);
         gt.start();
     }
 
     /**
-     * Ö÷·½·¨
+     * ä¸»æ–¹æ³•
      */
     public static void main(String[] args) {
         GameFrame frame = new GameFrame();

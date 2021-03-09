@@ -8,11 +8,11 @@ import java.lang.annotation.Target;
 
 /**
  * 
- * <p>Title:Ë®¹û¹©Ó¦Õß</p>
+ * <p>Title:æ°´æœä¾›åº”è€…</p>
  * <p>Description:</p>
  * <p>Copyright: Copyright (c) 2018</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2018Äê3ÔÂ26ÈÕ</p>
+ * <p>CreateDate:2018å¹´3æœˆ26æ—¥</p>
  * @author zohn
  * @version 1.0
  */
@@ -21,15 +21,15 @@ import java.lang.annotation.Target;
 @Documented
 public @interface FruitProvider {
 	/*
-	 * ¹©Ó¦ÉÌ±àºÅ
+	 * ä¾›åº”å•†ç¼–å·
 	 */
 	public int id() default 1;
 	/*
-	 * ¹©Ó¦ÉÌÃû×Ö
+	 * ä¾›åº”å•†åå­—
 	 */
 	public String name() default "";
 	/*
-	 * ¹©Ó¦ÉÌµØÖ·
+	 * ä¾›åº”å•†åœ°å€
 	 */
 	public String address() default "";
 }

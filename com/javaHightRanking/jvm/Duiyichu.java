@@ -3,7 +3,7 @@ package com.javaHightRanking.jvm;
 import java.util.ArrayList;
 
 /**
- * @Description ¶ÑÄÚ´æÒç³ö
+ * @Description å †å†…å­˜æº¢å‡º
  * @CreateDate 18/07/31 9:00
  * @Author zohn
  * @Version 1.0

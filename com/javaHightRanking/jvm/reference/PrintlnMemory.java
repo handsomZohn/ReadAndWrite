@@ -1,7 +1,7 @@
 package com.javaHightRanking.jvm.reference;
 
 /**
- * 打印内存信息
+ * 鎵撳嵃鍐呭瓨淇℃伅
  * @author Administrator
  */
 public class PrintlnMemory {
@@ -9,7 +9,7 @@ public class PrintlnMemory {
     public static int M = 1024*1024;
 
     /**
-     * 打印内存信息
+     * 鎵撳嵃鍐呭瓨淇℃伅
      * @param tag
      */
     public static void printlnMemory(String tag){

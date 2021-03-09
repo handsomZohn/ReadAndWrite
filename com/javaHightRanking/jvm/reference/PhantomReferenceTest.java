@@ -4,40 +4,40 @@ import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;
 
 /**
- * ĞéÒıÓÃÊ¾Àı
+ * è™šå¼•ç”¨ç¤ºä¾‹
  * @author Administrator
  */
 public class PhantomReferenceTest {
 
     public static void main(String[] args) throws InterruptedException {
 
-        PrintlnMemory.printlnMemory("1.Ô­¿ÉÓÃÄÚ´æºÍ×ÜÄÚ´æ");
+        PrintlnMemory.printlnMemory("1.åŸå¯ç”¨å†…å­˜å’Œæ€»å†…å­˜");
         byte[] object = new byte[10*PrintlnMemory.M];
-        PrintlnMemory.printlnMemory("2.ÊµÀı»¯10MµÄÊı×éºó");
+        PrintlnMemory.printlnMemory("2.å®ä¾‹åŒ–10Mçš„æ•°ç»„å");
 
-        //½¨Á¢ĞéÒıÓÃ
+        //å»ºç«‹è™šå¼•ç”¨
         ReferenceQueue<Object> referenceQueue = new ReferenceQueue<Object>();
         PhantomReference<Object> phantomReference = new PhantomReference<Object>(object,referenceQueue);
 
-        PrintlnMemory.printlnMemory("3.½¨Á¢ĞéÒıÓÃºó");
+        PrintlnMemory.printlnMemory("3.å»ºç«‹è™šå¼•ç”¨å");
         System.out.println("phantomReference : "+phantomReference);
         System.out.println("phantomReference.get() : "+phantomReference.get());
         System.out.println("referenceQueue.poll() : "+referenceQueue.poll());
 
-        //¶Ï¿ªbyte[10*PrintlnMemory.M]µÄÇ¿ÒıÓÃ
+        //æ–­å¼€byte[10*PrintlnMemory.M]çš„å¼ºå¼•ç”¨
         object = null;
-        PrintlnMemory.printlnMemory("4.Ö´ĞĞobject = null;Ç¿ÒıÓÃ¶Ï¿ªºó");
+        PrintlnMemory.printlnMemory("4.æ‰§è¡Œobject = null;å¼ºå¼•ç”¨æ–­å¼€å");
 
         System.gc();
-        PrintlnMemory.printlnMemory("5.GCºó");
+        PrintlnMemory.printlnMemory("5.GCå");
         System.out.println("phantomReference : "+phantomReference);
         System.out.println("phantomReference.get() : "+phantomReference.get());
         System.out.println("referenceQueue.poll() : "+referenceQueue.poll());
 
-        //¶Ï¿ªĞéÒıÓÃ
+        //æ–­å¼€è™šå¼•ç”¨
         phantomReference = null;
         System.gc();
-        PrintlnMemory.printlnMemory("6.¶Ï¿ªĞéÒıÓÃºóGC");
+        PrintlnMemory.printlnMemory("6.æ–­å¼€è™šå¼•ç”¨åGC");
         System.out.println("phantomReference : "+phantomReference);
         System.out.println("referenceQueue.poll() : "+referenceQueue.poll());
     }

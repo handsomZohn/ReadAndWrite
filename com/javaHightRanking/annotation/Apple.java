@@ -4,11 +4,11 @@ import com.javaHightRanking.annotation.FruitColor.Color;
 
 /**
  * 
- * <p>Title:×¢½âÊ¹ÓÃ</p>
+ * <p>Title:æ³¨è§£ä½¿ç”¨</p>
  * <p>Description:</p>
  * <p>Copyright: Copyright (c) 2018</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2018Äê3ÔÂ26ÈÕ</p>
+ * <p>CreateDate:2018å¹´3æœˆ26æ—¥</p>
  * @author zohn
  * @version 1.0
  */
@@ -21,7 +21,7 @@ public class Apple {
 	@FruitColor(fruitcolor = Color.RED)
 	private String appleColor;
 	
-	@FruitProvider(id = 1, name = "Íû¾©ºì¸»Ê¿¼¯ÍÅ", address = "±±¾©ÊĞ³¯ÑôÇø¸·Í¨´ó½ÖÒ»ºÅÔºÍû¾©SOHOËşÈıA×ùÈı²ã")
+	@FruitProvider(id = 1, name = "æœ›äº¬çº¢å¯Œå£«é›†å›¢", address = "åŒ—äº¬å¸‚æœé˜³åŒºé˜œé€šå¤§è¡—ä¸€å·é™¢æœ›äº¬SOHOå¡”ä¸‰Aåº§ä¸‰å±‚")
 	private String appleProvider;
 
 	public String getAppleName() {
@@ -49,6 +49,6 @@ public class Apple {
 	}
 	
 	public void displayName() {
-		System.out.println("Ë®¹ûµÄÃû×Ö: Æ»¹û~~");
+		System.out.println("æ°´æœçš„åå­—: è‹¹æœ~~");
 	}
 }

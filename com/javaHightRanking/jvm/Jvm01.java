@@ -15,7 +15,7 @@ public class Jvm01 {
 		// System.out.println(price); //
 		System.out.println(age);
 
-		return "ÕÅÈı";
+		return "å¼ ä¸‰";
 	}
 
 }

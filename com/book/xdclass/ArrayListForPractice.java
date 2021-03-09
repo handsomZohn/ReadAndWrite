@@ -26,7 +26,7 @@ public class ArrayListForPractice {
     @Test
     public void arrayListTest() {
         List<String> list = new ArrayList<>();
-        System.out.println("======^_^======±äÁ¿list.size()ÖµÎª: " + list.size() + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: " +
+        System.out.println("======^_^======å˜é‡list.size()å€¼ä¸º: " + list.size() + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: " +
                 "ArrayListForPractice.arrayListTest()");
         for (int i = 0; i < 10; i++) {
             list.add("" + i);
@@ -36,25 +36,25 @@ public class ArrayListForPractice {
         System.out.println(list.size());
     }
 /*
-    //¼ÆËãÈİÁ¿?+È·±£ÈİÁ¿?
+    //è®¡ç®—å®¹é‡?+ç¡®ä¿å®¹é‡?
     private void ensureCapacityInternal(int minCapacity) {
-//Èç¹ûÊÇ³õ´ÎÀ©Èİ£¬ÔòÊ¹?ÓÃÄ¬ÈÏµÄÈİÁ¿?
+//å¦‚æœæ˜¯åˆæ¬¡æ‰©å®¹ï¼Œåˆ™ä½¿?ç”¨é»˜è®¤çš„å®¹é‡?
         if (elementData == EMPTY_ELEMENT_DATA) {
             minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);
         }
-//ÊÇ·ñĞèÒªÀ©Èİ£¬ĞèÒªµÄ×îÉÙÈİÁ¿??´óÓÚÏÖÔÚÊı×éµÄ?³¤¶ÈÔòÒªÀ©Èİ
+//æ˜¯å¦éœ€è¦æ‰©å®¹ï¼Œéœ€è¦çš„æœ€å°‘å®¹é‡??å¤§äºç°åœ¨æ•°ç»„çš„?é•¿åº¦åˆ™è¦æ‰©å®¹
         if (minCapacity - elementData.length > 0) {
             int oldCapacity = elementData.length;
             int newCapacity = oldCapacity + (oldCapacity >> 1);
-//Èç¹ûĞÂÈİÁ¿? < ×î?Ğ¡ÈİÁ¿?£¬ Ôò½²×îĞÂµÄÈİÁ¿?¸³Öµ¸øĞÂµÄÈİÁ¿?
+//å¦‚æœæ–°å®¹é‡? < æœ€?å°å®¹é‡?ï¼Œ åˆ™è®²æœ€æ–°çš„å®¹é‡?èµ‹å€¼ç»™æ–°çš„å®¹é‡?
             if (newCapacity - minCapacity < 0) {
                 newCapacity = minCapacity;
             }
-//´´½¨ĞÂÊı×é
+//åˆ›å»ºæ–°æ•°ç»„
             Object[] objects = new Object[newCapacity];
-//½«¾ÉµÄÊı×é¸´ÖÆµ½ĞÂµÄÊı×é?Àï??Ãæ
+//å°†æ—§çš„æ•°ç»„å¤åˆ¶åˆ°æ–°çš„æ•°ç»„?é‡Œ??é¢
             System.arraycopy(elementData, 0, objects, 0, elementData.length);
-//ĞŞ¸ÄÒı?ÓÃ
+//ä¿®æ”¹å¼•?ç”¨
             elementData = objects;
         }*/
     }

@@ -6,49 +6,49 @@ import java.awt.event.*;
 
 public class FiveChessGame {
     /**
-     * ¿Ø¼şÊôĞÔ
+     * æ§ä»¶å±æ€§
      */
-    private JFrame frame; // Îå×ÓÆåÓÎÏ·µÄ´°¿Ú¿ò¼Ü
-    private GameMap map; // Îå×ÓÆåÓÎÏ·µÄ´°¿ÚÈİÆ÷
-    private JMenuBar bar; // ²Ëµ¥
-    private JMenu game; // ²Ëµ¥Ïî
-    private JMenuItem[] items; // ²Ëµ¥ÏÂÀ­Ïî
+    private JFrame frame; // äº”å­æ£‹æ¸¸æˆçš„çª—å£æ¡†æ¶
+    private GameMap map; // äº”å­æ£‹æ¸¸æˆçš„çª—å£å®¹å™¨
+    private JMenuBar bar; // èœå•
+    private JMenu game; // èœå•é¡¹
+    private JMenuItem[] items; // èœå•ä¸‹æ‹‰é¡¹
 
     /**
-     * ¾²Ì¬Êı¾İÊôĞÔ
+     * é™æ€æ•°æ®å±æ€§
      */
-    private static final int BOARD_SIZE = 15; // ÆåÅÌ´óĞ¡(15 * 15)
-    private static final int ROW_WIDTH = 36; // ¼ä¾à
-    private static final int SPACE = ROW_WIDTH / 2; // ÉÏÏÂ±ß¼ä¾à
+    private static final int BOARD_SIZE = 15; // æ£‹ç›˜å¤§å°(15 * 15)
+    private static final int ROW_WIDTH = 36; // é—´è·
+    private static final int SPACE = ROW_WIDTH / 2; // ä¸Šä¸‹è¾¹é—´è·
 
     /**
-     * Êı¾İÊôĞÔ
+     * æ•°æ®å±æ€§
      */
-    private boolean player; // trueºÚ,false°×
-    private char[][] board; // ºóÌ¨ĞéÄâÆåÅÌ
+    private boolean player; // trueé»‘,falseç™½
+    private char[][] board; // åå°è™šæ‹Ÿæ£‹ç›˜
 
     public FiveChessGame() {
-        player = true; // ÓÎÏ·ÏÈºÚ×ÓÏÂ
-        board = new char[BOARD_SIZE][BOARD_SIZE]; // ½¨Á¢ºóÌ¨ĞéÄâÆåÅÌ
+        player = true; // æ¸¸æˆå…ˆé»‘å­ä¸‹
+        board = new char[BOARD_SIZE][BOARD_SIZE]; // å»ºç«‹åå°è™šæ‹Ÿæ£‹ç›˜
         clearMap();
         createGUI();
     }
 
     /**
-     * ¶ÔGUI¿Ø¼şµÄ´´½¨
+     * å¯¹GUIæ§ä»¶çš„åˆ›å»º
      */
     private void createGUI() {
-        frame = new JFrame("Îå×ÓÆå"); // ÊµÏÖÎå×ÓÆåÓÎÏ·´°¿Ú¿ò¼Ü
-        map = new GameMap(); // ÊµÏÖÎå×ÓÆåÓÎÏ·´°¿ÚÈİÆ÷
-        bar = new JMenuBar(); // ½¨Á¢²Ëµ¥À¸
-        game = new JMenu("ÓÎÏ·"); // ½¨Á¢ÃûÎª¡°ÓÎÏ·¡±µÄ²Ëµ¥
-        items = new JMenuItem[2]; // game²Ëµ¥ÏÂ´´½¨2¸ö×Ó²Ëµ¥Ïî
-        game.add(items[0] = new JMenuItem("ÖØĞÂ¿ªÊ¼"));// µÚÒ»¸ö×Ó²Ëµ¥Îª¡°ÖØĞÂ¿ªÊ¼¡±
-        game.add(items[1] = new JMenuItem("ÍË³ö")); // µÚ¶ş¸ö×Ó²Ëµ¥Îª¡°ÍË³ö¡±
+        frame = new JFrame("äº”å­æ£‹"); // å®ç°äº”å­æ£‹æ¸¸æˆçª—å£æ¡†æ¶
+        map = new GameMap(); // å®ç°äº”å­æ£‹æ¸¸æˆçª—å£å®¹å™¨
+        bar = new JMenuBar(); // å»ºç«‹èœå•æ 
+        game = new JMenu("æ¸¸æˆ"); // å»ºç«‹åä¸ºâ€œæ¸¸æˆâ€çš„èœå•
+        items = new JMenuItem[2]; // gameèœå•ä¸‹åˆ›å»º2ä¸ªå­èœå•é¡¹
+        game.add(items[0] = new JMenuItem("é‡æ–°å¼€å§‹"));// ç¬¬ä¸€ä¸ªå­èœå•ä¸ºâ€œé‡æ–°å¼€å§‹â€
+        game.add(items[1] = new JMenuItem("é€€å‡º")); // ç¬¬äºŒä¸ªå­èœå•ä¸ºâ€œé€€å‡ºâ€
     }
 
     /**
-     * Çå¿ÕÆå×Ó
+     * æ¸…ç©ºæ£‹å­
      */
     protected void clearMap() {
         for (int i = 0; i < BOARD_SIZE; i++) {
@@ -59,70 +59,70 @@ public class FiveChessGame {
     }
 
     /**
-     * ÔËĞĞÓÎÏ·
+     * è¿è¡Œæ¸¸æˆ
      */
     public void start() {
         map.setPreferredSize(new Dimension(ROW_WIDTH * (BOARD_SIZE - 1) + SPACE
                 * 2, ROW_WIDTH * (BOARD_SIZE - 1) + SPACE * 2));
         map.addMouseListener(new MouseAdapter() {
-            // Êó±êµã»÷ÊÂ¼ş
+            // é¼ æ ‡ç‚¹å‡»äº‹ä»¶
             @Override
             public void mouseClicked(MouseEvent e) {
-                // ½«ÓÃ»§Êó±êÊÂ¼şµÄ×ù±ê×ª»»³ÉÆå×ÓÊı×éµÄ×ù±ê¡£
+                // å°†ç”¨æˆ·é¼ æ ‡äº‹ä»¶çš„åº§æ ‡è½¬æ¢æˆæ£‹å­æ•°ç»„çš„åº§æ ‡ã€‚
                 int xPos = (int) (e.getX() / ROW_WIDTH);
                 int yPos = (int) (e.getY() / ROW_WIDTH);
-                if (board[xPos][yPos] == '+') {// ÅĞ¶ÏÊÇ·ñÏÂ¹ıÆå
-                    board[xPos][yPos] = player ? 'b' : 'w'; // ¸øĞéÄâ¼üÅÌ¸³Öµ
-                    map.repaint(); // Í¨¹ı¶ÁÈ¡boardÊı×é½øĞĞÌùÍ¼
-                    if (isWin(xPos, yPos)) {// Èç¹ûÓĞÂú×ãÊ¤ÀûÌõ¼şµÄÍæ¼ÒÁË
-                        map.repaint(); // Ë¢ĞÂÍ¼Ïñ
-                        String str = player ? "ºÚ·½Ê¤Àû" : "°×·½Ê¤Àû";
-                        JOptionPane.showMessageDialog(null, str, "ÓÎÏ·½áÊø",
-                                JOptionPane.PLAIN_MESSAGE); // µ¯³öÏûÏ¢¿ò
-                        clearMap(); // Çå¿ÕÆåÅÌ
-                        map.repaint(); // Ë¢ĞÂÆåÅÌ
-                        player = true; // ĞÂÒ»¾Ö¼ÌĞøºÚ×ÓÏÈÏÂ
+                if (board[xPos][yPos] == '+') {// åˆ¤æ–­æ˜¯å¦ä¸‹è¿‡æ£‹
+                    board[xPos][yPos] = player ? 'b' : 'w'; // ç»™è™šæ‹Ÿé”®ç›˜èµ‹å€¼
+                    map.repaint(); // é€šè¿‡è¯»å–boardæ•°ç»„è¿›è¡Œè´´å›¾
+                    if (isWin(xPos, yPos)) {// å¦‚æœæœ‰æ»¡è¶³èƒœåˆ©æ¡ä»¶çš„ç©å®¶äº†
+                        map.repaint(); // åˆ·æ–°å›¾åƒ
+                        String str = player ? "é»‘æ–¹èƒœåˆ©" : "ç™½æ–¹èƒœåˆ©";
+                        JOptionPane.showMessageDialog(null, str, "æ¸¸æˆç»“æŸ",
+                                JOptionPane.PLAIN_MESSAGE); // å¼¹å‡ºæ¶ˆæ¯æ¡†
+                        clearMap(); // æ¸…ç©ºæ£‹ç›˜
+                        map.repaint(); // åˆ·æ–°æ£‹ç›˜
+                        player = true; // æ–°ä¸€å±€ç»§ç»­é»‘å­å…ˆä¸‹
                     } else {
-                        player = player ? false : true; // ÇĞ»»Íæ¼Ò
+                        player = player ? false : true; // åˆ‡æ¢ç©å®¶
                     }
                 }
             }
         });
-        // µã»÷ÖØĞÂ¿ªÊ¼ÊÂ¼ş
+        // ç‚¹å‡»é‡æ–°å¼€å§‹äº‹ä»¶
         items[0].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String str = "ÊÇ·ñÒªÖØĞÂ¿ªÊ¼ÓÎÏ·?";
-                // Ìí¼ÓÏûÏ¢¶Ô»°¿ò
-                if (JOptionPane.showConfirmDialog(null, str, "ÖØĞÂ¿ªÊ¼",
+                String str = "æ˜¯å¦è¦é‡æ–°å¼€å§‹æ¸¸æˆ?";
+                // æ·»åŠ æ¶ˆæ¯å¯¹è¯æ¡†
+                if (JOptionPane.showConfirmDialog(null, str, "é‡æ–°å¼€å§‹",
                         JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                    clearMap(); // Çå¿ÕÆåÅÌ
-                    map.repaint(); // Ë¢ĞÂÆåÅÌ
-                    player = true; // Íæ¼ÒÎªºÚÆå
+                    clearMap(); // æ¸…ç©ºæ£‹ç›˜
+                    map.repaint(); // åˆ·æ–°æ£‹ç›˜
+                    player = true; // ç©å®¶ä¸ºé»‘æ£‹
                 }
             }
         });
-        // µã»÷ÍË³öÊÂ¼ş
+        // ç‚¹å‡»é€€å‡ºäº‹ä»¶
         items[1].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String str = "ÊÇ·ñÒªÍË³öÓÎÏ·?";
-                // Ìí¼ÓÏûÏ¢¶Ô»°¿ò
-                if (JOptionPane.showConfirmDialog(null, str, "ÖØĞÂ¿ªÊ¼",
+                String str = "æ˜¯å¦è¦é€€å‡ºæ¸¸æˆ?";
+                // æ·»åŠ æ¶ˆæ¯å¯¹è¯æ¡†
+                if (JOptionPane.showConfirmDialog(null, str, "é‡æ–°å¼€å§‹",
                         JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                    System.exit(0); // ÍË³ö
+                    System.exit(0); // é€€å‡º
                 }
             }
         });
-        // µã¹Ø±Õ°´Å¥ÊÂ¼ş
+        // ç‚¹å…³é—­æŒ‰é’®äº‹ä»¶
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                String str = "ÊÇ·ñÒªÍË³öÓÎÏ·?";
-                // Ìí¼ÓÏûÏ¢¶Ô»°¿ò
-                if (JOptionPane.showConfirmDialog(null, str, "ÍË³öÓÎÏ·",
+                String str = "æ˜¯å¦è¦é€€å‡ºæ¸¸æˆ?";
+                // æ·»åŠ æ¶ˆæ¯å¯¹è¯æ¡†
+                if (JOptionPane.showConfirmDialog(null, str, "é€€å‡ºæ¸¸æˆ",
                         JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                    System.exit(0); // ÍË³ö
+                    System.exit(0); // é€€å‡º
                 }
             }
         });
@@ -137,12 +137,12 @@ public class FiveChessGame {
     }
 
     /**
-     * ×İÏòÕÒ
+     * çºµå‘æ‰¾
      */
     protected boolean find(int x, int y) {
         int i, num = 1;
         char temp = player ? 'b' : 'w';
-        for (i = x + 1; i < 15; i++) {// ÏòÏÂÕÒ
+        for (i = x + 1; i < 15; i++) {// å‘ä¸‹æ‰¾
             if (board[i][y] == temp) {
                 num++;
                 if (num == 5) {
@@ -152,7 +152,7 @@ public class FiveChessGame {
                 break;
             }
         }
-        for (i = x - 1; i >= 0; i--) {// ÏòÉÏÕÒ
+        for (i = x - 1; i >= 0; i--) {// å‘ä¸Šæ‰¾
             if (board[i][y] == temp) {
                 num++;
                 if (num == 5) {
@@ -166,12 +166,12 @@ public class FiveChessGame {
     }
 
     /**
-     * ºáÏòÕÒ
+     * æ¨ªå‘æ‰¾
      */
     protected boolean find2(int x, int y) {
         int i, num = 1;
         char temp = player ? 'b' : 'w';
-        for (i = y + 1; i < 15; i++) { // ÏòÓÒÕÒ
+        for (i = y + 1; i < 15; i++) { // å‘å³æ‰¾
             if (board[x][i] == temp) {
                 num++;
                 if (num == 5) {
@@ -181,7 +181,7 @@ public class FiveChessGame {
                 break;
             }
         }
-        for (i = y - 1; i >= 0; i--) {// Ïò×óÕÒ
+        for (i = y - 1; i >= 0; i--) {// å‘å·¦æ‰¾
             if (board[x][i] == temp) {
                 num++;
                 if (num == 5) {
@@ -195,12 +195,12 @@ public class FiveChessGame {
     }
 
     /**
-     * \·½Ïò
+     * \æ–¹å‘
      */
     protected boolean find3(int x, int y) {
         int i, j, num = 1;
         char temp = player ? 'b' : 'w';
-        for (i = x + 1, j = y + 1; i < 15 && j < 15; i++, j++) {// ÏòÏÂ·½
+        for (i = x + 1, j = y + 1; i < 15 && j < 15; i++, j++) {// å‘ä¸‹æ–¹
             if (board[i][j] == temp) {
                 num++;
                 if (num == 5) {
@@ -210,7 +210,7 @@ public class FiveChessGame {
                 break;
             }
         }
-        for (i = x - 1, j = y - 1; i >= 0 && j >= 0; i--, j--) {// ÏòÉÏ·½
+        for (i = x - 1, j = y - 1; i >= 0 && j >= 0; i--, j--) {// å‘ä¸Šæ–¹
             if (board[i][j] == temp) {
                 num++;
                 if (num == 5) {
@@ -224,12 +224,12 @@ public class FiveChessGame {
     }
 
     /**
-     * /·½Ïò
+     * /æ–¹å‘
      */
     protected boolean find4(int x, int y) {
         int i, j, num = 1;
         char temp = player ? 'b' : 'w';
-        for (i = x + 1, j = y - 1; i < 15 && j >= 0; i++, j--) {// ÏòÏÂ
+        for (i = x + 1, j = y - 1; i < 15 && j >= 0; i++, j--) {// å‘ä¸‹
             if (board[i][j] == temp) {
                 num++;
                 if (num == 5) {
@@ -239,7 +239,7 @@ public class FiveChessGame {
                 break;
             }
         }
-        for (i = x - 1, j = y + 1; i >= 0 && j < 15; i--, j++) { // ÏòÉÏ
+        for (i = x - 1, j = y + 1; i >= 0 && j < 15; i--, j++) { // å‘ä¸Š
             if (board[i][j] == temp) {
                 num++;
                 if (num == 5) {
@@ -253,14 +253,14 @@ public class FiveChessGame {
     }
 
     /**
-     *ÅĞ¶ÏÊ¤¸º
+     *åˆ¤æ–­èƒœè´Ÿ
      */
     protected boolean isWin(int x, int y) {
         return (find(x, y) || find2(x, y) || find3(x, y) || find4(x, y));
     }
 
     /**
-     * ÄÚ²¿ÈİÆ÷Àà£¬ÓÃÓÚÊµÏÖÍ¼Ïñ´¦Àí
+     * å†…éƒ¨å®¹å™¨ç±»ï¼Œç”¨äºå®ç°å›¾åƒå¤„ç†
      */
     private class GameMap extends JPanel {
         private static final long serialVersionUID = 16578987565248L;
@@ -268,20 +268,20 @@ public class FiveChessGame {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            // ÆåÅÌ
-            g.setColor(new Color(200, 100, 50)); // ÉèÎª½Û»ÆÉ«
+            // æ£‹ç›˜
+            g.setColor(new Color(200, 100, 50)); // è®¾ä¸ºæ¡”é»„è‰²
             g.fillRect(0, 0, ROW_WIDTH * (BOARD_SIZE + 1), ROW_WIDTH
-                    * (BOARD_SIZE + 1)); // Ìî³äÆåÅÌ
-            g.setColor(Color.black); // ÉèÎªºÚÉ«
-            for (int i = 0; i < BOARD_SIZE; i++) {// »­ÊúÏß
+                    * (BOARD_SIZE + 1)); // å¡«å……æ£‹ç›˜
+            g.setColor(Color.black); // è®¾ä¸ºé»‘è‰²
+            for (int i = 0; i < BOARD_SIZE; i++) {// ç”»ç«–çº¿
                 g.drawLine(SPACE + ROW_WIDTH * i, SPACE, SPACE + ROW_WIDTH * i,
                         SPACE + ROW_WIDTH * (BOARD_SIZE - 1));
             }
-            for (int i = 0; i < BOARD_SIZE; i++) {// »­ºáÏß
+            for (int i = 0; i < BOARD_SIZE; i++) {// ç”»æ¨ªçº¿
                 g.drawLine(SPACE, SPACE + ROW_WIDTH * i, SPACE + ROW_WIDTH
                         * (BOARD_SIZE - 1), SPACE + ROW_WIDTH * i);
             }
-            // »­µã
+            // ç”»ç‚¹
             g.fillOval(SPACE + 3 * ROW_WIDTH - 3, SPACE + 3 * ROW_WIDTH - 3, 7,
                     7);
             g.fillOval(SPACE + 11 * ROW_WIDTH - 3, SPACE + 3 * ROW_WIDTH - 3,
@@ -293,17 +293,17 @@ public class FiveChessGame {
             g.fillOval(SPACE + 11 * ROW_WIDTH - 3, SPACE + 11 * ROW_WIDTH - 3,
                     7, 7);
 
-            // Æå×Ó
-            // ±éÀúÊı×é£¬»æÖÆÆå×Ó¡£
+            // æ£‹å­
+            // éå†æ•°ç»„ï¼Œç»˜åˆ¶æ£‹å­ã€‚
             for (int i = 0; i < BOARD_SIZE; i++) {
                 for (int j = 0; j < BOARD_SIZE; j++) {
-                    if (board[i][j] == 'b') {// »æÖÆºÚÆå
+                    if (board[i][j] == 'b') {// ç»˜åˆ¶é»‘æ£‹
                         g.setColor(Color.black);
                         g.fillOval(SPACE + i * ROW_WIDTH - ROW_WIDTH / 2, SPACE
                                         + j * ROW_WIDTH - ROW_WIDTH / 2, ROW_WIDTH,
                                 ROW_WIDTH);
                     }
-                    if (board[i][j] == 'w') {// »æÖÆ°×Æå
+                    if (board[i][j] == 'w') {// ç»˜åˆ¶ç™½æ£‹
                         g.setColor(Color.white);
                         g.fillOval(SPACE + i * ROW_WIDTH - ROW_WIDTH / 2, SPACE
                                         + j * ROW_WIDTH - ROW_WIDTH / 2, ROW_WIDTH,

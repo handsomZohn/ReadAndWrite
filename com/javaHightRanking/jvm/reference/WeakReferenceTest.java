@@ -3,21 +3,21 @@ package com.javaHightRanking.jvm.reference;
 import java.lang.ref.WeakReference;
 
 /**
- * ÈõÒıÓÃÊ¾Àı
+ * å¼±å¼•ç”¨ç¤ºä¾‹
  * @Author
  */
 public class WeakReferenceTest {
 
     public static void main(String[] args){
-        PrintlnMemory.printlnMemory("1.Ô­¿ÉÓÃÄÚ´æºÍ×ÜÄÚ´æ");
+        PrintlnMemory.printlnMemory("1.åŸå¯ç”¨å†…å­˜å’Œæ€»å†…å­˜");
 
-        //´´½¨ÈõÒıÓÃ
+        //åˆ›å»ºå¼±å¼•ç”¨
         WeakReference<Object> weakRerference = new WeakReference<Object>(new byte[10*PrintlnMemory.M]);
-        PrintlnMemory.printlnMemory("2.ÊµÀı»¯10MµÄÊı×é,²¢½¨Á¢ÈõÒıÓÃ");
+        PrintlnMemory.printlnMemory("2.å®ä¾‹åŒ–10Mçš„æ•°ç»„,å¹¶å»ºç«‹å¼±å¼•ç”¨");
         System.out.println("weakRerference.get() : "+weakRerference.get());
 
         System.gc();
-        PrintlnMemory.printlnMemory("3.GCºó");
+        PrintlnMemory.printlnMemory("3.GCå");
         System.out.println("weakRerference.get() : "+weakRerference.get());
     }
 }

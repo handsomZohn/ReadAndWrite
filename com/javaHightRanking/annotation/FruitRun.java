@@ -1,11 +1,11 @@
 package com.javaHightRanking.annotation;
 
 /**
- * <p>Title:Êä³ö½á¹û</p>
+ * <p>Title:è¾“å‡ºç»“æžœ</p>
  * <p>Description:</p>
  * <p>Copyright: Copyright (c) 2018</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2018Äê3ÔÂ26ÈÕ</p>
+ * <p>CreateDate:2018å¹´3æœˆ26æ—¥</p>
  *
  * @author zohn
  * @version 1.0

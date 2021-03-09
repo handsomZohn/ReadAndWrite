@@ -10,7 +10,7 @@ public class JavaHeapSpace {
         int size = K * K * 8;
         List<byte[]> list = new ArrayList<>();
         for (int i = 0; i < K; i++) {
-            System.out.println("JVM Ð´ÈëÊý¾Ý" + (i + 1) + "M");
+            System.out.println("JVM å†™å…¥æ•°æ®" + (i + 1) + "M");
             try{
                 Thread.sleep(1000);
             } catch (InterruptedException e){

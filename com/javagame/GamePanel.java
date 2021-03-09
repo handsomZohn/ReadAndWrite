@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- *@Description ÓÎÏ·»­²¼ 
+ *@Description æ¸¸æˆç”»å¸ƒ 
  *@CreateDate 2020\6\24 0024 14:36
  *@Author z
  *@Version 1.0
  */
 public class GamePanel extends JPanel {
     /**
-     * ÆÁÄ»µÄ¿íºÍ¸ß
+     * å±å¹•çš„å®½å’Œé«˜
      */
     private int width, height;
 
@@ -20,36 +20,36 @@ public class GamePanel extends JPanel {
         this.height = height;
         this.setSize(width, height);
 
-        //ÉèÖÃµ±Ç°»­²¼¿ÉÒÔ»ñµÃ½¹µã¡£
+        //è®¾ç½®å½“å‰ç”»å¸ƒå¯ä»¥è·å¾—ç„¦ç‚¹ã€‚
         this.setFocusable(true);
     }
 
     /**
-     * ·½¿éµÄÎ»ÖÃ
+     * æ–¹å—çš„ä½ç½®
      */
     private int fk_x = 60;
     private int fk_y = 60;
 
 
     /**
-     * »­²¼µÄ»æÖÆ
+     * ç”»å¸ƒçš„ç»˜åˆ¶
      */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        //»­ÂÌÉ«±³¾°
+        //ç”»ç»¿è‰²èƒŒæ™¯
         g.setColor(new Color(0x9391d6));
         g.fillRect(0, 0, width, height);
 
-        //»æÖÆ·½¿é
+        //ç»˜åˆ¶æ–¹å—
         g.setColor(Color.red);
         g.fillRect(fk_x, fk_y, 80, 80);
     }
 
 
     /**
-     * ÓÎÏ·Âß¼­£¬´¦Àí·½¿éµÄÔË¶¯£¬Ã¿´Îºá×İ×ø±ê¶¼ÒÆ¶¯1¸öÏñËØ
+     * æ¸¸æˆé€»è¾‘ï¼Œå¤„ç†æ–¹å—çš„è¿åŠ¨ï¼Œæ¯æ¬¡æ¨ªçºµåæ ‡éƒ½ç§»åŠ¨1ä¸ªåƒç´ 
      */
     public void logic() {
         if (fk_x < 260) {

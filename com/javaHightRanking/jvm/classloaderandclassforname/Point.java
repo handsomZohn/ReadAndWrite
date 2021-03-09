@@ -9,6 +9,6 @@ package com.javaHightRanking.jvm.classloaderandclassforname;
  */
 public class Point {
     static {
-        System.out.println("¾²Ì¬´úÂë¿éÖ´ĞĞ: loading point");
+        System.out.println("é™æ€ä»£ç å—æ‰§è¡Œ: loading point");
     }
 }

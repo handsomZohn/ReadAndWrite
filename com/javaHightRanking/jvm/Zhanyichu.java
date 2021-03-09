@@ -1,7 +1,7 @@
 package com.javaHightRanking.jvm;
 
 /**
- *@Description  Õ»ÄÚ´æÒç³ö  ´íÎóµÄµÝ¹éµ÷ÓÃ
+ *@Description  æ ˆå†…å­˜æº¢å‡º  é”™è¯¯çš„é€’å½’è°ƒç”¨
  *@CreateDate   18/07/31 9:05
  *@Author        zohn
  *@Version       1.0

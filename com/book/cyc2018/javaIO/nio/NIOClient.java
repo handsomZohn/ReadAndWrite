@@ -17,56 +17,56 @@ import java.util.Iterator;
  *
  */
 public class NIOClient {
-    // Í¨µÀ¹ÜÀíÆ÷
+    // é€šé“ç®¡ç†å™¨
     private Selector selector;
 
     /**
-     * »ñµÃÒ»¸öSocketÍ¨µÀ£¬²¢¶Ô¸ÃÍ¨µÀ×öÒ»Ğ©³õÊ¼»¯¹¤×÷
-     * @param ip ÒªÁ¬½ÓµÄ·şÎñÆ÷µÄIPµØÖ·
-     * @param port ÒªÁ¬½ÓµÄ·şÎñÆ÷µÄ¶Ë¿Ú
+     * è·å¾—ä¸€ä¸ªSocketé€šé“ï¼Œå¹¶å¯¹è¯¥é€šé“åšä¸€äº›åˆå§‹åŒ–å·¥ä½œ
+     * @param ip è¦è¿æ¥çš„æœåŠ¡å™¨çš„IPåœ°å€
+     * @param port è¦è¿æ¥çš„æœåŠ¡å™¨çš„ç«¯å£
      * @throws IOException
      */
     public void initClient(String ip, int port) throws IOException {
-        // »ñµÃÒ»¸öSocketÍ¨µÀ
+        // è·å¾—ä¸€ä¸ªSocketé€šé“
         SocketChannel channel = SocketChannel.open();
-        // ÉèÖÃÍ¨µÀÎª·Ç×èÈû
+        // è®¾ç½®é€šé“ä¸ºéé˜»å¡
         channel.configureBlocking(false);
-        // »ñµÃÒ»¸öÍ¨µÀ¹ÜÀíÆ÷
+        // è·å¾—ä¸€ä¸ªé€šé“ç®¡ç†å™¨
         this.selector = Selector.open();
-        // ¿Í»§¶ËÁ¬½Ó·şÎñÆ÷£¬ÆäÊµ·½·¨Ö´ĞĞ²¢Ã»ÓĞ½øĞĞÁ¬½Ó£¬ĞèÒªÔÚlisten£¨£©·½·¨ÖĞµ÷ÓÃchannel.finishConnect();²ÅÄÜÍê³ÉÁ¬½Ó
+        // å®¢æˆ·ç«¯è¿æ¥æœåŠ¡å™¨ï¼Œå…¶å®æ–¹æ³•æ‰§è¡Œå¹¶æ²¡æœ‰è¿›è¡Œè¿æ¥ï¼Œéœ€è¦åœ¨listenï¼ˆï¼‰æ–¹æ³•ä¸­è°ƒç”¨channel.finishConnect();æ‰èƒ½å®Œæˆè¿æ¥
         channel.connect(new InetSocketAddress(ip, port));
-        // ½«Í¨µÀ¹ÜÀíÆ÷ºÍ¸ÃÍ¨µÀ°ó¶¨£¬²¢Îª¸ÄÍ¨µÀ×¢²áSeletionKey.OP_CONNECTÊÂ¼ş¡£
+        // å°†é€šé“ç®¡ç†å™¨å’Œè¯¥é€šé“ç»‘å®šï¼Œå¹¶ä¸ºæ”¹é€šé“æ³¨å†ŒSeletionKey.OP_CONNECTäº‹ä»¶ã€‚
         channel.register(selector, SelectionKey.OP_CONNECT);
     }
 
     /**
-     * ²ÉÓÃÂÖÑµµÄ·½Ê½¼àÌıselectorÉÏÊÇ·ñÓĞĞèÒª´¦ÀíµÄÊÂ¼ş£¬Èç¹ûÓĞ£¬Ôò½øĞĞ´¦Àí
+     * é‡‡ç”¨è½®è®­çš„æ–¹å¼ç›‘å¬selectorä¸Šæ˜¯å¦æœ‰éœ€è¦å¤„ç†çš„äº‹ä»¶ï¼Œå¦‚æœæœ‰ï¼Œåˆ™è¿›è¡Œå¤„ç†
      * @throws IOException
      */
     public void listen() throws IOException {
-        // ÂÖÑ¯selector
+        // è½®è¯¢selector
         while (true) {
             selector.select();
-            // »ñÈ¡selectorÖĞÑ¡ÖĞÏîµÄµü´úÆ÷
+            // è·å–selectorä¸­é€‰ä¸­é¡¹çš„è¿­ä»£å™¨
             Iterator<SelectionKey> keyIterator = this.selector.selectedKeys().iterator();
             while (keyIterator.hasNext()){
                 SelectionKey key = keyIterator.next();
-                // É¾³ıÑ¡ÖĞµÄkey·ÀÖ¹ÖØ¸´´¦Àí
+                // åˆ é™¤é€‰ä¸­çš„keyé˜²æ­¢é‡å¤å¤„ç†
                 keyIterator.remove();
-                // Á¬½ÓÊÂ¼ş·¢Éú
+                // è¿æ¥äº‹ä»¶å‘ç”Ÿ
                 if (key.isConnectable()){
                     SocketChannel channel = (SocketChannel) key.channel();
-                    // Èç¹ûÕıÔÚÁ¬½Ó ÔòÍê³ÉÁ¬½Ó
+                    // å¦‚æœæ­£åœ¨è¿æ¥ åˆ™å®Œæˆè¿æ¥
                     if (channel.isConnectionPending()){
                         channel.finishConnect();
                     }
-                    // ÉèÖÃ³É·Ç×èÈû
+                    // è®¾ç½®æˆéé˜»å¡
                     channel.configureBlocking(false);
 
-                    // ÔÚÕâÀï¸ø·şÎñ¶Ë·¢ËÍÏûÏ¢
-                    channel.write(ByteBuffer.wrap(new String("Ïò·şÎñÆ÷·¢ËÍÒ»ÌõÏûÏ¢").getBytes()));
+                    // åœ¨è¿™é‡Œç»™æœåŠ¡ç«¯å‘é€æ¶ˆæ¯
+                    channel.write(ByteBuffer.wrap(new String("å‘æœåŠ¡å™¨å‘é€ä¸€æ¡æ¶ˆæ¯").getBytes()));
 
-                    // ÔÚºÍ·şÎñÆ÷¶ËÁ¬½Ó³É¹¦Ö®ºó£¬ÎªÁË¿ÉÒÔ½ÓÊÕµ½·şÎñ¶ËµÄÏûÏ¢£¬ĞèÒª¸øÍ¨µÀÉèÖÃ¶ÁµÄÈ¨ÏŞ¡£
+                    // åœ¨å’ŒæœåŠ¡å™¨ç«¯è¿æ¥æˆåŠŸä¹‹åï¼Œä¸ºäº†å¯ä»¥æ¥æ”¶åˆ°æœåŠ¡ç«¯çš„æ¶ˆæ¯ï¼Œéœ€è¦ç»™é€šé“è®¾ç½®è¯»çš„æƒé™ã€‚
                     channel.register(this.selector, SelectionKey.OP_READ);
                 } else if (key.isReadable()) {
                     read(key);
@@ -76,25 +76,25 @@ public class NIOClient {
     }
 
     /**
-     * ´¦Àí·şÎñÆ÷¶Ë·¢À´µÄĞÅÏ¢ ÊÂ¼ş
+     * å¤„ç†æœåŠ¡å™¨ç«¯å‘æ¥çš„ä¿¡æ¯ äº‹ä»¶
      * @param key
      * @throws IOException
      */
     public void read (SelectionKey key) throws IOException {
-        // ¿Í»§¶Ë¿É¶ÁÈ¡ÏûÏ¢£ºµÃµ½ÊÂ¼ş·¢ÉúµÄSocketÍ¨µÀ
+        // å®¢æˆ·ç«¯å¯è¯»å–æ¶ˆæ¯ï¼šå¾—åˆ°äº‹ä»¶å‘ç”Ÿçš„Socketé€šé“
         SocketChannel channel = (SocketChannel) key.channel();
-        // ´´½¨¶ÁÈ¡µÄ»º³åÇø
+        // åˆ›å»ºè¯»å–çš„ç¼“å†²åŒº
         ByteBuffer buffer = ByteBuffer.allocate(10);
         channel.read(buffer);
         byte[] data = buffer.array();
         String msg = new String(data).trim();
-        System.out.println("·şÎñ¶ËÊÕµ½ĞÅÏ¢£º"+msg);
+        System.out.println("æœåŠ¡ç«¯æ”¶åˆ°ä¿¡æ¯ï¼š"+msg);
         ByteBuffer outBuffer = ByteBuffer.wrap(msg.getBytes());
-        channel.write(outBuffer);// ½«ÏûÏ¢»ØËÍ¸ø¿Í»§¶Ë
+        channel.write(outBuffer);// å°†æ¶ˆæ¯å›é€ç»™å®¢æˆ·ç«¯
     }
 
     /**
-     * Æô¶¯¿Í»§¶Ë²âÊÔ
+     * å¯åŠ¨å®¢æˆ·ç«¯æµ‹è¯•
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {

@@ -4,20 +4,20 @@ public class StringTest03 {
 
 	/*public static void main(String[] args) {
 		String tjny = "201712";
-		System.out.println(tjny.substring(4, 5).equals("0")?tjny.substring(5):tjny.substring(4) + "ÔÂ");
+		System.out.println(tjny.substring(4, 5).equals("0")?tjny.substring(5):tjny.substring(4) + "æœˆ");
 		System.out.println(tjny.substring(5));
 		System.out.println(tjny.substring(4));
 		
-		System.out.println(tjny.substring(0, 4)+"Äê" + (tjny.substring(4, 5).equals("0")?tjny.substring(5):tjny.substring(4) + "ÔÂ"));
+		System.out.println(tjny.substring(0, 4)+"å¹´" + (tjny.substring(4, 5).equals("0")?tjny.substring(5):tjny.substring(4) + "æœˆ"));
 	}*/
 	
 	public static void main(String[] args) {
 //		String finalreturn = "";
-//		String bhgyy = "Óë¡°Moumou¡±Õş²ßÏà³åÍ»£¡";
-//		int endindex = bhgyy.indexOf("Õş²ßÏà³åÍ»");
+//		String bhgyy = "ä¸â€œMoumouâ€æ”¿ç­–ç›¸å†²çªï¼";
+//		int endindex = bhgyy.indexOf("æ”¿ç­–ç›¸å†²çª");
 //		String zcmc = bhgyy.substring(1, endindex);
-//		String xsbhgyy = "ÕıÔÚÏíÊÜÆäËûÕş²ß£¬²»ÄÜÍ¬Ê±ÏíÊÜ±¾Õş²ß";
-//		int indexOf = xsbhgyy.indexOf("Õş");
+//		String xsbhgyy = "æ­£åœ¨äº«å—å…¶ä»–æ”¿ç­–ï¼Œä¸èƒ½åŒæ—¶äº«å—æœ¬æ”¿ç­–";
+//		int indexOf = xsbhgyy.indexOf("æ”¿");
 //		
 //		finalreturn = xsbhgyy.substring(0, 4) + zcmc + xsbhgyy.substring(6, xsbhgyy.length());
 //		System.out.println(finalreturn);

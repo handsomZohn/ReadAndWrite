@@ -3,8 +3,8 @@ package com.book.cyc2018.javabingfa.thread;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Description Ò»ÃëÖ®ÄÚÖÕÖ¹ ×¢ÒâĞ´·½·¨£¨requestStop£©ºÍ¶Á·½·¨£¨stopRequested£©¶¼±»Í¬²½ÁË¡£
- * Ö»Í¬²½Ğ´·½·¨»¹²»¹»£¡Êµ¼ÊÉÏ£¬Èç¹û¶ÁºÍĞ´·½·¨Ã»ÓĞ¶¼Í¬²½£¬Í¬²½¾Í²»»áÆğ×÷ÓÃ¡£
+ * @Description ä¸€ç§’ä¹‹å†…ç»ˆæ­¢ æ³¨æ„å†™æ–¹æ³•ï¼ˆrequestStopï¼‰å’Œè¯»æ–¹æ³•ï¼ˆstopRequestedï¼‰éƒ½è¢«åŒæ­¥äº†ã€‚
+ * åªåŒæ­¥å†™æ–¹æ³•è¿˜ä¸å¤Ÿï¼å®é™…ä¸Šï¼Œå¦‚æœè¯»å’Œå†™æ–¹æ³•æ²¡æœ‰éƒ½åŒæ­¥ï¼ŒåŒæ­¥å°±ä¸ä¼šèµ·ä½œç”¨ã€‚
  * @CreateDate 18/08/07 15:46
  * @Author zohn
  * @Version 1.0
@@ -28,8 +28,8 @@ public class FixStopThread {
                 System.out.println(i + "sml");
             }
         }).start();
-        TimeUnit.SECONDS.sleep(1);// 15Íò×óÓÒ»áÓĞ13ÍòÒ²»áÓĞ16Íò ĞÂÑ§ÁËÒ»ÕĞÈÃÏß³ÌË¯×ÅµÄ°ì·¨ Ğ§ÂÊ¸ü¸ßµã
-        // Thread.sleep(1000); // 15Íò
+        TimeUnit.SECONDS.sleep(1);// 15ä¸‡å·¦å³ä¼šæœ‰13ä¸‡ä¹Ÿä¼šæœ‰16ä¸‡ æ–°å­¦äº†ä¸€æ‹›è®©çº¿ç¨‹ç¡ç€çš„åŠæ³• æ•ˆç‡æ›´é«˜ç‚¹
+        // Thread.sleep(1000); // 15ä¸‡
         requestStop();
     }
 }

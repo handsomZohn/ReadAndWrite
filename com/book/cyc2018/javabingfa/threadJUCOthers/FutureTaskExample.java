@@ -5,12 +5,12 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
- * @Description: 用于异步获取执行结果或者取消执行任务的场景
+ * @Description: 鐢ㄤ簬寮傛鑾峰彇鎵ц缁撴灉鎴栬�呭彇娑堟墽琛屼换鍔＄殑鍦烘櫙
  * @Author: zohn
  * @CreateDate: 2018/7/28 12:14
  * @UpdateUser: zohn
  * @UpdateDate: 2018/7/28 12:14
- * @UpdateRemark: 修改内容
+ * @UpdateRemark: 淇敼鍐呭
  * @Version: 1.0
  */
 public class FutureTaskExample {

@@ -8,12 +8,12 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @Description ×Ô¼ºĞ´µÄDateHelper
+ * @Description è‡ªå·±å†™çš„DateHelper
  * @CreateDate 18/08/14 11:33
  * @Author zohn
  * @Version 1.0
  */
-public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
+public class DateHelper extends DateTools { // çƒ§èŒ„å­ç›–é¥­ å°–å«è…Šè‚‰ç›–é¥­
     private DateHelper() {
     }
 
@@ -40,7 +40,7 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
     }
 
     /**
-     * ¸ñÊ½»¯Ê±¼ä  ÄêÔÂÈÕ
+     * æ ¼å¼åŒ–æ—¶é—´  å¹´æœˆæ—¥
      */
     public static String formatYMD(String k_yxkssj) {
         StringBuffer sj = new StringBuffer();
@@ -54,23 +54,23 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
             day = k_yxkssj.substring(7, 8);
         }
         sj.append(year);
-        sj.append("Äê");
+        sj.append("å¹´");
         sj.append(moth);
-        sj.append("ÔÂ");
+        sj.append("æœˆ");
         sj.append(day);
-        sj.append("ÈÕ");
+        sj.append("æ—¥");
         return sj.toString();
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚyyyy-mm-dd Îª yyyymmdd
+     * æ ¼å¼åŒ–æ—¥æœŸyyyy-mm-dd ä¸º yyyymmdd
      */
     public static String fomat8Str(String str) {
         return str.replace("-", "");
     }
 
     /**
-     * »ñÈ¡µ±Ç°Ê±¼ä yyyy-mm-ddÓÃÓÚÒ³Ãæ»ØÏÔÊ¾·şÎñÆ÷Ê±¼ä
+     * è·å–å½“å‰æ—¶é—´ yyyy-mm-ddç”¨äºé¡µé¢å›æ˜¾ç¤ºæœåŠ¡å™¨æ—¶é—´
      */
     public static String getServiceDate() {
         Date d = new Date(System.currentTimeMillis());
@@ -79,19 +79,19 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
     }
 
     /**
-     * »ñÈ¡µ±Ç°Ê±¼äµÄÇ°nÌìÊ±¼ä yyyyMMdd
+     * è·å–å½“å‰æ—¶é—´çš„å‰nå¤©æ—¶é—´ yyyyMMdd
      */
     public static String getBeforDate(String dateStr, int diff) {
         return new DateTools().getBeforeTime(dateStr, FORMAT_STR_8, diff, FORMAT_STR_8);
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²
      *
-     * @param dateString ÈÕÆÚ×Ö·û´®
-     * @param source     Ô´¸ñÊ½
-     * @param target     Ä¿±ê¸ñÊ½
-     * @return ¸ñÊ½»¯ºóµÄ×Ö·û´®
+     * @param dateString æ—¥æœŸå­—ç¬¦ä¸²
+     * @param source     æºæ ¼å¼
+     * @param target     ç›®æ ‡æ ¼å¼
+     * @return æ ¼å¼åŒ–åçš„å­—ç¬¦ä¸²
      */
     public static String dateFmt(String dateString, String source, String target) {
         if (StringHelper.isEmpty(dateString)) {
@@ -102,27 +102,27 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
     }
 
     /**
-     * µÃµ½µ±Ç°µÄÊ±¼ä ¸ñÊ½ÎªyyyyMMddhhmmssSSS
+     * å¾—åˆ°å½“å‰çš„æ—¶é—´ æ ¼å¼ä¸ºyyyyMMddhhmmssSSS
      *
      * @return
      */
     public static String getNow() {
         DateTools mydt = new DateTools();
-        return mydt.getDate();// µ±Ç°Ê±¼ä
+        return mydt.getDate();// å½“å‰æ—¶é—´
     }
 
     /**
-     * µÃµ½µ±Ç°µÄÊ±¼ä ¸ñÊ½Îªformat
+     * å¾—åˆ°å½“å‰çš„æ—¶é—´ æ ¼å¼ä¸ºformat
      *
      * @return
      */
     public static String getNow(String format) {
         DateTools mydt = new DateTools();
-        return mydt.getDate(format);// µ±Ç°Ê±¼ä
+        return mydt.getDate(format);// å½“å‰æ—¶é—´
     }
 
     /**
-     * µÃµ½µ±Ç°µÄÊ±¼ä ¸ñÊ½ÎªyyyyMMdd
+     * å¾—åˆ°å½“å‰çš„æ—¶é—´ æ ¼å¼ä¸ºyyyyMMdd
      *
      * @return
      */
@@ -131,7 +131,7 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
     }
 
     /**
-     * »ñµÃµ±Ç°ÈÕÆÚÇ°Ò»¸öÔÂ£¬¸ñÊ½Îªyyyy-MM-dd
+     * è·å¾—å½“å‰æ—¥æœŸå‰ä¸€ä¸ªæœˆï¼Œæ ¼å¼ä¸ºyyyy-MM-dd
      */
     public static String dateFmt_qyr() {
         DateTools mydt = new DateTools();
@@ -139,7 +139,7 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
     }
 
     /**
-     * »ñµÃĞÇÆÚ¼¸
+     * è·å¾—æ˜ŸæœŸå‡ 
      *
      * @return
      */
@@ -149,7 +149,7 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
     }
 
     /**
-     * µÃµ½µ±Ç°µÄÊ±¼ä ¸ñÊ½Îªyyyy-MM-dd
+     * å¾—åˆ°å½“å‰çš„æ—¶é—´ æ ¼å¼ä¸ºyyyy-MM-dd
      *
      * @return
      */
@@ -158,73 +158,73 @@ public class DateHelper extends DateTools { // ÉÕÇÑ×Ó¸Ç·¹ ¼â½ĞÀ°Èâ¸Ç·¹
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  ÊäÈë
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å…¥
      */
     public static String dateFmt_ymdhms(String rq) {
         return dateFmt(rq, "yyyy-MM-dd", "yyyyMMddHHmmss");
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  ÊäÈë_²éÑ¯½áÊøÊ±¼ä
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å…¥_æŸ¥è¯¢ç»“æŸæ—¶é—´
      */
     public static String dateFmt_ymdhms_cx(String rq) {
         return dateFmt(rq, "yyyy-MM-dd", "yyyyMMdd") + "235959";
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  Êä³ö
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å‡º
      */
     public static String dateFmt_ymd(String rq) {
         return dateFmt(rq, "yyyyMMddHHmmss", "yyyy-MM-dd");
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  Êä³ö
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å‡º
      */
     public static String dateFmt_ymToymdhms(String rq) {
         return dateFmt(rq, "yyyy-MM", "yyyyMMddHHmmss");
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  Êä³ö
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å‡º
      */
     public static String dateFmt_ym(String rq) {
         return rq.substring(0, 4) + "-" + rq.substring(4, 6);
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  ÊäÈë
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å…¥
      */
     public static String dateFmt_ymdhms_begin(String rq) {
         return dateFmt(rq, "yyyy-MM-dd", "yyyyMMdd") + "000000";
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  ÊäÈë
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å…¥
      */
     public static String dateFmt_ymhms_begin(String rq) {
         return dateFmt(rq, "yyyy-MM", "yyyyMMdd") + "000000";
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  ÊäÈë
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å…¥
      */
     public static String dateFmt_ymdhms_end(String rq) {
         return dateFmt(rq, "yyyy-MM-dd", "yyyyMMdd") + "235959";
     }
 
     /**
-     * ¸ñÊ½»¯ÈÕÆÚ×Ö·û´®  ÊäÈë
+     * æ ¼å¼åŒ–æ—¥æœŸå­—ç¬¦ä¸²  è¾“å…¥
      */
     public static String dateFmt_ymhms_end(String rq) {
         return dateFmt(rq, "yyyy-MM", "yyyyMMdd") + "235959";
     }
 
     /**
-     * µÃµ½ ¼¸Ììºó(¼¸ÌìÇ°µÄÈÕÆÚ)µÄ ÈÕÆÚ
-     * ·½·¨ÃèÊö: ¼¸ÌìºónumÎªÕıÊı£¬¼¸ÌìÇ°numÎª¸ºÊı
-     * @²ÎÊıÀàĞÍ:@return
-     * @·µ»ØÖµ:String
+     * å¾—åˆ° å‡ å¤©å(å‡ å¤©å‰çš„æ—¥æœŸ)çš„ æ—¥æœŸ
+     * æ–¹æ³•æè¿°: å‡ å¤©ånumä¸ºæ­£æ•°ï¼Œå‡ å¤©å‰numä¸ºè´Ÿæ•°
+     * @å‚æ•°ç±»å‹:@return
+     * @è¿”å›å€¼:String
      */
     public static String getBeforeOrAfterDay(int num){
         Calendar c = Calendar.getInstance();

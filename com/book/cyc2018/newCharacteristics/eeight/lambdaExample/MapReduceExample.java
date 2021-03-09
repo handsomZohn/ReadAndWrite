@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *@Description  Java 8ÖĞÊ¹ÓÃlambda±í´ïÊ½µÄMapºÍReduceÊ¾Àı
+ *@Description  Java 8ä¸­ä½¿ç”¨lambdaè¡¨è¾¾å¼çš„Mapå’ŒReduceç¤ºä¾‹
  *@CreateDate   18/07/19 14:53
  *@Author        zohn
  *@Version       1.0
@@ -19,13 +19,13 @@ public class MapReduceExample {
     private static void jiaShui() {
         List<Integer> costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);
 
-        // ²»Ê¹ÓÃlambdaÎªÃ¿¸ö¶©µ¥¼ÓÉÏ12%µÄË°
+        // ä¸ä½¿ç”¨lambdaä¸ºæ¯ä¸ªè®¢å•åŠ ä¸Š12%çš„ç¨
         for (Integer cost : costBeforeTax) {
             double price = .12 * cost + cost;
             System.out.println(price);
         }
 
-        // Ê¹ÓÃlambdaÎªÃ¿¸ö¶©µ¥¼ÓÉÏ12%µÄË°
+        // ä½¿ç”¨lambdaä¸ºæ¯ä¸ªè®¢å•åŠ ä¸Š12%çš„ç¨
         costBeforeTax.stream().map((cost) -> cost + .12 * cost).forEach(System.out :: println);
 //        for (Integer cost: costBeforeTax) {
 //            if (cost > 400) {
@@ -40,25 +40,25 @@ public class MapReduceExample {
 //                cost + .12 * cost).forEach(System.out :: println)
 //            }
 //        }
-        // ±¾Àı½éÉÜ×î¹ãÎªÈËÖªµÄº¯ÊıÊ½±à³Ì¸ÅÄîmap¡£ËüÔÊĞíÄã½«¶ÔÏó½øĞĞ×ª»»¡£
-        // ÀıÈçÔÚ±¾ÀıÖĞ£¬ÎÒÃÇ½« costBeforeTax ÁĞ±íµÄÃ¿¸öÔªËØ×ª»»³ÉÎªË°ºóµÄÖµ¡£
-        // ÎÒÃÇ½« x -> x*x lambda±í´ïÊ½´«µ½ map() ·½·¨£¬ºóÕß½«ÆäÓ¦ÓÃµ½Á÷ÖĞµÄÃ¿Ò»¸öÔªËØ¡£
-        // È»ºóÓÃ forEach() ½«ÁĞ±íÔªËØ´òÓ¡³öÀ´¡£Ê¹ÓÃÁ÷APIµÄÊÕ¼¯Æ÷Àà£¬¿ÉÒÔµÃµ½ËùÓĞº¬Ë°µÄ¿ªÏú¡£
-        // ÓĞ toList() ÕâÑùµÄ·½·¨½« map »òÈÎºÎÆäËû²Ù×÷µÄ½á¹ûºÏ²¢ÆğÀ´¡£ÓÉÓÚÊÕ¼¯Æ÷ÔÚÁ÷ÉÏ×öÖÕ¶Ë²Ù×÷£¬Òò´ËÖ®ºó±ã²»ÄÜÖØÓÃÁ÷ÁË¡£
-        // ÄãÉõÖÁ¿ÉÒÔÓÃÁ÷APIµÄ reduce() ·½·¨½«ËùÓĞÊı×ÖºÏ³ÉÒ»¸ö£¬ÏÂÒ»¸öÀı×Ó½«»á½²µ½¡£
+        // æœ¬ä¾‹ä»‹ç»æœ€å¹¿ä¸ºäººçŸ¥çš„å‡½æ•°å¼ç¼–ç¨‹æ¦‚å¿µmapã€‚å®ƒå…è®¸ä½ å°†å¯¹è±¡è¿›è¡Œè½¬æ¢ã€‚
+        // ä¾‹å¦‚åœ¨æœ¬ä¾‹ä¸­ï¼Œæˆ‘ä»¬å°† costBeforeTax åˆ—è¡¨çš„æ¯ä¸ªå…ƒç´ è½¬æ¢æˆä¸ºç¨åçš„å€¼ã€‚
+        // æˆ‘ä»¬å°† x -> x*x lambdaè¡¨è¾¾å¼ä¼ åˆ° map() æ–¹æ³•ï¼Œåè€…å°†å…¶åº”ç”¨åˆ°æµä¸­çš„æ¯ä¸€ä¸ªå…ƒç´ ã€‚
+        // ç„¶åç”¨ forEach() å°†åˆ—è¡¨å…ƒç´ æ‰“å°å‡ºæ¥ã€‚ä½¿ç”¨æµAPIçš„æ”¶é›†å™¨ç±»ï¼Œå¯ä»¥å¾—åˆ°æ‰€æœ‰å«ç¨çš„å¼€é”€ã€‚
+        // æœ‰ toList() è¿™æ ·çš„æ–¹æ³•å°† map æˆ–ä»»ä½•å…¶ä»–æ“ä½œçš„ç»“æœåˆå¹¶èµ·æ¥ã€‚ç”±äºæ”¶é›†å™¨åœ¨æµä¸Šåšç»ˆç«¯æ“ä½œï¼Œå› æ­¤ä¹‹åä¾¿ä¸èƒ½é‡ç”¨æµäº†ã€‚
+        // ä½ ç”šè‡³å¯ä»¥ç”¨æµAPIçš„ reduce() æ–¹æ³•å°†æ‰€æœ‰æ•°å­—åˆæˆä¸€ä¸ªï¼Œä¸‹ä¸€ä¸ªä¾‹å­å°†ä¼šè®²åˆ°ã€‚
     }
 
     private static void jiaShuiQiuhe(){
         List<Integer> costBeforeTax = Arrays.asList(100, 200, 300, 400, 500);
         double total = 0;
-        // 1.8Ö®Ç°
+        // 1.8ä¹‹å‰
         for (Integer cost : costBeforeTax) {
             double price = .12 * cost + cost;
             total = total + price;
         }
         System.out.println("total:" + total);
 
-        // 1.8Ö®ºó
+        // 1.8ä¹‹å
         double bill = costBeforeTax.stream().map((cost) -> cost + .12 * cost).reduce((sum, cost) -> sum + cost).get();
 
         System.out.println("total:" + bill);

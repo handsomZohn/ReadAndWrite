@@ -14,10 +14,10 @@ import javax.swing.ImageIcon;
 /**
  * 
  * <p>Title:BufferedImageBuilder</p>
- * <p>Description:´¦Àí¶ÁÈ¡JPEGÎÄ¼şÊ±£¬Ìí¼ÓºìÉ«ÃÉ²ãµÄÎÊÌâ</p>
+ * <p>Description:å¤„ç†è¯»å–JPEGæ–‡ä»¶æ—¶ï¼Œæ·»åŠ çº¢è‰²è’™å±‚çš„é—®é¢˜</p>
  * <p>Copyright: Copyright (c) 2019</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2019Äê3ÔÂ28ÈÕ</p>
+ * <p>CreateDate:2019å¹´3æœˆ28æ—¥</p>
  * @author Administrator
  * @version 1.0
  */

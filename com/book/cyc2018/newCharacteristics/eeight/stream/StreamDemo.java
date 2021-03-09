@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 
 /**
  * https://blog.csdn.net/zxc123e/article/details/50533760
- * @Description ´´½¨ÁËÒ»¸ö½ĞmyListµÄArrayList£¬ÓÃÓÚ´æ´¢ÕûÊı¼¯ºÏ£¨×Ô¶¯×°ÏäÎªIntegerÒıÓÃÀàĞÍ£©¡£È»ºó£¬»ñµÃÒ»¸öÊ¹ÓÃmyList×÷ÎªÔ´µÄÁ÷¡£
- * ×îºó£¬ÑİÊ¾ÁË¸÷ÖÖÁ÷²Ù×÷¡£
+ * @Description åˆ›å»ºäº†ä¸€ä¸ªå«myListçš„ArrayListï¼Œç”¨äºå­˜å‚¨æ•´æ•°é›†åˆï¼ˆè‡ªåŠ¨è£…ç®±ä¸ºIntegerå¼•ç”¨ç±»å‹ï¼‰ã€‚ç„¶åï¼Œè·å¾—ä¸€ä¸ªä½¿ç”¨myListä½œä¸ºæºçš„æµã€‚
+ * æœ€åï¼Œæ¼”ç¤ºäº†å„ç§æµæ“ä½œã€‚
  * @CreateDate 18/09/17 11:39
  * @Author zohn
  * @Version 1.0
@@ -23,10 +23,10 @@ public class StreamDemo {
         myList.add(24);
         myList.add(5);
 
-        // ×î´ó×îĞ¡Öµ£»
-        Stream<Integer> integerStream = myList.stream(); // »ñÈ¡Á÷
+        // æœ€å¤§æœ€å°å€¼ï¼›
+        Stream<Integer> integerStream = myList.stream(); // è·å–æµ
 
-        Optional<Integer> min = integerStream.min(Integer::compareTo);// listÖĞ×îĞ¡
+        Optional<Integer> min = integerStream.min(Integer::compareTo);// listä¸­æœ€å°
 
         if (min.isPresent()){
             System.out.println("Min value:" + min.get());
@@ -34,7 +34,7 @@ public class StreamDemo {
 
         // Exception in thread "main" java.lang.IllegalStateException: stream has already been operated upon or closed
         //	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:229)
-        // ±ØĞë»ñµÃÒ»¸öĞÂµÄÁ÷£¬ÒòÎªµ÷ÓÃMIN£¨£©ÊÇËùÏûºÄµÄÁ÷µÄÖÕ¶ËµÄ²Ù×÷¡£
+        // å¿…é¡»è·å¾—ä¸€ä¸ªæ–°çš„æµï¼Œå› ä¸ºè°ƒç”¨MINï¼ˆï¼‰æ˜¯æ‰€æ¶ˆè€—çš„æµçš„ç»ˆç«¯çš„æ“ä½œã€‚
         integerStream = myList.stream();
         Optional<Integer> max = integerStream.max(Integer::compare);
 
@@ -43,21 +43,21 @@ public class StreamDemo {
         }
 
 
-        // ÅÅĞò
+        // æ’åº
 
         Stream<Integer> sorted = myList.stream().sorted();
 
-        // Ê¹ÓÃforEach£¨£©ÏÔÊ¾ÒÑÅÅĞòµÄÁ÷¡£
+        // ä½¿ç”¨forEachï¼ˆï¼‰æ˜¾ç¤ºå·²æ’åºçš„æµã€‚
         System.out.println("sorted stream: ");
         System.out.println();
 
-        // Ö»ÏÔÊ¾ÆæÊı
+        // åªæ˜¾ç¤ºå¥‡æ•°
         Stream<Integer> odd = myList.stream().sorted().filter((n) -> (n % 2 == 1));
         System.out.println("odd values:");
         // odd.forEach((n) -> System.out.println(n + ""));
         odd.forEach(System.out :: println);
 
-        // Ö»ÏÔÊ¾´óÓÚ5µÄÆæÊı
+        // åªæ˜¾ç¤ºå¤§äº5çš„å¥‡æ•°
         Stream<Integer> oddBigerThan5 = myList.stream().sorted().filter((n) -> (n % 2 == 1)).filter((n) -> (n > 5));
         System.out.println("odd values that bigger than 5 :");
         oddBigerThan5.forEach(System.out :: println);

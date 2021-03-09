@@ -21,7 +21,7 @@ public class LockExample {
                 System.out.print(i + " ");
             }
         } finally {
-            lock.unlock();// ȷ���ͷ��� ��������
+            lock.unlock();// 确保释放锁 避免死锁
         }
     }
 
@@ -31,9 +31,9 @@ public class LockExample {
         executorService.execute(()->lockExample.func());
         executorService.execute(()->lockExample.func());
     }
-    // ReentrantLock��java.util.concurrent(J.U.C)���е����������synchronized���˼����߼�����
-    // 1.�ȴ����ж� ���������̳߳��ڲ��ͷ�����ʱ�� ���ڵȴ����߳̿���ѡ������ȴ� ȥ������������
-    // 2.ʵ�ֹ�ƽ�� ��ƽ���Ƕ���߳��ڵȴ�ͬһ������ʱ�� ���밴�������˳�������λ���� synchronized�е����Ƿǹ�ƽ�� ReentrantLock
-    // �е���Ĭ��Ҳ�Ƿǹ�ƽ�� ���ǿ���ͨ�����в���ֵ�ù��캯��Ҫ��ʹ�ù�ƽ��
-    // 3.���󶨶������
+    // ReentrantLock是java.util.concurrent(J.U.C)包中的锁，相比于synchronized多了几个高级特性
+    // 1.等待可中断 持有锁的线程长期不释放锁的时候 正在等待的线程可以选择放弃等待 去处理其他事情
+    // 2.实现公平锁 公平锁是多个线程在等待同一个锁的时候 必须按照申请的顺序来依次获得锁 synchronized中的锁是非公平的 ReentrantLock
+    // 中的锁默认也是非公平的 但是可以通过带有布尔值得构造函数要求使用公平锁
+    // 3.锁绑定多个条件
 }

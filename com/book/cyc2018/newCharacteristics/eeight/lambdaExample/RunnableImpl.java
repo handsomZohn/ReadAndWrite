@@ -1,7 +1,7 @@
 package com.book.cyc2018.newCharacteristics.eeight.lambdaExample;
 
 /**
- *@Description  ÓÃlambda±í´ïÊ½ÊµÏÖRunnable
+ *@Description  ç”¨lambdaè¡¨è¾¾å¼å®žçŽ°Runnable
  *@CreateDate   18/07/19 10:25
  *@Author        zohn
  *@Version       1.0
@@ -18,14 +18,14 @@ public class RunnableImpl {
 
         new Thread(() -> System.out.println("After Java8 is so cool")).start();
     }
-    // Àý×ÓÏòÎÒÃÇÕ¹Ê¾ÁËJava 8 lambda±í´ïÊ½µÄÓï·¨¡£Äã¿ÉÒÔÊ¹ÓÃlambdaÐ´³öÈçÏÂ´úÂë£º
+    // ä¾‹å­å‘æˆ‘ä»¬å±•ç¤ºäº†Java 8 lambdaè¡¨è¾¾å¼çš„è¯­æ³•ã€‚ä½ å¯ä»¥ä½¿ç”¨lambdaå†™å‡ºå¦‚ä¸‹ä»£ç ï¼š
     // (params) -> Expression
     // (params) -> statement
     // (params) -> {statements}
-    // ÀýÈç£¬Èç¹ûÄãµÄ·½·¨²»¶Ô²ÎÊý½øÐÐÐÞ¸Ä¡¢ÖØÐ´£¬Ö»ÊÇÔÚ¿ØÖÆÌ¨´òÓ¡µã¶«Î÷µÄ»°£¬ÄÇÃ´¿ÉÒÔÕâÑùÐ´£º
+    // ä¾‹å¦‚ï¼Œå¦‚æžœä½ çš„æ–¹æ³•ä¸å¯¹å‚æ•°è¿›è¡Œä¿®æ”¹ã€é‡å†™ï¼Œåªæ˜¯åœ¨æŽ§åˆ¶å°æ‰“å°ç‚¹ä¸œè¥¿çš„è¯ï¼Œé‚£ä¹ˆå¯ä»¥è¿™æ ·å†™ï¼š
     // () -> System.out.println("After Java8 is so cool")
-    // Èç¹ûÄãµÄ·½·¨½ÓÊÕÁ½¸ö²ÎÊý£¬ÄÇÃ´¿ÉÒÔÐ´³ÉÈçÏÂÕâÑù£º
+    // å¦‚æžœä½ çš„æ–¹æ³•æŽ¥æ”¶ä¸¤ä¸ªå‚æ•°ï¼Œé‚£ä¹ˆå¯ä»¥å†™æˆå¦‚ä¸‹è¿™æ ·ï¼š
     // (int even, int odd) -> even + odd;
-    // Í¨³£¶¼»á°Ñlambda±í´ïÊ½ÄÚ²¿±äÁ¿µÄÃû×ÖÆðµÃ¶ÌÒ»Ð©¡£ÕâÑùÄÜÊ¹´úÂë¸ü¼ò¶Ì£¬·ÅÔÚÍ¬Ò»ÐÐ¡£ËùÒÔ£¬ÔÚÉÏÊö´úÂëÖÐ£¬±äÁ¿ÃûÑ¡ÓÃa¡¢b»òÕßx¡¢y»á±È
-    // even¡¢oddÒªºÃ
+    // é€šå¸¸éƒ½ä¼šæŠŠlambdaè¡¨è¾¾å¼å†…éƒ¨å˜é‡çš„åå­—èµ·å¾—çŸ­ä¸€äº›ã€‚è¿™æ ·èƒ½ä½¿ä»£ç æ›´ç®€çŸ­ï¼Œæ”¾åœ¨åŒä¸€è¡Œã€‚æ‰€ä»¥ï¼Œåœ¨ä¸Šè¿°ä»£ç ä¸­ï¼Œå˜é‡åé€‰ç”¨aã€bæˆ–è€…xã€yä¼šæ¯”
+    // evenã€oddè¦å¥½
 }

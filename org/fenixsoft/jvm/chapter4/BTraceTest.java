@@ -40,10 +40,10 @@ public class TracingScript {
     )
 
     public static void func(@Self org.fenixsoft.jvm.chapter4.BTraceTest instance,int a,int b,@Return int result) {
-        println("调用堆栈:");
+        println("璋冪敤鍫嗘爤:");
         jstack();
-        println(strcat("方法参数A:",str(a)));
-        println(strcat("方法参数B:",str(b)));
-        println(strcat("方法结果:",str(result)));
+        println(strcat("鏂规硶鍙傛暟A:",str(a)));
+        println(strcat("鏂规硶鍙傛暟B:",str(b)));
+        println(strcat("鏂规硶缁撴灉:",str(result)));
     }
 }*/

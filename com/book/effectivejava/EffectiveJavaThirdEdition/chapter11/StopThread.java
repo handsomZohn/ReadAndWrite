@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @Description  Í¬²½Ğ´µÄÊ±ºò Ò²ÒªÍ¬²½¶ÁÈ¡¡£
+ * @Description  åŒæ­¥å†™çš„æ—¶å€™ ä¹Ÿè¦åŒæ­¥è¯»å–ã€‚
  * @Author zohn
  * @Date 2019/12/22 19:15
  * @Param
@@ -27,10 +27,10 @@ public class StopThread {
     public static void main(String[] args) throws InterruptedException {
         Thread backgroundThread = new Thread(() -> {
             int i = 0;
-            // Í¬²½µÄ¡¤¶Á
+            // åŒæ­¥çš„Â·è¯»
             while (!stopRequested()) {
                 i++;
-                System.out.println("======^_^======±äÁ¿iÖµÎª: " + i + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: StopThread.main()");
+                System.out.println("======^_^======å˜é‡iå€¼ä¸º: " + i + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: StopThread.main()");
             }
         });
 
@@ -40,20 +40,20 @@ public class StopThread {
 
         // stopRequested = true;
         // ============================
-        // Í¬²½Ğ´
+        // åŒæ­¥å†™
         requestStop();
         // ============================
     }
 
-    // Éú²úĞòÁĞºÅ i++ ²Ù×÷²»ÊÇÔ­×ÓµÄ¡£»ñÈ¡×ÔÔö³¤µÄĞòºÅ
+    // ç”Ÿäº§åºåˆ—å· i++ æ“ä½œä¸æ˜¯åŸå­çš„ã€‚è·å–è‡ªå¢é•¿çš„åºå·
     private static  final AtomicLong nextSerialNumber = new AtomicLong();
 
     public static long generateSerialNumber(){
         return nextSerialNumber.getAndIncrement();
     }
 
-    // °²È«·¢²¼¶ÔÏóÒıÓÃµÄ·½·¨£º
-    // »»Ò»ÖÖÌáÎÊ·½·¨£¬¾ÍÊÇÔõÃ´±£Ö¤Êı¾İµÄ°²È«ĞÔ£¿
-     // ¾²Ì¬Óò¡¢volatileÓò¡¢finalÓò¡¢Õı³£Ëø¶¨·ÃÎÊµÄÓò¡¢·ÅÈë²¢·¢¼¯ºÏÖĞ
+    // å®‰å…¨å‘å¸ƒå¯¹è±¡å¼•ç”¨çš„æ–¹æ³•ï¼š
+    // æ¢ä¸€ç§æé—®æ–¹æ³•ï¼Œå°±æ˜¯æ€ä¹ˆä¿è¯æ•°æ®çš„å®‰å…¨æ€§ï¼Ÿ
+     // é™æ€åŸŸã€volatileåŸŸã€finalåŸŸã€æ­£å¸¸é”å®šè®¿é—®çš„åŸŸã€æ”¾å…¥å¹¶å‘é›†åˆä¸­
 
 }

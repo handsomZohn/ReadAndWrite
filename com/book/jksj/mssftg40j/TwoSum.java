@@ -4,14 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description ÇóÊı×éÖĞÁ½ÊıÖ®ºÍ ¸ÃÊı×éÖĞÕÒ³ö ºÍÎªÄ¿±êÖµ µÄÄÇ Á½¸ö ÕûÊı£¬²¢·µ»ØËüÃÇµÄÊı×éÏÂ±ê
+ * @Description æ±‚æ•°ç»„ä¸­ä¸¤æ•°ä¹‹å’Œ è¯¥æ•°ç»„ä¸­æ‰¾å‡º å’Œä¸ºç›®æ ‡å€¼ çš„é‚£ ä¸¤ä¸ª æ•´æ•°ï¼Œå¹¶è¿”å›å®ƒä»¬çš„æ•°ç»„ä¸‹æ ‡
  * @CreateDate 2021\1\27 0027 14:06
  * @Author z
  * @Version 1.0
  */
 public class TwoSum {
     /**
-     * @Description ±©Á¦ÆÆ½â
+     * @Description æš´åŠ›ç ´è§£
      * @Author z
      * @Date 2021\1\27 0027 15:25
      * @Param [nums, target]
@@ -29,7 +29,7 @@ public class TwoSum {
     }
 
     /**
-     * @Description hashmapÊµÏÖ
+     * @Description hashmapå®ç°
      * @Author z
      * @Date 2021\1\27 0027 15:31
      * @Param [nums, target]

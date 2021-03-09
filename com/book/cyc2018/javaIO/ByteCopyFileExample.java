@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * @Description Ê¹ÓÃ×Ö½ÚÁ÷½øĞĞÎÄ¼ş¸´ÖÆ
+ * @Description ä½¿ç”¨å­—èŠ‚æµè¿›è¡Œæ–‡ä»¶å¤åˆ¶
  * @CreateDate 18/07/18 14:15
  * @Author zohn
  * @Version 1.0
@@ -14,26 +14,26 @@ import java.io.IOException;
 public class ByteCopyFileExample {
     public static void main(String[] args) throws IOException {
         String src = "d:\\licence.txt", dist = "e:\\licence.txt";
-        System.out.println("¸´ÖÆÎÄ¼ş¿ªÊ¼£º" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶å¼€å§‹ï¼š" + System.currentTimeMillis());
         copyFile(src,dist);
-        System.out.println("¸´ÖÆÎÄ¼ş½áÊø£º" + System.currentTimeMillis());
-        System.out.println("¸´ÖÆÎÄ¼ş¿ªÊ¼£º" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶ç»“æŸï¼š" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶å¼€å§‹ï¼š" + System.currentTimeMillis());
         copyFile();
-        System.out.println("¸´ÖÆÎÄ¼ş½áÊø£º" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶ç»“æŸï¼š" + System.currentTimeMillis());
     }
 
     /**
      *
-     * @param src Ô­ÎÄ¼şÂ·¾¶
-     * @param dist Ä¿±êÎÄ¼şÂ·¾¶
+     * @param src åŸæ–‡ä»¶è·¯å¾„
+     * @param dist ç›®æ ‡æ–‡ä»¶è·¯å¾„
      * @throws IOException
      */
     static void copyFile(String src, String dist) throws IOException {
         FileInputStream fis = new FileInputStream(src);
         FileOutputStream fos = new FileOutputStream(dist);
         byte[] buffer = new byte[20 * 1024];
-        // read()×î¶à¶ÁÈ¡buffer.length¸ö×Ö½Ú£¬·µ»ØÊµ¼Ê¶ÁÈ¡µÄ¸öÊı
-        // ·µ»Ø-1±íÊ¾¶Áµ½eof£¬¼´ÎÄ¼şÎ²
+        // read()æœ€å¤šè¯»å–buffer.lengthä¸ªå­—èŠ‚ï¼Œè¿”å›å®é™…è¯»å–çš„ä¸ªæ•°
+        // è¿”å›-1è¡¨ç¤ºè¯»åˆ°eofï¼Œå³æ–‡ä»¶å°¾
         while (fis.read(buffer, 0, buffer.length) != -1){
             fos.write(buffer);
         }
@@ -41,12 +41,12 @@ public class ByteCopyFileExample {
         fis.close();
     }
 
-    // Java I/OÊ¹ÓÃ×°ÊÎÕßÄ£Ê½À´ÊµÏÖ¡£
-    // ÒÔInputStreamÎªÀı£¬InputStreamÊÇ³éÏó×é¼ş FileInputStreamÊÇInputStreamµÄ×ÓÀà£¬ÊÇ¾ßÌå×é¼ş£¬Ìá¹©×Ö½ÚÁ÷µÄÊäÈë²Ù×÷
-    // ÊµÀı»¯Ò»¸ö¾ßÓĞ»º´æ¹¦ÄÜµÄ×Ö½ÚÁ÷¶ÔÏóÊ±£¬Ö»ĞèÔÚFileInputStream¶ÔÏóÉÏÔÙÌ×Ò»²ãBufferedInputStream¶ÔÏó¼´¿É¡£
+    // Java I/Oä½¿ç”¨è£…é¥°è€…æ¨¡å¼æ¥å®ç°ã€‚
+    // ä»¥InputStreamä¸ºä¾‹ï¼ŒInputStreamæ˜¯æŠ½è±¡ç»„ä»¶ FileInputStreamæ˜¯InputStreamçš„å­ç±»ï¼Œæ˜¯å…·ä½“ç»„ä»¶ï¼Œæä¾›å­—èŠ‚æµçš„è¾“å…¥æ“ä½œ
+    // å®ä¾‹åŒ–ä¸€ä¸ªå…·æœ‰ç¼“å­˜åŠŸèƒ½çš„å­—èŠ‚æµå¯¹è±¡æ—¶ï¼Œåªéœ€åœ¨FileInputStreamå¯¹è±¡ä¸Šå†å¥—ä¸€å±‚BufferedInputStreamå¯¹è±¡å³å¯ã€‚
     static void copyFile() throws IOException{
         FileInputStream fis = new FileInputStream("d:\\licence.txt");
-        // ¾ßÓĞ»º´æ¹¦ÄÜµÄ×Ö½ÚÁ÷¶ÔÏó
+        // å…·æœ‰ç¼“å­˜åŠŸèƒ½çš„å­—èŠ‚æµå¯¹è±¡
         BufferedInputStream bis = new BufferedInputStream(fis);
         FileOutputStream fos = new FileOutputStream("e:\\licence.txt");
         byte[] buffer = new byte[1024];

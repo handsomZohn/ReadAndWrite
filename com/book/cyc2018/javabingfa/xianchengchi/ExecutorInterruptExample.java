@@ -6,8 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * @Description µ÷ÓÃExecutorµÄshutdown£¨£©·½·¨»áµÈ´ıËùÓĞÏß³ÌÈ«²¿Ö´ĞĞÍê±ÏÔÙ¹Ø±Õ£¬µ«ÊÇÈç¹ûµ÷ÓÃshutdownNow£¨£©Ïàµ±ÓÚµ÷ÓÃÃ¿¸öÏß³ÌµÄ
- * interrupt()·½·¨
+ * @Description è°ƒç”¨Executorçš„shutdownï¼ˆï¼‰æ–¹æ³•ä¼šç­‰å¾…æ‰€æœ‰çº¿ç¨‹å…¨éƒ¨æ‰§è¡Œå®Œæ¯•å†å…³é—­ï¼Œä½†æ˜¯å¦‚æœè°ƒç”¨shutdownNowï¼ˆï¼‰ç›¸å½“äºè°ƒç”¨æ¯ä¸ªçº¿ç¨‹çš„
+ * interrupt()æ–¹æ³•
  * @CreateDate 18/07/23 17:34
  * @Author zohn
  * @Version 1.0
@@ -26,7 +26,7 @@ public class ExecutorInterruptExample {
         // executorService.shutdownNow();
         System.out.println("Main Run");
 
-        // ÖĞ¶ÏÒ»¸öÏß³Ì
+        // ä¸­æ–­ä¸€ä¸ªçº¿ç¨‹
         Future<?> future = executorService.submit(() -> {
 
         });

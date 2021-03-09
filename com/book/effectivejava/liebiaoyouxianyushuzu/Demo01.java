@@ -17,7 +17,7 @@ public class Demo01 {
             System.out.println(name);
         } catch (NullPointerException e) {
             //e.printStackTrace();
-            System.out.println("其他错误信息");
+            System.out.println("鍏朵粬閿欒淇℃伅");
         }
 
     }

@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @Description 线程协作-waitNotify
+ * @Description 绾跨▼鍗忎綔-waitNotify
  * @CreateDate 18/07/26 11:55
  * @Author zohn
  * @Version 1.0

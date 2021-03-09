@@ -6,25 +6,25 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @Description Í¨¹ı¹ıÂË´´½¨Ò»¸öStringÁĞ±í
+ * @Description é€šè¿‡è¿‡æ»¤åˆ›å»ºä¸€ä¸ªStringåˆ—è¡¨
  * @CreateDate 18/07/19 17:10
  * @Author zohn
  * @Version 1.0
  */
 public class StringListFilter {
     public static void main(String[] args) {
-        strFilter();// ¹ıÂË
-        filter02();// ÇóºÍ
-        filter03();// ¶ÔÏóÊôĞÔÇóºÍ
+        strFilter();// è¿‡æ»¤
+        filter02();// æ±‚å’Œ
+        filter03();// å¯¹è±¡å±æ€§æ±‚å’Œ
     }
 
     private static void strFilter() {
-        // ´´½¨¹ıÂËÆ÷¹ıÂË
+        // åˆ›å»ºè¿‡æ»¤å™¨è¿‡æ»¤
         List<String> strList = Arrays.asList("abc", "", "bcd", "defg", "jk", "kl");
         List<String> filtered = strList.stream().filter(x -> x.length() > 2).collect(Collectors.toList());
         System.out.printf("Original List : %s, filtered list : %s %n", strList, filtered);
-        // ¹ØÓÚ filter() ·½·¨ÓĞ¸ö³£¼ûÎó½â¡£ÔÚÏÖÊµÉú»îÖĞ£¬×ö¹ıÂËµÄÊ±ºò£¬Í¨³£»á¶ªÆú²¿·Ö£¬µ«Ê¹ÓÃfilter()·½·¨ÔòÊÇ»ñµÃÒ»¸öĞÂµÄÁĞ±í£¬
-        // ÇÒÆäÃ¿¸öÔªËØ·ûºÏ¹ıÂËÔ­Ôò
+        // å…³äº filter() æ–¹æ³•æœ‰ä¸ªå¸¸è§è¯¯è§£ã€‚åœ¨ç°å®ç”Ÿæ´»ä¸­ï¼Œåšè¿‡æ»¤çš„æ—¶å€™ï¼Œé€šå¸¸ä¼šä¸¢å¼ƒéƒ¨åˆ†ï¼Œä½†ä½¿ç”¨filter()æ–¹æ³•åˆ™æ˜¯è·å¾—ä¸€ä¸ªæ–°çš„åˆ—è¡¨ï¼Œ
+        // ä¸”å…¶æ¯ä¸ªå…ƒç´ ç¬¦åˆè¿‡æ»¤åŸåˆ™
     }
 
 
@@ -33,18 +33,18 @@ public class StringListFilter {
 
         list.add(5);
         int size = list.size();
-        System.out.println("======^_^======±äÁ¿sizeÖµÎª: " + size + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: StringListFilter.filter02()");
+        System.out.println("======^_^======å˜é‡sizeå€¼ä¸º: " + size + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: StringListFilter.filter02()");
 
         //Integer integer = list.stream().filter(q -> q == 3).reduce(Integer::sum).get();
         // Integer integer = list.stream().filter(q -> q == 3).reduce(Integer::sum).get();
 
         Integer integer1 = list.stream().filter(q -> q == 5).reduce(0, Integer::sum);
-        System.out.println("======^_^======±äÁ¿integer1ÖµÎª: " + integer1 + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: StringListFilter.filter02()");
+        System.out.println("======^_^======å˜é‡integer1å€¼ä¸º: " + integer1 + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: StringListFilter.filter02()");
         // list.stream().filter(s -> s == 5).map(Integer :: intValue).reduce(Integer :: sum).get();
     }
 
     /**
-     * @Description ¼ÆËã¼¸¸ö°à¼¶µÄ×ÜÈËÊı
+     * @Description è®¡ç®—å‡ ä¸ªç­çº§çš„æ€»äººæ•°
      * @CreateDate 18/11/22 9:31
      * @Author zohn
      * @Version 1.0
@@ -52,7 +52,7 @@ public class StringListFilter {
     public static void filter03() {
         List<ClassRoom> classRoomList = new ArrayList<>();
         for (int i = 0; i < 5; i++){
-            classRoomList.add(new ClassRoom("ÎåÄê¼¶(" + i +")°à", (i + 30) + ""));
+            classRoomList.add(new ClassRoom("äº”å¹´çº§(" + i +")ç­", (i + 30) + ""));
         }
 
         classRoomList.forEach(System.out :: print);
@@ -62,14 +62,14 @@ public class StringListFilter {
 }
 
 /**
- * @Description ½ÌÊÒ
+ * @Description æ•™å®¤
  * @CreateDate 18/11/22 9:29
  * @Author zohn
  * @Version 1.0
  */
 class ClassRoom {
-    private String bjmc;// °à¼¶Ãû³Æ
-    private String bjrs;// °à¼¶ÈËÊı
+    private String bjmc;// ç­çº§åç§°
+    private String bjrs;// ç­çº§äººæ•°
 
     public ClassRoom(String bjmc, String bjrs) {
         this.bjmc = bjmc;

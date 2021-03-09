@@ -1,7 +1,7 @@
 package com.book.cyc2018.clone;
 
 /**
- *@Description Éî¶Ècopy ¿½±´¶ÔÏóºÍÔ­Ê¼¶ÔÏóµÄÒıÓÃÀàĞÍÒıÓÃ²»Í¬µÄ¶ÔÏó
+ *@Description æ·±åº¦copy æ‹·è´å¯¹è±¡å’ŒåŸå§‹å¯¹è±¡çš„å¼•ç”¨ç±»å‹å¼•ç”¨ä¸åŒçš„å¯¹è±¡
  *@CreateDate 2021\1\25 0025 14:52
  *@Author z
  *@Version 1.0

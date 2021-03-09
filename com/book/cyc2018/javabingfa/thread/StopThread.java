@@ -3,7 +3,7 @@ package com.book.cyc2018.javabingfa.thread;
 import java.util.concurrent.TimeUnit;
 
 /**
- *@Description  Thread.stop. ÓÉÓÚÃ»ÓĞÍ¬²½£¬¾Í²»ÄÜ±£Ö¤ºóÌ¨Ïß³ÌºÎÊ±¡®¿´µ½¡¯Ö÷Ïß³Ì¶ÔstopRequestedµÄÖµËù×öµÄ¸Ä±ä
+ *@Description  Thread.stop. ç”±äºæ²¡æœ‰åŒæ­¥ï¼Œå°±ä¸èƒ½ä¿è¯åå°çº¿ç¨‹ä½•æ—¶â€˜çœ‹åˆ°â€™ä¸»çº¿ç¨‹å¯¹stopRequestedçš„å€¼æ‰€åšçš„æ”¹å˜
  *@CreateDate   18/08/07 15:30
  *@Author        zohn
  *@Version       1.0
@@ -14,28 +14,28 @@ public class StopThread {
     public static void main(String[] args) {
         new Thread(() ->{
             int i = 0;
-            while (!stopRequest) {// ĞÂÆô¶¯Ïß³Ì¿´²»µ½Ö÷Ïß³Ì¶ÔstopRequestÓò×öµÄĞŞ¸Ä ËùÒÔ¾Í»áÒ»Ö±ÔËĞĞ£»
+            while (!stopRequest) {// æ–°å¯åŠ¨çº¿ç¨‹çœ‹ä¸åˆ°ä¸»çº¿ç¨‹å¯¹stopRequeståŸŸåšçš„ä¿®æ”¹ æ‰€ä»¥å°±ä¼šä¸€ç›´è¿è¡Œï¼›
                 i++;
             }
         }).start();
 
         try {
             TimeUnit.SECONDS.sleep(1);
-            stopRequest = true;// Ö÷Ïß³Ì×öĞŞ¸Ä
+            stopRequest = true;// ä¸»çº¿ç¨‹åšä¿®æ”¹
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
     }
 
-    // Ã»ÓĞÍ¬²½ ĞéÄâ»ú½«Õâ¸ö´úÂë£º
+    // æ²¡æœ‰åŒæ­¥ è™šæ‹Ÿæœºå°†è¿™ä¸ªä»£ç ï¼š
     // while (!done)
     //     i++;
-    // ×ª»»Îª
+    // è½¬æ¢ä¸º
     // if ()
     //     while(true)
     //         i++
-    // ÕâÖÖÓÅ»¯½Ğ×öÌáÉı£¨hoisting£©ÕıÊÇHopSpot Server VMµÄ¹¤×÷¡£½á¹ûÊÇ¸ö»îĞÔÊ§°Ü£¨liveness failure£©£º
-    // Õâ¸ö³ÌĞòÎŞ·¨Ç°½ø
-    // ĞŞÕıÕâ¸öÎÊÌâµÄÒ»ÖÖ½â¾ö·½Ê½ÊÇÍ¬²½·ÃÎÊstopRequestedÓò
+    // è¿™ç§ä¼˜åŒ–å«åšæå‡ï¼ˆhoistingï¼‰æ­£æ˜¯HopSpot Server VMçš„å·¥ä½œã€‚ç»“æœæ˜¯ä¸ªæ´»æ€§å¤±è´¥ï¼ˆliveness failureï¼‰ï¼š
+    // è¿™ä¸ªç¨‹åºæ— æ³•å‰è¿›
+    // ä¿®æ­£è¿™ä¸ªé—®é¢˜çš„ä¸€ç§è§£å†³æ–¹å¼æ˜¯åŒæ­¥è®¿é—®stopRequestedåŸŸ
 }

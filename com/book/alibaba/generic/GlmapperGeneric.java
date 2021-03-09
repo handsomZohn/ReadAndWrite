@@ -17,23 +17,23 @@ public class GlmapperGeneric<T> {
     }
 
     /**
-     * ²»Ö¸¶¨ÀàĞÍ
+     * ä¸æŒ‡å®šç±»å‹
      */
     public void noSpecifyType(){
         GlmapperGeneric glmapperGeneric = new GlmapperGeneric();
         glmapperGeneric.set("noSpecifyType");
-        // ĞèÒªÇ¿ÖÆÀàĞÍ×ª»»
+        // éœ€è¦å¼ºåˆ¶ç±»å‹è½¬æ¢
         String test = (String) glmapperGeneric.get();
         System.out.println(test);
     }
 
     /**
-     * Ö¸¶¨ÀàĞÍ
+     * æŒ‡å®šç±»å‹
      */
     public void specifyType(){
         GlmapperGeneric<String> glmapperGeneric = new GlmapperGeneric();
         glmapperGeneric.set("specifyType");
-        // ²»ĞèÒªÇ¿ÖÆÀàĞÍ×ª»»
+        // ä¸éœ€è¦å¼ºåˆ¶ç±»å‹è½¬æ¢
         String test = glmapperGeneric.get();
         System.out.println(test);
     }

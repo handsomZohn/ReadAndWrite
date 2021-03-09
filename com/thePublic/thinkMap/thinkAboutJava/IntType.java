@@ -1,6 +1,6 @@
 package com.thePublic.thinkMap.thinkAboutJava;
 
-// 一个java对象
+// 涓�涓猨ava瀵硅薄
 public class IntType {
     private int value;
 

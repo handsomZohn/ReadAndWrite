@@ -16,43 +16,43 @@ import com.sx.conf.UploadConfig;
 /**
  * 
  * <p>Title:UnRar</p>
- * <p>Description:rarÎÄ¼ş½âÑ¹Ëõ</p>
+ * <p>Description:raræ–‡ä»¶è§£å‹ç¼©</p>
  * <p>Copyright: Copyright (c) 2019</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2019Äê3ÔÂ21ÈÕ</p>
+ * <p>CreateDate:2019å¹´3æœˆ21æ—¥</p>
  * @author Administrator
  * @version 1.0
  */
 public class UnRarV02 {
 	
 	/**
-	 * ½âÑ¹Ëõ 
-	 * @param scclfwqwjmc ÉÏ´«²ÄÁÏ·şÎñÆ÷ÎÄ¼şÃû×Ö
+	 * è§£å‹ç¼© 
+	 * @param scclfwqwjmc ä¸Šä¼ ææ–™æœåŠ¡å™¨æ–‡ä»¶åå­—
 	 */
 	public void unRar(String scclfwqwjmc) {
 		if (StringHelper.isNotEmpty(scclfwqwjmc) && scclfwqwjmc.toLowerCase().endsWith(".rar")) {
 			String filePath = SysConfig.getROOT_REAL_PATH() + SysConfig.getFILESEPARATOR()
 					+ UploadConfig.getFILE_PATH() + SysConfig.getFILESEPARATOR()
 					+ "rlzyfwxk" + SysConfig.getFILESEPARATOR();
-			// rarÎÄ¼şÃû×ÖÇ°×º
+			// raræ–‡ä»¶åå­—å‰ç¼€
 			String prefix = "";
-			// ½âÑ¹ËõºóÎÄ¼ş´æ·ÅÂ·¾¶=filePath + rarÎÄ¼şÇ°×º 
+			// è§£å‹ç¼©åæ–‡ä»¶å­˜æ”¾è·¯å¾„=filePath + raræ–‡ä»¶å‰ç¼€ 
 			String unRARFilePath = "";
 			try {
 				if (scclfwqwjmc.lastIndexOf(".") != -1) {
 					prefix = scclfwqwjmc.substring(0, scclfwqwjmc.indexOf("."));
 					unRARFilePath = filePath + prefix + SysConfig.getFILESEPARATOR();
 					// unRar(filePath + scclfwqwjmc, unRARFilePath);
-					// ½âÑ¹Ëõ
+					// è§£å‹ç¼©
 					// unRARFilePath==E:\workspace\myeclipse2014\bjldlsc\root\\\sysfiles\rlzyfwxk\fb33a3b3651800\
 					boolean unZip = new ZipTools().unZip(filePath + scclfwqwjmc, unRARFilePath);
-					// ½«½âÍêÑ¹ËõµÄÎÄ¼şÖĞµÄÍ¼Æ¬ÌáÈ¡³öÀ´·ÅÈëµ¥¶ÀÎÄ¼ş¼Ğ£¬×öÍ¼Æ¬Ô¤ÀÀÎÄ¼ş¼ĞÍ³Ò»ÃüÃûÎª¡°tpyl¡±
+					// å°†è§£å®Œå‹ç¼©çš„æ–‡ä»¶ä¸­çš„å›¾ç‰‡æå–å‡ºæ¥æ”¾å…¥å•ç‹¬æ–‡ä»¶å¤¹ï¼Œåšå›¾ç‰‡é¢„è§ˆæ–‡ä»¶å¤¹ç»Ÿä¸€å‘½åä¸ºâ€œtpylâ€
 					if (unZip) {
 						new PictureCopyV01().pCopy(unRARFilePath);
 					}
 				}
 			} catch (Exception e) {
-				System.out.println("=============ÎÄ¼ş²Ù×÷Òì³£==============");
+				System.out.println("=============æ–‡ä»¶æ“ä½œå¼‚å¸¸==============");
 				e.printStackTrace();
 			}
 		}
@@ -60,36 +60,36 @@ public class UnRarV02 {
 	
 
 	/**
-	 * ÒòĞèÒªÒıÈëcom.github.junrar£¬¶àÓà
-	 * ´Ë·½·¨×÷·Ï
-	 * ½âÑ¹Ëõ
-	 * @param srcRarPath Ô´ÎÄ¼şÂ·¾¶ e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900.rar
-	 * @param dstDirectoryPath ½âÑ¹ÖÁÄ¿Â¼ e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900\
+	 * å› éœ€è¦å¼•å…¥com.github.junrarï¼Œå¤šä½™
+	 * æ­¤æ–¹æ³•ä½œåºŸ
+	 * è§£å‹ç¼©
+	 * @param srcRarPath æºæ–‡ä»¶è·¯å¾„ e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900.rar
+	 * @param dstDirectoryPath è§£å‹è‡³ç›®å½• e.g.E:\workspace\myeclipse2014\bjldlsc\root\sysfiles\rlzyfwxk\fb33a37aa9c900\
 	 * @throws Exception
 	 */
 	public void unRar(String srcRarPath, String dstDirectoryPath) throws Exception{
-		// ÑéÖ¤ÊÇ·ñrarÎÄ¼ş
+		// éªŒè¯æ˜¯å¦raræ–‡ä»¶
 		if (!srcRarPath.toLowerCase().endsWith(".rar")) {
-			throw new Exception("·ÇrarÎÄ¼ş£¡");
+			throw new Exception("éraræ–‡ä»¶ï¼");
 		}
 		
-		// ´´½¨½âÑ¹ÖÁÄ¿Â¼
+		// åˆ›å»ºè§£å‹è‡³ç›®å½•
 		File file = new File(dstDirectoryPath);
 		if (!file.exists() && !file.isDirectory()) {
 			file.mkdirs();
 		}
 		
-		// ½âÑ¹²Ù×÷
+		// è§£å‹æ“ä½œ
 		File fol = null, out = null;
 		Archive archive = null;
 		try {
 			archive = new Archive((VolumeManager) new File(srcRarPath));
 			if (archive != null) {
-				// ´òÓ¡ÎÄ¼şĞÅÏ¢
+				// æ‰“å°æ–‡ä»¶ä¿¡æ¯
 				// archive.getMainHeader().print();
 				FileHeader nextFileHeader = archive.nextFileHeader();
 				while(nextFileHeader != null){
-					// ÊÇÎÄ¼ş¼Ğ
+					// æ˜¯æ–‡ä»¶å¤¹
 					if (nextFileHeader.isDirectory()) {
 						if (existsZH(nextFileHeader.getFileNameW())) {
 							fol = new File(dstDirectoryPath + SysConfig.getFILESEPARATOR() + nextFileHeader.getFileNameW());
@@ -97,7 +97,7 @@ public class UnRarV02 {
 							fol = new File(dstDirectoryPath + SysConfig.getFILESEPARATOR() + nextFileHeader.getFileNameString());
 						}
 						fol.mkdirs();
-					// ÎÄ¼ş
+					// æ–‡ä»¶
 					} else {
 						if (existsZH(nextFileHeader.getFileNameW())) {
 							out = new File(dstDirectoryPath + SysConfig.getFILESEPARATOR() + nextFileHeader.getFileNameW());
@@ -106,7 +106,7 @@ public class UnRarV02 {
 						}
 					}
 					
-					// ±ÜÃâ³öÏÖÒì³£Ö®ºó²»»á¼ÌĞø½âÑ¹
+					// é¿å…å‡ºç°å¼‚å¸¸ä¹‹åä¸ä¼šç»§ç»­è§£å‹
 					FileOutputStream fileOutputStream = null;
 					try {
 						if (!out.exists()) {
@@ -119,7 +119,7 @@ public class UnRarV02 {
 						archive.extractFile(nextFileHeader, fileOutputStream);
 						
 					} catch (Exception e) {
-						// ¾¯¸æ: exception in archive constructor maybe file is encrypted or currupt
+						// è­¦å‘Š: exception in archive constructor maybe file is encrypted or currupt
 						// e.printStackTrace();
 					} finally {
 						fileOutputStream.close();
@@ -128,7 +128,7 @@ public class UnRarV02 {
 				nextFileHeader = archive.nextFileHeader();
 			}
 		} catch (Exception e) {
-			// ¾¯¸æ: exception in archive constructor maybe file is encrypted or currupt
+			// è­¦å‘Š: exception in archive constructor maybe file is encrypted or currupt
 			// e.printStackTrace();
 		} finally {
 			archive.close();
@@ -137,9 +137,9 @@ public class UnRarV02 {
 	
 	
 	/**
-	 * ÊÇ·ñÓĞÖĞÎÄ
-	 * @param str ÒªÅĞ¶ÏµÄ×Ö·û´®
-	 * @return flaseÃ»ÓĞÖĞÎÄ
+	 * æ˜¯å¦æœ‰ä¸­æ–‡
+	 * @param str è¦åˆ¤æ–­çš„å­—ç¬¦ä¸²
+	 * @return flaseæ²¡æœ‰ä¸­æ–‡
 	 */
 	private static boolean existsZH(String str) {
 		String regStr = "[\\u4e00-\\u9fa5]";

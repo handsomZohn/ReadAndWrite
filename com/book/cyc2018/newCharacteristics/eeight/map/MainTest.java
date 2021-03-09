@@ -8,36 +8,36 @@ import java.util.function.BiFunction;
 
 public class MainTest {
     public static void main(String[] args) {
-        //map ĞÂÌØĞÔ
+        //map æ–°ç‰¹æ€§
         Map<Integer,String> map = new HashMap<Integer,String>();
         for(int i=0; i<6; i++){
             map.put(i,"val_"+i);
         }
         map.put(10,null);
 
-        //1:±éÀú
+        //1:éå†
         map.forEach((key,value) -> System.out.println(key+":"+value));
         // map.forEach((key, value) -> System.out :: println);
 
-        //2:V getOrDefault(key,defaultValue):»ñÈ¡keyÖµ,Èç¹ûkey²»´æÔÚÔòÓÃdefaultValue
+        //2:V getOrDefault(key,defaultValue):è·å–keyå€¼,å¦‚æœkeyä¸å­˜åœ¨åˆ™ç”¨defaultValue
         System.out.println("3-->"+map.getOrDefault(3,"val_66"));//3-->val_3
         System.out.println("10-->"+map.getOrDefault(10,"val_66"));//10-->null
         System.out.println("11-->"+map.getOrDefault(11,"val_66"));//11-->val_66
 
-        //3:V putIfAbsent(K key, V value):¸ù¾İkeyÆ¥ÅäNode,Èç¹ûÆ¥Åä²»µ½ÔòÔö¼Ókey-value,·µ»Ønull,Èç¹ûÆ¥Åäµ½Node,Èç¹ûoldValue²»µÈÓÚnullÔò²»½øĞĞvalue¸²¸Ç£¬·µ»ØoldValue
+        //3:V putIfAbsent(K key, V value):æ ¹æ®keyåŒ¹é…Node,å¦‚æœåŒ¹é…ä¸åˆ°åˆ™å¢åŠ key-value,è¿”å›null,å¦‚æœåŒ¹é…åˆ°Node,å¦‚æœoldValueä¸ç­‰äºnullåˆ™ä¸è¿›è¡Œvalueè¦†ç›–ï¼Œè¿”å›oldValue
         System.out.println(map.putIfAbsent(3,"val_66"));//val_3
         System.out.println(map.putIfAbsent(10,"val_66"));//null
         System.out.println(map.putIfAbsent(11,"val_66"));//null
         System.out.println(map.get(3)+"--"+map.get(10)+"--"+map.get(11));//val_3--val_66--val_66
 
-        //4:boolean remove(Object key, Object value):¸ù¾İkeyÆ¥Åänode£¬Èç¹ûvalueÒ²ÏàÍ¬ÔòÉ¾³ı
+        //4:boolean remove(Object key, Object value):æ ¹æ®keyåŒ¹é…nodeï¼Œå¦‚æœvalueä¹Ÿç›¸åŒåˆ™åˆ é™¤
         System.out.println(map.size());//8
         map.remove(10,"66");
         map.remove(11,"val_66");
         System.out.println(map.size());//7
         System.out.println(map.toString());//{0=val_0, 1=val_1, 2=val_2, 3=val_3, 4=val_4, 5=val_5, 10=val_66}
 
-        //5:boolean replace(K key, V oldValue, V newValue):¸ù¾İkeyÆ¥Åänode,Èç¹ûvalueÒ²ÏàÍ¬ÔòÊ¹ÓÃnewValue¸²¸Ç·µ»Øtrue£¬·ñÔò·µ»Øfalse
+        //5:boolean replace(K key, V oldValue, V newValue):æ ¹æ®keyåŒ¹é…node,å¦‚æœvalueä¹Ÿç›¸åŒåˆ™ä½¿ç”¨newValueè¦†ç›–è¿”å›trueï¼Œå¦åˆ™è¿”å›false
         map.put(11,null);
         map.replace(3,"3","33");
         map.replace(10,"val_66","val_666666");
@@ -45,8 +45,8 @@ public class MainTest {
         map.replace(11,null,"val_11");
         System.out.println(map.toString());//{0=val_0, 1=val_1, 2=val_2, 3=val_3, 4=val_4, 5=val_5, 10=val_666666, 11=val_11}
         /** 6:
-         * void replaceAll(BiFunction function)£ºµ÷ÓÃ´Ë·½·¨Ê±ÖØĞ´BiFunctionµÄObject apply(Object o, Object o2)·½·¨£¬
-         * ÆäÖĞoÎªkey£¬o2Îªvalue£¬¸ù¾İÖØĞ´·½·¨Âß¼­½øĞĞÖØĞÂ¸³Öµ¡£
+         * void replaceAll(BiFunction function)ï¼šè°ƒç”¨æ­¤æ–¹æ³•æ—¶é‡å†™BiFunctionçš„Object apply(Object o, Object o2)æ–¹æ³•ï¼Œ
+         * å…¶ä¸­oä¸ºkeyï¼Œo2ä¸ºvalueï¼Œæ ¹æ®é‡å†™æ–¹æ³•é€»è¾‘è¿›è¡Œé‡æ–°èµ‹å€¼ã€‚
          */
         map.replaceAll((key,value) -> {
             if(key == 2){
@@ -56,8 +56,8 @@ public class MainTest {
         });
         System.out.println(map.toString());//{0=val_0, 1=val_1, 2=val_2222, 3=val_3, 4=val_4, 5=val_5, 10=val_666666, 11=val_11}
         /** 7:
-         * V compute(K key,BiFunction remappingFunction)£º¸ù¾İkey×öÆ¥Åä£¬¸ù¾İBiFunctionµÄapply·µ»Ø×ö´æ´¢µÄvalue¡£
-         * Æ¥Åäµ½Node×övalueÌæ»»£¬Æ¥Åä²»µ½ĞÂÔönode¡£applyµÄ·µ»ØÖµÈç¹ûÎªnullÔòÉ¾³ı¸Ã½Úµã£¬·ñÔò¼´ÎªÒª´æ´¢µÄvalue¡£
+         * V compute(K key,BiFunction remappingFunction)ï¼šæ ¹æ®keyåšåŒ¹é…ï¼Œæ ¹æ®BiFunctionçš„applyè¿”å›åšå­˜å‚¨çš„valueã€‚
+         * åŒ¹é…åˆ°Nodeåšvalueæ›¿æ¢ï¼ŒåŒ¹é…ä¸åˆ°æ–°å¢nodeã€‚applyçš„è¿”å›å€¼å¦‚æœä¸ºnullåˆ™åˆ é™¤è¯¥èŠ‚ç‚¹ï¼Œå¦åˆ™å³ä¸ºè¦å­˜å‚¨çš„valueã€‚
          */
         System.out.println("---------------------- compute -----------------------");
         System.out.println(map.compute(3,new BiFunction() {
@@ -65,57 +65,57 @@ public class MainTest {
             public Object apply(Object key, Object value) {
                 return key+":"+value;
             }
-        }));//3:val_3 -¡·ÓÃ·µ»ØÖµ¸²¸ÇÔ­À´µÄÖµ£¬ÕâÀïÓÃÁËjava7µÄ±àÂë·½Ê½£¬ÒÔÏÂ¾ù²ÉÓÃjava8µÄlanbda±í´ïÊ½
-        System.out.println(map.compute(10,(key,value) -> {return value.split("_")[1];}));//666666 -¡·ÓÃ·µ»ØÖµ¸²¸ÇÔ­À´µÄÖµ
-        System.out.println(map.compute(6,(key,value) ->  null));//null -¡··µ»ØÖµÎªnull£¬ÔòÉ¾³ı¸ÃkeyÖµ
+        }));//3:val_3 -ã€‹ç”¨è¿”å›å€¼è¦†ç›–åŸæ¥çš„å€¼ï¼Œè¿™é‡Œç”¨äº†java7çš„ç¼–ç æ–¹å¼ï¼Œä»¥ä¸‹å‡é‡‡ç”¨java8çš„lanbdaè¡¨è¾¾å¼
+        System.out.println(map.compute(10,(key,value) -> {return value.split("_")[1];}));//666666 -ã€‹ç”¨è¿”å›å€¼è¦†ç›–åŸæ¥çš„å€¼
+        System.out.println(map.compute(6,(key,value) ->  null));//null -ã€‹è¿”å›å€¼ä¸ºnullï¼Œåˆ™åˆ é™¤è¯¥keyå€¼
         System.out.println(map.toString());//{0=val_0, 1=val_1, 2=val_2, 3=3:val_3, 4=val_4, 5=val_5, 10=666666, 11=val_11}
         /** 8:
          * merge(K key, V value,BiFunctionsuper V, ? super V, ? extends V> remappingFunction):
-         * ¹¦ÄÜ´ó²¿·ÖÓëcomputeÏàÍ¬£¬²»Í¬Ö®´¦ÔÚÓÚBiFunctionÖĞapplyµÄ²ÎÊı£¬Èë²ÎÎªoldValue¡¢value£¬
-         * µ÷ÓÃmergeÊ±¸ù¾İÁ½¸övalue½øĞĞÂß¼­´¦Àí²¢·µ»Øvalue¡£
+         * åŠŸèƒ½å¤§éƒ¨åˆ†ä¸computeç›¸åŒï¼Œä¸åŒä¹‹å¤„åœ¨äºBiFunctionä¸­applyçš„å‚æ•°ï¼Œå…¥å‚ä¸ºoldValueã€valueï¼Œ
+         * è°ƒç”¨mergeæ—¶æ ¹æ®ä¸¤ä¸ªvalueè¿›è¡Œé€»è¾‘å¤„ç†å¹¶è¿”å›valueã€‚
          */
-        System.out.println(map.merge(3,"val_3",(value,newValue) -> newValue));//val_3  --¡··µ»ØÖµ¸²¸ÇÔ­À´µÄvalue
+        System.out.println(map.merge(3,"val_3",(value,newValue) -> newValue));//val_3  --ã€‹è¿”å›å€¼è¦†ç›–åŸæ¥çš„value
         System.out.println(map.merge(10,"33334",(a,b) -> (Integer.valueOf(a)+Integer.valueOf(b))+""));//700000
-        System.out.println(map.merge(8,"88",(oldValue,newValue) -> oldValue+newValue));//88 -¡·key²»´æÔÚÔòĞÂÔö
-        System.out.println(map.merge(11,"11",(old,newValue) -> null));//null -¡··µ»ØÖµÎªnull,É¾³ı¸Ã½Úµã
+        System.out.println(map.merge(8,"88",(oldValue,newValue) -> oldValue+newValue));//88 -ã€‹keyä¸å­˜åœ¨åˆ™æ–°å¢
+        System.out.println(map.merge(11,"11",(old,newValue) -> null));//null -ã€‹è¿”å›å€¼ä¸ºnull,åˆ é™¤è¯¥èŠ‚ç‚¹
         System.out.println(map.toString());//{0=val_0, 1=val_1, 2=val_2, 3=val_3, 4=val_4, 5=val_5, 8=88, 10=700000}
         /** 9:
          * computeIfAbsent(K key,Functionsuper K, ? extends V> mappingFunction):
-         * ¸ù¾İkey×öÆ¥ÅäNode£¬£¨Æ¥Åä²»µ½ÔòĞÂ½¨È»ºóÖØÅÅ£©
-         * Èç¹ûNodeÓĞvalue£¬ÔòÖ±½Ó·µ»ØoldValue£¬
-         * Èç¹ûÃ»ÓĞvalueÔò¸ù¾İFunction½Ó¿ÚµÄapply·½·¨»ñÈ¡value£¬·µ»Øvalue¡£
-         * Function½Ó¿ÚµÄapplyµÄÈë²ÎÎªkey£¬µ÷ÓÃcomputeIfAbsentÊ±ÖØĞ´Function½Ó¿Ú¿ÉÒÔ¸ù¾İkey½øĞĞÂß¼­´¦Àí£¬
-         * applyµÄ·µ»ØÖµ¼´ÎªÒª´æ´¢µÄvalue¡£
+         * æ ¹æ®keyåšåŒ¹é…Nodeï¼Œï¼ˆåŒ¹é…ä¸åˆ°åˆ™æ–°å»ºç„¶åé‡æ’ï¼‰
+         * å¦‚æœNodeæœ‰valueï¼Œåˆ™ç›´æ¥è¿”å›oldValueï¼Œ
+         * å¦‚æœæ²¡æœ‰valueåˆ™æ ¹æ®Functionæ¥å£çš„applyæ–¹æ³•è·å–valueï¼Œè¿”å›valueã€‚
+         * Functionæ¥å£çš„applyçš„å…¥å‚ä¸ºkeyï¼Œè°ƒç”¨computeIfAbsentæ—¶é‡å†™Functionæ¥å£å¯ä»¥æ ¹æ®keyè¿›è¡Œé€»è¾‘å¤„ç†ï¼Œ
+         * applyçš„è¿”å›å€¼å³ä¸ºè¦å­˜å‚¨çš„valueã€‚
          */
         System.out.println("----------------------computeIfAbsent------------------------");
         map.put(8,null);
         System.out.println(map.toString());//{0=val_0, 1=val_1, 2=val_2, 3=val_3, 4=val_4, 5=val_5, 8=null, 10=700000}
-        System.out.println(map.computeIfAbsent(0,key -> key+"000"));//val_0  -¡·keyÖµ´æÔÚ£¬Ö±½Ó·µ»ØoldValue
-        System.out.println(map.computeIfAbsent(7,key -> "value_"+key));//value_7 -¡·keyÆ¥Åä²»µ½£¬Ö±½ÓĞÂÔö£¬·µ»ØÖµÎªvalue
-        System.out.println(map.computeIfAbsent(8,key -> "88"));//88 -¡·keyÆ¥Åäµ½ÁË£¬valueÎªnull£¬·µ»ØÖµ×÷Îªvalue
+        System.out.println(map.computeIfAbsent(0,key -> key+"000"));//val_0  -ã€‹keyå€¼å­˜åœ¨ï¼Œç›´æ¥è¿”å›oldValue
+        System.out.println(map.computeIfAbsent(7,key -> "value_"+key));//value_7 -ã€‹keyåŒ¹é…ä¸åˆ°ï¼Œç›´æ¥æ–°å¢ï¼Œè¿”å›å€¼ä¸ºvalue
+        System.out.println(map.computeIfAbsent(8,key -> "88"));//88 -ã€‹keyåŒ¹é…åˆ°äº†ï¼Œvalueä¸ºnullï¼Œè¿”å›å€¼ä½œä¸ºvalue
         System.out.println(map.toString());//{0=val_0, 1=val_1, 2=val_2, 3=val_3, 4=val_4, 5=val_5, 7=value_7, 8=88, 10=700000}
         /** 10:
-         * V computeIfPresent(K key,BiFunction remappingFunction)£º
-         * ¸ù¾İkey×öÆ¥Åä£¬Èç¹ûÆ¥Åä²»ÉÏÔò·µ»Ønull,Æ¥ÅäÉÏ¸ù¾İBiFunctionµÄapply·½·¨»ñÈ¡value£¬·µ»Øvalue¡£
-         * BiFunction½Ó¿ÚµÄapplyµÄÈë²ÎÎªkey¡¢oldValue£¬µ÷ÓÃcomputeIfPresentÊ±ÖØĞ´Function½Ó¿Ú
-         * ¿ÉÒÔ¸ù¾İkeyºÍoldValue½øĞĞÂß¼­´¦Àí£¬applyµÄ·µ»ØÖµÈç¹ûÎªnullÔòÉ¾³ı¸Ã½Úµã£¬·ñÔò¼´ÎªÒª´æ´¢µÄvalue¡£
+         * V computeIfPresent(K key,BiFunction remappingFunction)ï¼š
+         * æ ¹æ®keyåšåŒ¹é…ï¼Œå¦‚æœåŒ¹é…ä¸ä¸Šåˆ™è¿”å›null,åŒ¹é…ä¸Šæ ¹æ®BiFunctionçš„applyæ–¹æ³•è·å–valueï¼Œè¿”å›valueã€‚
+         * BiFunctionæ¥å£çš„applyçš„å…¥å‚ä¸ºkeyã€oldValueï¼Œè°ƒç”¨computeIfPresentæ—¶é‡å†™Functionæ¥å£
+         * å¯ä»¥æ ¹æ®keyå’ŒoldValueè¿›è¡Œé€»è¾‘å¤„ç†ï¼Œapplyçš„è¿”å›å€¼å¦‚æœä¸ºnullåˆ™åˆ é™¤è¯¥èŠ‚ç‚¹ï¼Œå¦åˆ™å³ä¸ºè¦å­˜å‚¨çš„valueã€‚
          */
         map.remove(7);
         map.remove(8);
         map.replace(10,null);
-        map.remove(0,"val_0");//valueÆ¥Åäµ½ÁËÉ¾³ı
-        map.remove(1,"val_0");//valueÆ¥ÅäÊ§°Ü£¬²»»áÉ¾³ı
+        map.remove(0,"val_0");//valueåŒ¹é…åˆ°äº†åˆ é™¤
+        map.remove(1,"val_0");//valueåŒ¹é…å¤±è´¥ï¼Œä¸ä¼šåˆ é™¤
         System.out.println(map.toString());//{1=val_1, 2=val_2, 3=val_3, 4=val_4, 5=val_5, 10=null}
-        System.out.println(map.computeIfPresent(3,(key,value) -> key+":"+value));//3:val_3 -¡·key´æÔÚ£¬¸ù¾İ·µ»ØÖµĞŞ¸Ävalue
-        System.out.println(map.computeIfPresent(0,(key, value) -> "0000"));//null -¡·key²»´æÔÚ£¬·µ»Ønull,²»×öÈÎºÎ²Ù×÷
-        System.out.println(map.computeIfPresent(1,(key, value) -> null));//null -¡·key´æÔÚ£¬¸ù¾İ·µ»ØÖµĞŞ¸Ävalue
-        System.out.println(map.computeIfPresent(10,(key,value) -> "val_10"));//null -¡·oldValueÖµÎªnull£¬É¾³ı½Úµã
+        System.out.println(map.computeIfPresent(3,(key,value) -> key+":"+value));//3:val_3 -ã€‹keyå­˜åœ¨ï¼Œæ ¹æ®è¿”å›å€¼ä¿®æ”¹value
+        System.out.println(map.computeIfPresent(0,(key, value) -> "0000"));//null -ã€‹keyä¸å­˜åœ¨ï¼Œè¿”å›null,ä¸åšä»»ä½•æ“ä½œ
+        System.out.println(map.computeIfPresent(1,(key, value) -> null));//null -ã€‹keyå­˜åœ¨ï¼Œæ ¹æ®è¿”å›å€¼ä¿®æ”¹value
+        System.out.println(map.computeIfPresent(10,(key,value) -> "val_10"));//null -ã€‹oldValueå€¼ä¸ºnullï¼Œåˆ é™¤èŠ‚ç‚¹
         System.out.println(map.toString());//{2=val_2, 3=3:val_3, 4=val_4, 5=val_5, 10=null}
-        /** ±È½Ï
-         * compute£º¸ù¾İkey×öÆ¥Åä£¬key,valueÎª²ÎÊı£¬Æ¥Åäµ½Node×övalueÌæ»»£¬Æ¥Åä²»µ½ĞÂÔönode¡£applyµÄ·µ»ØÖµÎªnullÔòÉ¾³ı¸Ã½Úµã¡£
-         * merge£ºoldValue£¬newValue×÷ÎªÎª²ÎÊı£¬ÆäËü¹¦ÄÜÓÚcomputeÀàËÆ
-         * computeIfAbsent£º¸ù¾İkeyÆ¥Åä£¬²ÎÊıÎªkey,´æÔÚÇÒvalue²»Îªnull£¬²»×öĞŞ¸Ä£¬ÎªnullÓÃ·µ»ØÖµ×÷Îªvalue£¬²»´æÔÚÔòĞÂÔö
-         * computeIfPresent£ºkey,value×÷Îª²ÎÊı£¬´æÔÚ,Ô­À´µÄÖµÎªnull²»×ö²Ù×÷£¬·ñÔò·µ»ØÖµ×÷ÎªĞÂµÄvalue¸²¸ÇÔ­À´£»²»´æÔÚ£¬²»×ö²Ù×÷£»·µ»ØÖµÎªnullÉ¾³ı¸Ã½Úµã
+        /** æ¯”è¾ƒ
+         * computeï¼šæ ¹æ®keyåšåŒ¹é…ï¼Œkey,valueä¸ºå‚æ•°ï¼ŒåŒ¹é…åˆ°Nodeåšvalueæ›¿æ¢ï¼ŒåŒ¹é…ä¸åˆ°æ–°å¢nodeã€‚applyçš„è¿”å›å€¼ä¸ºnullåˆ™åˆ é™¤è¯¥èŠ‚ç‚¹ã€‚
+         * mergeï¼šoldValueï¼ŒnewValueä½œä¸ºä¸ºå‚æ•°ï¼Œå…¶å®ƒåŠŸèƒ½äºcomputeç±»ä¼¼
+         * computeIfAbsentï¼šæ ¹æ®keyåŒ¹é…ï¼Œå‚æ•°ä¸ºkey,å­˜åœ¨ä¸”valueä¸ä¸ºnullï¼Œä¸åšä¿®æ”¹ï¼Œä¸ºnullç”¨è¿”å›å€¼ä½œä¸ºvalueï¼Œä¸å­˜åœ¨åˆ™æ–°å¢
+         * computeIfPresentï¼škey,valueä½œä¸ºå‚æ•°ï¼Œå­˜åœ¨,åŸæ¥çš„å€¼ä¸ºnullä¸åšæ“ä½œï¼Œå¦åˆ™è¿”å›å€¼ä½œä¸ºæ–°çš„valueè¦†ç›–åŸæ¥ï¼›ä¸å­˜åœ¨ï¼Œä¸åšæ“ä½œï¼›è¿”å›å€¼ä¸ºnullåˆ é™¤è¯¥èŠ‚ç‚¹
          *
          */
     }

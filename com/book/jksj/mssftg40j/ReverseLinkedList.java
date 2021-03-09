@@ -3,7 +3,7 @@ package com.book.jksj.mssftg40j;
 import java.util.Stack;
 
 /**
- *@Description 反转列表
+ *@Description 鍙嶈浆鍒楄〃
  *@CreateDate 2021\2\2 0002 16:01
  *@Author z
  *@Version 1.0
@@ -16,7 +16,7 @@ public class ReverseLinkedList {
     }
 
     /**
-     * 通过栈结构去实现反转列表
+     * 閫氳繃鏍堢粨鏋勫幓瀹炵幇鍙嶈浆鍒楄〃
      * @param head
      * @return
      */

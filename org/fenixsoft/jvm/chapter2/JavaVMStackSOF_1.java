@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter2;
 
 /**
- * VM Args£º-Xss128k
+ * VM Argsï¼š-Xss128k
  *
  * @author zzm
  */

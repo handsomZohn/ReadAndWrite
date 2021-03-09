@@ -10,7 +10,7 @@ public class AboutFinal {
 		User user2 = new User();
 		// user = user2; // The final local variable user cannot be assigned. It must be blank and not using a compound assignment
 		
-		// user ÒÑ¾­ÒıÓÃÁËÒ»¸ö new User(),,,Õâ¸öÒıÓÃÊÇ²»ÄÜ±äµÄ¡£
+		// user å·²ç»å¼•ç”¨äº†ä¸€ä¸ª new User(),,,è¿™ä¸ªå¼•ç”¨æ˜¯ä¸èƒ½å˜çš„ã€‚
 		
 		User.i = 100;
 		System.out.println(User.i);

@@ -2,10 +2,10 @@ package com.tools.helper;
 
 public class IDCardHelper {
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÊÇÕıÈ·µÄÉí·İÖ¤ºÅÂë
+	 * åˆ¤æ–­æ˜¯å¦æ˜¯æ­£ç¡®çš„èº«ä»½è¯å·ç 
 	 * 
 	 * @param sfzhm
-	 * @return ÊÇ·ñÊÇÕıÈ·µÄÉí·İÖ¤ºÅÂë
+	 * @return æ˜¯å¦æ˜¯æ­£ç¡®çš„èº«ä»½è¯å·ç 
 	 * @throws Exception
 	 */
 	public boolean checkIdNo(String sfzhm) throws Exception {
@@ -41,7 +41,7 @@ public class IDCardHelper {
 		return b;
 	}
 
-	// °Ñ15Î»µÄÉí·İÖ¤ºÅÂë×ª»»Îª18Î»
+	// æŠŠ15ä½çš„èº«ä»½è¯å·ç è½¬æ¢ä¸º18ä½
 	private String zhsfzhm(String strobject1) {
 		int l_l_jym[] = { 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2,
 				1 };
@@ -67,7 +67,7 @@ public class IDCardHelper {
 				l_l_total += l_l_temp1;
 			}
 			l_l_total--;
-			lastnum = l_l_total % 11;// ×îºóÒ»Î»
+			lastnum = l_l_total % 11;// æœ€åä¸€ä½
 			if (lastnum == 0) {
 				last = "0";
 			} else {
@@ -85,7 +85,7 @@ public class IDCardHelper {
 	}
 
 	/**
-	 * ÅĞ¶ÏÉí·İÖ¤ºÅÂëÖĞµÄÈÕÆÚÊÇ·ñÕıÈ·
+	 * åˆ¤æ–­èº«ä»½è¯å·ç ä¸­çš„æ—¥æœŸæ˜¯å¦æ­£ç¡®
 	 * 
 	 * @param sfzhm
 	 * @return
@@ -136,7 +136,7 @@ public class IDCardHelper {
 
 	/**
 	 * 
-	 * ¼ì²é18Î»Éí·İÖ¤ºÅÂëÊÇ·ñĞ£ÑéÉí·İÖ¤ÊÇ·ñÕıÈ·
+	 * æ£€æŸ¥18ä½èº«ä»½è¯å·ç æ˜¯å¦æ ¡éªŒèº«ä»½è¯æ˜¯å¦æ­£ç¡®
 	 * 
 	 * @param strobject1
 	 * @return
@@ -167,7 +167,7 @@ public class IDCardHelper {
 				l_l_total += l_l_temp1;
 			}
 			l_l_total--;
-			lastnum = l_l_total % 11;// ×îºóÒ»Î»
+			lastnum = l_l_total % 11;// æœ€åä¸€ä½
 			if (lastnum == 0) {
 				last = "0";
 			} else {
@@ -186,9 +186,9 @@ public class IDCardHelper {
 	
 	
 	/**
-	 * ×ª»»Éí·İÖ¤ºÅÂëÎª18Î»
+	 * è½¬æ¢èº«ä»½è¯å·ç ä¸º18ä½
 	 * @param sfzhm
-	 * @return 18Î»Éí·İÖ¤ºÅÂë
+	 * @return 18ä½èº«ä»½è¯å·ç 
 	 * @throws Exception
 	 */
 	public String get18ID(String sfzhm) throws Exception {

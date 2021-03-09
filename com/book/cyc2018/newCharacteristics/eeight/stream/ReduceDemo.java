@@ -20,20 +20,20 @@ public class ReduceDemo {
         myList.add(10);
         myList.add(24);
         myList.add(5);
-        // myList.add(0);// Ã»Ìí¼Ó0µÄÊ±ºòÔËĞĞÁË89ºÁÃë  Ã¿´ÎÔËĞĞºÄ·ÑÊ±¼ä»ù±¾¶¼²»Ò»ÖÂ
+        // myList.add(0);// æ²¡æ·»åŠ 0çš„æ—¶å€™è¿è¡Œäº†89æ¯«ç§’  æ¯æ¬¡è¿è¡Œè€—è´¹æ—¶é—´åŸºæœ¬éƒ½ä¸ä¸€è‡´
 
-        // Ê¹ÓÃlambda±í´ïÊ½À´¼ÆËãÁ½¸öÖµµÃ³Ë»ı
-        // Á½¸öÖµ·Ö±ğ´ú±íÀÛ»ı½á¹ûÖĞµÄµ±Ç°ÖµºÍÁ÷ÖĞµÄÏÂÒ»¸öÔªËØ
+        // ä½¿ç”¨lambdaè¡¨è¾¾å¼æ¥è®¡ç®—ä¸¤ä¸ªå€¼å¾—ä¹˜ç§¯
+        // ä¸¤ä¸ªå€¼åˆ†åˆ«ä»£è¡¨ç´¯ç§¯ç»“æœä¸­çš„å½“å‰å€¼å’Œæµä¸­çš„ä¸‹ä¸€ä¸ªå…ƒç´ 
         Optional<Integer> reduce = myList.stream().reduce((a, b) -> (a * b));
 
         if (reduce.isPresent()) {
             System.out.println("product as optional:" + reduce.get());
-            // ÔÚµÚ¶ş¸ö°æ±¾ÖĞ£¬ÏÔÊ¾Ö¸¶¨ÁËµ¥Î»Öµ£¬¶ÔÓÚ³Ë·¨¶øÑÔ¾ÍÊÇ1
+            // åœ¨ç¬¬äºŒä¸ªç‰ˆæœ¬ä¸­ï¼Œæ˜¾ç¤ºæŒ‡å®šäº†å•ä½å€¼ï¼Œå¯¹äºä¹˜æ³•è€Œè¨€å°±æ˜¯1
 
-            int product = myList.stream().reduce(1, (a, b) -> a * b);// 1 ËùÓĞÔªËØÈ«²¿*ÆğÀ´
+            int product = myList.stream().reduce(1, (a, b) -> a * b);// 1 æ‰€æœ‰å…ƒç´ å…¨éƒ¨*èµ·æ¥
             System.out.println("product as int:" + product);
 
-            // »ñÈ¡Å¼ÊıµÄ³Ë»ı
+            // è·å–å¶æ•°çš„ä¹˜ç§¯
             int evenProduct = myList.stream().reduce(1, (a, b) -> {
                 if (b % 2 == 0) {
                     return a * b;
@@ -41,7 +41,7 @@ public class ReduceDemo {
                     return a;
                 }
             });
-            System.out.println("ËùÓĞÅ¼ÊıµÄ³Ë»ı£º" + evenProduct);
+            System.out.println("æ‰€æœ‰å¶æ•°çš„ä¹˜ç§¯ï¼š" + evenProduct);
         }
     }
 

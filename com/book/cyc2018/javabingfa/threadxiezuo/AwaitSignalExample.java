@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @CreateDate: 2018/7/28 5:29
  * @UpdateUser: zohn
  * @UpdateDate: 2018/7/28 5:29
- * @UpdateRemark: ÐÞ¸ÄÄÚÈÝ
+ * @UpdateRemark: ä¿®æ”¹å†…å®¹
  * @Version: 1.0
  */
 public class AwaitSignalExample {

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *@Description ÕÒ³öÄ³Ä¿Â¼ÏÂµÄËùÓĞ×ÓÄ¿Â¼ÒÔ¼°×ÓÎÄ¼ş²¢´òÓ¡µ½¿ØÖÆÌ¨ÉÏ
+ *@Description æ‰¾å‡ºæŸç›®å½•ä¸‹çš„æ‰€æœ‰å­ç›®å½•ä»¥åŠå­æ–‡ä»¶å¹¶æ‰“å°åˆ°æ§åˆ¶å°ä¸Š
  *@CreateDate 2020\3\13 0013 11:05
  *@Author zohn
  *@Version 1.0
@@ -23,7 +23,7 @@ public class FileAPI {
     }
 
     /**
-     * @Description »ñÈ¡ËùÓĞÎÄ¼şµÄÂ·¾¶
+     * @Description è·å–æ‰€æœ‰æ–‡ä»¶çš„è·¯å¾„
      * @Author zohn
      * @Date 2020\3\13 0013 11:09
      * @Param [filePath, paths]
@@ -37,7 +37,7 @@ public class FileAPI {
         for (File f : files) {
             if (f.isDirectory()) {
                 paths.add(f.getPath());
-                getAllFilePaths(f, paths);// µİ¹éµ÷ÓÃ
+                getAllFilePaths(f, paths);// é€’å½’è°ƒç”¨
             } else {
                 paths.add(f.getPath());
             }

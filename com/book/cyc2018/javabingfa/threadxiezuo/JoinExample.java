@@ -1,7 +1,7 @@
 package com.book.cyc2018.javabingfa.threadxiezuo;
 
 /**
- *@Description  Ïß³ÌÖ®¼äµÄĞ­×÷-join
+ *@Description  çº¿ç¨‹ä¹‹é—´çš„åä½œ-join
  *@CreateDate   18/07/26 11:29
  *@Author        zohn
  *@Version       1.0
@@ -23,7 +23,7 @@ public class JoinExample {
         @Override
         public void run() {
             try {
-                a.join();// ÔÚbÖĞµ÷ÓÃa bÏß³Ì»áµÈµ½aÏß³Ì½áÊø²Å¼ÌĞøÖ´ĞĞ ËùÒÔaÏß³ÌµÄÊä³öÓÅÏÈÓÚbÏß³Ì
+                a.join();// åœ¨bä¸­è°ƒç”¨a bçº¿ç¨‹ä¼šç­‰åˆ°açº¿ç¨‹ç»“æŸæ‰ç»§ç»­æ‰§è¡Œ æ‰€ä»¥açº¿ç¨‹çš„è¾“å‡ºä¼˜å…ˆäºbçº¿ç¨‹
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -34,7 +34,7 @@ public class JoinExample {
     public void test () {
         A a = new A();
         B b = new B(a);
-        b.start();// bÏß³ÌÏÈÆô¶¯ µ«ÊÇaÏß³ÌÏÈÔËĞĞÍê±Ï
+        b.start();// bçº¿ç¨‹å…ˆå¯åŠ¨ ä½†æ˜¯açº¿ç¨‹å…ˆè¿è¡Œå®Œæ¯•
         a.start();
     }
 

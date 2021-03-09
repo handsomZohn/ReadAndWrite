@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**
- * 获取os环境变量
+ * 鑾峰彇os鐜鍙橀噺
  * @author Administrator
  */
 public class EnvironmentVariables {
@@ -25,7 +25,7 @@ public class EnvironmentVariables {
         }
 
 
-        // 通过system访问
+        // 閫氳繃system璁块棶
         String java_home = System.getenv("JAVA_HOME");
 
         System.out.println("======^_^======variable java_home value is : " + java_home + ", " + " current method and class name is : EnvironmentVariables.main()");

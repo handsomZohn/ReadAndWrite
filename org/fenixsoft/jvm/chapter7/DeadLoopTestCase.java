@@ -7,7 +7,7 @@ public class DeadLoopTestCase {
 
     static class DeadLoopClass {
         static {
-            // 如果不加上这个if语句，编译器将提示“Initializer does not complete normally”并拒绝编译
+            // 濡傛灉涓嶅姞涓婅繖涓猧f璇彞锛岀紪璇戝櫒灏嗘彁绀衡�淚nitializer does not complete normally鈥濆苟鎷掔粷缂栬瘧
             if (true) {
                 System.out.println(Thread.currentThread() + "init DeadLoopClass");
                 while (true) {

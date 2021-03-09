@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- *@Description  Ê¹ÓÃ×Ö·ûÁ÷½øĞĞÎÄ¼ş¸´ÖÆ
+ *@Description  ä½¿ç”¨å­—ç¬¦æµè¿›è¡Œæ–‡ä»¶å¤åˆ¶
  *@CreateDate   18/07/18 14:55
  *@Author        zohn
  *@Version       1.0
@@ -15,16 +15,16 @@ import java.io.IOException;
 public class CharacterCopyFileExample {
     public static void main(String[] args) throws IOException {
         String src = "d:\\licence.txt", dist = "e:\\licence.txt";
-        System.out.println("¸´ÖÆÎÄ¼ş¿ªÊ¼£º" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶å¼€å§‹ï¼š" + System.currentTimeMillis());
         copyFile(src,dist);
-        System.out.println("¸´ÖÆÎÄ¼ş½áÊø£º" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶ç»“æŸï¼š" + System.currentTimeMillis());
         readLine(src);
     }
 
     /**
      *
-     * @param src Ô­ÎÄ¼şÂ·¾¶
-     * @param dist Ä¿±êÎÄ¼şÂ·¾¶
+     * @param src åŸæ–‡ä»¶è·¯å¾„
+     * @param dist ç›®æ ‡æ–‡ä»¶è·¯å¾„
      * @throws IOException
      */
     static void copyFile(String src, String dist) throws IOException{
@@ -39,21 +39,21 @@ public class CharacterCopyFileExample {
     }
 
     /**
-     * ÖğĞĞÊä³öÎÄ¼şÄÚÈİ
-     * @param src Ô´ÎÄ¼şÂ·¾¶
+     * é€è¡Œè¾“å‡ºæ–‡ä»¶å†…å®¹
+     * @param src æºæ–‡ä»¶è·¯å¾„
      * @throws IOException
      */
     static void readLine(String src) throws  IOException{
         FileReader fileReader = new FileReader(src);
-        // ×°ÊÎÕßÄ£Ê½Ê¹µÃBufferedReader×éºÏÒ»¸öFileReader¶ÔÏó
+        // è£…é¥°è€…æ¨¡å¼ä½¿å¾—BufferedReaderç»„åˆä¸€ä¸ªFileReaderå¯¹è±¡
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String line;
         while ((line = bufferedReader.readLine()) != null){
             System.out.println(line);
         }
-        // ÔÚµ÷ÓÃBufferedReaderµÄclose()·½·¨Ê±,»áÈ¥µ÷ÓÃFileReaderµÄclose()·½·¨
-        // Ö»Ğèµ÷ÓÃÒ»´Î¼´¿É
+        // åœ¨è°ƒç”¨BufferedReaderçš„close()æ–¹æ³•æ—¶,ä¼šå»è°ƒç”¨FileReaderçš„close()æ–¹æ³•
+        // åªéœ€è°ƒç”¨ä¸€æ¬¡å³å¯
         bufferedReader.close();
     }
-    // ±àÂë¾ÍÊÇ°Ñ×Ö·û×ª»»Îª×Ö½Ú ½âÂë¾ÍÊÇ°Ñ×Ö½ÚÖØĞÂ×éºÏ³É×Ö·û;
+    // ç¼–ç å°±æ˜¯æŠŠå­—ç¬¦è½¬æ¢ä¸ºå­—èŠ‚ è§£ç å°±æ˜¯æŠŠå­—èŠ‚é‡æ–°ç»„åˆæˆå­—ç¬¦;
 }

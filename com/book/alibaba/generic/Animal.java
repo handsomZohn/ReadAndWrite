@@ -7,14 +7,14 @@ public class Animal {
 
     public static void main(String[] args) {
         List<Dog> dogs = new ArrayList<>();
-        // ²»»á±¨´í
+        // ä¸ä¼šæŠ¥é”™
         int i = countLegs(dogs);
-        // Ö±½Ó±àÒë±¨´í
+        // ç›´æ¥ç¼–è¯‘æŠ¥é”™
         // countLegs001(dogs);
-        System.out.println("======^_^======±äÁ¿iÖµÎª: " + i + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Animal.main()");
+        System.out.println("======^_^======å˜é‡iå€¼ä¸º: " + i + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Animal.main()");
     }
 
-    // ¹æ¶¨ÁËÉÏ±ß½çµ«ÊÇ²»¹ØĞÄ¾ßÌåÀàĞÍÊÇÊ²Ã´£¬ËùÒÔ¶ÔÓÚ´«ÈëµÄ AnimalÒÔ¼°Æä µÄËùÓĞ×ÓÀà¶¼¿ÉÒÔÖ§³Ö£¬²¢ÇÒ²»»á±¨´í
+    // è§„å®šäº†ä¸Šè¾¹ç•Œä½†æ˜¯ä¸å…³å¿ƒå…·ä½“ç±»å‹æ˜¯ä»€ä¹ˆï¼Œæ‰€ä»¥å¯¹äºä¼ å…¥çš„ Animalä»¥åŠå…¶ çš„æ‰€æœ‰å­ç±»éƒ½å¯ä»¥æ”¯æŒï¼Œå¹¶ä¸”ä¸ä¼šæŠ¥é”™
     static int countLegs (List<? extends Animal> animals) {
         int retVal = 0;
         for (Animal animal : animals) {

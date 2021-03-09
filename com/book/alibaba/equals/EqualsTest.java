@@ -3,7 +3,7 @@ package com.book.alibaba.equals;
 import java.util.Objects;
 
 /**
- * @Description ObjectµÄequals·½·¨ÈİÒ×Å×³ö¿ÕÖ¸ÕëÒì³££¬Ó¦Ê¹ÓÃ³£Á¿»òÈ·¶¨ÓĞÖµµÄ¶ÔÏóÀ´µ÷ÓÃequals
+ * @Description Objectçš„equalsæ–¹æ³•å®¹æ˜“æŠ›å‡ºç©ºæŒ‡é’ˆå¼‚å¸¸ï¼Œåº”ä½¿ç”¨å¸¸é‡æˆ–ç¡®å®šæœ‰å€¼çš„å¯¹è±¡æ¥è°ƒç”¨equals
  * @Author zohn
  * @Date 2020\1\7 0007 9:21
  * @Param 
@@ -17,9 +17,9 @@ public class EqualsTest {
 
         boolean equals = Objects.equals(str01, str02);
 
-        System.out.println("======^_^======±äÁ¿equalsÖµÎª: " + equals + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: EqualsTest.main()");
+        System.out.println("======^_^======å˜é‡equalså€¼ä¸º: " + equals + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: EqualsTest.main()");
 
-        // ¾­¹ı²âÊÔObjects.equals(str01, str02) ÊÇ±È½ÏÍ¨ÓÃµÄ
-        // ÒÔºó£¨2020.01.07¿ªÊ¼£©¾­ÊÖµÄËùÓĞ´úÂë£¬ÔÚ1.7ÒÔ¼°ÒÔÉÏµÄ£¬ÒªÓÃObjects.equals(str01, str02)¡£
+        // ç»è¿‡æµ‹è¯•Objects.equals(str01, str02) æ˜¯æ¯”è¾ƒé€šç”¨çš„
+        // ä»¥åï¼ˆ2020.01.07å¼€å§‹ï¼‰ç»æ‰‹çš„æ‰€æœ‰ä»£ç ï¼Œåœ¨1.7ä»¥åŠä»¥ä¸Šçš„ï¼Œè¦ç”¨Objects.equals(str01, str02)ã€‚
     }
 }

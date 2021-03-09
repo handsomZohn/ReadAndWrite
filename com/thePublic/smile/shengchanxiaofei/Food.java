@@ -10,7 +10,7 @@ package com.thePublic.smile.shengchanxiaofei;
 public class Food {
     private int id;
 
-    // ÓÃ²»µ½ÎŞ²Î¹¹Ôì ¿ÉÒÔ²»Ğ´ÎŞ²Î¹¹Ôìº¯Êı ·ñÔòĞÂ½¨¶ÔÏó³ö´í
+    // ç”¨ä¸åˆ°æ— å‚æ„é€  å¯ä»¥ä¸å†™æ— å‚æ„é€ å‡½æ•° å¦åˆ™æ–°å»ºå¯¹è±¡å‡ºé”™
     public Food(int id) {
         this.id = id;
     }

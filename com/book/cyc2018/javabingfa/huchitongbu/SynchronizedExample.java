@@ -4,14 +4,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @Description synchronized Í¬²½Ò»¸ö¶ÔÏó
+ * @Description synchronized åŒæ­¥ä¸€ä¸ªå¯¹è±¡
  * @CreateDate 18/07/23 17:50
  * @Author zohn
  * @Version 1.0
  */
 public class SynchronizedExample {
     public void func1() {
-        synchronized (this) { // synchronizedÖ»×÷ÓÃÓÚÍ¬Ò»¸ö¶ÔÏó Èç¹ûµ÷ÓÃÁ½¸ö¶ÔÏóÉÏµÄÍ¬²½´úÂë¿é ²»»á½øĞĞÍ¬²½
+        synchronized (this) { // synchronizedåªä½œç”¨äºåŒä¸€ä¸ªå¯¹è±¡ å¦‚æœè°ƒç”¨ä¸¤ä¸ªå¯¹è±¡ä¸Šçš„åŒæ­¥ä»£ç å— ä¸ä¼šè¿›è¡ŒåŒæ­¥
             for (int i = 0; i < 100; i++) {
                 System.out.print(i + " ");
             }
@@ -19,8 +19,8 @@ public class SynchronizedExample {
     }
 
     public void func2(){
-        synchronized (SynchronizedExample.class){ // ×÷ÓÃÓÚÕû¸öÀà Ò²¾ÍÊÇËµÁ½¸öÏß³Ìµ÷ÓÃÍ¬Ò»¸öÀàµÄ²»Í¬¶ÔÏóµÄÕâÖÖÍ¬²½Óï¾ä
-            // Ò²»á½øĞĞÍ¬²½
+        synchronized (SynchronizedExample.class){ // ä½œç”¨äºæ•´ä¸ªç±» ä¹Ÿå°±æ˜¯è¯´ä¸¤ä¸ªçº¿ç¨‹è°ƒç”¨åŒä¸€ä¸ªç±»çš„ä¸åŒå¯¹è±¡çš„è¿™ç§åŒæ­¥è¯­å¥
+            // ä¹Ÿä¼šè¿›è¡ŒåŒæ­¥
             for (int i = 0; i < 20; i++) {
                 System.out.print(i + " ");
             }
@@ -29,17 +29,17 @@ public class SynchronizedExample {
 
     public static void main(String[] args) {
         /**
-         * Í¬²½Ò»¸ö¶ÔÏó
+         * åŒæ­¥ä¸€ä¸ªå¯¹è±¡
          */
 //        SynchronizedExample synchronizedExample = new SynchronizedExample();
 //        SynchronizedExample synchronizedExample2 = new SynchronizedExample();
 //        ExecutorService executorService = Executors.newCachedThreadPool();
 //        executorService.execute(() -> synchronizedExample.func1()); //
-//        executorService.execute(() -> synchronizedExample.func1()); // ÓëÉÏÃæµÄÍ¬²½
-//        executorService.execute(() -> synchronizedExample2.func1());// ÓëÉÏÃæµÄ²»Í¬²½
+//        executorService.execute(() -> synchronizedExample.func1()); // ä¸ä¸Šé¢çš„åŒæ­¥
+//        executorService.execute(() -> synchronizedExample2.func1());// ä¸ä¸Šé¢çš„ä¸åŒæ­¥
 
         /**
-         * Í¬²½Ò»¸öÀà
+         * åŒæ­¥ä¸€ä¸ªç±»
          */
         SynchronizedExample synchronizedExample = new SynchronizedExample();
         SynchronizedExample synchronizedExample1 = new SynchronizedExample();
@@ -48,8 +48,8 @@ public class SynchronizedExample {
         executorService.execute(()->synchronizedExample1.func2());
     }
 
-    // Í¬²½Ò»¸ö¾²Ì¬·½·¨
-    // ×÷ÓÃÓÚÕû¸öÀà
+    // åŒæ­¥ä¸€ä¸ªé™æ€æ–¹æ³•
+    // ä½œç”¨äºæ•´ä¸ªç±»
     public synchronized static void fun() {
 
     }

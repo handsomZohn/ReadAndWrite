@@ -13,8 +13,8 @@ public class Bigram {
         this.second = second;
     }
 
-    // Ã»ÓĞ¸²¸Çequals ¶øÊÇ½«equals·½·¨¸øÖØÔØÁË£¬ÏëÒª¸²¸ÇObjectµÄequals·½·¨£¬ÄÇ¾Í±ØĞë¶¨ÒåÒ»¸ö²ÎÊıÎªObjectµÄequals·½·¨£»
-    // Õâ¸öequals·½·¨ÊÇ²âÊÔ¶ÔÏóµÄÍ¬Ò»ĞÔ ÀàËÆÓÚ==¡£
+    // æ²¡æœ‰è¦†ç›–equals è€Œæ˜¯å°†equalsæ–¹æ³•ç»™é‡è½½äº†ï¼Œæƒ³è¦è¦†ç›–Objectçš„equalsæ–¹æ³•ï¼Œé‚£å°±å¿…é¡»å®šä¹‰ä¸€ä¸ªå‚æ•°ä¸ºObjectçš„equalsæ–¹æ³•ï¼›
+    // è¿™ä¸ªequalsæ–¹æ³•æ˜¯æµ‹è¯•å¯¹è±¡çš„åŒä¸€æ€§ ç±»ä¼¼äº==ã€‚
     //
     /*public boolean equals(Bigram bigram){
         return bigram.first == first && bigram.second == second;

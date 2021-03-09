@@ -3,7 +3,7 @@ package com.learnFromSourceCode;
 public class ForFor {
     public static void main(String[] args) {
 
-        // ÎŞÏŞÑ­»·µÄÓÖÒ»ÖÖĞ´·¨
+        // æ— é™å¾ªç¯çš„åˆä¸€ç§å†™æ³•
         for (;;) {
             System.out.println(110);
             break;

@@ -4,22 +4,22 @@ import static java.lang.Thread.currentThread;
 
 /**
  * Created by zohn on 2016-09-27.
- * 1¡¢extends Thread
- * 2¡¢implements Runnable
+ * 1ã€extends Thread
+ * 2ã€implements Runnable
  */
 public class Thread01 {
 
     public static void main(String[] args) {
 
-       //µÚÒ»ÖÖ´´½¨Ïß³ÌµÄ·½Ê½ new Thread(){}.start();
+       //ç¬¬ä¸€ç§åˆ›å»ºçº¿ç¨‹çš„æ–¹å¼ new Thread(){}.start();
         new Thread(){
                     @Override
                     public void run(){
                 try {
                     int i = 0;
                     while (i<2){
-                        //TimeUnit.SECONDS.sleep(1); //×ßµ½Õâ¸öµØ·½£¬Í£Ò»Ãë
-                       // TimeUnit.MINUTES.sleep(1);   //×ßµ½Õâ¸öµã£¬Í¦Ò»·ÖÖÓ
+                        //TimeUnit.SECONDS.sleep(1); //èµ°åˆ°è¿™ä¸ªåœ°æ–¹ï¼Œåœä¸€ç§’
+                       // TimeUnit.MINUTES.sleep(1);   //èµ°åˆ°è¿™ä¸ªç‚¹ï¼ŒæŒºä¸€åˆ†é’Ÿ
                         System.out.println("1name:"+currentThread().getName());
                         i++;
                     }
@@ -27,10 +27,10 @@ public class Thread01 {
                     e.printStackTrace();
                 }
             }
-        }.start(); //¶ÔÏó.start();±íÊ¾ÈÃ¸ÃÏß³ÌÆğÀ´
+        }.start(); //å¯¹è±¡.start();è¡¨ç¤ºè®©è¯¥çº¿ç¨‹èµ·æ¥
 
-        // µÚ¶şÖÖ´´½¨Ïß³ÌµÄ·½Ê½  new Thread(Runnable target,String name).start();
-        // ¿ÉÒÔÓÃlambdaÌæ»»ÄäÃûÀà
+        // ç¬¬äºŒç§åˆ›å»ºçº¿ç¨‹çš„æ–¹å¼  new Thread(Runnable target,String name).start();
+        // å¯ä»¥ç”¨lambdaæ›¿æ¢åŒ¿åç±»
         new Thread(new Runnable(){
                     public void run(){
                         try {
@@ -43,9 +43,9 @@ public class Thread01 {
                     e.printStackTrace();
                 }
             }
-        },"Thread-zidingyi").start(); //"Thread-×Ô¼ºÆğµÄÃû×Ö" ¿É±ä²ÎÊı£¬ÊÇ´´½¨ Ïß³ÌµÄÃû×Ö£»zidingyi£»
+        },"Thread-zidingyi").start(); //"Thread-è‡ªå·±èµ·çš„åå­—" å¯å˜å‚æ•°ï¼Œæ˜¯åˆ›å»º çº¿ç¨‹çš„åå­—ï¼›zidingyiï¼›
 
-        //½«Á½ÖÖ·½Ê½½áºÏÆğÀ´ ÏÈ×ßÈı»¹ÊÇÏÈ×ßËÄ£¿¿´¿´´òÓ¡½á¹û new Thread(Runnable target,String name){}.start();
+        //å°†ä¸¤ç§æ–¹å¼ç»“åˆèµ·æ¥ å…ˆèµ°ä¸‰è¿˜æ˜¯å…ˆèµ°å››ï¼Ÿçœ‹çœ‹æ‰“å°ç»“æœ new Thread(Runnable target,String name){}.start();
         new Thread(new Runnable(){
             public void run(){
                 try {
@@ -73,13 +73,13 @@ public class Thread01 {
             }
         }.start();
         /*
-        µÚÈı¼ÒÏß³Ì¸ù±¾Ã»ÓĞÊä³ö£¡ÒòÎª£¬ÈıºÍËÄ Ïß³Ì Ö»Æô¶¯ÁËÒ»¸ö£¬
-        ÏÂÃæµÄÄäÃûÀà¼Ì³Ğ×ÔThread£¬²¢°ÑThreadÀïÃæµÄrun·½·¨¸²¸ÇÁË¡£
+        ç¬¬ä¸‰å®¶çº¿ç¨‹æ ¹æœ¬æ²¡æœ‰è¾“å‡ºï¼å› ä¸ºï¼Œä¸‰å’Œå›› çº¿ç¨‹ åªå¯åŠ¨äº†ä¸€ä¸ªï¼Œ
+        ä¸‹é¢çš„åŒ¿åç±»ç»§æ‰¿è‡ªThreadï¼Œå¹¶æŠŠThreadé‡Œé¢çš„runæ–¹æ³•è¦†ç›–äº†ã€‚
          */
 
 
-      //main ·½·¨
+      //main æ–¹æ³•
     }
 
-    //Àà
+    //ç±»
 }

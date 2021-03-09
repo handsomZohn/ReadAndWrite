@@ -1,6 +1,6 @@
 package com.thePublic.thinkMap.thinkAboutJava;
 
-// ²âÊÔmain·½·¨
+// æµ‹è¯•mainæ–¹æ³•
 public class IntTypeSwap {
     public static void main(String[] args) {
 
@@ -12,7 +12,7 @@ public class IntTypeSwap {
         IntType type2 = new IntType();
         type2.setValue(2);
 
-        // ½»»»
+        // äº¤æ¢
         swap1(type1, type2);
         System.out.printf("type1.value = %s, type2.value = %s", type1.getValue(), type2.getValue());
 
@@ -23,18 +23,18 @@ public class IntTypeSwap {
 
     }
 
-    // ¶ÔÏó²ÎÊı´«µİ²ÉÓÃµÄÊÇÒıÓÃ´«µİ,type1ºÍtype2´«µİ¹ıÀ´µÄÊÇÖ¸Ïò¶ÔÏóµÄÒıÓÃ£¬ÔÚ·½·¨ÄÚ²¿Ö±½Ó²Ù×÷ĞÎ²Î£¬½»»»ÁËĞÎ²ÎµÄÄÚÈİ£¬ÕâÑùĞÎ²Î
-    // ¸Ä±ä£¬Ã»ÓĞ¶ÔÊµ²Î²úÉúÈÎºÎÓ°Ïì£¬Ò²Ã»ÓĞ¸Ä±ä¶ÔÏóÊµ¼ÊµÄÖµ£¬ËùÒÔ½á¹ûÊÇÎŞ·¨½»»»µÄ¡£
+    // å¯¹è±¡å‚æ•°ä¼ é€’é‡‡ç”¨çš„æ˜¯å¼•ç”¨ä¼ é€’,type1å’Œtype2ä¼ é€’è¿‡æ¥çš„æ˜¯æŒ‡å‘å¯¹è±¡çš„å¼•ç”¨ï¼Œåœ¨æ–¹æ³•å†…éƒ¨ç›´æ¥æ“ä½œå½¢å‚ï¼Œäº¤æ¢äº†å½¢å‚çš„å†…å®¹ï¼Œè¿™æ ·å½¢å‚
+    // æ”¹å˜ï¼Œæ²¡æœ‰å¯¹å®å‚äº§ç”Ÿä»»ä½•å½±å“ï¼Œä¹Ÿæ²¡æœ‰æ”¹å˜å¯¹è±¡å®é™…çš„å€¼ï¼Œæ‰€ä»¥ç»“æœæ˜¯æ— æ³•äº¤æ¢çš„ã€‚
     public static void swap1 (IntType type1, IntType type2) {
         IntType type = type1;
         type1 = type2;
         type2 = type;
-        System.out.println("Ö»ÊÇĞÎ²ÎµÄ×ª»»==================");
-        System.out.println("======^_^======±äÁ¿type1.getValue()ÖµÎª: " + type1.getValue() + ", ±äÁ¿type2.getValue()ÖµÎª: " +type2.getValue()+ ", µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: IntTypeSwap.swap1()");
+        System.out.println("åªæ˜¯å½¢å‚çš„è½¬æ¢==================");
+        System.out.println("======^_^======å˜é‡type1.getValue()å€¼ä¸º: " + type1.getValue() + ", å˜é‡type2.getValue()å€¼ä¸º: " +type2.getValue()+ ", å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: IntTypeSwap.swap1()");
     }
 
-    // ¶ÔÏóÒıÓÃ×÷ÎªĞÎ²Î´«µİ¹ıÀ´£¬Ã»ÓĞ¶ÔĞÎ²Î×öÈÎºÎ¸Ä±ä£¬¶øÊÇÖ±½Ó²Ù×÷ÁËĞÎ²ÎËøÖ¸ÏòµÄ¶ÔÏóÊµ¼ÊµØÖ·£¬ÄÇÕâÑù£¬ÎŞÂÛÊÇÊµ²Î»¹ÊÇÆäËûµØ·½£¬
-    // Ö»ÒªÊÇÖ¸Ïò¸Ã¶ÔÏóµÄËùÓĞµÄÒıÓÃµØÖ·¶ÔÓ¦µÄÖµ¶¼»á¸Ä±ä¡£
+    // å¯¹è±¡å¼•ç”¨ä½œä¸ºå½¢å‚ä¼ é€’è¿‡æ¥ï¼Œæ²¡æœ‰å¯¹å½¢å‚åšä»»ä½•æ”¹å˜ï¼Œè€Œæ˜¯ç›´æ¥æ“ä½œäº†å½¢å‚é”æŒ‡å‘çš„å¯¹è±¡å®é™…åœ°å€ï¼Œé‚£è¿™æ ·ï¼Œæ— è®ºæ˜¯å®å‚è¿˜æ˜¯å…¶ä»–åœ°æ–¹ï¼Œ
+    // åªè¦æ˜¯æŒ‡å‘è¯¥å¯¹è±¡çš„æ‰€æœ‰çš„å¼•ç”¨åœ°å€å¯¹åº”çš„å€¼éƒ½ä¼šæ”¹å˜ã€‚
     public static void swap2 (IntType type1, IntType type2) {
         int temp = type1.getValue();
         type1.setValue(type2.getValue());

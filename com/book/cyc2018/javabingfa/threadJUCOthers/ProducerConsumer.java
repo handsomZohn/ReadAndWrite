@@ -10,7 +10,7 @@ import java.util.concurrent.BlockingQueue;
  * @CreateDate: 2018/7/28 18:11
  * @UpdateUser: zohn
  * @UpdateDate: 2018/7/28 18:11
- * @UpdateRemark: ÐÞ¸ÄÄÚÈÝ
+ * @UpdateRemark: ä¿®æ”¹å†…å®¹
  * @Version: 1.0
  */
 public class ProducerConsumer {

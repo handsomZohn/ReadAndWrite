@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter8;
 
 /**
- * ·½·¨¾²Ì¬½âÎöÑİÊ¾
+ * æ–¹æ³•é™æ€è§£ææ¼”ç¤º
  *
  * @author zzm
  */

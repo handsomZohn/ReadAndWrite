@@ -3,7 +3,7 @@ package com.book.cyc2018.javabingfa.thread;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Description volatile ±£Ö¤ÈÎºÎÒ»¸öÏß³ÌÔÚ¶ÁÈ¡¸ÃÓòµÄÊ±ºò¶¼½«¿´µ½×îĞÂĞ´ÈëµÄÖµ£»
+ * @Description volatile ä¿è¯ä»»ä½•ä¸€ä¸ªçº¿ç¨‹åœ¨è¯»å–è¯¥åŸŸçš„æ—¶å€™éƒ½å°†çœ‹åˆ°æœ€æ–°å†™å…¥çš„å€¼ï¼›
  * @CreateDate 18/08/07 16:05
  * @Author zohn
  * @Version 1.0
@@ -14,14 +14,14 @@ public class FixStopThread02 {
     public static void main(String[] args) {
         new Thread(() ->{
             int i = 0;
-            while (!stopRequested) {// ĞÂ´´½¨Ïß³Ì¿ÉÒÔ¿´µ½±»Ö÷Ïß³ÌĞŞ¸Ä¹ıµÄÖµ;
+            while (!stopRequested) {// æ–°åˆ›å»ºçº¿ç¨‹å¯ä»¥çœ‹åˆ°è¢«ä¸»çº¿ç¨‹ä¿®æ”¹è¿‡çš„å€¼;
                 i++;
                 System.out.println(i + "sml");
             }
         }).start();
         try {
             TimeUnit.SECONDS.sleep(1);
-            stopRequested = true;// Ö÷Ïß³Ì¸ü¸ÄÖµ
+            stopRequested = true;// ä¸»çº¿ç¨‹æ›´æ”¹å€¼
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

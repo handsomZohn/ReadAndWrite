@@ -10,7 +10,7 @@ import java.util.Set;
 
 
 /**
- * @Description Ì×½Ó×ÖNIOÊµÀı·şÎñ¶Ë
+ * @Description å¥—æ¥å­—NIOå®ä¾‹æœåŠ¡ç«¯
  * @CreateDate 18/07/18 16:21
  * @Author zohn
  * @Version 1.0
@@ -32,10 +32,10 @@ public class NIOServer {
                 SelectionKey key = keyIterator.next();
                 if (key.isAcceptable()) {
                     ServerSocketChannel serverSocketChannel2 = (ServerSocketChannel) key.channel();
-                    // ·şÎñÆ÷»áÎªÃ¿Ò»¸öĞÂÁ¬½Ó´´½¨Ò»¸öSocketChannel
+                    // æœåŠ¡å™¨ä¼šä¸ºæ¯ä¸€ä¸ªæ–°è¿æ¥åˆ›å»ºä¸€ä¸ªSocketChannel
                     SocketChannel socketChannel = serverSocketChannel2.accept();
                     socketChannel.configureBlocking(false);
-                    // Õâ¸öĞÂÁ¬½ÓÖ÷Òª´Ó¿Í»§¶Ë¶ÁÈ¡Êı¾İ
+                    // è¿™ä¸ªæ–°è¿æ¥ä¸»è¦ä»å®¢æˆ·ç«¯è¯»å–æ•°æ®
                     socketChannel.register(selector, SelectionKey.OP_READ);
                 } else if (key.isReadable()) {
                     SocketChannel socketChannel = (SocketChannel) key.channel();

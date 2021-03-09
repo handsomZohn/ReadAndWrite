@@ -5,13 +5,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
-* @Description: semaphore¾ÍÊÇ²Ù×÷ÏµÍ³ÖĞµÄĞÅºÅÁ¿£¬¿ÉÒÔ¿ØÖÆ¶Ô»¥³â×ÊÔ´µÄ·ÃÎÊÏß³ÌÊı£»
- * Ä£Äâ¶ÔÄ³¸ö·şÎñµÄ²¢·¢ÇëÇó£¬Ã¿´ÎÖ»ÄÜÓĞÈı¸ö¿Í»§¶ËÍ¬Ê±·ÃÎÊ ÇëÇóÊıÎª10
+* @Description: semaphoreå°±æ˜¯æ“ä½œç³»ç»Ÿä¸­çš„ä¿¡å·é‡ï¼Œå¯ä»¥æ§åˆ¶å¯¹äº’æ–¥èµ„æºçš„è®¿é—®çº¿ç¨‹æ•°ï¼›
+ * æ¨¡æ‹Ÿå¯¹æŸä¸ªæœåŠ¡çš„å¹¶å‘è¯·æ±‚ï¼Œæ¯æ¬¡åªèƒ½æœ‰ä¸‰ä¸ªå®¢æˆ·ç«¯åŒæ—¶è®¿é—® è¯·æ±‚æ•°ä¸º10
 * @Author:         zohn
 * @CreateDate:     2018/7/28 11:56
 * @UpdateUser:     zohn
 * @UpdateDate:     2018/7/28 11:56
-* @UpdateRemark:   ĞŞ¸ÄÄÚÈİ
+* @UpdateRemark:   ä¿®æ”¹å†…å®¹
 * @Version:        1.0
 */
 public class SemaphoreExample {

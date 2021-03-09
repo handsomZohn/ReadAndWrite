@@ -7,7 +7,7 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
- * VM Args£º -XX:PermSize=10M -XX:MaxPermSize=10M
+ * VM Argsï¼š -XX:PermSize=10M -XX:MaxPermSize=10M
  *
  * @author zzm
  */

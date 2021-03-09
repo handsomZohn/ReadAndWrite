@@ -46,14 +46,14 @@ class StreamDemo03 {
                 System.out.println("name: " + a.name + ", Phone: " + a.phonenum + ", Email:" + a.email)
         );
 
-        // ¶ÔÏó.ÊôÐÔ
+        // å¯¹è±¡.å±žæ€§
         Stream<NamePhone> namePhoneStream = myList.stream().map((a) -> new NamePhone(a.name, a.phonenum));
         System.out.println("List of Names and Phone Numbers:");
         namePhoneStream.forEach(a -> System.out.println("name: " + a.name + ", Phone: " + a.phonenum));
 
         Stream<NamePhone> namePhoneStream1 = myList.stream().filter((a) -> a.name.equals("James")).map((a) -> new NamePhone(a.name, a.phonenum));
 
-        System.out.println("nameÊÇJamesµÄÐÅÏ¢£º");
+        System.out.println("nameæ˜¯Jamesçš„ä¿¡æ¯ï¼š");
         namePhoneStream1.forEach(a -> System.out.println("name: " + a.name + ", Phone:" + a.phonenum));
     }
 

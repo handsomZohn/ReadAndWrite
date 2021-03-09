@@ -4,7 +4,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- *@Description  Ã¿¸öÏß³Ìµ±×öÒ»¸öÏû·ÑÕß
+ *@Description  æ¯ä¸ªçº¿ç¨‹å½“åšä¸€ä¸ªæ¶ˆè´¹è€…
  *@CreateDate   18/08/13 9:13
  *@Author        zohn
  *@Version       1.0
@@ -22,8 +22,8 @@ public class Consumer implements Runnable {
     public void run() {
         while (true) {
             try {
-                Food food = queue.take(); // take·½Ê½£¬Èô¶ÓÁĞÖĞÃ»ÓĞÔªËØ ÔòÏß³Ì×èÈû
-                System.out.println(food.getId() + "ºÅÊ³ÎïÒÑ±»" + Thread.currentThread().getId() + "ºÅ¹Ë¿Í¶Ë×ß");
+                Food food = queue.take(); // takeæ–¹å¼ï¼Œè‹¥é˜Ÿåˆ—ä¸­æ²¡æœ‰å…ƒç´  åˆ™çº¿ç¨‹é˜»å¡
+                System.out.println(food.getId() + "å·é£Ÿç‰©å·²è¢«" + Thread.currentThread().getId() + "å·é¡¾å®¢ç«¯èµ°");
                 TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();

@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter8;
 
 /**
- * ·½·¨¾²Ì¬·ÖÅÉÑİÊ¾
+ * æ–¹æ³•é™æ€åˆ†æ´¾æ¼”ç¤º
  * @author zzm
  */
 public class StaticDispatch {

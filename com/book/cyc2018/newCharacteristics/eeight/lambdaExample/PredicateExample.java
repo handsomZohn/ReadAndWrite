@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- *@Description  Java 8 Predicate µÄÀı×Ó£¬Õ¹Ê¾ÁË¹ıÂË¼¯ºÏÊı¾İµÄ¶àÖÖ³£ÓÃ·½·¨ Õâ¸öÀàÃ»ÓĞÍ¨¹ıÎÒ×Ô¼ºĞ´µÄ²âÊÔÕÒµÄÀı×ÓÊÇ´íÎóµÄ--ÎØÎØ
+ *@Description  Java 8 Predicate çš„ä¾‹å­ï¼Œå±•ç¤ºäº†è¿‡æ»¤é›†åˆæ•°æ®çš„å¤šç§å¸¸ç”¨æ–¹æ³• è¿™ä¸ªç±»æ²¡æœ‰é€šè¿‡æˆ‘è‡ªå·±å†™çš„æµ‹è¯•æ‰¾çš„ä¾‹å­æ˜¯é”™è¯¯çš„--å‘œå‘œ
  *@CreateDate   18/07/19 13:31
  *@Author        zohn
  *@Version       1.0

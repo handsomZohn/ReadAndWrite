@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter8;
 
 /**
- * ×Ö¶Î²»²ÎÓë¶àÌ¬
+ * å­—æ®µä¸å‚ä¸å¤šæ€
  * @author zzm
  */
 public class FieldHasNoPolymorphic {

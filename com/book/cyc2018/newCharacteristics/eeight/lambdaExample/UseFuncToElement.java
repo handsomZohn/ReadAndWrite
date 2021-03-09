@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @Description ¶ÔÁÐ±íµÄÃ¿¸öÔªËØÓ¦ÓÃº¯Êý ÎÒÃÇÍ¨³£ÐèÒª¶ÔÁÐ±íµÄÃ¿¸öÔªËØÊ¹ÓÃÄ³¸öº¯Êý£¬ÀýÈçÖðÒ»³ËÒÔÄ³¸öÊý¡¢³ýÒÔÄ³¸öÊý»òÕß×öÆäËü²Ù×÷¡£
- * ÕâÐ©²Ù×÷¶¼ºÜÊÊºÏÓÃ map() ·½·¨£¬¿ÉÒÔ½«×ª»»Âß¼­ÒÔlambda±í´ïÊ½µÄÐÎÊ½·ÅÔÚ map() ·½·¨Àï£¬¾Í¿ÉÒÔ¶Ô¼¯ºÏµÄ¸÷¸öÔªËØ½øÐÐ×ª»»ÁË
+ * @Description å¯¹åˆ—è¡¨çš„æ¯ä¸ªå…ƒç´ åº”ç”¨å‡½æ•° æˆ‘ä»¬é€šå¸¸éœ€è¦å¯¹åˆ—è¡¨çš„æ¯ä¸ªå…ƒç´ ä½¿ç”¨æŸä¸ªå‡½æ•°ï¼Œä¾‹å¦‚é€ä¸€ä¹˜ä»¥æŸä¸ªæ•°ã€é™¤ä»¥æŸä¸ªæ•°æˆ–è€…åšå…¶å®ƒæ“ä½œã€‚
+ * è¿™äº›æ“ä½œéƒ½å¾ˆé€‚åˆç”¨ map() æ–¹æ³•ï¼Œå¯ä»¥å°†è½¬æ¢é€»è¾‘ä»¥lambdaè¡¨è¾¾å¼çš„å½¢å¼æ”¾åœ¨ map() æ–¹æ³•é‡Œï¼Œå°±å¯ä»¥å¯¹é›†åˆçš„å„ä¸ªå…ƒç´ è¿›è¡Œè½¬æ¢äº†
  * @CreateDate 18/07/19 17:21
  * @Author zohn
  * @Version 1.0

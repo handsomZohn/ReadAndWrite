@@ -17,17 +17,17 @@ public class IdCardTest {
 		// TODO Auto-generated method stub
 		String sfzhm = "142201199805213064";
 
-		Object obj = new Object(); // Ç¿ÒıÓÃ
-		SoftReference softReference = new SoftReference(obj); // ÈíÒıÓÃ
-		WeakReference weakReference = new WeakReference(obj); // ÈõÒıÓÃ
+		Object obj = new Object(); // å¼ºå¼•ç”¨
+		SoftReference softReference = new SoftReference(obj); // è½¯å¼•ç”¨
+		WeakReference weakReference = new WeakReference(obj); // å¼±å¼•ç”¨
 		ReferenceQueue q = null;
-		PhantomReference phantomReference = new PhantomReference(obj, q); // ĞéÒıÓÃ
+		PhantomReference phantomReference = new PhantomReference(obj, q); // è™šå¼•ç”¨
 
 		getNlBySfzhm(sfzhm);
 
 	}
 
-	//¸ù¾İÉí·İÖ¤»ñÈ¡ÄêÁä
+	//æ ¹æ®èº«ä»½è¯è·å–å¹´é¾„
 	public static String getNlBySfzhm(String sfzhm) throws Exception {
 		String year = IDCardHelper.getYear(sfzhm);
 		String month = IDCardHelper.getMonth(sfzhm);

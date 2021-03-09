@@ -1,8 +1,8 @@
 package com.book.cyc2018.javabingfa.xianchengchi;
 
 /**
- * @Description Í¨¹ıµ÷ÓÃÒ»¸öÏß³ÌµÄinterrupt()À´ÖĞ¶ÏÏß³Ì Èç¹û¸ÃÏß³Ì³öÓÚ×èÈû¡¢ÏŞÆÚµÈ´ı»òÕßÎŞÏŞÆÚµÈ´ı ¾Í»áÅ×³öInterruptedException
- * ´Ó¶øÌáÇ°½áÊø¸ÃÏß³Ì¡£µ«ÊÇ²»ÄÜÖĞ¶ÏIO×èÈûºÍsynchronizedËø×èÈû¡£
+ * @Description é€šè¿‡è°ƒç”¨ä¸€ä¸ªçº¿ç¨‹çš„interrupt()æ¥ä¸­æ–­çº¿ç¨‹ å¦‚æœè¯¥çº¿ç¨‹å‡ºäºé˜»å¡ã€é™æœŸç­‰å¾…æˆ–è€…æ— é™æœŸç­‰å¾… å°±ä¼šæŠ›å‡ºInterruptedException
+ * ä»è€Œæå‰ç»“æŸè¯¥çº¿ç¨‹ã€‚ä½†æ˜¯ä¸èƒ½ä¸­æ–­IOé˜»å¡å’Œsynchronizedé”é˜»å¡ã€‚
  * @CreateDate 18/07/23 17:16
  * @Author zohn
  * @Version 1.0
@@ -12,8 +12,8 @@ public class InterruptedException {
         @Override
         public void run() {
             try {
-                Thread.sleep(1000);// sleep()¿ÉÄÜ»áÅ×³öInterruptedException ÒòÎªÒì³£²»ÄÜ¿äÏß³Ì´«²¥»Ømain()ÖĞ
-                // Òò´Ë±ØĞëÔÚ±¾µØ´¦Àí
+                Thread.sleep(1000);// sleep()å¯èƒ½ä¼šæŠ›å‡ºInterruptedException å› ä¸ºå¼‚å¸¸ä¸èƒ½å¤¸çº¿ç¨‹ä¼ æ’­å›main()ä¸­
+                // å› æ­¤å¿…é¡»åœ¨æœ¬åœ°å¤„ç†
                 System.out.println("Thread  Run");
             } catch (java.lang.InterruptedException e) {
                 e.printStackTrace();
@@ -41,7 +41,7 @@ public class InterruptedException {
         public static void main(String[] args) throws java.lang.InterruptedException {
             MyThread2 myThread2 = new MyThread2();
             myThread2.start();
-            Thread.sleep(5000); // ÔËĞĞ10Ãë interrupt
+            Thread.sleep(5000); // è¿è¡Œ10ç§’ interrupt
             myThread2.interrupt();
         }
     }

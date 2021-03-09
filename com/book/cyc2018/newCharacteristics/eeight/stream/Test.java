@@ -5,14 +5,14 @@ import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 /**
- * @Description Êı×éÔªËØ°üº¬ÏàÍ¬ÊôĞÔÊ±£¬È¥³ıÔªËØ£¬Ö»ÁôÒ»¸ö
+ * @Description æ•°ç»„å…ƒç´ åŒ…å«ç›¸åŒå±æ€§æ—¶ï¼Œå»é™¤å…ƒç´ ï¼Œåªç•™ä¸€ä¸ª
  * @CreateDate 18/09/20 12:53
  * @Author zohn
  * @Version 1.0
  */
 public class Test {
     public static void main(String[] args) {
-        // Ô­Êı×é
+        // åŸæ•°ç»„
         Ry[] rys = new Ry[3];
         Ry ry0 = new Ry();
         ry0.setSfzhm("411322199501302430");
@@ -24,9 +24,9 @@ public class Test {
         rys[1] = ry1;
         rys[2] = ry2;
 
-        // Êı×éÀïÃæµÄÔªËØÊôĞÔÖØ¸´£¬È¥µôÊôĞÔÖØ¸´µÄÔªËØ£¬Ö»±£ÁôÒ»¸ö
+        // æ•°ç»„é‡Œé¢çš„å…ƒç´ å±æ€§é‡å¤ï¼Œå»æ‰å±æ€§é‡å¤çš„å…ƒç´ ï¼Œåªä¿ç•™ä¸€ä¸ª
 
-        // ÏÈ°ÑÊı×é×ªÎª¼¯ºÏ
+        // å…ˆæŠŠæ•°ç»„è½¬ä¸ºé›†åˆ
         List<Ry> ries = Arrays.asList(rys);
 
         //for (Ry ry : ries ) {
@@ -41,7 +41,7 @@ public class Test {
 
 
 
-        // Êı×é·ÅÈëmap Êı×éÔªËØµÄsfzhmÊôĞÔ×ökey Êı×éÔªËØ×övalue
+        // æ•°ç»„æ”¾å…¥map æ•°ç»„å…ƒç´ çš„sfzhmå±æ€§åškey æ•°ç»„å…ƒç´ åšvalue
         //Map haMap = new HashMap();
         //for (int i = 0; i < rys.length; i++) {
         //    haMap.put(rys[i].getSfzhm(), rys[i]);

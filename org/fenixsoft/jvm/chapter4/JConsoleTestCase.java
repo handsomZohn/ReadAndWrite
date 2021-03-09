@@ -6,7 +6,7 @@ import java.util.List;
 public class JConsoleTestCase {
 
     /**
-     * ÄÚ´æÕ¼Î»·û¶ÔÏó£¬Ò»¸öOOMObject´óÔ¼Õ¼64K
+     * å†…å­˜å ä½ç¬¦å¯¹è±¡ï¼Œä¸€ä¸ªOOMObjectå¤§çº¦å 64K
      */
     static class OOMObject {
         public byte[] placeholder = new byte[64 * 1024];
@@ -15,18 +15,18 @@ public class JConsoleTestCase {
     public static void fillHeap(int num) throws InterruptedException {
         List<OOMObject> list = new ArrayList<OOMObject>();
         for (int i = 0; i < num; i++) {
-            // ÉÔ×÷ÑÓÊ±£¬Áî¼àÊÓÇúÏßµÄ±ä»¯¸ü¼ÓÃ÷ÏÔ
+            // ç¨ä½œå»¶æ—¶ï¼Œä»¤ç›‘è§†æ›²çº¿çš„å˜åŒ–æ›´åŠ æ˜æ˜¾
             Thread.sleep(100);
             list.add(new OOMObject());
         }
-        // ·½·¨Ã»ÓĞÍË³ö ²»ÄÜ»ØÊÕµôÈ«²¿µÄÄÚ´æ£º£º
+        // æ–¹æ³•æ²¡æœ‰é€€å‡º ä¸èƒ½å›æ”¶æ‰å…¨éƒ¨çš„å†…å­˜ï¼šï¼š
         System.gc();
     }
 
     // System.gc();
 
     /**
-     * @Description ÒÔ64kb/100msµÄËÙ¶ÈÏòjava¶ÑÖĞÌî³äÊı¾İ£¬Ò»¹²Ìî³ä10w´Î
+     * @Description ä»¥64kb/100msçš„é€Ÿåº¦å‘javaå †ä¸­å¡«å……æ•°æ®ï¼Œä¸€å…±å¡«å……10wæ¬¡
      * @Author z
      * @Date 2020/10/12 22:02
      * @Param [args]

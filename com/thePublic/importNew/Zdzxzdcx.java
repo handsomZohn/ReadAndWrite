@@ -2,7 +2,7 @@ package com.thePublic.importNew;
 
 
 /**
- * @Description ×Ô¶¯×°Ïä×Ô¶¯²ğÏä
+ * @Description è‡ªåŠ¨è£…ç®±è‡ªåŠ¨æ‹†ç®±
  * @CreateDate 18/10/24 15:48
  * @Author zohn
  * @Version 1.0
@@ -16,31 +16,31 @@ public class Zdzxzdcx {
     }
 
     /**
-     * ×Ô¶¯×°Ïä
+     * è‡ªåŠ¨è£…ç®±
      */
     public static void zdzx() {
         Integer i = 10;
         System.out.println(i);// 2: invokestatic  #4                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
-        // ¸ù¾İÊıÖµ´´½¨¶ÔÓ¦µÄInteger¶ÔÏó Õâ¾ÍÊÇ×Ô¶¯×°Ïä
+        // æ ¹æ®æ•°å€¼åˆ›å»ºå¯¹åº”çš„Integerå¯¹è±¡ è¿™å°±æ˜¯è‡ªåŠ¨è£…ç®±
     }
 
     /**
-     * ×Ô¶¯²ğÏä
+     * è‡ªåŠ¨æ‹†ç®±
      */
     public static void zdcx() {
         Integer integer = 10;
         int i = integer;//  7: invokevirtual #7                  // Method java/lang/Integer.intValue:()I
         System.out.println(i);
-        // ¸ù¾İ°ü×°Æ÷ÀàĞÍ½«Êı¾İ×ª»»Îª»ù±¾ÀàĞÍ ×Ô¶¯²ğÏä
+        // æ ¹æ®åŒ…è£…å™¨ç±»å‹å°†æ•°æ®è½¬æ¢ä¸ºåŸºæœ¬ç±»å‹ è‡ªåŠ¨æ‹†ç®±
     }
 
-    // Ô­Àí£º
-    // ¿´javap ·´±àÒëµÄ×Ö½ÚÂëÖ¸ÁîĞÅÏ¢£º
-    // ×Ô¶¯×°ÏäµÄÊ±ºò£¬JavaĞéÄâ»ú»á×Ô¶¯µ÷ÓÃIntegerµÄvalueOf·½·¨
-    // ×Ô¶¯²ğÏäµÄÊ±ºò£¬JavaĞéÄâ»ú»á×Ô¶¯µ÷ÓÃIntegerµÄintValue·½·¨
+    // åŸç†ï¼š
+    // çœ‹javap åç¼–è¯‘çš„å­—èŠ‚ç æŒ‡ä»¤ä¿¡æ¯ï¼š
+    // è‡ªåŠ¨è£…ç®±çš„æ—¶å€™ï¼ŒJavaè™šæ‹Ÿæœºä¼šè‡ªåŠ¨è°ƒç”¨Integerçš„valueOfæ–¹æ³•
+    // è‡ªåŠ¨æ‹†ç®±çš„æ—¶å€™ï¼ŒJavaè™šæ‹Ÿæœºä¼šè‡ªåŠ¨è°ƒç”¨Integerçš„intValueæ–¹æ³•
 
     /**
-     * @Description Ğ¡ĞÄ¿ÕÖ¸Õë
+     * @Description å°å¿ƒç©ºæŒ‡é’ˆ
      * @CreateDate 18/10/24 15:59
      * @Author zohn
      * @Version 1.0
@@ -69,11 +69,11 @@ public class Zdzxzdcx {
         System.out.println(double01 == double02);// false
         System.out.println(double03 == double04);// false
 
-        // Ô­Òò·ÖÎö:Byte, Short, Integer, Long, CharÕâ¼¸¸ö×°ÏäÀàµÄvalueOf()·½·¨ÊÇÒÔ128Îª·Ö½ç×öÁË»º´æ
-        // ¼ÙÈçÊÇ128ÒÔÏÂ£¨²»°üº¬128£©-128ÒÔÉÏ£¨°üº¬-128£©»áÈ¡»º´æÀïÃæµÄÖµ£»
-        // ¶øFloat£¬DoubleÔò²»»á£¬ÒòÎªByte£¬Short£¬Integer£¬Long£¬CharµÄÄ³¸ö·¶Î§ÄÚµÄÕûÊı¸öÊıÊÇÓĞÏŞµÄ£¬FloatºÍDoubleÈ´²»ÊÇ
+        // åŸå› åˆ†æ:Byte, Short, Integer, Long, Charè¿™å‡ ä¸ªè£…ç®±ç±»çš„valueOf()æ–¹æ³•æ˜¯ä»¥128ä¸ºåˆ†ç•Œåšäº†ç¼“å­˜
+        // å‡å¦‚æ˜¯128ä»¥ä¸‹ï¼ˆä¸åŒ…å«128ï¼‰-128ä»¥ä¸Šï¼ˆåŒ…å«-128ï¼‰ä¼šå–ç¼“å­˜é‡Œé¢çš„å€¼ï¼›
+        // è€ŒFloatï¼ŒDoubleåˆ™ä¸ä¼šï¼Œå› ä¸ºByteï¼ŒShortï¼ŒIntegerï¼ŒLongï¼ŒCharçš„æŸä¸ªèŒƒå›´å†…çš„æ•´æ•°ä¸ªæ•°æ˜¯æœ‰é™çš„ï¼ŒFloatå’ŒDoubleå´ä¸æ˜¯
 
-        // »ù±¾ÖªÊ¶
-        // »º´æµÄ¸ÅÄî£¬»º´æ¶ÔÓÚÌá¸ß³ÌĞòÔËĞĞĞ§ÂÊ¡¢½ÚÊ¡ÄÚ´æ¿Õ¼äÓĞºÜ´ó°ïÖú
+        // åŸºæœ¬çŸ¥è¯†
+        // ç¼“å­˜çš„æ¦‚å¿µï¼Œç¼“å­˜å¯¹äºæé«˜ç¨‹åºè¿è¡Œæ•ˆç‡ã€èŠ‚çœå†…å­˜ç©ºé—´æœ‰å¾ˆå¤§å¸®åŠ©
     }
 }

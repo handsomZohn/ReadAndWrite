@@ -5,7 +5,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 /**
- *@Description  Ì×½Ó×ÖNIOÊµÀý¿Í»§¶Ë
+ *@Description  å¥—æŽ¥å­—NIOå®žä¾‹å®¢æˆ·ç«¯
  *@CreateDate   18/07/18 16:21
  *@Author        zohn
  *@Version       1.0

@@ -1,7 +1,7 @@
 package com.book.xdclass;
 
 /**
- *@Description  TryCatchFinally 测试
+ *@Description  TryCatchFinally 娴嬭瘯
  *@CreateDate 2020\3\13 0013 10:35
  *@Author zohn
  *@Version 1.0
@@ -12,7 +12,7 @@ public class TryCatchFinallyTest {
     public static void main(String[] args) {
         int i = test1();
         int i1 = test2();
-        System.out.println("======^_^======变量i值为: " + i + ", 变量i1值为: " +i1+ ", 当前类以及方法名字是: TryCatchFinallyTest.main()");
+        System.out.println("======^_^======鍙橀噺i鍊间负: " + i + ", 鍙橀噺i1鍊间负: " +i1+ ", 褰撳墠绫讳互鍙婃柟娉曞悕瀛楁槸: TryCatchFinallyTest.main()");
     }
 
     public static int test1() {
@@ -39,7 +39,7 @@ public class TryCatchFinallyTest {
             return a;
         } finally {
             a = 4;
-            return a;// 直接执行这里了；finally中的return语句一定会被执行的
+            return a;// 鐩存帴鎵ц杩欓噷浜嗭紱finally涓殑return璇彞涓�瀹氫細琚墽琛岀殑
         }
     }
 }

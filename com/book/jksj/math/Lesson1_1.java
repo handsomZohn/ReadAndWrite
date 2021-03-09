@@ -8,12 +8,12 @@ public class Lesson1_1 {
 
         int a = 53;
         String b = "110101";
-        System.out.println(String.format(" Êı×Ö %d µÄ¶ş½øÖÆÊÇ %s", a, Lesson1_1.decimalToBinary(a))); // »ñÈ¡Ê®½øÖÆÊı 53 µÄ¶ş½øÖÆÊı
-        System.out.println(String.format(" Êı×Ö %s µÄÊ®½øÖÆÊÇ %d", b, Lesson1_1.binaryToDecimal(b))); // »ñÈ¡¶ş½øÖÆÊı 110101 µÄÊ®½øÖÆÊı
+        System.out.println(String.format(" æ•°å­— %d çš„äºŒè¿›åˆ¶æ˜¯ %s", a, Lesson1_1.decimalToBinary(a))); // è·å–åè¿›åˆ¶æ•° 53 çš„äºŒè¿›åˆ¶æ•°
+        System.out.println(String.format(" æ•°å­— %s çš„åè¿›åˆ¶æ˜¯ %d", b, Lesson1_1.binaryToDecimal(b))); // è·å–äºŒè¿›åˆ¶æ•° 110101 çš„åè¿›åˆ¶æ•°
 
-        // %d Êı×Ö
-        // %s ×Ö·û´®
-        // %f ¸¡µãĞÍ
+        // %d æ•°å­—
+        // %s å­—ç¬¦ä¸²
+        // %f æµ®ç‚¹å‹
 
     }
 
@@ -21,21 +21,21 @@ public class Lesson1_1 {
     /**
      * @param decimalSource
      * @return String
-     * @Description: Ê®½øÖÆ×ª»»³É¶ş½øÖÆ
+     * @Description: åè¿›åˆ¶è½¬æ¢æˆäºŒè¿›åˆ¶
      */
     public static String decimalToBinary(int decimalSource) {
-        BigInteger bi = new BigInteger(String.valueOf(decimalSource)); // ×ª»»³É BigInteger ÀàĞÍ£¬Ä¬ÈÏÊÇÊ®½øÖÆ
-        return bi.toString(2); // ²ÎÊı 2 Ö¸¶¨µÄÊÇ×ª»¯³É¶ş½øÖÆ
+        BigInteger bi = new BigInteger(String.valueOf(decimalSource)); // è½¬æ¢æˆ BigInteger ç±»å‹ï¼Œé»˜è®¤æ˜¯åè¿›åˆ¶
+        return bi.toString(2); // å‚æ•° 2 æŒ‡å®šçš„æ˜¯è½¬åŒ–æˆäºŒè¿›åˆ¶
     }
 
     /**
      * @param binarySource
      * @return int
-     * @Description: ¶ş½øÖÆ×ª»»³ÉÊ®½øÖÆ
+     * @Description: äºŒè¿›åˆ¶è½¬æ¢æˆåè¿›åˆ¶
      */
     public static int binaryToDecimal(String binarySource) {
-        BigInteger bi = new BigInteger(binarySource, 2);  // ×ª»»Îª BigInteger ÀàĞÍ£¬²ÎÊı 2 Ö¸¶¨µÄÊÇ¶ş½øÖÆ
-        return Integer.parseInt(bi.toString());     // Ä¬ÈÏ×ª»»³ÉÊ®½øÖÆ
+        BigInteger bi = new BigInteger(binarySource, 2);  // è½¬æ¢ä¸º BigInteger ç±»å‹ï¼Œå‚æ•° 2 æŒ‡å®šçš„æ˜¯äºŒè¿›åˆ¶
+        return Integer.parseInt(bi.toString());     // é»˜è®¤è½¬æ¢æˆåè¿›åˆ¶
     }
 
 

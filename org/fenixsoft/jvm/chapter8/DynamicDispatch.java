@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter8;
 
 /**
- * ·½·¨¶¯Ì¬·ÖÅÉÑİÊ¾
+ * æ–¹æ³•åŠ¨æ€åˆ†æ´¾æ¼”ç¤º
  * @author zzm
  */
 public class DynamicDispatch {

@@ -7,14 +7,14 @@ public class Array2List {
     public static void main(String[] args) {
         String[] strArr = {"001", "002", "003", "004", "005"};
         List<String> asList = Arrays.asList(strArr);
-        System.out.println("======^_^======±äÁ¿asListÖµÎª: " + asList + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Array2List.main()");
+        System.out.println("======^_^======å˜é‡asListå€¼ä¸º: " + asList + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Array2List.main()");
 
-        // ¼ÓÒ»¸öÔªËØÊÔÊÔ È»ºó¾Í  Exception in thread "main" java.lang.UnsupportedOperationException
+        // åŠ ä¸€ä¸ªå…ƒç´ è¯•è¯• ç„¶åå°±  Exception in thread "main" java.lang.UnsupportedOperationException
         // asList.add("006");
 
-        // asList.get(1)Ò²»á±»ĞŞ¸ÄÁË¡£
+        // asList.get(1)ä¹Ÿä¼šè¢«ä¿®æ”¹äº†ã€‚
         strArr[1] = "0001";
 
-        System.out.println("======^_^======±äÁ¿asListÖµÎª: " + asList + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: Array2List.main()");
+        System.out.println("======^_^======å˜é‡asListå€¼ä¸º: " + asList + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: Array2List.main()");
     }
 }

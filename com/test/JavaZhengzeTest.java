@@ -29,10 +29,10 @@ public class JavaZhengzeTest {
 		}
 		 //System.out.println(str2);
 
-		// Èç£º"aa bb    cc  dd  ee   cs "±ä³É"aa bb cc dd ee cs"
-		// ÕıÔò±í´ïÊ½ÊµÏÖ
+		// å¦‚ï¼š"aa bb    cc  dd  ee   cs "å˜æˆ"aa bb cc dd ee cs"
+		// æ­£åˆ™è¡¨è¾¾å¼å®ç°
 		 String string = "0.0.0.0[]         0.255.255.255[] 552222";
-		 String test = string.replaceAll("\\[]\\s{1,}", " "); // \s Æ¥ÅäÈÎºÎ¿Õ°××Ö·û£¬°üÀ¨¿Õ¸ñ¡¢ÖÆ±í·û¡¢»»Ò³·ûµÈµÈ¡£µÈ¼ÛÓÚ[ \f\n\r\t\v]¡£ 
+		 String test = string.replaceAll("\\[]\\s{1,}", " "); // \s åŒ¹é…ä»»ä½•ç©ºç™½å­—ç¬¦ï¼ŒåŒ…æ‹¬ç©ºæ ¼ã€åˆ¶è¡¨ç¬¦ã€æ¢é¡µç¬¦ç­‰ç­‰ã€‚ç­‰ä»·äº[ \f\n\r\t\v]ã€‚ 
 		 String[] split = test.split(" ");
 		 for (int i = 0; i < split.length; i++) {
 		 //System.out.println(split[i]);
@@ -47,11 +47,11 @@ public class JavaZhengzeTest {
 		// System.out.println(str3[i]);
 		// }
 
-		// ÓÃÑ­»·ÊµÏÖ
+		// ç”¨å¾ªç¯å®ç°
 		/*String str4 = "aa bb    cc  dd  ee   cs ";
 		String s = "";
 		for (int i = 0; i < str4.length() - 1; i++) {
-			// ¿Õ¸ñ×ª³ÉintĞÍ´ú±íÊı×ÖÊÇ32
+			// ç©ºæ ¼è½¬æˆintå‹ä»£è¡¨æ•°å­—æ˜¯32
 			if ((int) str4.charAt(i) == 32 && (int) str4.charAt(i + 1) == 32) {
 				continue;
 			}

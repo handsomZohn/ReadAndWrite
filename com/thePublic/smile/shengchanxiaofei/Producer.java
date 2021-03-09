@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- *@Description  Ã¿¸öÏß³Ìµ±×öÒ»¸öÉú²úÕß
+ *@Description  æ¯ä¸ªçº¿ç¨‹å½“åšä¸€ä¸ªç”Ÿäº§è€…
  *@CreateDate   18/08/13 9:01
  *@Author        zohn
  *@Version       1.0
@@ -16,7 +16,7 @@ public class Producer implements Runnable{
     private BlockingQueue<Food> queue;
     private static AtomicInteger count = new AtomicInteger();
 
-    // ¹¹Ôìº¯Êı
+    // æ„é€ å‡½æ•°
     public Producer(BlockingQueue<Food> queue) {
         this.queue = queue;
     }
@@ -27,9 +27,9 @@ public class Producer implements Runnable{
             int id = count.incrementAndGet();
             Food food = new Food(id);
             if (queue.offer(food)) {
-                System.out.println(Thread.currentThread().getId() + "ºÅÔ±¹¤½«" + food.getId() + "ºÅÊ³Îï¼ÓÈë²ÍÌ¨");
+                System.out.println(Thread.currentThread().getId() + "å·å‘˜å·¥å°†" + food.getId() + "å·é£Ÿç‰©åŠ å…¥é¤å°");
             } else {
-                System.out.println("²ÍÌ¨ÒÑÂú£¬" + food.getId() + "ºÅÊ³ÎïÎŞ·¨¼ÓÈë");
+                System.out.println("é¤å°å·²æ»¡ï¼Œ" + food.getId() + "å·é£Ÿç‰©æ— æ³•åŠ å…¥");
             }
             try {
                 // Thread.sleep(1000*3);

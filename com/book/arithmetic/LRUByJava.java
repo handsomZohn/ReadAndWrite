@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- *@Description ÊÖĞ´Ò»¸öjava°æ±¾µÄlru
+ *@Description æ‰‹å†™ä¸€ä¸ªjavaç‰ˆæœ¬çš„lru
  *@CreateDate 2021\2\8 0008 13:59
  *@Author z
  *@Version 1.0
@@ -12,18 +12,18 @@ import java.util.Map;
 public class LRUByJava<K,V> extends LinkedHashMap<K,V> {
     private int CACHE_SIZE;
     /**
-     * ´«µİ½øÀ´ÄÜ»º´æ¶àÉÙÊı¾İ
-     * @param cacheSize »º´æ´óĞ¡
+     * ä¼ é€’è¿›æ¥èƒ½ç¼“å­˜å¤šå°‘æ•°æ®
+     * @param cacheSize ç¼“å­˜å¤§å°
      */
     public LRUByJava(int cacheSize){
-        // true±íÊ¾ÈÃlinkedHashMap°´ÕÕ·ÃÎÊË³ĞòÀ´ÅÅĞò£¬×î½ü·ÃÎÊµÄÅÅÔÚÍ·²¿£¬×îÏÈ£¨ÀÏ£©·ÃÎÊµÄÅÅÔÚÎ²²¿
+        // trueè¡¨ç¤ºè®©linkedHashMapæŒ‰ç…§è®¿é—®é¡ºåºæ¥æ’åºï¼Œæœ€è¿‘è®¿é—®çš„æ’åœ¨å¤´éƒ¨ï¼Œæœ€å…ˆï¼ˆè€ï¼‰è®¿é—®çš„æ’åœ¨å°¾éƒ¨
         super((int)Math.ceil(cacheSize/0.75) + 1, 0.75f,true);
         CACHE_SIZE = cacheSize;
     }
 
     @Override
     protected boolean removeEldestEntry(Map.Entry<K,V> eldest){
-        // µ±mapÖĞµÄÊı¾İÁ¿´óÓÚÖ¸¶¨µÄ»º´æµÄ¸öÊıµÄÊ±ºò£¬¾Í×Ô¶¯É¾³ı×îÀÏµÄÊı¾İ
+        // å½“mapä¸­çš„æ•°æ®é‡å¤§äºæŒ‡å®šçš„ç¼“å­˜çš„ä¸ªæ•°çš„æ—¶å€™ï¼Œå°±è‡ªåŠ¨åˆ é™¤æœ€è€çš„æ•°æ®
         return size() > CACHE_SIZE;
     }
     public static void main(String[] args) {

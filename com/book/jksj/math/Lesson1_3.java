@@ -10,14 +10,14 @@ public class Lesson1_3 {
         int a = 53;
         int b = 35;
 
-        System.out.println(String.format(" Êı×Ö %d(%s) ºÍÊı×Ö %d(%s) µÄ°´Î»¡®»ò¡¯½á¹ûÊÇ %d(%s)",
-                a, decimalToBinary(a), b, decimalToBinary(b), Lesson1_3.or(a, b), decimalToBinary(Lesson1_3.or(a, b)))); // »ñÈ¡Ê®½øÖÆÊı 53 ºÍ 35 µÄ°´Î»¡°»ò¡±
+        System.out.println(String.format(" æ•°å­— %d(%s) å’Œæ•°å­— %d(%s) çš„æŒ‰ä½â€˜æˆ–â€™ç»“æœæ˜¯ %d(%s)",
+                a, decimalToBinary(a), b, decimalToBinary(b), Lesson1_3.or(a, b), decimalToBinary(Lesson1_3.or(a, b)))); // è·å–åè¿›åˆ¶æ•° 53 å’Œ 35 çš„æŒ‰ä½â€œæˆ–â€
 
-        System.out.println(String.format(" Êı×Ö %d(%s) ºÍÊı×Ö %d(%s) µÄ°´Î»¡®Óë¡¯½á¹ûÊÇ %d(%s)",
-                a, decimalToBinary(a), b, decimalToBinary(b), Lesson1_3.and(a, b), decimalToBinary(Lesson1_3.and(a, b))));  // »ñÈ¡Ê®½øÖÆÊı 53 ºÍ 35 µÄ°´Î»¡°Óë¡±
+        System.out.println(String.format(" æ•°å­— %d(%s) å’Œæ•°å­— %d(%s) çš„æŒ‰ä½â€˜ä¸â€™ç»“æœæ˜¯ %d(%s)",
+                a, decimalToBinary(a), b, decimalToBinary(b), Lesson1_3.and(a, b), decimalToBinary(Lesson1_3.and(a, b))));  // è·å–åè¿›åˆ¶æ•° 53 å’Œ 35 çš„æŒ‰ä½â€œä¸â€
 
-        System.out.println(String.format(" Êı×Ö %d(%s) ºÍÊı×Ö %d(%s) µÄ°´Î»¡®Òì»ò¡¯½á¹ûÊÇ %d(%s)",
-                a, decimalToBinary(a), a, decimalToBinary(a), Lesson1_3.xor(a, a), decimalToBinary(Lesson1_3.xor(a, a))));  // »ñÈ¡Ê®½øÖÆÊı 53 ºÍ 35 µÄ°´Î»¡°Òì»ò¡±
+        System.out.println(String.format(" æ•°å­— %d(%s) å’Œæ•°å­— %d(%s) çš„æŒ‰ä½â€˜å¼‚æˆ–â€™ç»“æœæ˜¯ %d(%s)",
+                a, decimalToBinary(a), a, decimalToBinary(a), Lesson1_3.xor(a, a), decimalToBinary(Lesson1_3.xor(a, a))));  // è·å–åè¿›åˆ¶æ•° 53 å’Œ 35 çš„æŒ‰ä½â€œå¼‚æˆ–â€
 
     }
 
@@ -25,9 +25,9 @@ public class Lesson1_3 {
 
 
     /**
-     * @Description: ¶ş½øÖÆ°´Î»¡°»ò¡±µÄ²Ù×÷
-     * @param num1- µÚÒ»¸öÊı×Ö£¬num2- µÚ¶ş¸öÊı×Ö
-     * @return ¶ş½øÖÆ°´Î»¡°»ò¡±µÄ½á¹û
+     * @Description: äºŒè¿›åˆ¶æŒ‰ä½â€œæˆ–â€çš„æ“ä½œ
+     * @param num1- ç¬¬ä¸€ä¸ªæ•°å­—ï¼Œnum2- ç¬¬äºŒä¸ªæ•°å­—
+     * @return äºŒè¿›åˆ¶æŒ‰ä½â€œæˆ–â€çš„ç»“æœ
      */
     public static int or(int num1, int num2) {
 
@@ -36,9 +36,9 @@ public class Lesson1_3 {
     }
 
     /**
-     * @Description: ¶ş½øÖÆ°´Î»¡°Óë¡±µÄ²Ù×÷
-     * @param num1- µÚÒ»¸öÊı×Ö£¬num2- µÚ¶ş¸öÊı×Ö
-     * @return ¶ş½øÖÆ°´Î»¡°Óë¡±µÄ½á¹û
+     * @Description: äºŒè¿›åˆ¶æŒ‰ä½â€œä¸â€çš„æ“ä½œ
+     * @param num1- ç¬¬ä¸€ä¸ªæ•°å­—ï¼Œnum2- ç¬¬äºŒä¸ªæ•°å­—
+     * @return äºŒè¿›åˆ¶æŒ‰ä½â€œä¸â€çš„ç»“æœ
      */
     public static int and(int num1, int num2) {
 
@@ -48,9 +48,9 @@ public class Lesson1_3 {
 
     /**
 
-     * @Description: ¶ş½øÖÆ°´Î»¡°Òì»ò¡±µÄ²Ù×÷
-     * @param num1- µÚÒ»¸öÊı×Ö£¬num2- µÚ¶ş¸öÊı×Ö
-     * @return ¶ş½øÖÆ°´Î»¡°Òì»ò¡±µÄ½á¹û
+     * @Description: äºŒè¿›åˆ¶æŒ‰ä½â€œå¼‚æˆ–â€çš„æ“ä½œ
+     * @param num1- ç¬¬ä¸€ä¸ªæ•°å­—ï¼Œnum2- ç¬¬äºŒä¸ªæ•°å­—
+     * @return äºŒè¿›åˆ¶æŒ‰ä½â€œå¼‚æˆ–â€çš„ç»“æœ
      */
 
     public static int xor(int num1, int num2) {

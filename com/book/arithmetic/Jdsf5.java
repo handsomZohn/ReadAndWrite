@@ -5,14 +5,14 @@ import javax.swing.JOptionPane;
 public class Jdsf5 {
 
 	/**
-	 * ¡¾³ÌÐò5¡¿ ÌâÄ¿£ºÀûÓÃÌõ¼þÔËËã·ûµÄÇ¶Ì×À´Íê³É´ËÌâ£ºÑ§Ï°³É¼¨> =90·ÖµÄÍ¬Ñ§ÓÃA±íÊ¾£¬60-89·ÖÖ®¼äµÄÓÃB±íÊ¾£¬60·ÖÒÔÏÂµÄÓÃC±íÊ¾¡£
-	 * 1.³ÌÐò·ÖÎö£º(a> b)?a:bÕâÊÇÌõ¼þÔËËã·ûµÄ»ù±¾Àý×Ó¡£
+	 * ã€ç¨‹åº5ã€‘ é¢˜ç›®ï¼šåˆ©ç”¨æ¡ä»¶è¿ç®—ç¬¦çš„åµŒå¥—æ¥å®Œæˆæ­¤é¢˜ï¼šå­¦ä¹ æˆç»©> =90åˆ†çš„åŒå­¦ç”¨Aè¡¨ç¤ºï¼Œ60-89åˆ†ä¹‹é—´çš„ç”¨Bè¡¨ç¤ºï¼Œ60åˆ†ä»¥ä¸‹çš„ç”¨Cè¡¨ç¤ºã€‚
+	 * 1.ç¨‹åºåˆ†æžï¼š(a> b)?a:bè¿™æ˜¯æ¡ä»¶è¿ç®—ç¬¦çš„åŸºæœ¬ä¾‹å­ã€‚
 	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		String str = "";
-		str = JOptionPane.showInputDialog("ÇëÊäÈë·ÖÊýÖµ(ÊäÈëexitÍË³ö):");// javaµ¯ÊäÈë¿òÈÃÊäÈë
+		str = JOptionPane.showInputDialog("è¯·è¾“å…¥åˆ†æ•°å€¼(è¾“å…¥exité€€å‡º):");// javaå¼¹è¾“å…¥æ¡†è®©è¾“å…¥
 		int mark = 0;
 		try {
 			
@@ -21,7 +21,7 @@ public class Jdsf5 {
 			}
 			mark = Integer.parseInt(str);
 		} catch (NumberFormatException e) {
-			throw new RuntimeException("·ÖÊý¸ñÊ½´íÎó!!!");
+			throw new RuntimeException("åˆ†æ•°æ ¼å¼é”™è¯¯!!!");
 			// e.printStackTrace();
 		}
 		System.out.println(mark > 90 ? "A" : (mark > 60 ? "B" : "C"));

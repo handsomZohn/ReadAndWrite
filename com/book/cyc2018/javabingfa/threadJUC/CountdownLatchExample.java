@@ -5,14 +5,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @Description:CountdownLatch ÓÃÀ´¿ØÖÆÒ»¸öÏß³ÌµÈ´ı¶à¸öÏß³Ì¡£
- * Î¬»¤Ò»¸ö¼ÆÊıÆ÷cnt£¬Ã¿´Îµ÷ÓÃcountDown()·½·¨»áÈÃ¼ÆÊıÆ÷µÄÖµ¼õ1£¬
- * ¼õµ½0µÄÊ±ºò£¬ÄÇĞ©ÒòÎªµ÷ÓÃawait£¨£©·½·¨¶øµÈ´ıµÄÏß³Ì¾Í»á±»»½ĞÑ¡£
+ * @Description:CountdownLatch ç”¨æ¥æ§åˆ¶ä¸€ä¸ªçº¿ç¨‹ç­‰å¾…å¤šä¸ªçº¿ç¨‹ã€‚
+ * ç»´æŠ¤ä¸€ä¸ªè®¡æ•°å™¨cntï¼Œæ¯æ¬¡è°ƒç”¨countDown()æ–¹æ³•ä¼šè®©è®¡æ•°å™¨çš„å€¼å‡1ï¼Œ
+ * å‡åˆ°0çš„æ—¶å€™ï¼Œé‚£äº›å› ä¸ºè°ƒç”¨awaitï¼ˆï¼‰æ–¹æ³•è€Œç­‰å¾…çš„çº¿ç¨‹å°±ä¼šè¢«å”¤é†’ã€‚
  * @Author: zohn
  * @CreateDate: 2018/7/28 10:25
  * @UpdateUser: zohn
  * @UpdateDate: 2018/7/28 10:25
- * @UpdateRemark: ĞŞ¸ÄÄÚÈİ
+ * @UpdateRemark: ä¿®æ”¹å†…å®¹
  * @Version: 1.0
  */
 public class CountdownLatchExample {

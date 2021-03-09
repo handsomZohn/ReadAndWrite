@@ -1,7 +1,7 @@
 package org.fenixsoft.jvm.chapter3;
 
 /**
- * VM²ÎÊı£º+XX:UseSerialGC
+ * VMå‚æ•°ï¼š+XX:UseSerialGC
  * @author zzm
  */
 public class TestSerialGCAllocation {
@@ -9,32 +9,32 @@ public class TestSerialGCAllocation {
     private static final int _1MB = 1024 * 1024;
 
     /**
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
      */
     public static void testAllocation() {
         byte[] allocation1, allocation2, allocation3, allocation4;
         allocation1 = new byte[2 * _1MB];
         allocation2 = new byte[2 * _1MB];
         allocation3 = new byte[2 * _1MB];
-        allocation4 = new byte[4 * _1MB];  // ³öÏÖÒ»´ÎMinor GC
+        allocation4 = new byte[4 * _1MB];  // å‡ºç°ä¸€æ¬¡Minor GC
     }
 
     /**
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
      * -XX:PretenureSizeThreshold=3145728
      */
     public static void testPretenureSizeThreshold() {
         byte[] allocation;
-        allocation = new byte[4 * _1MB];  //Ö±½Ó·ÖÅäÔÚÀÏÄê´úÖĞ
+        allocation = new byte[4 * _1MB];  //ç›´æ¥åˆ†é…åœ¨è€å¹´ä»£ä¸­
     }
 
     /**
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=1
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=1
      * -XX:+PrintTenuringDistribution
      */
     public static void testTenuringThreshold() {
         byte[] allocation1, allocation2, allocation3;
-        allocation1 = new byte[_1MB / 4];  // Ê²Ã´Ê±ºò½øÈëÀÏÄê´ú¾ö¶¨ÓÚXX:MaxTenuringThresholdÉèÖÃ
+        allocation1 = new byte[_1MB / 4];  // ä»€ä¹ˆæ—¶å€™è¿›å…¥è€å¹´ä»£å†³å®šäºXX:MaxTenuringThresholdè®¾ç½®
         allocation2 = new byte[4 * _1MB];
         allocation3 = new byte[4 * _1MB];
         allocation3 = null;
@@ -42,12 +42,12 @@ public class TestSerialGCAllocation {
     }
 
     /**
-     * VM²ÎÊı£º-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=15
+     * VMå‚æ•°ï¼š-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=15
      * -XX:+PrintTenuringDistribution
      */
     public static void testTenuringThreshold2() {
         byte[] allocation1, allocation2, allocation3, allocation4;
-        allocation1 = new byte[_1MB / 4];   // allocation1+allocation2´óÓÚsurvivo¿Õ¼äÒ»°ë
+        allocation1 = new byte[_1MB / 4];   // allocation1+allocation2å¤§äºsurvivoç©ºé—´ä¸€åŠ
         allocation2 = new byte[_1MB / 4];
         allocation3 = new byte[4 * _1MB];
         allocation4 = new byte[4 * _1MB];
@@ -56,7 +56,7 @@ public class TestSerialGCAllocation {
     }
 
     /**
-     * VM²ÎÊı£º-Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:-HandlePromotionFailure
+     * VMå‚æ•°ï¼š-Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:-HandlePromotionFailure
      */
     public static void testHandlePromotion() {
         byte[] allocation1, allocation2, allocation3, allocation4, allocation5, allocation6, allocation7;

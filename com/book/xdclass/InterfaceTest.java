@@ -1,7 +1,7 @@
 package com.book.xdclass;
 
 /**
- *@Description ½Ó¿ÚÖĞµÄ¾²Ì¬·½·¨
+ *@Description æ¥å£ä¸­çš„é™æ€æ–¹æ³•
  *@CreateDate 2020\3\13 0013 13:24
  *@Author zohn
  *@Version 1.0
@@ -9,7 +9,7 @@ package com.book.xdclass;
 public interface InterfaceTest {
     static void sout(){
         int i = 10;
-        System.out.println("======^_^======±äÁ¿iÖµÎª: " + i + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: InterfaceTest.sout()");
+        System.out.println("======^_^======å˜é‡iå€¼ä¸º: " + i + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: InterfaceTest.sout()");
     }
 }
 

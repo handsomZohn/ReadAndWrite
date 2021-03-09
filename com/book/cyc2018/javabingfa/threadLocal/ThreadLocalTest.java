@@ -1,12 +1,12 @@
 package com.book.cyc2018.javabingfa.threadLocal;
 
 /**
- *@Description  Í¨¹ıthreadlcoalÄÜ´ïµ½ÔÚÃ¿¸öÏß³ÌÖĞ´´½¨±äÁ¿¸±±¾µÄĞ§¹û :
- * Ê×ÏÈ£¬ÔÚÃ¿¸öÏß³ÌThreadÄÚ²¿ÓĞÒ»¸öThreadLocal.ThreadLocalMapÀàĞÍµÄ³ÉÔ±±äÁ¿threadLocals£¬Õâ¸öthreadLocals¾ÍÊÇÓÃÀ´´æ´¢Êµ¼ÊµÄ±äÁ¿
- * ¸±±¾µÄ£¬keyÎªµ±Ç°ThreadLocal±äÁ¿£¬valueÎª±äÁ¿¸±±¾£¨¼´TÀàĞÍµÄ±äÁ¿£©
- * ³õÊ¼Ê±£¬ÔÚThreadÀïÃæ£¬threadLocalsÎª¿Õ£¬µ±Í¨¹ıThreadLocal±äÁ¿µ÷ÓÃget()·½·¨»òÕßset£¨£©·½·¨£¬¾Í»á¶ÔThreadÀàÖĞµÄthreadLocals½øĞĞ³õ
- * Ê¼»¯£¬²¢ÇÒÒÔµ±Ç°ThreadLocal±äÁ¿Îªkey£¬ÒÔThreadLocalÒª±£´æµÄ¸±±¾±äÁ¿Îªvalue£¬´æµ½threadLocals¡£
- * È»ºóÔÙÏß³ÌÀïÃæ£¬Èç¹ûÒªÊ¹ÓÃ¸±±¾±äÁ¿£¬¾Í¿ÉÒÔÍ¨¹ıget·½·¨ÔÚthreadLocalsÀïÃæ²éÕÒ¡£
+ *@Description  é€šè¿‡threadlcoalèƒ½è¾¾åˆ°åœ¨æ¯ä¸ªçº¿ç¨‹ä¸­åˆ›å»ºå˜é‡å‰¯æœ¬çš„æ•ˆæœ :
+ * é¦–å…ˆï¼Œåœ¨æ¯ä¸ªçº¿ç¨‹Threadå†…éƒ¨æœ‰ä¸€ä¸ªThreadLocal.ThreadLocalMapç±»å‹çš„æˆå‘˜å˜é‡threadLocalsï¼Œè¿™ä¸ªthreadLocalså°±æ˜¯ç”¨æ¥å­˜å‚¨å®é™…çš„å˜é‡
+ * å‰¯æœ¬çš„ï¼Œkeyä¸ºå½“å‰ThreadLocalå˜é‡ï¼Œvalueä¸ºå˜é‡å‰¯æœ¬ï¼ˆå³Tç±»å‹çš„å˜é‡ï¼‰
+ * åˆå§‹æ—¶ï¼Œåœ¨Threadé‡Œé¢ï¼ŒthreadLocalsä¸ºç©ºï¼Œå½“é€šè¿‡ThreadLocalå˜é‡è°ƒç”¨get()æ–¹æ³•æˆ–è€…setï¼ˆï¼‰æ–¹æ³•ï¼Œå°±ä¼šå¯¹Threadç±»ä¸­çš„threadLocalsè¿›è¡Œåˆ
+ * å§‹åŒ–ï¼Œå¹¶ä¸”ä»¥å½“å‰ThreadLocalå˜é‡ä¸ºkeyï¼Œä»¥ThreadLocalè¦ä¿å­˜çš„å‰¯æœ¬å˜é‡ä¸ºvalueï¼Œå­˜åˆ°threadLocalsã€‚
+ * ç„¶åå†çº¿ç¨‹é‡Œé¢ï¼Œå¦‚æœè¦ä½¿ç”¨å‰¯æœ¬å˜é‡ï¼Œå°±å¯ä»¥é€šè¿‡getæ–¹æ³•åœ¨threadLocalsé‡Œé¢æŸ¥æ‰¾ã€‚
  *@CreateDate   18/08/09 14:40
  *@Author        zohn
  *@Version       1.0
@@ -31,7 +31,7 @@ public class ThreadLocalTest {
 
     public static void main(String[] args) throws Exception {
         final ThreadLocalTest threadLocalTest = new ThreadLocalTest();
-         threadLocalTest.set(); // ²»ÖØĞ´initialValueÒ²²»set() ÔÚµ÷ÓÃµÄÊÇ¾Í»áÒì³£
+         threadLocalTest.set(); // ä¸é‡å†™initialValueä¹Ÿä¸set() åœ¨è°ƒç”¨çš„æ˜¯å°±ä¼šå¼‚å¸¸
         System.out.println(threadLocalTest.getLong());
         System.out.println(threadLocalTest.getString());
 
@@ -49,10 +49,10 @@ public class ThreadLocalTest {
     }
 }
 /**
- * ×Ü½á£º
- * 1.Êµ¼ÊµÄÍ¨¹ıThreadLocal´´½¨µÄ¸±±¾ÊÇ´æ´¢ÔÚÃ¿¸öÏß³Ì×Ô¼ºµÄthreadLocalsÖĞµÄ£»
- * 2.ÎªºÎthreadLocalsµÄÀàĞÍThreadLocalMapµÄ¼üÖµÎªThreadLocal¶ÔÏó£¬ÒòÎªÃ¿¸öÏß³ÌÖĞ¿ÉÓĞ¶à¸öthreadLocal±äÁ¿£¬¾ÍÏñÉÏÃæµÄ´úÂëÖĞµÄ
- * longLocalºÍStringLocal
- * 3.ÔÚgetÖ®Ç°±ØĞëset·ñÔò»á±¨¿ÕÖ¸ÕëÒì³£
- * Èç¹ûÔÚgetÖ®Ç°²»ĞèÒªµ÷ÓÃset¾ÍÄÜÕı³£·ÃÎÊ ±ØĞëÖØĞ´initialValue£¨£©·½·¨
+ * æ€»ç»“ï¼š
+ * 1.å®é™…çš„é€šè¿‡ThreadLocalåˆ›å»ºçš„å‰¯æœ¬æ˜¯å­˜å‚¨åœ¨æ¯ä¸ªçº¿ç¨‹è‡ªå·±çš„threadLocalsä¸­çš„ï¼›
+ * 2.ä¸ºä½•threadLocalsçš„ç±»å‹ThreadLocalMapçš„é”®å€¼ä¸ºThreadLocalå¯¹è±¡ï¼Œå› ä¸ºæ¯ä¸ªçº¿ç¨‹ä¸­å¯æœ‰å¤šä¸ªthreadLocalå˜é‡ï¼Œå°±åƒä¸Šé¢çš„ä»£ç ä¸­çš„
+ * longLocalå’ŒStringLocal
+ * 3.åœ¨getä¹‹å‰å¿…é¡»setå¦åˆ™ä¼šæŠ¥ç©ºæŒ‡é’ˆå¼‚å¸¸
+ * å¦‚æœåœ¨getä¹‹å‰ä¸éœ€è¦è°ƒç”¨setå°±èƒ½æ­£å¸¸è®¿é—® å¿…é¡»é‡å†™initialValueï¼ˆï¼‰æ–¹æ³•
  */

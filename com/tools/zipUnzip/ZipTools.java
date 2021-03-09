@@ -35,12 +35,12 @@ public class ZipTools {
 	}
 
 	/**
-	 * zipÑ¹Ëõ
+	 * zipå‹ç¼©
 	 * 
 	 * @param zipFileName
-	 *            zipÎÄ¼şÃû
+	 *            zipæ–‡ä»¶å
 	 * @param fileName
-	 *            ĞèÒªÑ¹ËõµÄÎÄ¼şÃûÊı×é
+	 *            éœ€è¦å‹ç¼©çš„æ–‡ä»¶åæ•°ç»„
 	 * @return
 	 */
 	public boolean Zip(String zipFileName, String[] fileName) {
@@ -53,18 +53,18 @@ public class ZipTools {
 		ZipEntry entry;
 		int size;
 		try {
-			// ´´½¨ÎÄ¼şÊä³öÁ÷¶ÔÏó
+			// åˆ›å»ºæ–‡ä»¶è¾“å‡ºæµå¯¹è±¡
 			out = new FileOutputStream(zipFileName);
-			// ´´½¨ZIPÊı¾İÊä³öÁ÷¶ÔÏó
+			// åˆ›å»ºZIPæ•°æ®è¾“å‡ºæµå¯¹è±¡
 			zipOut = new ZipOutputStream(out);
 			for (int i = 0; i < fileName.length; i++) {
-				// ´´½¨ÎÄ¼şÊäÈëÁ÷¶ÔÏó
+				// åˆ›å»ºæ–‡ä»¶è¾“å…¥æµå¯¹è±¡
 				in = new FileInputStream(fileName[i]);
-				// ´´½¨Ö¸ÏòÑ¹ËõÔ­Ê¼ÎÄ¼şµÄÈë¿Ú
+				// åˆ›å»ºæŒ‡å‘å‹ç¼©åŸå§‹æ–‡ä»¶çš„å…¥å£
 				File file = new File(fileName[i]);
 				entry = new ZipEntry(file.getName());
 				zipOut.putNextEntry(entry);
-				// ÏòÑ¹ËõÎÄ¼şÖĞÊä³öÊı¾İ
+				// å‘å‹ç¼©æ–‡ä»¶ä¸­è¾“å‡ºæ•°æ®
 				byte[] buffer = new byte[8092];
 				while ((size = in.read(buffer)) != -1) {
 					zipOut.write(buffer, 0, size);
@@ -74,7 +74,7 @@ public class ZipTools {
 				zipOut.flush();
 				in.close();
 			}
-			// ¹Ø±Õ´´½¨µÄÁ÷¶ÔÏó
+			// å…³é—­åˆ›å»ºçš„æµå¯¹è±¡
 			out.flush();
 			
 			zipOut.close();
@@ -93,12 +93,12 @@ public class ZipTools {
 	}
 
 	/**
-	 * ½âÑ¹Ëõ
+	 * è§£å‹ç¼©
 	 * 
 	 * @param zipFileName
-	 *            zipÎÄ¼şÃû
+	 *            zipæ–‡ä»¶å
 	 * @param fileSavePath
-	 *            ½âÑ¹ÎÄ¼şÂ·¾¶
+	 *            è§£å‹æ–‡ä»¶è·¯å¾„
 	 * @return
 	 */
 	public boolean unZip(String zipFileName, String fileSavePath) {
@@ -107,11 +107,11 @@ public class ZipTools {
 			int size;
 			File file = new File(zipFileName);
 			File savePath = new File(fileSavePath);
-			// ÑéÖ¤´ı½âÑ¹ÎÄ¼şÊÇ·ñ´æÔÚ
+			// éªŒè¯å¾…è§£å‹æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 			if (!file.exists()) {
 				return false;
 			}
-			// ´´½¨½âÑ¹ËõÄ¿Â¼
+			// åˆ›å»ºè§£å‹ç¼©ç›®å½•
 			if (!savePath.exists()) {
 				savePath.mkdirs();
 			}
@@ -124,10 +124,10 @@ public class ZipTools {
 				entry=(ZipEntry) enu.nextElement();
 				file = new File(fileSavePath + entry.getName());
 				if (entry.isDirectory()) {
-					// Ä¿Â¼
+					// ç›®å½•
 					file.mkdirs();
 				} else {
-					// ÎÄ¼ş
+					// æ–‡ä»¶
 					InputStream in = zf.getInputStream(entry);
 					file.createNewFile();
 					fos = new FileOutputStream(file);
@@ -164,8 +164,8 @@ public class ZipTools {
 		ZipTools zt = new ZipTools();
 		String zipFileName = "d:\\ziptest\\test.zip";
 		String[] fileName = new String[] { "d:\\ziptest\\startWebLogic.sh",
-				"d:\\ziptest\\tracert1.txt", "d:\\ziptest\\¸±±¾ÈËÁ¦×ÊÔ´ĞÅÏ¢ÏµÍ³_ÒµÎñ»¥¶¯½ø¶È¼Æ»®(ÓÃ»§)_2010 0505.xls",
-				"d:\\ziptest\\dbpc_init²âÊÔ.log"};
+				"d:\\ziptest\\tracert1.txt", "d:\\ziptest\\å‰¯æœ¬äººåŠ›èµ„æºä¿¡æ¯ç³»ç»Ÿ_ä¸šåŠ¡äº’åŠ¨è¿›åº¦è®¡åˆ’(ç”¨æˆ·)_2010 0505.xls",
+				"d:\\ziptest\\dbpc_initæµ‹è¯•.log"};
 		System.out.println(new DateTools().getDate());
 		zt.Zip(zipFileName, fileName);
 		System.out.println(new DateTools().getDate());

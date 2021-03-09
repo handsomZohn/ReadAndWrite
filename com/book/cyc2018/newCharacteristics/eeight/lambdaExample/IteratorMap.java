@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description Java8ĞÂÌØĞÔÖ®forEach+Lambda ±í´ïÊ½±éÀúMap
+ * @Description Java8æ–°ç‰¹æ€§ä¹‹forEach+Lambda è¡¨è¾¾å¼éå†Map
  * @CreateDate 18/07/19 11:39
  * @Author zohn
  * @Version 1.0
@@ -18,14 +18,14 @@ public class IteratorMap {
         items.put("D", 40);
         items.put("E", 50);
         items.put("F", 60);
-        // 1.8Ö®Ç°
+        // 1.8ä¹‹å‰
         for (Map.Entry<String, Integer> entry : items.entrySet()) {
             System.out.println("item: " + entry.getKey() + " Count: " + entry.getValue());
         }
-        // 1.8Ö®ºó Ö±½ÓÊäÈë¾ÍÔÚ>ºóÃæÖ±½Ó+System.out.println
+        // 1.8ä¹‹å ç›´æ¥è¾“å…¥å°±åœ¨>åé¢ç›´æ¥+System.out.println
         items.forEach((k, v) -> System.out.println("item: " + k + ",Count: " + v));
 
-        // ÓĞ¶Ô¼¯ºÏÔªËØ²Ù×÷µÄ¾ÍÔÚ>ºóÃæ¼ÓÉÏ{},È»ºóÔÙ{}ÀïÃæ¶ÔÊı¾İ½øĞĞ²Ù×÷
+        // æœ‰å¯¹é›†åˆå…ƒç´ æ“ä½œçš„å°±åœ¨>åé¢åŠ ä¸Š{},ç„¶åå†{}é‡Œé¢å¯¹æ•°æ®è¿›è¡Œæ“ä½œ
         items.forEach((k, v) -> {
             if ("A".equals(k)) {
                 System.out.println(v);

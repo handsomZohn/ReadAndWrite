@@ -7,7 +7,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @Description Ö¸¶¨¼¸¸öÎÄ¼ş´ò°üÎªzip
+ * @Description æŒ‡å®šå‡ ä¸ªæ–‡ä»¶æ‰“åŒ…ä¸ºzip
  * @CreateDate 18/08/08 10:43
  * @Author zohn
  * @Version 1.0
@@ -22,38 +22,38 @@ public class ZipFiles {
     }
 
     /**
-     * ½«Ö¸¶¨µÄÎÄ¼ş´ò°üÎªzip
+     * å°†æŒ‡å®šçš„æ–‡ä»¶æ‰“åŒ…ä¸ºzip
      *
-     * @param srcFiels Ô´ÎÄ¼ş£ºÒª´ò°üÎªzipµÄÎÄ¼ş
-     * @param zipFile  zipÎÄ¼ş
+     * @param srcFiels æºæ–‡ä»¶ï¼šè¦æ‰“åŒ…ä¸ºzipçš„æ–‡ä»¶
+     * @param zipFile  zipæ–‡ä»¶
      * @throws Exception
      */
     public static void zipFiles(File[] srcFiels, File zipFile) throws Exception {
-        // ²»´æÔÚ ´´½¨
+        // ä¸å­˜åœ¨ åˆ›å»º
         if (!zipFile.exists()) {
             zipFile.createNewFile();
         }
 
-        // ´´½¨Á÷¶ÔÏó
+        // åˆ›å»ºæµå¯¹è±¡
         FileOutputStream fos = null;
         ZipOutputStream zos = null;
         FileInputStream fis = null;
 
-        // ÊµÀı»¯Á÷¶ÔÏó
+        // å®ä¾‹åŒ–æµå¯¹è±¡
         fos = new FileOutputStream(zipFile);
         zos = new ZipOutputStream(fos);
         ZipEntry zipEntry = null;
 
-        // ±éÀúÔ´ÎÄ¼şÊı×é
+        // éå†æºæ–‡ä»¶æ•°ç»„
         for (int i = 0; i < srcFiels.length; i++) {
-            // ½«Ô´ÎÄ¼şÊı×éÖĞµÄµ±Ç°ÎÄ¼ş¶ÁÈëFileInputStreamÁ÷ÖĞ
+            // å°†æºæ–‡ä»¶æ•°ç»„ä¸­çš„å½“å‰æ–‡ä»¶è¯»å…¥FileInputStreamæµä¸­
             fis = new FileInputStream(srcFiels[i]);
-            // ÊµÀı»¯ZipEntry ¶ÔÏó£¬Ô´ÎÄ¼şÊı×éÖĞµÄµ±Ç°ÎÄ¼ş
+            // å®ä¾‹åŒ–ZipEntry å¯¹è±¡ï¼Œæºæ–‡ä»¶æ•°ç»„ä¸­çš„å½“å‰æ–‡ä»¶
             zipEntry = new ZipEntry(srcFiels[i].getName());
             zos.putNextEntry(zipEntry);
-            // ¸Ã±äÁ¿¼ÇÂ¼Ã¿´ÎÕæÕı¶ÁÈ¡µÄ×Ö½Ú¸öÊı
+            // è¯¥å˜é‡è®°å½•æ¯æ¬¡çœŸæ­£è¯»å–çš„å­—èŠ‚ä¸ªæ•°
             int len;
-            // ¶¨ÒåÃ¿´Î¶ÁÈ¡µÄ×Ö½ÚÊı×é
+            // å®šä¹‰æ¯æ¬¡è¯»å–çš„å­—èŠ‚æ•°ç»„
             byte[] buffer = new byte[1024];
             while ((len = fis.read(buffer)) > 0) {
                 zos.write(buffer, 0, len);

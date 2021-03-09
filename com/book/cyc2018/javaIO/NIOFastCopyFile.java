@@ -7,7 +7,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * @Description Ê¹ÓÃNIO¿ìËÙ¸´ÖÆÎÄ¼ş
+ * @Description ä½¿ç”¨NIOå¿«é€Ÿå¤åˆ¶æ–‡ä»¶
  * @CreateDate 18/07/18 15:53
  * @Author zohn
  * @Version 1.0
@@ -15,45 +15,45 @@ import java.nio.channels.FileChannel;
 public class NIOFastCopyFile {
     public static void main(String[] args) throws IOException {
         String src = "d:\\licence.txt", dist = "e:\\licence.txt";
-        System.out.println("¸´ÖÆÎÄ¼ş¿ªÊ¼£º" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶å¼€å§‹ï¼š" + System.currentTimeMillis());
         fastCopyFile(src,dist);
-        System.out.println("¸´ÖÆÎÄ¼ş½áÊø£º" + System.currentTimeMillis());
+        System.out.println("å¤åˆ¶æ–‡ä»¶ç»“æŸï¼š" + System.currentTimeMillis());
 
     }
 
     /**
-     * NIO¿ìËÙ¸´ÖÆÎÄ¼ş
+     * NIOå¿«é€Ÿå¤åˆ¶æ–‡ä»¶
      *
-     * @param src  Ô´ÎÄ¼ş
-     * @param dist Ä¿±êÎÄ¼ş
+     * @param src  æºæ–‡ä»¶
+     * @param dist ç›®æ ‡æ–‡ä»¶
      * @throws IOException
      */
     static void fastCopyFile(String src, String dist) throws IOException {
-        // »ñÈ¡Ô´ÎÄ¼şµÄÊäÈë×Ö½ÚÁ÷
+        // è·å–æºæ–‡ä»¶çš„è¾“å…¥å­—èŠ‚æµ
         FileInputStream fis = new FileInputStream(src);
-        // »ñÈ¡ÊäÈë×Ö½ÚÁ÷µÄÎÄ¼şÍ¨µÀ
+        // è·å–è¾“å…¥å­—èŠ‚æµçš„æ–‡ä»¶é€šé“
         FileChannel fisChannel = fis.getChannel();
-        // »ñÈ¡Ä¿±êÎÄ¼şµÄÊä³ö×Ö½ÚÁ÷
+        // è·å–ç›®æ ‡æ–‡ä»¶çš„è¾“å‡ºå­—èŠ‚æµ
         FileOutputStream fos = new FileOutputStream(dist);
-        // »ñÈ¡Êä³ö×Ö½ÚÁ÷µÄÎÄ¼şÍ¨µÀ
+        // è·å–è¾“å‡ºå­—èŠ‚æµçš„æ–‡ä»¶é€šé“
         FileChannel fosChannel = fos.getChannel();
-        // Îª»º³åÇø·ÖÅä1024¸ö×Ö½Ú
+        // ä¸ºç¼“å†²åŒºåˆ†é…1024ä¸ªå­—èŠ‚
         ByteBuffer buffer = ByteBuffer.allocateDirect(1024);
         while (true) {
-            // ´ÓÊäÈëÍ¨µÀÖĞ¶ÁÈ¡Êı¾İµ½»º³åÇøÖĞ
+            // ä»è¾“å…¥é€šé“ä¸­è¯»å–æ•°æ®åˆ°ç¼“å†²åŒºä¸­
             int r = fisChannel.read(buffer);
-            // read() ·µ»Ø-1 ±íÊ¾EOF
+            // read() è¿”å›-1 è¡¨ç¤ºEOF
             if (r == -1){
                 break;
             }
             buffer.flip();
-            // °Ñ»º³åÇøµÄÄÚÈİĞ´ÈëÊä³öÎÄ¼şÖĞ
+            // æŠŠç¼“å†²åŒºçš„å†…å®¹å†™å…¥è¾“å‡ºæ–‡ä»¶ä¸­
             fosChannel.write(buffer);
-            // Çå¿Õ»º³åÇø
+            // æ¸…ç©ºç¼“å†²åŒº
             buffer.clear();
         }
     }
-    // NIOÓëIOµÄÇø±ğÖ÷ÒªÓĞÒÔÏÂÁ½µã£º
-    // NIOÊÇ·Ç×èÈûµÄ¡£Ó¦µ±×¢Òâ:FileChannel²»ÄÜÇĞ»»µ½·Ç×èÈûÄ£Ê½£¬Ì×½Ó×ÖChannel¿ÉÒÔ£»
-    // NIOÃæÏò¿é£¬IOÃæÏòÁ÷
+    // NIOä¸IOçš„åŒºåˆ«ä¸»è¦æœ‰ä»¥ä¸‹ä¸¤ç‚¹ï¼š
+    // NIOæ˜¯éé˜»å¡çš„ã€‚åº”å½“æ³¨æ„:FileChannelä¸èƒ½åˆ‡æ¢åˆ°éé˜»å¡æ¨¡å¼ï¼Œå¥—æ¥å­—Channelå¯ä»¥ï¼›
+    // NIOé¢å‘å—ï¼ŒIOé¢å‘æµ
 }

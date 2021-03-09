@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 /**
- * @Description ²¢ĞĞÁ÷demo
+ * @Description å¹¶è¡Œæµdemo
  * @CreateDate 18/09/17 13:57
  * @Author zohn
  * @Version 1.0
@@ -20,17 +20,17 @@ public class ParallelDemo {
 
 
         Optional<Integer> parallelReduce = myList.parallelStream().reduce((a, b) -> (a * b));
-        // ²¢ĞĞ¼ÆËã£¬±£³Ö¼ÆËã½á¹ûºÍ´®ĞĞ¼ÆËãµÄ½á¹ûÒ»ÖÂ£º
-        // ²¢ĞĞ¼ÆËã£¬ÓĞÓ²¼şÒªÇó£¬ĞèÒª¶àºË´¦ÀíÆ÷
+        // å¹¶è¡Œè®¡ç®—ï¼Œä¿æŒè®¡ç®—ç»“æœå’Œä¸²è¡Œè®¡ç®—çš„ç»“æœä¸€è‡´ï¼š
+        // å¹¶è¡Œè®¡ç®—ï¼Œæœ‰ç¡¬ä»¶è¦æ±‚ï¼Œéœ€è¦å¤šæ ¸å¤„ç†å™¨
         if (parallelReduce.isPresent()) {
-            System.out.println("²¢ĞĞ¼ÆËã£º");
+            System.out.println("å¹¶è¡Œè®¡ç®—ï¼š");
             System.out.println(parallelReduce.get());
         }
         // < U > U reduce(U identityVal, BiFunction< U, ? super T, U > accumulator, BinaryOperator< U > combiner)
         Integer reduce = myList.parallelStream().reduce(1, (a, b) -> (a * b),  (a, b) -> (a * b));
-        System.out.println("accumulatorºÍcombinerÖ´ĞĞµÄÊÇÏàÍ¬µÄ²Ù×÷:" + reduce);
+        System.out.println("accumulatorå’Œcombineræ‰§è¡Œçš„æ˜¯ç›¸åŒçš„æ“ä½œ:" + reduce);
 
-        // accumulatorºÍcombinerÖ´ĞĞµÄÊÇÏàÍ¬µÄ²Ù×÷¡£µ«ÊÇÓĞĞ©Çé¿öÏÂ£¬accumulatorµÄÖ´ĞĞÓëcombinerµÄ²Ù×÷±ØĞë²»Í¬
+        // accumulatorå’Œcombineræ‰§è¡Œçš„æ˜¯ç›¸åŒçš„æ“ä½œã€‚ä½†æ˜¯æœ‰äº›æƒ…å†µä¸‹ï¼Œaccumulatorçš„æ‰§è¡Œä¸combinerçš„æ“ä½œå¿…é¡»ä¸åŒ
 
     }
 }

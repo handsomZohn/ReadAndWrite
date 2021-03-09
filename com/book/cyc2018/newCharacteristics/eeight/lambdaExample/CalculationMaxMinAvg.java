@@ -5,67 +5,67 @@ import java.util.IntSummaryStatistics;
 import java.util.List;
 
 /**
- * @Description ¼ÆËã¼¯ºÏÔªËØµÄ×î´óÖµ¡¢×îĞ¡Öµ¡¢×ÜºÍÒÔ¼°Æ½¾ùÖµ IntStream¡¢LongStream ºÍ DoubleStream µÈÁ÷µÄÀàÖĞ£¬
- * ÓĞ¸ö·Ç³£ÓĞÓÃµÄ·½·¨½Ğ×ö summaryStatistics() ¡£
- * ¿ÉÒÔ·µ»Ø IntSummaryStatistics¡¢LongSummaryStatistics »òÕß DoubleSummaryStatistic s£¬ÃèÊöÁ÷ÖĞÔªËØµÄ¸÷ÖÖÕªÒªÊı¾İ¡£
- * ÔÚ±¾ÀıÖĞ£¬ÎÒÃÇÓÃÕâ¸ö·½·¨À´¼ÆËãÁĞ±íµÄ×î´óÖµºÍ×îĞ¡Öµ¡£ËüÒ²ÓĞ getSum() ºÍ getAverage() ·½·¨À´»ñµÃÁĞ±íµÄËùÓĞÔªËØµÄ×ÜºÍ¼°Æ½¾ùÖµ¡£
+ * @Description è®¡ç®—é›†åˆå…ƒç´ çš„æœ€å¤§å€¼ã€æœ€å°å€¼ã€æ€»å’Œä»¥åŠå¹³å‡å€¼ IntStreamã€LongStream å’Œ DoubleStream ç­‰æµçš„ç±»ä¸­ï¼Œ
+ * æœ‰ä¸ªéå¸¸æœ‰ç”¨çš„æ–¹æ³•å«åš summaryStatistics() ã€‚
+ * å¯ä»¥è¿”å› IntSummaryStatisticsã€LongSummaryStatistics æˆ–è€… DoubleSummaryStatistic sï¼Œæè¿°æµä¸­å…ƒç´ çš„å„ç§æ‘˜è¦æ•°æ®ã€‚
+ * åœ¨æœ¬ä¾‹ä¸­ï¼Œæˆ‘ä»¬ç”¨è¿™ä¸ªæ–¹æ³•æ¥è®¡ç®—åˆ—è¡¨çš„æœ€å¤§å€¼å’Œæœ€å°å€¼ã€‚å®ƒä¹Ÿæœ‰ getSum() å’Œ getAverage() æ–¹æ³•æ¥è·å¾—åˆ—è¡¨çš„æ‰€æœ‰å…ƒç´ çš„æ€»å’ŒåŠå¹³å‡å€¼ã€‚
  * @CreateDate 18/07/19 17:37
  * @Author zohn
  * @Version 1.0
  */
 public class CalculationMaxMinAvg {
     public static void main(String[] args) {
-        //»ñÈ¡Êı×ÖµÄ¸öÊı¡¢×îĞ¡Öµ¡¢×î´óÖµ¡¢×ÜºÍÒÔ¼°Æ½¾ùÖµ
+        //è·å–æ•°å­—çš„ä¸ªæ•°ã€æœ€å°å€¼ã€æœ€å¤§å€¼ã€æ€»å’Œä»¥åŠå¹³å‡å€¼
         List<Integer> primes = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29);
         IntSummaryStatistics stats = primes.stream().mapToInt((x) -> x).summaryStatistics();
 
-        System.out.println("Count prime number in List£º" + stats.getCount());
+        System.out.println("Count prime number in Listï¼š" + stats.getCount());
         System.out.println("Highest prime number in List : " + stats.getMax());
         System.out.println("Lowest prime number in List : " + stats.getMin());
         System.out.println("Sum of all prime numbers : " + stats.getSum());
         System.out.println("Average of all prime numbers : " + stats.getAverage());
 
     }
-    // Lambda±í´ïÊ½ vs ÄäÃûÀà
-    // ¼ÈÈ»lambda±í´ïÊ½¼´½«ÕıÊ½È¡´úJava´úÂëÖĞµÄÄäÃûÄÚ²¿Àà£¬ÄÇÃ´ÓĞ±ØÒª¶Ô¶şÕß×öÒ»¸ö±È½Ï·ÖÎö¡£
-    // Ò»¸ö¹Ø¼üµÄ²»Í¬µã¾ÍÊÇ¹Ø¼ü×Ö this¡£ÄäÃûÀàµÄ this ¹Ø¼ü×ÖÖ¸ÏòÄäÃûÀà£¬¶ølambda±í´ïÊ½µÄ this ¹Ø¼ü×ÖÖ¸Ïò°üÎ§lambda±í´ïÊ½µÄÀà¡£
-    // ÁíÒ»¸ö²»Í¬µãÊÇ¶şÕßµÄ±àÒë·½Ê½¡£Java±àÒëÆ÷½«lambda±í´ïÊ½±àÒë³ÉÀàµÄË½ÓĞ·½·¨¡£
-    // Ê¹ÓÃÁËJava 7µÄ invokedynamic ×Ö½ÚÂëÖ¸ÁîÀ´¶¯Ì¬°ó¶¨Õâ¸ö·½·¨¡£
+    // Lambdaè¡¨è¾¾å¼ vs åŒ¿åç±»
+    // æ—¢ç„¶lambdaè¡¨è¾¾å¼å³å°†æ­£å¼å–ä»£Javaä»£ç ä¸­çš„åŒ¿åå†…éƒ¨ç±»ï¼Œé‚£ä¹ˆæœ‰å¿…è¦å¯¹äºŒè€…åšä¸€ä¸ªæ¯”è¾ƒåˆ†æã€‚
+    // ä¸€ä¸ªå…³é”®çš„ä¸åŒç‚¹å°±æ˜¯å…³é”®å­— thisã€‚åŒ¿åç±»çš„ this å…³é”®å­—æŒ‡å‘åŒ¿åç±»ï¼Œè€Œlambdaè¡¨è¾¾å¼çš„ this å…³é”®å­—æŒ‡å‘åŒ…å›´lambdaè¡¨è¾¾å¼çš„ç±»ã€‚
+    // å¦ä¸€ä¸ªä¸åŒç‚¹æ˜¯äºŒè€…çš„ç¼–è¯‘æ–¹å¼ã€‚Javaç¼–è¯‘å™¨å°†lambdaè¡¨è¾¾å¼ç¼–è¯‘æˆç±»çš„ç§æœ‰æ–¹æ³•ã€‚
+    // ä½¿ç”¨äº†Java 7çš„ invokedynamic å­—èŠ‚ç æŒ‡ä»¤æ¥åŠ¨æ€ç»‘å®šè¿™ä¸ªæ–¹æ³•ã€‚
 
-    // ºó¼Ç£º
-    //1£©lambda±í´ïÊ½½öÄÜ·ÅÈëÈçÏÂ´úÂë£ºÔ¤¶¨ÒåÊ¹ÓÃÁË @Functional ×¢ÊÍµÄº¯ÊıÊ½½Ó¿Ú£¬×Ô´øÒ»¸ö³éÏóº¯ÊıµÄ·½·¨£¬
-    // »òÕßSAM£¨Single Abstract Method µ¥¸ö³éÏó·½·¨£©ÀàĞÍ¡£ÕâĞ©³ÆÎªlambda±í´ïÊ½µÄÄ¿±êÀàĞÍ£¬¿ÉÒÔÓÃ×÷·µ»ØÀàĞÍ£¬
-    // »òlambdaÄ¿±ê´úÂëµÄ²ÎÊı¡£ÀıÈç£¬ÈôÒ»¸ö·½·¨½ÓÊÕRunnable¡¢Comparable»òÕß Callable ½Ó¿Ú£¬¶¼ÓĞµ¥¸ö³éÏó·½·¨£¬
-    // ¿ÉÒÔ´«Èëlambda±í´ïÊ½¡£ÀàËÆµÄ£¬Èç¹ûÒ»¸ö·½·¨½ÓÊÜÉùÃ÷ÓÚ java.util.function °üÄÚµÄ½Ó¿Ú£¬
-    // ÀıÈç Predicate¡¢Function¡¢Consumer »ò Supplier£¬ÄÇÃ´¿ÉÒÔÏòÆä´«lambda±í´ïÊ½¡£
-    //2£©lambda±í´ïÊ½ÄÚ¿ÉÒÔÊ¹ÓÃ·½·¨ÒıÓÃ£¬½öµ±¸Ã·½·¨²»ĞŞ¸Älambda±í´ïÊ½Ìá¹©µÄ²ÎÊı¡£±¾ÀıÖĞµÄlambda±í´ïÊ½¿ÉÒÔ»»Îª·½·¨ÒıÓÃ£¬ÒòÎªÕâ½öÊÇÒ»¸ö²ÎÊıÏàÍ¬µÄ¼òµ¥·½·¨µ÷ÓÃ¡£
+    // åè®°ï¼š
+    //1ï¼‰lambdaè¡¨è¾¾å¼ä»…èƒ½æ”¾å…¥å¦‚ä¸‹ä»£ç ï¼šé¢„å®šä¹‰ä½¿ç”¨äº† @Functional æ³¨é‡Šçš„å‡½æ•°å¼æ¥å£ï¼Œè‡ªå¸¦ä¸€ä¸ªæŠ½è±¡å‡½æ•°çš„æ–¹æ³•ï¼Œ
+    // æˆ–è€…SAMï¼ˆSingle Abstract Method å•ä¸ªæŠ½è±¡æ–¹æ³•ï¼‰ç±»å‹ã€‚è¿™äº›ç§°ä¸ºlambdaè¡¨è¾¾å¼çš„ç›®æ ‡ç±»å‹ï¼Œå¯ä»¥ç”¨ä½œè¿”å›ç±»å‹ï¼Œ
+    // æˆ–lambdaç›®æ ‡ä»£ç çš„å‚æ•°ã€‚ä¾‹å¦‚ï¼Œè‹¥ä¸€ä¸ªæ–¹æ³•æ¥æ”¶Runnableã€Comparableæˆ–è€… Callable æ¥å£ï¼Œéƒ½æœ‰å•ä¸ªæŠ½è±¡æ–¹æ³•ï¼Œ
+    // å¯ä»¥ä¼ å…¥lambdaè¡¨è¾¾å¼ã€‚ç±»ä¼¼çš„ï¼Œå¦‚æœä¸€ä¸ªæ–¹æ³•æ¥å—å£°æ˜äº java.util.function åŒ…å†…çš„æ¥å£ï¼Œ
+    // ä¾‹å¦‚ Predicateã€Functionã€Consumer æˆ– Supplierï¼Œé‚£ä¹ˆå¯ä»¥å‘å…¶ä¼ lambdaè¡¨è¾¾å¼ã€‚
+    //2ï¼‰lambdaè¡¨è¾¾å¼å†…å¯ä»¥ä½¿ç”¨æ–¹æ³•å¼•ç”¨ï¼Œä»…å½“è¯¥æ–¹æ³•ä¸ä¿®æ”¹lambdaè¡¨è¾¾å¼æä¾›çš„å‚æ•°ã€‚æœ¬ä¾‹ä¸­çš„lambdaè¡¨è¾¾å¼å¯ä»¥æ¢ä¸ºæ–¹æ³•å¼•ç”¨ï¼Œå› ä¸ºè¿™ä»…æ˜¯ä¸€ä¸ªå‚æ•°ç›¸åŒçš„ç®€å•æ–¹æ³•è°ƒç”¨ã€‚
     //        list.forEach(n -> System.out.println(n));
-    //        list.forEach(System.out::println);  // Ê¹ÓÃ·½·¨ÒıÓÃ
-    // È»¶ø£¬Èô¶Ô²ÎÊıÓĞÈÎºÎĞŞ¸Ä£¬Ôò²»ÄÜÊ¹ÓÃ·½·¨ÒıÓÃ£¬¶øĞè¼üÈëÍêÕûµØlambda±í´ïÊ½£¬ÈçÏÂËùÊ¾£º
+    //        list.forEach(System.out::println);  // ä½¿ç”¨æ–¹æ³•å¼•ç”¨
+    // ç„¶è€Œï¼Œè‹¥å¯¹å‚æ•°æœ‰ä»»ä½•ä¿®æ”¹ï¼Œåˆ™ä¸èƒ½ä½¿ç”¨æ–¹æ³•å¼•ç”¨ï¼Œè€Œéœ€é”®å…¥å®Œæ•´åœ°lambdaè¡¨è¾¾å¼ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š
     // list.forEach((String s) -> System.out.println("*" + s + "*"));
-    // ÊÂÊµÉÏ£¬¿ÉÒÔÊ¡ÂÔÕâÀïµÄlambda²ÎÊıµÄÀàĞÍÉùÃ÷£¬±àÒëÆ÷¿ÉÒÔ´ÓÁĞ±íµÄÀàÊôĞÔÍÆ²â³öÀ´¡£
-    // 3£©lambdaÄÚ²¿¿ÉÒÔÊ¹ÓÃ¾²Ì¬¡¢·Ç¾²Ì¬ºÍ¾Ö²¿±äÁ¿£¬Õâ³ÆÎªlambdaÄÚµÄ±äÁ¿²¶»ñ¡£
+    // äº‹å®ä¸Šï¼Œå¯ä»¥çœç•¥è¿™é‡Œçš„lambdaå‚æ•°çš„ç±»å‹å£°æ˜ï¼Œç¼–è¯‘å™¨å¯ä»¥ä»åˆ—è¡¨çš„ç±»å±æ€§æ¨æµ‹å‡ºæ¥ã€‚
+    // 3ï¼‰lambdaå†…éƒ¨å¯ä»¥ä½¿ç”¨é™æ€ã€éé™æ€å’Œå±€éƒ¨å˜é‡ï¼Œè¿™ç§°ä¸ºlambdaå†…çš„å˜é‡æ•è·ã€‚
 
-    // 4£©Lambda±í´ïÊ½ÔÚJavaÖĞÓÖ³ÆÎª±Õ°ü»òÄäÃûº¯Êı£¬ËùÒÔÈç¹ûÓĞÍ¬ÊÂ°ÑËü½Ğ±Õ°üµÄÊ±ºò£¬²»ÓÃ¾ªÑÈ¡£
+    // 4ï¼‰Lambdaè¡¨è¾¾å¼åœ¨Javaä¸­åˆç§°ä¸ºé—­åŒ…æˆ–åŒ¿åå‡½æ•°ï¼Œæ‰€ä»¥å¦‚æœæœ‰åŒäº‹æŠŠå®ƒå«é—­åŒ…çš„æ—¶å€™ï¼Œä¸ç”¨æƒŠè®¶ã€‚
 
-    // 5£©Lambda·½·¨ÔÚ±àÒëÆ÷ÄÚ²¿±»·­Òë³ÉË½ÓĞ·½·¨£¬²¢ÅÉ·¢ invokedynamic ×Ö½ÚÂëÖ¸ÁîÀ´½øĞĞµ÷ÓÃ¡£
-    // ¿ÉÒÔÊ¹ÓÃJDKÖĞµÄ javap ¹¤¾ßÀ´·´±àÒëclassÎÄ¼ş¡£Ê¹ÓÃ javap -p »ò javap -c -v ÃüÁîÀ´¿´Ò»¿´lambda±í´ïÊ½Éú³ÉµÄ×Ö½ÚÂë¡£
-    // ´óÖÂÓ¦¸Ã³¤ÕâÑù£º
+    // 5ï¼‰Lambdaæ–¹æ³•åœ¨ç¼–è¯‘å™¨å†…éƒ¨è¢«ç¿»è¯‘æˆç§æœ‰æ–¹æ³•ï¼Œå¹¶æ´¾å‘ invokedynamic å­—èŠ‚ç æŒ‡ä»¤æ¥è¿›è¡Œè°ƒç”¨ã€‚
+    // å¯ä»¥ä½¿ç”¨JDKä¸­çš„ javap å·¥å…·æ¥åç¼–è¯‘classæ–‡ä»¶ã€‚ä½¿ç”¨ javap -p æˆ– javap -c -v å‘½ä»¤æ¥çœ‹ä¸€çœ‹lambdaè¡¨è¾¾å¼ç”Ÿæˆçš„å­—èŠ‚ç ã€‚
+    // å¤§è‡´åº”è¯¥é•¿è¿™æ ·ï¼š
     // private static java.lang.Object zlambda$0(java.lang.String);
-    // 6£©lambda±í´ïÊ½ÓĞ¸öÏŞÖÆ£¬ÄÇ¾ÍÊÇÖ»ÄÜÒıÓÃ final »ò final ¾Ö²¿±äÁ¿£¬Õâ¾ÍÊÇËµ²»ÄÜÔÚlambdaÄÚ²¿ĞŞ¸Ä¶¨ÒåÔÚÓòÍâµÄ±äÁ¿¡£
+    // 6ï¼‰lambdaè¡¨è¾¾å¼æœ‰ä¸ªé™åˆ¶ï¼Œé‚£å°±æ˜¯åªèƒ½å¼•ç”¨ final æˆ– final å±€éƒ¨å˜é‡ï¼Œè¿™å°±æ˜¯è¯´ä¸èƒ½åœ¨lambdaå†…éƒ¨ä¿®æ”¹å®šä¹‰åœ¨åŸŸå¤–çš„å˜é‡ã€‚
     // List<Integer> primes = Arrays.asList(new Integer[]{2, 3,5,7});
     // int factor = 2;
     // primes.forEach(element -> { factor++; });
     // Compile time error : "local variables referenced from a zlambda expression must be final or effectively final"
-    // ÁíÍâ£¬Ö»ÊÇ·ÃÎÊËü¶ø²»×÷ĞŞ¸ÄÊÇ¿ÉÒÔµÄ£¬ÈçÏÂËùÊ¾£º
+    // å¦å¤–ï¼Œåªæ˜¯è®¿é—®å®ƒè€Œä¸ä½œä¿®æ”¹æ˜¯å¯ä»¥çš„ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š
     // List<Integer> primes = Arrays.asList(new Integer[]{2, 3,5,7});
     // int factor = 2;
     // primes.forEach(element -> { System.out.println(factor*element); });
-    // Êä³ö£º
+    // è¾“å‡ºï¼š
     // 4
     // 6
     // 10
     // 14
-    // Òò´Ë£¬Ëü¿´ÆğÀ´¸üÏñ²»¿É±ä±Õ°ü£¬ÀàËÆÓÚPython¡£
+    // å› æ­¤ï¼Œå®ƒçœ‹èµ·æ¥æ›´åƒä¸å¯å˜é—­åŒ…ï¼Œç±»ä¼¼äºPythonã€‚
 
 }

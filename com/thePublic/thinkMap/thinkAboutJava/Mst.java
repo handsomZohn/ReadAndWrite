@@ -2,7 +2,7 @@ package com.thePublic.thinkMap.thinkAboutJava;
 
 import java.lang.reflect.Field;
 
-// ¹ØÓÚÒ»µÀÃæÊÔÌâ
+// å…³äºä¸€é“é¢è¯•é¢˜
 public class Mst {
     public static void main(String[] args) {
         Integer a = 1;
@@ -12,9 +12,9 @@ public class Mst {
         System.out.printf("a = %s, b = %s \n", a, b);
     }
 
-    // ÌØ±ğÌáĞÑÕâÖÖ·½Ê½ÊÇ´íÎóµÄ
-    // ÌØ±ğÌáĞÑÕâÖÖ·½Ê½ÊÇ´íÎóµÄ
-    // ÌØ±ğÌáĞÑÕâÖÖ·½Ê½ÊÇ´íÎóµÄ
+    // ç‰¹åˆ«æé†’è¿™ç§æ–¹å¼æ˜¯é”™è¯¯çš„
+    // ç‰¹åˆ«æé†’è¿™ç§æ–¹å¼æ˜¯é”™è¯¯çš„
+    // ç‰¹åˆ«æé†’è¿™ç§æ–¹å¼æ˜¯é”™è¯¯çš„
     /*
     public static void swap (Integer a, Integer b) {
         Integer temp = a;
@@ -22,20 +22,20 @@ public class Mst {
         b = temp;
     }*/
 
-    // ÕâÑùĞ´µÄ»°  ÃæÊÔ¹Ù¿Ï¶¨»áºÚÈËÎÊºÅµÄ~~
+    // è¿™æ ·å†™çš„è¯  é¢è¯•å®˜è‚¯å®šä¼šé»‘äººé—®å·çš„~~
     /*
     public static void swap (Integer a, Integer b) {
-        // TODO ÊµÏÖ
-        // ÎŞ·¨ÊµÏÖ
+        // TODO å®ç°
+        // æ— æ³•å®ç°
     }*/
 
     // !!!!!!!!!!!!!!
     // a = 1, b = 2
     // a = 2, b = 2
     // !!!!!!!!!!!!!!
-    // ÔÚvalue.setµÄÊ±ºò½«IntegerµÄ»º´æÖµ¸Ä±äÁË£¬ÒòÎªvalue.set(Object v1, Object v2)Á½¸ö²ÎÊı¶¼ÊÇ¶ÔÏóÀàĞÍ£¬ËùÒÔtemp»á×ö×Ô¶¯
-    // ×°Ïä²Ù×÷£¬»áµ÷ÓÃvalueOf·½·¨£¬ÕâÑù»áÈ¡µ½´íÎóµÄ»º´æÖµ£¬ËùÒÔÎªÁË±ÜÃâÕâÖÖÇé¿ö£¬¾ÍÖ»ÄÜ²»ĞèÒªµ÷ÓÃ»º´æÖµ£¬Ö±½Ónew Integer£¨£©¾Í
-    // ¿ÉÒÔÌø¹ı»º´æ¡£
+    // åœ¨value.setçš„æ—¶å€™å°†Integerçš„ç¼“å­˜å€¼æ”¹å˜äº†ï¼Œå› ä¸ºvalue.set(Object v1, Object v2)ä¸¤ä¸ªå‚æ•°éƒ½æ˜¯å¯¹è±¡ç±»å‹ï¼Œæ‰€ä»¥tempä¼šåšè‡ªåŠ¨
+    // è£…ç®±æ“ä½œï¼Œä¼šè°ƒç”¨valueOfæ–¹æ³•ï¼Œè¿™æ ·ä¼šå–åˆ°é”™è¯¯çš„ç¼“å­˜å€¼ï¼Œæ‰€ä»¥ä¸ºäº†é¿å…è¿™ç§æƒ…å†µï¼Œå°±åªèƒ½ä¸éœ€è¦è°ƒç”¨ç¼“å­˜å€¼ï¼Œç›´æ¥new Integerï¼ˆï¼‰å°±
+    // å¯ä»¥è·³è¿‡ç¼“å­˜ã€‚
 
     /*
     public static void swap(Integer a, Integer b) {

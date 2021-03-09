@@ -1,7 +1,7 @@
 package com.book.xdclass;
 
 /**
- *@Description i++ »òÕß++i µÄ·µ»Ø½á¹û
+ *@Description i++ æˆ–è€…++i çš„è¿”å›ç»“æœ
  *@CreateDate 2020\3\13 0013 10:28
  *@Author zohn
  *@Version 1.0
@@ -11,7 +11,7 @@ public class IPlusPlusTest {
         int i = returnTest();
         int i02 = returnTest02();
 
-        System.out.println("======^_^======±äÁ¿iÖµÎª: " + i + ", ±äÁ¿i02ÖµÎª: " +i02+ ", µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: IPlusPlusTest.main()");
+        System.out.println("======^_^======å˜é‡iå€¼ä¸º: " + i + ", å˜é‡i02å€¼ä¸º: " +i02+ ", å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: IPlusPlusTest.main()");
     }
 
     static int returnTest(){

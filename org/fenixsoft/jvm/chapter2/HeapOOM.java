@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * VM Args£º-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
+ * VM Argsï¼š-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
  *
  * @author zzm
  */

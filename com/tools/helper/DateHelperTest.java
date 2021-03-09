@@ -14,13 +14,13 @@ public class DateHelperTest {
 
     @Test
     public void testDateHelper() {
-        // ÈÕÆÚÔöÁ¿
+        // æ—¥æœŸå¢é‡
         int rqzl = 1;
-        // »ñÈ¡µ±Ç°Ê±¼ä
+        // è·å–å½“å‰æ—¶é—´
         String dqsj = DateHelper.getNow("yyyyMMdd");
-        // »ñÈ¡µ±Ç°Ê±¼äµÄºóÒ»Ìì
+        // è·å–å½“å‰æ—¶é—´çš„åä¸€å¤©
         String rq = DateHelper.getBeforDate(dqsj, -rqzl * 24);
 
-        System.out.println("µ±Ç°ÈÕÆÚ£º" + dqsj + "µ±Ç°ÈÕÆÚµÄºóÒ»Ìì£º" + rq);
+        System.out.println("å½“å‰æ—¥æœŸï¼š" + dqsj + "å½“å‰æ—¥æœŸçš„åä¸€å¤©ï¼š" + rq);
     }
 }

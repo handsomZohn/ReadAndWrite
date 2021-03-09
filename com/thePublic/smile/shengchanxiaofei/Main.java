@@ -3,9 +3,9 @@ package com.thePublic.smile.shengchanxiaofei;
 import java.util.concurrent.*;
 
 /**
- *@Description  Ö÷Ïß³Ìµ÷ÓÃ Ê¹ÓÃÏß³Ì³Ø¶ÔÏß³Ì½øĞĞ·ÖÅä
- * ½«Êı¾İ¶ÓÁĞ¶¨ÒåÎª10¸öÔªËØ¿Õ¼ä
- * Ïß³Ì³ØÊ¹ÓÃnewFixedThreadPool·½Ê½À´¹æ¶¨ÎåÌõÏß³Ì£¬³õÊ¼»¯3ÃûÉú²úÕßºÍ15ÃûÏû·ÑÕß
+ *@Description  ä¸»çº¿ç¨‹è°ƒç”¨ ä½¿ç”¨çº¿ç¨‹æ± å¯¹çº¿ç¨‹è¿›è¡Œåˆ†é…
+ * å°†æ•°æ®é˜Ÿåˆ—å®šä¹‰ä¸º10ä¸ªå…ƒç´ ç©ºé—´
+ * çº¿ç¨‹æ± ä½¿ç”¨newFixedThreadPoolæ–¹å¼æ¥è§„å®šäº”æ¡çº¿ç¨‹ï¼Œåˆå§‹åŒ–3åç”Ÿäº§è€…å’Œ15åæ¶ˆè´¹è€…
  *@CreateDate   18/08/13 9:19
  *@Author        zohn
  *@Version       1.0

@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * @Description Ê¹ÓÃJava 8 lambda±í´ïÊ½½øĞĞÊÂ¼ş´¦Àí ÓÃlambda±í´ïÊ½Ğ´³ö¸üºÃµÄÊÂ¼ş¼àÌı´úÂë
+ * @Description ä½¿ç”¨Java 8 lambdaè¡¨è¾¾å¼è¿›è¡Œäº‹ä»¶å¤„ç† ç”¨lambdaè¡¨è¾¾å¼å†™å‡ºæ›´å¥½çš„äº‹ä»¶ç›‘å¬ä»£ç 
  * @CreateDate 18/07/19 10:36
  * @Author zohn
  * @Version 1.0
@@ -13,19 +13,19 @@ import java.awt.event.ActionListener;
 public class EventProcessing {
     public static void main(String[] args) {
         JButton button = new JButton("Show");
-        // 1.8Ö®Ç°
+        // 1.8ä¹‹å‰
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Event handing without zlambda is boring");
             }
         });
-        // 1.8Ö®ºó
+        // 1.8ä¹‹å
         button.addActionListener((e) -> {
             System.out.println("Light, Camera, Action !! Lambda expressions Rocks");
         });
     }
-    // Java¿ª·¢Õß¾­³£Ê¹ÓÃÄäÃûÀàµÄÁíÒ»¸öµØ·½ÊÇÎª Collections.sort() ¶¨ÖÆ Comparator¡£
-    // ÔÚJava 8ÖĞ£¬Äã¿ÉÒÔÓÃ¸ü¿É¶ÁµÄlambda±í´ïÊ½»»µô³óÂªµÄÄäÃûÀà¡£
-    // ÎÒ°ÑÕâ¸öÁô×öÁ·Ï°£¬Ó¦¸Ã²»ÄÑ£¬¿ÉÒÔ°´ÕÕÎÒÔÚÊ¹ÓÃlambda±í´ïÊ½ÊµÏÖ Runnable ºÍ ActionListener µÄ¹ı³ÌÖĞµÄÌ×Â·À´×ö¡£
+    // Javaå¼€å‘è€…ç»å¸¸ä½¿ç”¨åŒ¿åç±»çš„å¦ä¸€ä¸ªåœ°æ–¹æ˜¯ä¸º Collections.sort() å®šåˆ¶ Comparatorã€‚
+    // åœ¨Java 8ä¸­ï¼Œä½ å¯ä»¥ç”¨æ›´å¯è¯»çš„lambdaè¡¨è¾¾å¼æ¢æ‰ä¸‘é™‹çš„åŒ¿åç±»ã€‚
+    // æˆ‘æŠŠè¿™ä¸ªç•™åšç»ƒä¹ ï¼Œåº”è¯¥ä¸éš¾ï¼Œå¯ä»¥æŒ‰ç…§æˆ‘åœ¨ä½¿ç”¨lambdaè¡¨è¾¾å¼å®ç° Runnable å’Œ ActionListener çš„è¿‡ç¨‹ä¸­çš„å¥—è·¯æ¥åšã€‚
 }

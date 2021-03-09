@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *@Description  Ê¹ÓÃlambda±í´ïÊ½¶ÔÁĞ±í½øĞĞµü´ú Õë¶Ô¼¯ºÏÀà£¬×î³£¼ûµÄ²Ù×÷¾ÍÊÇ½øĞĞµü´ú
+ *@Description  ä½¿ç”¨lambdaè¡¨è¾¾å¼å¯¹åˆ—è¡¨è¿›è¡Œè¿­ä»£ é’ˆå¯¹é›†åˆç±»ï¼Œæœ€å¸¸è§çš„æ“ä½œå°±æ˜¯è¿›è¡Œè¿­ä»£
  *@CreateDate   18/07/19 10:57
  *@Author        zohn
  *@Version       1.0
@@ -13,15 +13,15 @@ import java.util.List;
 public class IteratorList {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("Lambda", "Default Method", "Stream  API", "Date And Time");
-        // 1.8Ö®Ç°
+        // 1.8ä¹‹å‰
         for (String l : list) {
             System.out.println(l);
         }
-        // 1.8Ö®ºó
-        // lambda±í´ïÊ½
+        // 1.8ä¹‹å
+        // lambdaè¡¨è¾¾å¼
         list.forEach(str -> System.out.println(list));
         list.forEach(str -> System.out.println(str));
-        // ·½·¨ÒıÓÃ
+        // æ–¹æ³•å¼•ç”¨
         list.forEach(System.out::print);
     }
 }

@@ -36,7 +36,7 @@ public class VectorTestCase_1 {
             removeThread.start();
             printThread.start();
 
-            //²»ÒªÍ¬Ê±²úÉú¹ý¶àµÄÏß³Ì£¬·ñÔò»áµ¼ÖÂ²Ù×÷ÏµÍ³¼ÙËÀ
+            //ä¸è¦åŒæ—¶äº§ç”Ÿè¿‡å¤šçš„çº¿ç¨‹ï¼Œå¦åˆ™ä¼šå¯¼è‡´æ“ä½œç³»ç»Ÿå‡æ­»
             while (Thread.activeCount() > 20) ;
         }
     }

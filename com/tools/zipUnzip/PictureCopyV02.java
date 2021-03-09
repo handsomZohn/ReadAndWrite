@@ -18,26 +18,26 @@ import com.sx.conf.UploadConfig;
 /**
  * 
  * <p>Title:PictureCopy</p>
- * <p>Description:Í¼Æ¬copy</p>
+ * <p>Description:å›¾ç‰‡copy</p>
  * <p>Copyright: Copyright (c) 2019</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2019Äê3ÔÂ21ÈÕ</p>
+ * <p>CreateDate:2019å¹´3æœˆ21æ—¥</p>
  * @author Administrator
  * @version 1.0
  */
 public class PictureCopyV02 {
 	
-	// ¹Ø¼ü×Ö
+	// å…³é”®å­—
 	static String pType01 = ".jpg", pType02 = ".png";
-	// ´æ·Å±éÀúµÄÎÄ¼ş  Õâ¸öÊÇÈ«²¿ÎÄ¼ş
+	// å­˜æ”¾éå†çš„æ–‡ä»¶  è¿™ä¸ªæ˜¯å…¨éƒ¨æ–‡ä»¶
 	static List fileList = new ArrayList();
-	// ´æ·ÅcopyµÄÎÄ¼ş Õâ¸öÀïÃæ´æµÄÊÇÍ¼Æ¬µÄname
+	// å­˜æ”¾copyçš„æ–‡ä»¶ è¿™ä¸ªé‡Œé¢å­˜çš„æ˜¯å›¾ç‰‡çš„name
 	static List pictureList = new ArrayList();
 	
 	
 	/**
 	 * 
-	 * @param dwbh µ¥Î»±àºÅ
+	 * @param dwbh å•ä½ç¼–å·
 	 * @throws Exception
 	 */
 	public void pCopy(String dwbh) throws Exception{
@@ -47,7 +47,7 @@ public class PictureCopyV02 {
 				+ UploadConfig.getFILE_PATH() + SysConfig.getFILESEPARATOR()
 				+ "rlzyfwxk" + SysConfig.getFILESEPARATOR() + dwbh + SysConfig.getFILESEPARATOR();
 		
-		// Ô´Ä¿Â¼
+		// æºç›®å½•
 		String srcFile = filePath;
 		
 		ArrayList fileList02 = new ArrayList();
@@ -58,11 +58,11 @@ public class PictureCopyV02 {
 			fileList02.add(listFiles[i]);
 		}
 		
-		// ÏÈËÑË÷ÎÄ¼ş¼ĞÏÂËùÓĞÎÄ¼ş
+		// å…ˆæœç´¢æ–‡ä»¶å¤¹ä¸‹æ‰€æœ‰æ–‡ä»¶
 		searchDir(fileList02);
 		
-		// ÔÙ´´½¨Ò»¸ö·ÅÍ¼Æ¬µÄÎÄ¼ş¼Ğ
-		// Í¼Æ¬copyÖÁÄ¿Â¼
+		// å†åˆ›å»ºä¸€ä¸ªæ”¾å›¾ç‰‡çš„æ–‡ä»¶å¤¹
+		// å›¾ç‰‡copyè‡³ç›®å½•
 		String dstDirPath = filePath + "tpyl" + SysConfig.getFILESEPARATOR();
 		File dstDir = new File(dstDirPath);
 		if (!dstDir.exists() && !dstDir.isDirectory()) {
@@ -74,15 +74,15 @@ public class PictureCopyV02 {
 	}
 	
 	/**
-	 * ±éÀúfilePathËùÓĞÎÄ¼ş
-	 * @param fileList02 Ö¸µÄÊÇfilePathµÄËùÓĞÎÄ¼ş¡¾°üÀ¨ÎÄ¼ş¼ĞÒÔ¼°ÎÄ¼ş¡¿
+	 * éå†filePathæ‰€æœ‰æ–‡ä»¶
+	 * @param fileList02 æŒ‡çš„æ˜¯filePathçš„æ‰€æœ‰æ–‡ä»¶ã€åŒ…æ‹¬æ–‡ä»¶å¤¹ä»¥åŠæ–‡ä»¶ã€‘
 	 */
 	public void searchDir(List fileList02){
-		// Ò»¼¶Ä¿Â¼
+		// ä¸€çº§ç›®å½•
 		List dirList01 = new ArrayList();
-		// Ò»¼¶Ä¿Â¼ÏÂ×ÓÄ¿Â¼
+		// ä¸€çº§ç›®å½•ä¸‹å­ç›®å½•
 		List dirList02 = new ArrayList();
-		// ±éÀúÎÄ¼ş¼Ğ£¬½«ÎÄ¼ş¼ĞºÍÎÄ¼ş·ÖÀà
+		// éå†æ–‡ä»¶å¤¹ï¼Œå°†æ–‡ä»¶å¤¹å’Œæ–‡ä»¶åˆ†ç±»
 		int size = fileList02.size();
 		for (int i = 0; i < size; i++) {
 			File file = (File) fileList02.get(i);
@@ -108,26 +108,26 @@ public class PictureCopyV02 {
 	}
 	
 	/**
-	 * ¶ÁĞ´Í¼Æ¬
-	 * @param fileList ÎÄ¼ş¼ĞÏÂÎÄ¼şÁĞ±í
-	 * @param pType01 Í¼Æ¬ÀàĞÍ01 .jpg
-	 * @param pType02 Í¼Æ¬ÀàĞÍ02 .png
-	 * @param dstDirPath Ä¿±êÂ·¾¶
+	 * è¯»å†™å›¾ç‰‡
+	 * @param fileList æ–‡ä»¶å¤¹ä¸‹æ–‡ä»¶åˆ—è¡¨
+	 * @param pType01 å›¾ç‰‡ç±»å‹01 .jpg
+	 * @param pType02 å›¾ç‰‡ç±»å‹02 .png
+	 * @param dstDirPath ç›®æ ‡è·¯å¾„
 	 */
 	public void readAndWritePicture(List fileList, String pType01, String pType02, String dstDirPath){
 		int size = fileList.size();
 		for (int i = 0; i < size; i++) {
 			File file = (File)fileList.get(i);
 			if (file.isFile()) {
-				// ÅĞ¶ÏÊÇ·ñÍ¼Æ¬
+				// åˆ¤æ–­æ˜¯å¦å›¾ç‰‡
 				boolean isJpg = file.toString().toLowerCase().endsWith(pType01);
 				boolean isPng = file.toString().toLowerCase().endsWith(pType02);
 				if (isJpg || isPng) {
-					// °ÑÎÄ¼şĞ´µ½Ö¸¶¨ÎÄ¼ş¼Ğ
+					// æŠŠæ–‡ä»¶å†™åˆ°æŒ‡å®šæ–‡ä»¶å¤¹
 					try {
-						// ImageIO¶ÁÈ¡JPEGÍ¼Æ¬Ê±£¬ÓĞÊ±»áÌí¼ÓºìÉ«ÃÉ²ã
+						// ImageIOè¯»å–JPEGå›¾ç‰‡æ—¶ï¼Œæœ‰æ—¶ä¼šæ·»åŠ çº¢è‰²è’™å±‚
 						// BufferedImage img = ImageIO.read(new File(file.toString()));
-						// ÓÃToolkitÖĞ·½·¨¼ÓÒÔ·â×° ²»»á³öÏÖºìÉ«ÃÉ²ã
+						// ç”¨Toolkitä¸­æ–¹æ³•åŠ ä»¥å°è£… ä¸ä¼šå‡ºç°çº¢è‰²è’™å±‚
 						Image image = Toolkit.getDefaultToolkit().getImage(file.toString());
 						BufferedImage img = BufferedImageBuilder.toBufferedImage(image);
 						ImageIO.write(img, isJpg ? "jpg" : "png", new File(dstDirPath + file.getName()));

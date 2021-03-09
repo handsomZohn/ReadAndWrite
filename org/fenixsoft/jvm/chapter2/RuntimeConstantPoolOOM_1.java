@@ -4,16 +4,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * VM Args£º-XX:PermSize=6M -XX:MaxPermSize=6M
+ * VM Argsï¼š-XX:PermSize=6M -XX:MaxPermSize=6M
  *
  * @author zzm
  */
 public class RuntimeConstantPoolOOM_1 {
 
     public static void main(String[] args) {
-        // Ê¹ÓÃSet±£³Ö×Å³£Á¿³ØÒıÓÃ£¬±ÜÃâFull GC»ØÊÕ³£Á¿³ØĞĞÎª
+        // ä½¿ç”¨Setä¿æŒç€å¸¸é‡æ± å¼•ç”¨ï¼Œé¿å…Full GCå›æ”¶å¸¸é‡æ± è¡Œä¸º
         Set<String> set = new HashSet<String>();
-        // ÔÚshort·¶Î§ÄÚ×ãÒÔÈÃ6MBµÄPermSize²úÉúOOMÁË
+        // åœ¨shortèŒƒå›´å†…è¶³ä»¥è®©6MBçš„PermSizeäº§ç”ŸOOMäº†
         short i = 0;
         while (true) {
             set.add(String.valueOf(i++).intern());

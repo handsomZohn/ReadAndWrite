@@ -13,32 +13,32 @@ public class GregorianCalendarTest {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		/*
-		 *ºÏÍ¬¿ªÊ¼ÈÕÆÚÊÇ201503
-		 *ºÏÍ¬ÂúÒ»ÄêÊÇ 201602
-		 *Éê±¨ÆÚ¿ªÊ¼£º
-		 *Éê±¨ÆÚ½áÊø£º 
+		 *åˆåŒå¼€å§‹æ—¥æœŸæ˜¯201503
+		 *åˆåŒæ»¡ä¸€å¹´æ˜¯ 201602
+		 *ç”³æŠ¥æœŸå¼€å§‹ï¼š
+		 *ç”³æŠ¥æœŸç»“æŸï¼š 
 		 */
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyyMM");
-		Date htksrq=sdf.parse("20150301".substring(0,6));//»ñµÃDateĞÍºÏÍ¬¿ªÊ¼ÄêÔÂ
-		System.out.println("201503" + "ºÏÍ¬¿ªÊ¼ÈÕÆÚ");
+		Date htksrq=sdf.parse("20150301".substring(0,6));//è·å¾—Dateå‹åˆåŒå¼€å§‹å¹´æœˆ
+		System.out.println("201503" + "åˆåŒå¼€å§‹æ—¥æœŸ");
 		GregorianCalendar cal = new GregorianCalendar();
 		cal.setTime(htksrq);
 		cal.add(GregorianCalendar.MONTH, 11);
-		String time1 = sdf.format(cal.getTime());//´ÓºÏÍ¬¿ªÊ¼ºóµÄµÚ12¸öÔÂµÄÄêÔÂ£¨ºÏÍ¬ÂúÒ»Äê£©
-		System.out.println(time1 + "ºÏÍ¬ÂúÒ»Äê");
+		String time1 = sdf.format(cal.getTime());//ä»åˆåŒå¼€å§‹åçš„ç¬¬12ä¸ªæœˆçš„å¹´æœˆï¼ˆåˆåŒæ»¡ä¸€å¹´ï¼‰
+		System.out.println(time1 + "åˆåŒæ»¡ä¸€å¹´");
 		
 		cal.setTime(htksrq);
 		cal.add(GregorianCalendar.MONTH, 12);
-		String sbqksny = sdf.format(cal.getTime()); //Éê±¨ÆÚ-¿ªÊ¼ÄêÔÂ
+		String sbqksny = sdf.format(cal.getTime()); //ç”³æŠ¥æœŸ-å¼€å§‹å¹´æœˆ
 		
-		System.out.println(sbqksny + "Éê±¨ÆÚ¿ªÊ¼");
+		System.out.println(sbqksny + "ç”³æŠ¥æœŸå¼€å§‹");
 		
 		
 		cal.setTime(htksrq);
 		cal.add(GregorianCalendar.MONTH, 23);
-		String sbqjsny = sdf.format(cal.getTime()); //Éê±¨ÆÚ-½áÊøÄêÔÂ
+		String sbqjsny = sdf.format(cal.getTime()); //ç”³æŠ¥æœŸ-ç»“æŸå¹´æœˆ
 		
-		System.out.println(sbqjsny + "Éê±¨ÆÚ½áÊø");
+		System.out.println(sbqjsny + "ç”³æŠ¥æœŸç»“æŸ");
 		
 		
 		
@@ -54,8 +54,8 @@ public class GregorianCalendarTest {
 		//cal.add(Calendar.MONTH, 11);
 		cal.add(Calendar.MONTH, 13);
 		String s=sdf21.format(cal.getTime());
-		System.out.println("ºÏÍ¬¿ªÊ¼ÈÕÆÚ" + "201604");
-		System.out.println("ºÏÍ¬¿ªÊ¼ÈÕÆÚÍÆ³Ù13¸öÔÂ" + s.substring(0, 6));
+		System.out.println("åˆåŒå¼€å§‹æ—¥æœŸ" + "201604");
+		System.out.println("åˆåŒå¼€å§‹æ—¥æœŸæ¨è¿Ÿ13ä¸ªæœˆ" + s.substring(0, 6));
 	}
 
 }

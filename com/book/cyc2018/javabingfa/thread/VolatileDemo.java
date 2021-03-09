@@ -33,7 +33,7 @@ public class VolatileDemo {
             }).start();
         }
 
-        // Ö÷Ïß³ÌÈÃ³ö×ÊÔ´
+        // ä¸»çº¿ç¨‹è®©å‡ºèµ„æº
         while (Thread.activeCount() > 1) {
             Thread.yield();
         }

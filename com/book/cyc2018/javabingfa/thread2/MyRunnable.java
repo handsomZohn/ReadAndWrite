@@ -1,7 +1,7 @@
 package com.book.cyc2018.javabingfa.thread2;
 
 /**
- *@Description  实现Runnable接口
+ *@Description  瀹炵幇Runnable鎺ュ彛
  *@CreateDate   18/07/23 16:16
  *@Author        zohn
  *@Version       1.0

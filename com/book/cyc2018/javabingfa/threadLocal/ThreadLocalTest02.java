@@ -1,6 +1,6 @@
 package com.book.cyc2018.javabingfa.threadLocal;
 /**
- *@Description  ÖØĞ´initialValue
+ *@Description  é‡å†™initialValue
  *@CreateDate   18/08/09 15:24
  *@Author        zohn
  *@Version       1.0
@@ -41,7 +41,7 @@ public class ThreadLocalTest02 {
 
     public static void main(String[] args) throws Exception {
         final ThreadLocalTest02 threadLocalTest2 = new ThreadLocalTest02();
-        // threadLocalTest.set(); // ²»ÖØĞ´initialValueÒ²²»set() ÔÚµ÷ÓÃµÄÊÇ¾Í»áÒì³£
+        // threadLocalTest.set(); // ä¸é‡å†™initialValueä¹Ÿä¸set() åœ¨è°ƒç”¨çš„æ˜¯å°±ä¼šå¼‚å¸¸
         System.out.println(threadLocalTest2.getLong());
         System.out.println(threadLocalTest2.getString());
 
@@ -59,8 +59,8 @@ public class ThreadLocalTest02 {
     }
 
     /**
-     * ÊÊÓÃ³¡¾°£º
-     * Êı¾İ¿âÁ¬½Ó
-     * Session¹ÜÀí
+     * é€‚ç”¨åœºæ™¯ï¼š
+     * æ•°æ®åº“è¿æ¥
+     * Sessionç®¡ç†
      */
 }

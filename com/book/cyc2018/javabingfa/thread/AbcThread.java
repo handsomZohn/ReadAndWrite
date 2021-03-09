@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @Description ÓÃÈı¸öÏß³Ì°´Ë³ĞòÑ­»·´òÓ¡abcÈı¸ö×ÖÄ¸£¬±ÈÈçabcabcabc
+ * @Description ç”¨ä¸‰ä¸ªçº¿ç¨‹æŒ‰é¡ºåºå¾ªç¯æ‰“å°abcä¸‰ä¸ªå­—æ¯ï¼Œæ¯”å¦‚abcabcabc
  * @CreateDate 18/08/07 17:25
  * @Author zohn
  * @Version 1.0
@@ -18,13 +18,13 @@ public class AbcThread implements Runnable {
     public void run() {
         String name = Thread.currentThread().getName();
         reentrantLock.lock();
-        // ½øÈëÁÙ½çÇø
+        // è¿›å…¥ä¸´ç•ŒåŒº
         try {
             for (int i = 0; i < 10; i++) {
                 if (name.equals("B")) {
-                    // Ö»ÓĞaºÍa2Í¬Ê±ÎªtrueÊ±²Å´òÓ¡B£¬·ñÔò×èÈûµ±Ç°Ïß³Ì
+                    // åªæœ‰aå’Œa2åŒæ—¶ä¸ºtrueæ—¶æ‰æ‰“å°Bï¼Œå¦åˆ™é˜»å¡å½“å‰çº¿ç¨‹
                     while (state % 3 != 1) {
-                        condition.await();// Ìõ¼ş²»Âú×ã£¬ÔİÊ±×èÈûÏß³Ì£¬ÔİÊ±ÊÍ·Ålock
+                        condition.await();// æ¡ä»¶ä¸æ»¡è¶³ï¼Œæš‚æ—¶é˜»å¡çº¿ç¨‹ï¼Œæš‚æ—¶é‡Šæ”¾lock
                     }
                 } else if (name.equals("C")) {
                     while (state % 3 != 2) {
@@ -37,12 +37,12 @@ public class AbcThread implements Runnable {
                 }
                 state++;
                 System.out.print(name);
-                condition.signalAll();// Í¨ÖªÕıÔÚµÈ´ıµÄÏß³Ì£¬´ËÊ±ÓĞ¿ÉÄÜÒÑ¾­Âú×ãÌõ¼ş
+                condition.signalAll();// é€šçŸ¥æ­£åœ¨ç­‰å¾…çš„çº¿ç¨‹ï¼Œæ­¤æ—¶æœ‰å¯èƒ½å·²ç»æ»¡è¶³æ¡ä»¶
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            reentrantLock.unlock();// ¼ÇµÃÒªÊÍ·ÅËø
+            reentrantLock.unlock();// è®°å¾—è¦é‡Šæ”¾é”
         }
     }
 

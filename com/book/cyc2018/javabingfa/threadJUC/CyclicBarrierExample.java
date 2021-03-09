@@ -6,12 +6,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @Description: ÓÃÀ´¿ØÖÆ¶à¸öÏß³Ì»¥ÏàµÈ´ı£¬Ö»ÓĞµ±¶à¸öÏß³Ì¶¼µ½´ïµÄÊ±ºò£¬ÕâĞ©Ïß³Ì²Å¼ÌĞøÖ´ĞĞ¡£
+ * @Description: ç”¨æ¥æ§åˆ¶å¤šä¸ªçº¿ç¨‹äº’ç›¸ç­‰å¾…ï¼Œåªæœ‰å½“å¤šä¸ªçº¿ç¨‹éƒ½åˆ°è¾¾çš„æ—¶å€™ï¼Œè¿™äº›çº¿ç¨‹æ‰ç»§ç»­æ‰§è¡Œã€‚
  * @Author: zohn
  * @CreateDate: 2018/7/28 11:41
  * @UpdateUser: zohn
  * @UpdateDate: 2018/7/28 11:41
- * @UpdateRemark: ĞŞ¸ÄÄÚÈİ
+ * @UpdateRemark: ä¿®æ”¹å†…å®¹
  * @Version: 1.0
  */
 public class CyclicBarrierExample {
@@ -21,7 +21,7 @@ public class CyclicBarrierExample {
         ExecutorService executorService = Executors.newCachedThreadPool();
         for (int i = 0; i < totalThread; i++) {
             executorService.execute(() -> {
-                System.out.print("before...");// µ¥¸öÊä³ö
+                System.out.print("before...");// å•ä¸ªè¾“å‡º
                 try {
                     cyclicBarrier.await();
                 } catch (InterruptedException e) {
@@ -29,7 +29,7 @@ public class CyclicBarrierExample {
                 } catch (BrokenBarrierException e) {
                     e.printStackTrace();
                 }
-                System.out.print("after...");// Ò»ÏÂÈ«±Ä³öÀ´ 10¸ö
+                System.out.print("after...");// ä¸€ä¸‹å…¨è¹¦å‡ºæ¥ 10ä¸ª
             });
         }
         executorService.shutdown();

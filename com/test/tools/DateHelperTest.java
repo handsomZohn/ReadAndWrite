@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.Date;
 
 /**
- *@Description DateHelper²âÊÔÀà
+ *@Description DateHelperæµ‹è¯•ç±»
  *@CreateDate 2020\3\13 0013 10:23
  *@Author zohn
  *@Version 1.0
@@ -15,19 +15,19 @@ public class DateHelperTest {
 
     @Test
     public void testDateHelper() {
-        // ÈÕÆÚÔöÁ¿
+        // æ—¥æœŸå¢é‡
         int rqzl = 1;
-        // »ñÈ¡µ±Ç°Ê±¼ä
+        // è·å–å½“å‰æ—¶é—´
         String dqsj = DateHelper.getNow("yyyyMMdd");
-        // »ñÈ¡µ±Ç°Ê±¼äµÄºóÒ»Ìì
+        // è·å–å½“å‰æ—¶é—´çš„åä¸€å¤©
         String rq = DateHelper.getBeforDate(dqsj, -rqzl * 24);
 
-        System.out.println("µ±Ç°ÈÕÆÚ£º" + dqsj + "µ±Ç°ÈÕÆÚµÄºóÒ»Ìì£º" + rq);
+        System.out.println("å½“å‰æ—¥æœŸï¼š" + dqsj + "å½“å‰æ—¥æœŸçš„åä¸€å¤©ï¼š" + rq);
     }
 
     @Test
     public void getBeforeOrAfterDay(){
         String after2Days = DateHelper.getBeforeOrAfterDay(-2);
-        System.out.println("======^_^======±äÁ¿after2DaysÖµÎª: " + after2Days + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: DateHelperTest.getBeforeOrAfterDay()");
+        System.out.println("======^_^======å˜é‡after2Dayså€¼ä¸º: " + after2Days + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: DateHelperTest.getBeforeOrAfterDay()");
     }
 }

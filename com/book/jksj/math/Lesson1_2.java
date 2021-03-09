@@ -7,31 +7,31 @@ public class Lesson1_2 {
 
         int num = 53;
         int m = 1;
-        System.out.println(String.format(" Êı×Ö %d µÄ¶ş½øÖÆÏò×óÒÆ %d Î»ÊÇ %d", num, m, Lesson1_2.leftShift(num, m)));   // ²âÊÔÏò×óÒÆÎ»
-        System.out.println(String.format(" Êı×Ö %d µÄ¶ş½øÖÆÏòÓÒÒÆ %d Î»ÊÇ %d", num, m, Lesson1_2.rightShift(num, m)));   // ²âÊÔÏòÓÒÒÆÎ»
+        System.out.println(String.format(" æ•°å­— %d çš„äºŒè¿›åˆ¶å‘å·¦ç§» %d ä½æ˜¯ %d", num, m, Lesson1_2.leftShift(num, m)));   // æµ‹è¯•å‘å·¦ç§»ä½
+        System.out.println(String.format(" æ•°å­— %d çš„äºŒè¿›åˆ¶å‘å³ç§» %d ä½æ˜¯ %d", num, m, Lesson1_2.rightShift(num, m)));   // æµ‹è¯•å‘å³ç§»ä½
 
         System.out.println();
 
         m = 3;
-        System.out.println(String.format(" Êı×Ö %d µÄ¶ş½øÖÆÏò×óÒÆ %d Î»ÊÇ %d", num, m, Lesson1_2.leftShift(num, m)));   // ²âÊÔÏò×óÒÆÎ»
-        System.out.println(String.format(" Êı×Ö %d µÄ¶ş½øÖÆÏòÓÒÒÆ %d Î»ÊÇ %d", num, m, Lesson1_2.rightShift(num, m)));   // ²âÊÔÏòÓÒÒÆÎ»
+        System.out.println(String.format(" æ•°å­— %d çš„äºŒè¿›åˆ¶å‘å·¦ç§» %d ä½æ˜¯ %d", num, m, Lesson1_2.leftShift(num, m)));   // æµ‹è¯•å‘å·¦ç§»ä½
+        System.out.println(String.format(" æ•°å­— %d çš„äºŒè¿›åˆ¶å‘å³ç§» %d ä½æ˜¯ %d", num, m, Lesson1_2.rightShift(num, m)));   // æµ‹è¯•å‘å³ç§»ä½
 
     }
 
 
     /**
-     * @param num- µÈ´ıÒÆÎ»µÄÊ®½øÖÆÊı, m- Ïò×óÒÆµÄÎ»Êı
-     * @return int- ÒÆÎ»ºóµÄÊ®½øÖÆÊı
-     * @Description: Ïò×óÒÆÎ»
+     * @param num- ç­‰å¾…ç§»ä½çš„åè¿›åˆ¶æ•°, m- å‘å·¦ç§»çš„ä½æ•°
+     * @return int- ç§»ä½åçš„åè¿›åˆ¶æ•°
+     * @Description: å‘å·¦ç§»ä½
      */
     public static int leftShift(int num, int m) {
         return num << m;
     }
 
     /**
-     * @param num- µÈ´ıÒÆÎ»µÄÊ®½øÖÆÊı, m- ÏòÓÒÒÆµÄÎ»Êı
-     * @return int- ÒÆÎ»ºóµÄÊ®½øÖÆÊı
-     * @Description: ÏòÓÒÒÆÎ»
+     * @param num- ç­‰å¾…ç§»ä½çš„åè¿›åˆ¶æ•°, m- å‘å³ç§»çš„ä½æ•°
+     * @return int- ç§»ä½åçš„åè¿›åˆ¶æ•°
+     * @Description: å‘å³ç§»ä½
      */
     public static int rightShift(int num, int m) {
         return num >>> m;

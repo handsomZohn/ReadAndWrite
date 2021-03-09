@@ -20,15 +20,15 @@ public class NioServerJKB extends Thread {
 
     public void run() {
         try (
-                Selector selector = Selector.open();// 创建selector
-                ServerSocketChannel serverSocketChannel = ServerSocketChannel.open()// 创建channel
+                Selector selector = Selector.open();// 鍒涘缓selector
+                ServerSocketChannel serverSocketChannel = ServerSocketChannel.open()// 鍒涘缓channel
         ) {
             serverSocketChannel.bind(new InetSocketAddress(InetAddress.getLocalHost(), 8888));
             serverSocketChannel.configureBlocking(false);
-            // 注册到selector 并说明关注点
+            // 娉ㄥ唽鍒皊elector 骞惰鏄庡叧娉ㄧ偣
             serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
             while (true) {
-                selector.select();// 阻塞等待就绪的Channel
+                selector.select();// 闃诲绛夊緟灏辩华鐨凜hannel
                 Set<SelectionKey> selectionKeys = selector.selectedKeys();
                 Iterator<SelectionKey> iterator = selectionKeys.iterator();
                 while (iterator.hasNext()) {

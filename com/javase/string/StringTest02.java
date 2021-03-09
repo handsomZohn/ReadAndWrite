@@ -9,18 +9,18 @@ public class StringTest02 {
 //		System.out.println("aa\taa");
 //		System.out.println("aacII\b");
 //		System.out.println("\\");
-		// \r	»Ø³µ
-		// \f 	»»Ò³
-		// \n 	»»ĞĞ
-		// \t	ÖÆ±í·û
-		// \	×ªÒå
-		// \b	µ¥´Ê±ß½ç
+		// \r	å›è½¦
+		// \f 	æ¢é¡µ
+		// \n 	æ¢è¡Œ
+		// \t	åˆ¶è¡¨ç¬¦
+		// \	è½¬ä¹‰
+		// \b	å•è¯è¾¹ç•Œ
 		
 		
 		ppdgkg();
 	}
 	
-	// java ÕıÔò Æ¥Åä¶à¸ö¿Õ¸ñ
+	// java æ­£åˆ™ åŒ¹é…å¤šä¸ªç©ºæ ¼
 	public static void ppdgkg(){
 		String str = "   ";
 		String reg_str = "\\s*";

@@ -19,11 +19,11 @@ public class ForEachTest {
     }
 
     private static void iteratorRemove() {
-        List<String> arrList = new ArrayList<>();// diamondÓï·¨
+        List<String> arrList = new ArrayList<>();// diamondè¯­æ³•
         arrList.add("1");
         arrList.add("2");
         arrList.add("3");
-        // ÕıÀı
+        // æ­£ä¾‹
         /*Iterator<String> iterator = arrList.iterator();
         while (iterator.hasNext()) {
             String string = iterator.next();
@@ -32,33 +32,33 @@ public class ForEachTest {
             }
         }*/
 
-        // ·´Àı
+        // åä¾‹
 		/*for (String string : arrList) {
 			if ("1".equals(string)) {
 				arrList.remove(string);// java.util.ConcurrentModificationException
 			}
 		}*/
 
-        // Êı×é{"1", "1", "1", "2", "3", "4", "5"}ÖĞÉ¾³ı1
+        // æ•°ç»„{"1", "1", "1", "2", "3", "4", "5"}ä¸­åˆ é™¤1
 
-        // Ê×ÏÈ×ªÎªlist
+        // é¦–å…ˆè½¬ä¸ºlist
         List<String> integerList = new ArrayList<>(); //Arrays.asList("1", "1", "1", "2", "3", "4", "5");// Arrays.asList
         /*integerList.add("1");
         integerList.add("1");
         integerList.add("1");*/
-        integerList.addAll(Arrays.asList("1", "1", "1", "2", "3", "4", "5"));// Arrays.asList ÕâÑù¾Í¿ÉÒÔ²Ù×÷ÁË£»£»£»£»
+        integerList.addAll(Arrays.asList("1", "1", "1", "2", "3", "4", "5"));// Arrays.asList è¿™æ ·å°±å¯ä»¥æ“ä½œäº†ï¼›ï¼›ï¼›ï¼›
         /*@SafeVarargs
         @SuppressWarnings("varargs")
         public static <T> List<T> asList(T... a) {
             return new ArrayList<>(a);
         }*/
 
-        // ÊÇArraysÀàÀïÃæµÄÒ»¸öÄÚ²¿Àà ²¢Ã»ÓĞÊµÏÖadd(E e), remove(int index)ºÍremove(Object o)µÈ·½·¨£¬×ÔÈ»ÊÇ²»¿ÉĞŞ¸ÄµÄ
+        // æ˜¯Arraysç±»é‡Œé¢çš„ä¸€ä¸ªå†…éƒ¨ç±» å¹¶æ²¡æœ‰å®ç°add(E e), remove(int index)å’Œremove(Object o)ç­‰æ–¹æ³•ï¼Œè‡ªç„¶æ˜¯ä¸å¯ä¿®æ”¹çš„
 
         //
-        // ÓÃ·´ÀıµÄÄÇÖÖ·½·¨ÊÇ²»¿ÉÒÔµÄ ÒòÎª»áÅ×³öjava.util.ConcurrentModificationException
+        // ç”¨åä¾‹çš„é‚£ç§æ–¹æ³•æ˜¯ä¸å¯ä»¥çš„ å› ä¸ºä¼šæŠ›å‡ºjava.util.ConcurrentModificationException
 
-        // ÓÃÕıÀıµÄÄÇÖÖ·½·¨
+        // ç”¨æ­£ä¾‹çš„é‚£ç§æ–¹æ³•
         Iterator<String> iterator = integerList.iterator();
         while (iterator.hasNext()) {
             String next = iterator.next();
@@ -74,10 +74,10 @@ public class ForEachTest {
         }
         */
 
-        // ·¢ÏÖÖ»ÒÆ³ıµôÁËÒ»¸ö
+        // å‘ç°åªç§»é™¤æ‰äº†ä¸€ä¸ª
 
 
-        // ×îºó×ªÎªstrÊä³ö
+        // æœ€åè½¬ä¸ºstrè¾“å‡º
         String string = integerList.toString();
         System.out.println(string);
     }
@@ -87,8 +87,8 @@ public class ForEachTest {
         ArrayList<String> list = new ArrayList<>();
         list.addAll(Arrays.asList("1", "1", "1", "2", "3", "4", "5"));
 
-        // »áÅ×³öConcurrentModificationExceptionµÄforeachÉ¾³ı·¨
-        // ºÍItrµü´úÆ÷ÓĞ¹ØÏµ
+        // ä¼šæŠ›å‡ºConcurrentModificationExceptionçš„foreachåˆ é™¤æ³•
+        // å’ŒItrè¿­ä»£å™¨æœ‰å…³ç³»
         // for (String str : list) {
         //     if ("1".equals(str)) {
         //         list.remove(str);
@@ -97,14 +97,14 @@ public class ForEachTest {
 
         for (int i = 0; i < list.size(); i++) {
             if ("1".equals(list.get(i))) {
-                list.remove(i--);// i-- Ãî°¡
+                list.remove(i--);// i-- å¦™å•Š
             }
         }
         System.out.println(list.toString());
     }
 
     /**
-     * Êı×é²»ÄÜÉìËõ°É
+     * æ•°ç»„ä¸èƒ½ä¼¸ç¼©å§
      */
     public static void testForLoopRemove02(){
         int[] arr = {1,2,1,1,1,1};

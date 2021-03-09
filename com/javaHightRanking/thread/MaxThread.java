@@ -1,12 +1,12 @@
 package com.javaHightRanking.thread;
 
 /**
- * @Description: ¶àÏß³ÌµÄÏß³ÌÊı¸ù¾İÊ²Ã´È·¶¨£º£º
+ * @Description: å¤šçº¿ç¨‹çš„çº¿ç¨‹æ•°æ ¹æ®ä»€ä¹ˆç¡®å®šï¼šï¼š
  * @Author: zohn
  * @CreateDate: 2019/2/5 9:23
  * @UpdateUser: zohn
  * @UpdateDate: 2019/2/5 9:23
- * @UpdateRemark: ĞŞ¸ÄÄÚÈİ
+ * @UpdateRemark: ä¿®æ”¹å†…å®¹
  * @Version: 1.0
  */
 public class MaxThread {
@@ -15,7 +15,7 @@ public class MaxThread {
         int maxThread = Runtime.getRuntime().availableProcessors() * 25;
         System.out.println("maxThread:" + maxThread);
 
-        // ×î´óÏß³ÌÊıÊÇCPUµÄºËÊı*25
-        // ÓÃjava³ÌĞò»ñÈ¡cpuµÄºËÊı£ºRuntime.getRuntime.availableProcessors();
+        // æœ€å¤§çº¿ç¨‹æ•°æ˜¯CPUçš„æ ¸æ•°*25
+        // ç”¨javaç¨‹åºè·å–cpuçš„æ ¸æ•°ï¼šRuntime.getRuntime.availableProcessors();
     }
 }

@@ -1,7 +1,7 @@
 package com.javase.passbyvalueorreference;
 
 /**
- *@Description »ù´¡ÀàĞÍ²ÎÊı´«µİ
+ *@Description åŸºç¡€ç±»å‹å‚æ•°ä¼ é€’
  *@CreateDate 2020\4\8 0008 15:39
  *@Author zz
  *@Version 1.0
@@ -14,7 +14,7 @@ public class BasicType {
 
         valuePassTest(a, w);
 
-        // Öµ´«µİ´«µİµÄÊÇÕæÊµÄÚÈİµÄÒ»¸ö¸±±¾£¬¶Ô¸±±¾µÄ²Ù×÷²»Ó°ÏìÔ­ÄÚÈİ£¬Ò²¾ÍÊÇĞÎ²ÎÔõÃ´±ä»¯£¬²»»áÓ°ÏìÊµ²Î¶ÔÓ¦µÄÄÚÈİ¡£
+        // å€¼ä¼ é€’ä¼ é€’çš„æ˜¯çœŸå®å†…å®¹çš„ä¸€ä¸ªå‰¯æœ¬ï¼Œå¯¹å‰¯æœ¬çš„æ“ä½œä¸å½±å“åŸå†…å®¹ï¼Œä¹Ÿå°±æ˜¯å½¢å‚æ€ä¹ˆå˜åŒ–ï¼Œä¸ä¼šå½±å“å®å‚å¯¹åº”çš„å†…å®¹ã€‚
         System.out.println("======^_^======variable a value is : " + a + ", " + " current method and class name is : BasicType.main()");
 
         System.out.println("======^_^======variable w value is : " + w + ", " + " current method and class name is : BasicType.main()");
@@ -22,13 +22,13 @@ public class BasicType {
 
 
     public static void valuePassTest(int age, float weight){
-        System.out.println("´«ÈëµÄage£º" + age);
-        System.out.println("´«ÈëµÄweight£º" + weight);
+        System.out.println("ä¼ å…¥çš„ageï¼š" + age);
+        System.out.println("ä¼ å…¥çš„weightï¼š" + weight);
 
         age = 33;
         weight = 87.5f;
 
-        System.out.println("·½·¨ÄÚÖØĞÂ¸³ÖµºóµÄage£º" + age);
-        System.out.println("·½·¨ÄÚÖØĞÂ¸³ÖµºóµÄµÄweight£º" + weight);
+        System.out.println("æ–¹æ³•å†…é‡æ–°èµ‹å€¼åçš„ageï¼š" + age);
+        System.out.println("æ–¹æ³•å†…é‡æ–°èµ‹å€¼åçš„çš„weightï¼š" + weight);
     }
 }

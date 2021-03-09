@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @Description ÔÚJavaÖĞ±éÀúHashMapµÄ5ÖÖ×î¼Ñ·½·¨
+ * @Description åœ¨Javaä¸­éå†HashMapçš„5ç§æœ€ä½³æ–¹æ³•
  * @CreateDate 2020/4/2 20:27
  * @Author zohn
  * @Version 1.0
@@ -23,26 +23,26 @@ public class IteratorHashMapExample {
         String EntrySet = "EntrySet";
         System.out.println("======^_^======variable EntrySet value is : " + EntrySet + ", " + " current method and class name is : IteratorHashMapExample.main()");
 
-        // Í¨¹ıEntrySet±éÀú
+        // é€šè¿‡EntrySetéå†
         iteratorByEntrySet(hashMap);
 
         String KeySet = "KeySet";
         System.out.println("======^_^======variable KeySet value is : " + KeySet + ", " + " current method and class name is : IteratorHashMapExample.main()");
-        // Í¨¹ıKeySet±éÀú
+        // é€šè¿‡KeySetéå†
         iteratorByKeySet(hashMap);
 
-        // Í¨¹ıfor-each±éÀúmap
+        // é€šè¿‡for-eachéå†map
         iteratorByForEach(hashMap);
 
-        // Í¨¹ılambda±éÀúmap
+        // é€šè¿‡lambdaéå†map
         iteratorByLambda(hashMap);
 
-        // Í¨¹ıstream API±éÀúmap
+        // é€šè¿‡stream APIéå†map
         iteratorByStreamAPI(hashMap);
     }
 
     /**
-     * @Description Ê¹ÓÃIterator±éÀúHashMap EntrySet
+     * @Description ä½¿ç”¨Iteratoréå†HashMap EntrySet
      * @Author zohn
      * @Date 2020/4/2 20:31
      * @Param [hashMap]
@@ -58,7 +58,7 @@ public class IteratorHashMapExample {
     }
 
     /**
-     * @Description Ê¹ÓÃIterator±éÀúHashMap KeySet
+     * @Description ä½¿ç”¨Iteratoréå†HashMap KeySet
      * @Author zohn
      * @Date 2020/4/2 20:37
      * @Param [hashMap]
@@ -74,7 +74,7 @@ public class IteratorHashMapExample {
     }
 
     /**
-     * @Description Ê¹ÓÃfor-each±éÀúmap
+     * @Description ä½¿ç”¨for-eachéå†map
      * @Author zohn
      * @Date 2020/4/2 20:47
      * @Param [hashMap]
@@ -89,7 +89,7 @@ public class IteratorHashMapExample {
     }
 
     /**
-     * @Description Ê¹ÓÃlambda±éÀúmap
+     * @Description ä½¿ç”¨lambdaéå†map
      * @Author zohn
      * @Date 2020/4/2 21:12
      * @Param [hashMap]
@@ -103,7 +103,7 @@ public class IteratorHashMapExample {
     }
 
     /**
-     * @Description Ê¹ÓÃstreamAPI±éÀúmap
+     * @Description ä½¿ç”¨streamAPIéå†map
      * @Author zohn
      * @Date 2020/4/2 21:14
      * @Param [hashMap]

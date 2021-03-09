@@ -16,7 +16,7 @@ public class AboutInt {
 
 		System.out.println(Integer.parseInt("0000"));
 
-		System.out.println("Integer的最大值是:" + Integer.MAX_VALUE);
+		System.out.println("Integer鐨勬渶澶у�兼槸:" + Integer.MAX_VALUE);
 
 		System.out.println();
 	}

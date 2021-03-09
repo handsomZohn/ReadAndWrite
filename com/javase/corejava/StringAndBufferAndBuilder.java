@@ -1,9 +1,9 @@
 package com.javase.corejava;
 
 /**
- *@Description  Àí½â Java µÄ×Ö·û´®£¬String¡¢StringBuff...
+ *@Description  ç†è§£ Java çš„å­—ç¬¦ä¸²ï¼ŒStringã€StringBuff...
 
-¼«¿ÍÊ±¼ä°æÈ¨ËùÓĞ: https://time.geekbang.org/column/article/7349
+æå®¢æ—¶é—´ç‰ˆæƒæ‰€æœ‰: https://time.geekbang.org/column/article/7349
  *@CreateDate   18/09/21 13:34
  *@Author        zohn
  *@Version       1.0

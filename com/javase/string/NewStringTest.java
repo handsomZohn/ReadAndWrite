@@ -2,7 +2,7 @@ package com.javase.string;
 
 
 /**
- *@Description Éæ¼°µ½µÄÃüÁî£º£º£ºjavap -verbose NewStringTest.class
+ *@Description æ¶‰åŠåˆ°çš„å‘½ä»¤ï¼šï¼šï¼šjavap -verbose NewStringTest.class
  *@CreateDate 2020\5\18 0018 15:29
  *@Author zz
  *@Version 1.0
@@ -11,23 +11,23 @@ package com.javase.string;
 public class NewStringTest {
     public static void main(String[] args) {
         String string = new String("123");
-        System.out.println("======^_^======±äÁ¿stringÖµÎª: " + string + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: NewStringTest.main()");
+        System.out.println("======^_^======å˜é‡stringå€¼ä¸º: " + string + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: NewStringTest.main()");
     }
 
     // Constant pool:
 
     // #2 = Class              #31            // java/lang/String
-    // #3 = String             #32            // 123  //----------    #32´æ´¢×Ö·û´®×ÖÃæÁ¿abc   #3ÊÇString PoolµÄ×Ö·û´®¶ÔÏó    ËüÖ¸Ïò#32Õâ¸ö×Ö·û´®×ÖÃæÁ¿
+    // #3 = String             #32            // 123  //----------    #32å­˜å‚¨å­—ç¬¦ä¸²å­—é¢é‡abc   #3æ˜¯String Poolçš„å­—ç¬¦ä¸²å¯¹è±¡    å®ƒæŒ‡å‘#32è¿™ä¸ªå­—ç¬¦ä¸²å­—é¢é‡
 
     // Code:
     // stack=3, locals=2, args_size=1
-    // 0: new           #2                  // class java/lang/String Ê¹ÓÃnew#2ÔÚ¶ÑÖĞ´´½¨×Ö·û´®¶ÔÏó
+    // 0: new           #2                  // class java/lang/String ä½¿ç”¨new#2åœ¨å †ä¸­åˆ›å»ºå­—ç¬¦ä¸²å¯¹è±¡
     // 3: dup
-    // 4: ldc           #3                  // String 123 ²¢ÇÒÊ¹ÓÃlcd#3½«String PoolÖĞµÄ×Ö·û´®¶ÔÏó×÷ÎªString¹¹Ôìº¯ÊıµÄ²ÎÊı
+    // 4: ldc           #3                  // String 123 å¹¶ä¸”ä½¿ç”¨lcd#3å°†String Poolä¸­çš„å­—ç¬¦ä¸²å¯¹è±¡ä½œä¸ºStringæ„é€ å‡½æ•°çš„å‚æ•°
 
     // public String(String original) {
     //     this.value = original.value;
     //     this.hash = original.hash;
     // }
-    // ÒÔÉÏÊÇString¹¹Ôìº¯ÊıµÄÔ´Âë£¬¿ÉÒÔ¿´µ½ÔÚ½«Ò»¸ö×Ö·û´®×÷ÎªÁíÒ»¸ö×Ö·û´®¶ÔÏóµÄ¹¹Ôìº¯Êı²ÎÊıÊ±£¬²¢²»»áÍêÈ«¸´ÖÆvalueÊı×éµÄÄÚÈİ£¬¶øÊÇ¶¼»áÖ¸ÏòÍ¬Ò»¸övalueÊı×é£»£»
+    // ä»¥ä¸Šæ˜¯Stringæ„é€ å‡½æ•°çš„æºç ï¼Œå¯ä»¥çœ‹åˆ°åœ¨å°†ä¸€ä¸ªå­—ç¬¦ä¸²ä½œä¸ºå¦ä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡çš„æ„é€ å‡½æ•°å‚æ•°æ—¶ï¼Œå¹¶ä¸ä¼šå®Œå…¨å¤åˆ¶valueæ•°ç»„çš„å†…å®¹ï¼Œè€Œæ˜¯éƒ½ä¼šæŒ‡å‘åŒä¸€ä¸ªvalueæ•°ç»„ï¼›ï¼›
 }

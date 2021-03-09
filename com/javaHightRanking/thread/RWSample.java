@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
- * @Description ¶ÁËø Ğ´Ëø Àı×Ó
+ * @Description è¯»é” å†™é” ä¾‹å­
  * @Author z
  * @Date 2021\2\1 0001 17:53
  * @Param 
@@ -20,7 +20,7 @@ public class RWSample {
 
     public String get (String key){
         rLock.lock();
-        System.out.println("¶ÁËøËø¶¨");
+        System.out.println("è¯»é”é”å®š");
         try {
             return map.get(key);
         } finally {
@@ -30,7 +30,7 @@ public class RWSample {
 
     public String put (String key, String value) {
         wLock.lock();
-        System.out.println("Ğ´ËøËø¶¨");
+        System.out.println("å†™é”é”å®š");
         try {
 
         } finally {

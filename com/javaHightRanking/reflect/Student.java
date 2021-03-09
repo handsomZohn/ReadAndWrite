@@ -6,7 +6,7 @@ public class Student {
 	private String tel;
 	
 	public void printInfo() {
-			System.out.println("打印学生信息~~~");
+			System.out.println("鎵撳嵃瀛︾敓淇℃伅~~~");
 	}
 
 	public void printAddress(String address) {

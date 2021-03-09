@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Description map×ªÎªlist
+ * @Description mapè½¬ä¸ºlist
  * @CreateDate 2020/4/4 17:03
  * @Author zz
  * @Version 1.0
@@ -24,7 +24,7 @@ public class Map2List {
             System.out.println(key);
         }
 
-        //List<String> valuesList = (List<String>) map.values();        //map.values()·µ»ØµÄÊÇcollection£¬Í¨¹ıarrayListµÄ¹¹Ôì·½·¨¿ÉÒÔÊµÏÖ
+        //List<String> valuesList = (List<String>) map.values();        //map.values()è¿”å›çš„æ˜¯collectionï¼Œé€šè¿‡arrayListçš„æ„é€ æ–¹æ³•å¯ä»¥å®ç°
 
         List<String> valuesList = new ArrayList<String>(map.values());
 

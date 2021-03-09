@@ -1,7 +1,7 @@
 package com.javase.dataType;
 
 /**
- *@Description short数据类型
+ *@Description short鏁版嵁绫诲瀷
  *@CreateDate 2020\4\8 0008 14:12
  *@Author zz
  *@Version 1.0
@@ -9,9 +9,9 @@ package com.javase.dataType;
 public class AboutShort {
     public static void main(String[] args) {
         short s1 = 10;
-        // 不能正确编译 不能把int赋值为short
+        // 涓嶈兘姝ｇ‘缂栬瘧 涓嶈兘鎶奿nt璧嬪�间负short
         // s1 = s1 + 1;
-        // 下面的则可以
+        // 涓嬮潰鐨勫垯鍙互
         s1 += 1;
         System.out.println("======^_^======variable s1 value is : " + s1 + ", " + " current method and class name is : AboutShort.main()");
     }

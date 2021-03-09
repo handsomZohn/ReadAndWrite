@@ -16,7 +16,7 @@ public class AboutBoolean {
         System.out.println(valueOf);
 
         /**
-         * ÓÃ==±È½ÏºÍ.equals±È½ÏÊÇÏàÍ¬µÄ£»
+         * ç”¨==æ¯”è¾ƒå’Œ.equalsæ¯”è¾ƒæ˜¯ç›¸åŒçš„ï¼›
          */
         System.out.println(Boolean.FALSE == Boolean.TRUE);
         System.out.println(Boolean.TRUE.equals(Boolean.FALSE));

@@ -4,7 +4,7 @@ import java.io.*;
 
 public class ExternalizableTest implements Externalizable {
 
-	private transient String content = "²»¹ÜÎÒÊÇ·ñ±»transientĞŞÊÎÖ»Òª±»ÊÖ¹¤Ö¸¶¨ÒªĞòÁĞ»¯ÎÒ¶¼»áĞòÁĞ»¯";
+	private transient String content = "ä¸ç®¡æˆ‘æ˜¯å¦è¢«transientä¿®é¥°åªè¦è¢«æ‰‹å·¥æŒ‡å®šè¦åºåˆ—åŒ–æˆ‘éƒ½ä¼šåºåˆ—åŒ–";
 	
 	@Override
 	public void writeExternal(ObjectOutput out) throws IOException {

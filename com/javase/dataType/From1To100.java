@@ -6,6 +6,6 @@ public class From1To100 {
         for (int i = 1; i <= 100; i++) {
             sum += i;
         }
-        System.out.println("1-100�ĺͣ�" + sum);
+        System.out.println("1-100的和：" + sum);
     }
 }

@@ -6,8 +6,8 @@ public class FixDeadLockDemo {
 
     public void methodA() {
         synchronized (locka) {
-            System.out.println("我是A方法中获得了锁A" + Thread.currentThread().getName());
-            //让出CPU执行权，不释放锁
+            System.out.println("鎴戞槸A鏂规硶涓幏寰椾簡閿丄" + Thread.currentThread().getName());
+            //璁╁嚭CPU鎵ц鏉冿紝涓嶉噴鏀鹃攣
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -15,14 +15,14 @@ public class FixDeadLockDemo {
             }
         }
         synchronized (lockb) {
-            System.out.println("我是A方法中获得了锁B" + Thread.currentThread().getName());
+            System.out.println("鎴戞槸A鏂规硶涓幏寰椾簡閿丅" + Thread.currentThread().getName());
         }
     }
 
     public void methodB() {
         synchronized (lockb) {
-            System.out.println("我是B方法中获得了锁B" + Thread.currentThread().getName());
-            //让出CPU执行权，不释放锁
+            System.out.println("鎴戞槸B鏂规硶涓幏寰椾簡閿丅" + Thread.currentThread().getName());
+            //璁╁嚭CPU鎵ц鏉冿紝涓嶉噴鏀鹃攣
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -30,12 +30,12 @@ public class FixDeadLockDemo {
             }
         }
         synchronized (locka) {
-            System.out.println("我是B方法中获得了锁A" + Thread.currentThread().getName());
+            System.out.println("鎴戞槸B鏂规硶涓幏寰椾簡閿丄" + Thread.currentThread().getName());
         }
     }
 
     public static void main(String[] args) {
-        System.out.println("主线程运行开始运行：" + Thread.currentThread().getName());
+        System.out.println("涓荤嚎绋嬭繍琛屽紑濮嬭繍琛岋細" + Thread.currentThread().getName());
         FixDeadLockDemo deadLockDemo = new FixDeadLockDemo();
         for (int i = 0; i < 10; i++) {
             new Thread(() -> {
@@ -45,6 +45,6 @@ public class FixDeadLockDemo {
                 deadLockDemo.methodB();
             }).start();
         }
-        System.out.println("主线程运行结束：" + Thread.currentThread().getName());
+        System.out.println("涓荤嚎绋嬭繍琛岀粨鏉燂細" + Thread.currentThread().getName());
     }
 }

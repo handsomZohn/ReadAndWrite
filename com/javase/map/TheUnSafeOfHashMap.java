@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- *@Description ΪʲôHashMap�ǲ���ȫ�� 
+ *@Description 为什么HashMap是不安全的 
  *@CreateDate 2020\3\31 0031 19:25
  *@Author zohn
  *@Version 1.0

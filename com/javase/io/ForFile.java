@@ -6,7 +6,7 @@ import java.io.*;
 import java.nio.channels.FileChannel;
 
 /**
- * @Description Á½ÖÖcopyÎÄ¼şµÄ·½Ê½
+ * @Description ä¸¤ç§copyæ–‡ä»¶çš„æ–¹å¼
  * @CreateDate 18/10/24 14:13
  * @Author zohn
  * @Version 1.0
@@ -14,20 +14,20 @@ import java.nio.channels.FileChannel;
 public class ForFile {
 
     public static void main(String[] args) throws Exception {
-      /*  File file = new File("e:/ÕË»§ÓëPWD.txt");
-        FileInputStream fileInputStream = new FileInputStream("e:/ÕË»§ÓëPWD.txt");
+      /*  File file = new File("e:/è´¦æˆ·ä¸PWD.txt");
+        FileInputStream fileInputStream = new FileInputStream("e:/è´¦æˆ·ä¸PWD.txt");
         int i = fileInputStream.read();
         while (i != -1) {
             System.out.println(i);
         }
         fileInputStream.close();*/
 
-        copyFileByStream(new File("e:/licence.txt"), new File("d:/ÕË»§ÓëPWD.txt"));
-        copyFileByChannel(new File("e:/licence.txt"), new File("d:/ÕË»§ÓëPWD.txt"));
+        copyFileByStream(new File("e:/licence.txt"), new File("d:/è´¦æˆ·ä¸PWD.txt"));
+        copyFileByChannel(new File("e:/licence.txt"), new File("d:/è´¦æˆ·ä¸PWD.txt"));
     }
 
     /**
-     * @Description Í¨¹ı´«Í³µÄIOÌá¹©µÄÁ÷APIÀ´copy
+     * @Description é€šè¿‡ä¼ ç»Ÿçš„IOæä¾›çš„æµAPIæ¥copy
      * @CreateDate 18/10/24 14:14
      * @Author zohn
      * @Version 1.0
@@ -46,7 +46,7 @@ public class ForFile {
     }
 
     /**
-     * @Description Í¨¹ınioµÄchannelÀ´copy
+     * @Description é€šè¿‡nioçš„channelæ¥copy
      * @CreateDate 18/10/24 14:14
      * @Author zohn
      * @Version 1.0
@@ -66,9 +66,9 @@ public class ForFile {
     }
 
     /**
-     * @Description try-with-resource  ĞèÒª¹Ø±ÕµÄ×ÊÔ´Ö»ÒªÊµÏÖÁËjava.lang.AutoCloseable£¬¾Í¿ÉÒÔ?¶¯±»¹Ø±Õ
-     * try()??¿ÉÒÔ¶¨Òå¶à¸ö×ÊÔ´£¬ËüÃÇµÄ¹Ø±ÕË³ĞòÊÇ×îºóÔÚtry()¶¨ÒåµÄ×ÊÔ´ÏÈ¹Ø±Õ
-     * Ctrl + Alt + U ²é¿´Ò»¸öÀàµÄËùÓĞ¼Ì³Ğ¹ØÏµ
+     * @Description try-with-resource  éœ€è¦å…³é—­çš„èµ„æºåªè¦å®ç°äº†java.lang.AutoCloseableï¼Œå°±å¯ä»¥?åŠ¨è¢«å…³é—­
+     * try()??å¯ä»¥å®šä¹‰å¤šä¸ªèµ„æºï¼Œå®ƒä»¬çš„å…³é—­é¡ºåºæ˜¯æœ€ååœ¨try()å®šä¹‰çš„èµ„æºå…ˆå…³é—­
+     * Ctrl + Alt + U æŸ¥çœ‹ä¸€ä¸ªç±»çš„æ‰€æœ‰ç»§æ‰¿å…³ç³»
      * @Author zohn
      * @Date 2020\3\13 0013 10:55
      * @Param []

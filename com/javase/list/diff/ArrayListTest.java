@@ -10,12 +10,12 @@ public class ArrayListTest {
         long timeStart = System.currentTimeMillis();
 
         while (i < num) {
-            list.add(0, i + "沉默王二");
+            list.add(0, i + "娌夐粯鐜嬩簩");
             i++;
         }
         long timeEnd = System.currentTimeMillis();
 
-        System.out.println("ArrayList从集合头部位置新增元素花费的时间" + (timeEnd - timeStart));
+        System.out.println("ArrayList浠庨泦鍚堝ご閮ㄤ綅缃柊澧炲厓绱犺姳璐圭殑鏃堕棿" + (timeEnd - timeStart));
     }
 
     public static void addFromMidTest(int num) {
@@ -25,12 +25,12 @@ public class ArrayListTest {
         long timeStart = System.currentTimeMillis();
         while (i < num) {
             int temp = list.size();
-            list.add(temp / 2 + "沉默王二");
+            list.add(temp / 2 + "娌夐粯鐜嬩簩");
             i++;
         }
         long timeEnd = System.currentTimeMillis();
 
-        System.out.println("ArrayList从集合中间位置新增元素花费的时间" + (timeEnd - timeStart));
+        System.out.println("ArrayList浠庨泦鍚堜腑闂翠綅缃柊澧炲厓绱犺姳璐圭殑鏃堕棿" + (timeEnd - timeStart));
     }
 
     public static void addFromTailTest(int num) {
@@ -40,17 +40,17 @@ public class ArrayListTest {
         long timeStart = System.currentTimeMillis();
 
         while (i < num) {
-            list.add(i + "沉默王二");
+            list.add(i + "娌夐粯鐜嬩簩");
             i++;
         }
 
         long timeEnd = System.currentTimeMillis();
 
-        System.out.println("ArrayList从集合尾部位置新增元素花费的时间" + (timeEnd - timeStart));
+        System.out.println("ArrayList浠庨泦鍚堝熬閮ㄤ綅缃柊澧炲厓绱犺姳璐圭殑鏃堕棿" + (timeEnd - timeStart));
     }
 
     /**
-     * @Description arrayList头部删除
+     * @Description arrayList澶撮儴鍒犻櫎
      * @Author zz
      * @Date 2021/2/28 12:44
      * @Param [num]
@@ -61,7 +61,7 @@ public class ArrayListTest {
         int i = 0;
 
         while (i < num) {
-            list.add(i + "沉默王二");
+            list.add(i + "娌夐粯鐜嬩簩");
             i++;
         }
 
@@ -69,11 +69,11 @@ public class ArrayListTest {
         list.remove(0);
         long timeEnd = System.currentTimeMillis();
 
-        System.out.println("ArrayList从集合头部位置删除元素花费的时间" + (timeEnd - timeStart));
+        System.out.println("ArrayList浠庨泦鍚堝ご閮ㄤ綅缃垹闄ゅ厓绱犺姳璐圭殑鏃堕棿" + (timeEnd - timeStart));
     }
 
     /**
-     * @Description arrayList尾部删除
+     * @Description arrayList灏鹃儴鍒犻櫎
      * @Author zz
      * @Date 2021/2/28 12:44
      * @Param [num]
@@ -84,7 +84,7 @@ public class ArrayListTest {
         int i = 0;
 
         while (i < num) {
-            list.add(i + "沉默王二");
+            list.add(i + "娌夐粯鐜嬩簩");
             i++;
         }
 
@@ -92,6 +92,6 @@ public class ArrayListTest {
         list.remove(num-1);
         long timeEnd = System.currentTimeMillis();
 
-        System.out.println("ArrayList从集合尾部位置删除元素花费的时间" + (timeEnd - timeStart));
+        System.out.println("ArrayList浠庨泦鍚堝熬閮ㄤ綅缃垹闄ゅ厓绱犺姳璐圭殑鏃堕棿" + (timeEnd - timeStart));
     }
 }

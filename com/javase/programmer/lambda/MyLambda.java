@@ -17,17 +17,17 @@ public class MyLambda {
 
 
     /**
-     * @Description ¹ıÂË
+     * @Description è¿‡æ»¤
      * @Author zohn
      * @Date 2020\1\14 0014 14:05
      * @Param []
      * @Return void
      */
     public static void filterTest() {
-        // ÊµÀı»¯Ò»¸ö
+        // å®ä¾‹åŒ–ä¸€ä¸ª
         Yhxx yhxx = new Yhxx("zohn", "411322199501302430", 2);
 
-        // ·ÅÈëlistÖĞÒ»¶Ñ
+        // æ”¾å…¥listä¸­ä¸€å †
         List<Yhxx> yhxxList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             if (i == 0) {
@@ -37,31 +37,31 @@ public class MyLambda {
             }
         }
 
-        //°ÑÊµÀı»¯µÄ·ÅÈëlist
+        //æŠŠå®ä¾‹åŒ–çš„æ”¾å…¥list
         yhxxList.add(yhxx);
 
-        // ¹ıÂË³öºÍÊµÀı»¯µÄyhxxÖĞxmÒ»Ñù²¢ÇÒsfzhmÒ»ÑùµÄ£¬²¢´òÓ¡¡£
+        // è¿‡æ»¤å‡ºå’Œå®ä¾‹åŒ–çš„yhxxä¸­xmä¸€æ ·å¹¶ä¸”sfzhmä¸€æ ·çš„ï¼Œå¹¶æ‰“å°ã€‚
         List<Yhxx> yhxxList1 = yhxxList.stream().filter(x -> Objects.equals(yhxx.getXm(), x.getXm()) && Objects.equals
                 (yhxx.getSfzhm(), x.getSfzhm())).collect(Collectors.toList());
 
-        // ´òÓ¡¹ıÂËÇ°µÄ
+        // æ‰“å°è¿‡æ»¤å‰çš„
         System.out.println("before filter:");
         System.out.println(yhxxList.toString());
 
-        // ´òÓ¡¹ıÂËºóµÄ
+        // æ‰“å°è¿‡æ»¤åçš„
         System.out.println("after filter:");
         System.out.println(yhxxList1.toString());
     }
 
     /**
-     * @Description ÇóºÍ
+     * @Description æ±‚å’Œ
      * @Author zohn
      * @Date 2020\1\14 0014 14:25
      * @Param []
      * @Return void
      */
     public static void countTest() {
-        // ·ÅÈëlistÖĞÒ»¶Ñ
+        // æ”¾å…¥listä¸­ä¸€å †
         List<Yhxx> yhxxList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             if (i == 0) {
@@ -70,12 +70,12 @@ public class MyLambda {
                 yhxxList.add(new Yhxx("zohn" + i, "41132219950130243" + i, i));
             }
         }
-        // listÖĞ·ÅµÄÊÇ¶ÔÏó£¬Ã¿¸ö¶ÔÏóµÄÔªËØÇóºÍ
+        // listä¸­æ”¾çš„æ˜¯å¯¹è±¡ï¼Œæ¯ä¸ªå¯¹è±¡çš„å…ƒç´ æ±‚å’Œ
         int sjgs = yhxxList.stream().mapToInt(Yhxx::getSjgs).sum();
 
         System.out.println("count of sjgs:" + sjgs);
 
-        // listÖĞÖ±½Ó·ÅµÄ¾ÍÊÇÊı×Ö
+        // listä¸­ç›´æ¥æ”¾çš„å°±æ˜¯æ•°å­—
         List<Integer> integerList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             integerList.add(i);

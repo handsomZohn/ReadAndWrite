@@ -1,8 +1,8 @@
 package com.javase.passbyvalueorreference;
 
 /**
- * @Description Öµ´«µİ»¹ÊÇÒıÓÃ´«µİ
- * ²Î¿¼ÎÄÕÂ£º£ºhttps://juejin.im/post/5bce68226fb9a05ce46a0476
+ * @Description å€¼ä¼ é€’è¿˜æ˜¯å¼•ç”¨ä¼ é€’
+ * å‚è€ƒæ–‡ç« ï¼šï¼šhttps://juejin.im/post/5bce68226fb9a05ce46a0476
  * @CreateDate 2020\4\8 0008 14:43
  * @Author zz
  * @Version 1.0
@@ -36,8 +36,8 @@ public class PassByValueOrReference {
     }*/
 
     /**
-     * @Description ÒıÓÃ´«µİ£º¡°ÒıÓÃ¡±Ò²¾ÍÊÇÖ¸ÏòÕæÊµÄÚÈİµÄµØÖ·Öµ£¬ÔÚ·½·¨µ÷ÓÃÊ±£¬Êµ²ÎµÄµØÖ·Í¨¹ı·½·¨µ÷ÓÃ´«µİ¸øÏàÓ¦µÄĞÎ²Î£¬ÔÚ·½·¨ÌåµÄÄÚ²¿
-     * ĞÎ²ÎºÍÊµ²ÎÖ¸ÏòÍ¬Ò»¿éÄÚ´æµØÖ·£¬¶ÔĞÎ²ÎµÄ²Ù×÷£¬»áÓ°Ïìµ½Êµ²ÎµÄÄÚÈİ
+     * @Description å¼•ç”¨ä¼ é€’ï¼šâ€œå¼•ç”¨â€ä¹Ÿå°±æ˜¯æŒ‡å‘çœŸå®å†…å®¹çš„åœ°å€å€¼ï¼Œåœ¨æ–¹æ³•è°ƒç”¨æ—¶ï¼Œå®å‚çš„åœ°å€é€šè¿‡æ–¹æ³•è°ƒç”¨ä¼ é€’ç»™ç›¸åº”çš„å½¢å‚ï¼Œåœ¨æ–¹æ³•ä½“çš„å†…éƒ¨
+     * å½¢å‚å’Œå®å‚æŒ‡å‘åŒä¸€å—å†…å­˜åœ°å€ï¼Œå¯¹å½¢å‚çš„æ“ä½œï¼Œä¼šå½±å“åˆ°å®å‚çš„å†…å®¹
      * @Author zz
      * @Date 2020\4\8 0008 15:11
      * @Param [student]
@@ -50,8 +50,8 @@ public class PassByValueOrReference {
 
         System.out.println("======^_^======variable nameBeforeTest002 value is : " + nameBeforeTest002 + ", " + " current method and class name is : PassByValueOrReference.test002()");
 
-        // Êä³ö½á¹ûÎª£º001 001 002 002
-        // ¶à¼ÓÏÂÃæÒ»ĞĞÄ§Á¦µÄ´úÂë ½á¹û¾Í±ä³ÉÁËÁË 001 001 002 001
+        // è¾“å‡ºç»“æœä¸ºï¼š001 001 002 002
+        // å¤šåŠ ä¸‹é¢ä¸€è¡Œé­”åŠ›çš„ä»£ç  ç»“æœå°±å˜æˆäº†äº† 001 001 002 001
         // student = new Student();
         student.setName("test002");
 

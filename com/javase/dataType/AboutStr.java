@@ -12,30 +12,30 @@ public class AboutStr {
 
 	static void tm1() {
 		String name1 = "zhangyifeng";
-		String name2 = "zhang" + "yifeng"; // ±àÒëÆÚÓÅ»¯Îª: name2 = "zhangyifeng";
+		String name2 = "zhang" + "yifeng"; // ç¼–è¯‘æœŸä¼˜åŒ–ä¸º: name2 = "zhangyifeng";
 		System.out.println(name1 == name2);// true
 	}
 
 	static void tm2() {
 		String name1 = "zhangyifeng";
 		String name2 = "zhang";
-		String name3 = name2 + "yifeng"; // ²»»áÔÚ±àÒëÆÚ¼äÓÅ»¯ ²»»á°Ñb+2µ±×ö×ÖÃæ³£Á¿À´´¦ÀíµÄ
+		String name3 = name2 + "yifeng"; // ä¸ä¼šåœ¨ç¼–è¯‘æœŸé—´ä¼˜åŒ– ä¸ä¼šæŠŠb+2å½“åšå­—é¢å¸¸é‡æ¥å¤„ç†çš„
 		System.out.println(name1 == name3);// false
 	}
 
 	static void tm3() {
 		String name1 = "zhangyifeng";
 		final String name2 = "zhang";
-		String name3 = name2 + "yifeng";// ¶ÔÓÚ±»finalĞŞÊÎµÄ±äÁ¿£¬»áÔÚclassÎÄ¼ş³£Á¿³ØÖĞ±£´æÒ»¸ö¸±±¾£¬Ò²¾ÍÊÇËµ²»»áÍ¨¹ıÁ¬½Ó¶ø½øĞĞ·ÃÎÊ£¬¶Ôfinal±äÁ¿µÄ·ÃÎÊÔÚ±àÒëÆÚ¼ä¶¼»áÖ±½Ó±»Ìæ´úÎªÕæÊµµÄÖµ
+		String name3 = name2 + "yifeng";// å¯¹äºè¢«finalä¿®é¥°çš„å˜é‡ï¼Œä¼šåœ¨classæ–‡ä»¶å¸¸é‡æ± ä¸­ä¿å­˜ä¸€ä¸ªå‰¯æœ¬ï¼Œä¹Ÿå°±æ˜¯è¯´ä¸ä¼šé€šè¿‡è¿æ¥è€Œè¿›è¡Œè®¿é—®ï¼Œå¯¹finalå˜é‡çš„è®¿é—®åœ¨ç¼–è¯‘æœŸé—´éƒ½ä¼šç›´æ¥è¢«æ›¿ä»£ä¸ºçœŸå®çš„å€¼
 		System.out.println(name1 == name3);// true
 	}
 
 	static void tm4() {
 		String string = "hello2";
 		final String string2 = getHello();
-		String string3 = string2 + "2";	// string2ËäÈ»±»finalĞŞÊÎ
-										// µ«ÊÇÓÉÓÚÆä¸³ÖµÊÇÍ¨¹ı·½·¨µ÷ÓÃ·µ»ØµÄ£¬ÄÇÃ´ËüµÄÖµÖ»ÄÜÔÚÔËĞĞÆÚ¼äÈ·¶¨£¬Òò´ËstringºÍString3
-										// Ö¸ÏòµÄ²»ÊÇÍ¬Ò»¸ö¶ÔÏó¡£
+		String string3 = string2 + "2";	// string2è™½ç„¶è¢«finalä¿®é¥°
+										// ä½†æ˜¯ç”±äºå…¶èµ‹å€¼æ˜¯é€šè¿‡æ–¹æ³•è°ƒç”¨è¿”å›çš„ï¼Œé‚£ä¹ˆå®ƒçš„å€¼åªèƒ½åœ¨è¿è¡ŒæœŸé—´ç¡®å®šï¼Œå› æ­¤stringå’ŒString3
+										// æŒ‡å‘çš„ä¸æ˜¯åŒä¸€ä¸ªå¯¹è±¡ã€‚
 		System.out.println(string == string3);// false
 	}
 
@@ -48,8 +48,8 @@ public class AboutStr {
 		String str2 = new String("hello");
 		String str3 = new String("hello");
 		String str4 = str2.intern();// String.intern()
-									// Java6Ö®Ç°»áÈ¥ÔËĞĞÊ±³£Á¿³Ø²éÕÒÓĞÃ»ÓĞÄÚÈİÏàÍ¬µÄ×Ö·û´®´æÔÚÔò·µ»ØÖ¸Ïò¸Ã×Ö·û´®µÄÒıÓÃ£¬Èç¹û²»´æÔÚ£¬
-									// Ôò»á½«¸Ã×Ö·û´®Èë³Ø£¬²¢·µ»ØÒ»¸öÖ¸Ïò¸Ã×Ö·û´®µÄÒıÓÃ¡£
+									// Java6ä¹‹å‰ä¼šå»è¿è¡Œæ—¶å¸¸é‡æ± æŸ¥æ‰¾æœ‰æ²¡æœ‰å†…å®¹ç›¸åŒçš„å­—ç¬¦ä¸²å­˜åœ¨åˆ™è¿”å›æŒ‡å‘è¯¥å­—ç¬¦ä¸²çš„å¼•ç”¨ï¼Œå¦‚æœä¸å­˜åœ¨ï¼Œ
+									// åˆ™ä¼šå°†è¯¥å­—ç¬¦ä¸²å…¥æ± ï¼Œå¹¶è¿”å›ä¸€ä¸ªæŒ‡å‘è¯¥å­—ç¬¦ä¸²çš„å¼•ç”¨ã€‚
 
 		System.out.println(str1 == str2);// false
 		System.out.println(str2 == str3);// false
@@ -58,18 +58,18 @@ public class AboutStr {
 	}
 
 	static void tm6() {
-		// ´´½¨¶àÉÙ¸ö¶ÔÏó
+		// åˆ›å»ºå¤šå°‘ä¸ªå¯¹è±¡
 		String string = new String("String");
-		// newÖ»µ÷ÓÃÁËÒ»´Î£¬Ò²¾ÍÊÇËµÖ»´´½¨ÁËÒ»¸ö¶ÔÏó
-		// Õâ¸öÎÊÌâÈç¹û»»³É String str = new String("abc")Éæ¼°µ½¼¸¸öString¶ÔÏó£¿ºÏÀíµÄ½âÊÍÊÇ2¸ö¡£
-		// ÏòÃæÊÔ¹ÙÑ¯ÎÊÇå³ş¡±ÊÇÕâ¶Î´úÂëÖ´ĞĞ¹ı³ÌÖĞ´´½¨ÁË¶àÉÙ¸ö¶ÔÏó»¹ÊÇÉæ¼°µ½¶àÉÙ¸ö¶ÔÏó
+		// newåªè°ƒç”¨äº†ä¸€æ¬¡ï¼Œä¹Ÿå°±æ˜¯è¯´åªåˆ›å»ºäº†ä¸€ä¸ªå¯¹è±¡
+		// è¿™ä¸ªé—®é¢˜å¦‚æœæ¢æˆ String str = new String("abc")æ¶‰åŠåˆ°å‡ ä¸ªStringå¯¹è±¡ï¼Ÿåˆç†çš„è§£é‡Šæ˜¯2ä¸ªã€‚
+		// å‘é¢è¯•å®˜è¯¢é—®æ¸…æ¥šâ€æ˜¯è¿™æ®µä»£ç æ‰§è¡Œè¿‡ç¨‹ä¸­åˆ›å»ºäº†å¤šå°‘ä¸ªå¯¹è±¡è¿˜æ˜¯æ¶‰åŠåˆ°å¤šå°‘ä¸ªå¯¹è±¡
 	}
 
 	static void tm7() {
 		String str1 = "I";
 		// str1 += "love"+"java"; 1)
 		str1 = str1 + "love" + "java"; // 2)
-		//¡¡1)µÄĞ§ÂÊ±È2)µÄĞ§ÂÊÒª¸ß£¬1)ÖĞµÄ"love"+"java"ÔÚ±àÒëÆÚ¼ä»á±»ÓÅ»¯³É"lovejava"£¬¶ø2)ÖĞµÄ²»»á±»ÓÅ»¯¡£
-		// ÔÚ1)ÖĞÖ»½øĞĞÁËÒ»´Îappend²Ù×÷£¬¶øÔÚ2)ÖĞ½øĞĞÁËÁ½´Îappend²Ù×÷¡£
+		//ã€€1)çš„æ•ˆç‡æ¯”2)çš„æ•ˆç‡è¦é«˜ï¼Œ1)ä¸­çš„"love"+"java"åœ¨ç¼–è¯‘æœŸé—´ä¼šè¢«ä¼˜åŒ–æˆ"lovejava"ï¼Œè€Œ2)ä¸­çš„ä¸ä¼šè¢«ä¼˜åŒ–ã€‚
+		// åœ¨1)ä¸­åªè¿›è¡Œäº†ä¸€æ¬¡appendæ“ä½œï¼Œè€Œåœ¨2)ä¸­è¿›è¡Œäº†ä¸¤æ¬¡appendæ“ä½œã€‚
 	}
 }

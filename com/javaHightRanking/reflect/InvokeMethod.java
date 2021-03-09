@@ -6,47 +6,47 @@ import java.lang.reflect.Method;
 public class InvokeMethod {
 
 	/**
-	 * Í¨¹ı·´Éäµ÷ÓÃÀàÖĞµÄ·½·¨
+	 * é€šè¿‡åå°„è°ƒç”¨ç±»ä¸­çš„æ–¹æ³•
 	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		try {
-			// ·´Éä´´½¨ÀàÊµÀıµÄÈıÖÖ·½Ê½
-			Class<?> student = Class.forName("com.javaHightRanking.reflect.Student"); // 1¡¢¶¯Ì¬¼ÓÔØ
-			student = Student.class; // 2¡¢µ÷ÓÃ¾²Ì¬ÊôĞÔ
+			// åå°„åˆ›å»ºç±»å®ä¾‹çš„ä¸‰ç§æ–¹å¼
+			Class<?> student = Class.forName("com.javaHightRanking.reflect.Student"); // 1ã€åŠ¨æ€åŠ è½½
+			student = Student.class; // 2ã€è°ƒç”¨é™æ€å±æ€§
 			Student stu = new Student();
 			stu.setName("zhangyifeng");
 			stu.setTel("15565668401");
-			student = stu.getClass(); // 3¡¢µ÷ÓÃÊµÀı¶ÔÏóµÄgetClass();
+			student = stu.getClass(); // 3ã€è°ƒç”¨å®ä¾‹å¯¹è±¡çš„getClass();
 
-			// Í¨¹ı·´Éä´úÓÃ¶ÔÏóµÄ·½·¨
-			Method method = student.getMethod("printInfo"); // »ñÈ¡·½·¨ ²ÎÊıÊÇ·½·¨µÄÃû×Ö
-			method.invoke(student.newInstance()); // Í¨¹ıÊµÀıµ÷ÓÃ·½·¨
-			Method method2 = student.getMethod("printAddress", String.class); // ²ÎÊıÊÇ·½·¨µÄÃû×ÖºÍ¸Ã·½·¨ËùĞèµÄ²ÎÊıÀàĞÍ
-			method2.invoke(student.newInstance(), "Íõ×¯Ğ¡Ñ§");
+			// é€šè¿‡åå°„ä»£ç”¨å¯¹è±¡çš„æ–¹æ³•
+			Method method = student.getMethod("printInfo"); // è·å–æ–¹æ³• å‚æ•°æ˜¯æ–¹æ³•çš„åå­—
+			method.invoke(student.newInstance()); // é€šè¿‡å®ä¾‹è°ƒç”¨æ–¹æ³•
+			Method method2 = student.getMethod("printAddress", String.class); // å‚æ•°æ˜¯æ–¹æ³•çš„åå­—å’Œè¯¥æ–¹æ³•æ‰€éœ€çš„å‚æ•°ç±»å‹
+			method2.invoke(student.newInstance(), "ç‹åº„å°å­¦");
 
-			// ·´Éä»ñÈ¡ºÍÉèÖÃ¶ÔÏóË½ÓĞ×Ö¶ÎµÄÖµ
+			// åå°„è·å–å’Œè®¾ç½®å¯¹è±¡ç§æœ‰å­—æ®µçš„å€¼
 			Field name = student.getDeclaredField("name");
 			Field tel = student.getDeclaredField("tel");
 			Field[] fields = student.getDeclaredFields();
 			for (Field field : fields) {
-				field.setAccessible(true); // ÕâÒ»²½ºÜÖØÒª false Class
+				field.setAccessible(true); // è¿™ä¸€æ­¥å¾ˆé‡è¦ false Class
 											// com.reflect.InvokeMethod can not
 											// access a member of class
 											// com.reflect.Student with
 											// modifiers "private"
-				System.out.println(field.get(stu)); // »ñÈ¡ÊÇÓĞÊôĞÔ
+				System.out.println(field.get(stu)); // è·å–æ˜¯æœ‰å±æ€§
 			}
 			name.setAccessible(true);
-			name.set(stu, "ÕÅÈı"); // ĞŞ¸ÄË½ÓĞÊôĞÔ
+			name.set(stu, "å¼ ä¸‰"); // ä¿®æ”¹ç§æœ‰å±æ€§
 			tel.setAccessible(true);
 			tel.set(stu, "18310834045");
-			// ĞŞ¸Ä¹ıºóµÄÖµ:
-			System.out.println("ĞŞ¸Ä¹ıºóµÄnameÊôĞÔÖµ:" + name.get(stu));
-			System.out.println("ĞŞ¸Ä¹ıºóµÄtelÊôĞÔÖµ:" + tel.get(stu));
-			Field[] fields2 = student.getDeclaredFields(); // fields2 µÚ¶ş¸ö¶¨ÒåµÄÒ²ĞèÒª ÈôÊÇÓÃµÄÍ¬Ò»¸ö Ôò²»ĞèÒªÔÙ´ÎsetAccessible()
+			// ä¿®æ”¹è¿‡åçš„å€¼:
+			System.out.println("ä¿®æ”¹è¿‡åçš„nameå±æ€§å€¼:" + name.get(stu));
+			System.out.println("ä¿®æ”¹è¿‡åçš„telå±æ€§å€¼:" + tel.get(stu));
+			Field[] fields2 = student.getDeclaredFields(); // fields2 ç¬¬äºŒä¸ªå®šä¹‰çš„ä¹Ÿéœ€è¦ è‹¥æ˜¯ç”¨çš„åŒä¸€ä¸ª åˆ™ä¸éœ€è¦å†æ¬¡setAccessible()
 															// setAccessible(true)
 			for (Field field : fields2) {
 				field.setAccessible(true);
@@ -58,9 +58,9 @@ public class InvokeMethod {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			System.out.println("·¢ÉúÒì³£----¹¹½¨Ê§°Ü----");
+			System.out.println("å‘ç”Ÿå¼‚å¸¸----æ„å»ºå¤±è´¥----");
 		} /*
-		 * finally { System.out.println("×ÜÊÇ»á¾­¹ıµÄ~~~"); }
+		 * finally { System.out.println("æ€»æ˜¯ä¼šç»è¿‡çš„~~~"); }
 		 */
 	}
 

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @Description »»¸ö·½Ê½Ğ´HashMap
+ * @Description æ¢ä¸ªæ–¹å¼å†™HashMap
  * @CreateDate 18/08/09 13:38
  * @Author zohn
  * @Version 1.0
@@ -13,43 +13,43 @@ import java.util.Map;
 public class HashMapNewWrite {
     public static void main(String[] args) {
         Map<String, String> hashMap = new HashMap() {{
-            put("name", "ÕÅÈı");
-            put("name", "ÕÅÈı");// ²»¿ÉÖØ¸´
+            put("name", "å¼ ä¸‰");
+            put("name", "å¼ ä¸‰");// ä¸å¯é‡å¤
             put("age", "20");
             put("birthday", "1995-01-30");
             put(null,"123");
         }};
 
-        // ±éÀúmap
+        // éå†map
 
-        // µÚÒ»ÖÖ
-        System.out.println("\nÍ¨¹ıMap.keySet±éÀúkeyºÍvalue");
+        // ç¬¬ä¸€ç§
+        System.out.println("\né€šè¿‡Map.keySetéå†keyå’Œvalue");
         for (String key : hashMap.keySet()) {
             System.out.println("Key:" + key + " Value:" + hashMap.get(key));
         }
 
-        // µÚ¶şÖÖ
-        System.out.println("\nÍ¨¹ıMap.entrySetÊ¹ÓÃiterator±éÀúkeyºÍvalue");
+        // ç¬¬äºŒç§
+        System.out.println("\né€šè¿‡Map.entrySetä½¿ç”¨iteratoréå†keyå’Œvalue");
         Iterator<Map.Entry<String, String>> iterator = hashMap.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, String> next = iterator.next();
             System.out.println("Key:" + next.getKey() + " Value:" + next.getValue());
         }
 
-        // µÚÈıÖÖ ÍÆ¼ö ÓÈÆäÊÇÈİÁ¿´óµÄÊ±ºò
-        System.out.println("\nÍ¨¹ıMap.entrySet±éÀúkeyºÍvalue");
+        // ç¬¬ä¸‰ç§ æ¨è å°¤å…¶æ˜¯å®¹é‡å¤§çš„æ—¶å€™
+        System.out.println("\né€šè¿‡Map.entrySetéå†keyå’Œvalue");
         for (Map.Entry<String, String> entry : hashMap.entrySet()) {
             System.out.println("Key:" + entry.getKey() + " Value:" + entry.getValue());
         }
 
-        // µÚËÄÖÖ
-        System.out.println("\nÍ¨¹ıMap.values()±éÀúËùÓĞµÄvalue£¬µ«ÊÇ²»ÄÜ±éÀúkey");
+        // ç¬¬å››ç§
+        System.out.println("\né€šè¿‡Map.values()éå†æ‰€æœ‰çš„valueï¼Œä½†æ˜¯ä¸èƒ½éå†key");
         for(String v: hashMap.values()){
             System.out.println(v);
         }
 
         //
-        System.out.println("»ñÈ¡keyÎªnullµÄÖµ£º");
+        System.out.println("è·å–keyä¸ºnullçš„å€¼ï¼š");
         String key = null;
         if (hashMap.containsKey(key)){
             System.out.println("Value:" + hashMap.get(key));

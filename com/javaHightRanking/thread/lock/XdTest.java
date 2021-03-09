@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class XdTest {
     private int num = 0;
-    //Ê¹?ÓÃlock£¬Ã¿¸ö¶ÔÏó¶¼ÊÇÓĞËø£¬Ö»ÓĞ»ñµÃÕâ¸öËø²Å¿ÉÒÔ½ø?ĞĞ?¶ÔÓ¦µÄ²Ù×÷
+    //ä½¿?ç”¨lockï¼Œæ¯ä¸ªå¯¹è±¡éƒ½æ˜¯æœ‰é”ï¼Œåªæœ‰è·å¾—è¿™ä¸ªé”æ‰å¯ä»¥è¿›?è¡Œ?å¯¹åº”çš„æ“ä½œ
     Lock lock = new ReentrantLock();
 
     public void add1() {
@@ -17,7 +17,7 @@ public class XdTest {
         }
     }
 
-    //Ê¹?ÓÃsynchronized£¬ºÍÉÏÊöÊÇ?Ò»¸ö²Ù×÷£¬Õâ¸öÊÇ±£Ö¤?·½·¨±»Ëø×¡?¶øÒÑ£¬ÉÏÊöµÄÊÇ´úÂë¿é±»Ëø×¡
+    //ä½¿?ç”¨synchronizedï¼Œå’Œä¸Šè¿°æ˜¯?ä¸€ä¸ªæ“ä½œï¼Œè¿™ä¸ªæ˜¯ä¿è¯?æ–¹æ³•è¢«é”ä½?è€Œå·²ï¼Œä¸Šè¿°çš„æ˜¯ä»£ç å—è¢«é”ä½
     public synchronized void add2() {
         num++;
         int minPriority = Thread.MIN_PRIORITY;

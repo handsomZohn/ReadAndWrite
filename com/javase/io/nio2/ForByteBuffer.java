@@ -5,21 +5,21 @@ import java.nio.IntBuffer;
 import java.security.SecureRandom;
 
 /**
- * @Description ¿´¿´ByteBufferÊÇÒ»¸öÊ²Ã´¹í
+ * @Description çœ‹çœ‹ByteBufferæ˜¯ä¸€ä¸ªä»€ä¹ˆé¬¼
  * @CreateDate 18/10/09 14:34
  * @Author zohn
  * @Version 1.0
  */
 public class ForByteBuffer {
     public static void byteBufferTest() {
-        // ÊÇ³éÏóÀàBuffer
-        // BufferµÄÖ±½Ó×ÓÀà Ò²ÊÇ³éÏóÀà ²»ÄÜ±»ÊµÀı»¯
+        // æ˜¯æŠ½è±¡ç±»Buffer
+        // Bufferçš„ç›´æ¥å­ç±» ä¹Ÿæ˜¯æŠ½è±¡ç±» ä¸èƒ½è¢«å®ä¾‹åŒ–
         //ByteBuffer byteBuffer = n
 
         System.out.println("-----test allocate-----");
         System.out.println("Before allocate:" + Runtime.getRuntime().freeMemory());
 
-        // ÎªByteBuffer·ÖÅäÄÚ´æ ·¢ÏÖ·ÖÅäµÄÊÇRAM ¾ÍÊÇ·şÎñÆ÷±¾ÉíµÄÄÚ´æ
+        // ä¸ºByteBufferåˆ†é…å†…å­˜ å‘ç°åˆ†é…çš„æ˜¯RAM å°±æ˜¯æœåŠ¡å™¨æœ¬èº«çš„å†…å­˜
         // while (true) {
         ByteBuffer buffer = ByteBuffer.allocate(1024 * 1024 * 1024);// 1024byte = 1kb
         System.out.println("buffer:" + buffer);
@@ -36,15 +36,15 @@ public class ForByteBuffer {
     }
 
     public static void flipTest() {
-        IntBuffer intBuffer = IntBuffer.allocate(10);// ÉùÃ÷Ò»¸öint»º³åÇø
-        // ·ÅÈëÊı¾İ
+        IntBuffer intBuffer = IntBuffer.allocate(10);// å£°æ˜ä¸€ä¸ªintç¼“å†²åŒº
+        // æ”¾å…¥æ•°æ®
         for (int i = 0; i < 5; i++) {
             int nextInt = new SecureRandom().nextInt(10);
             intBuffer.put(nextInt);
         }
 
-        // ¶ÁÈ¡Êı¾İ
-        intBuffer.flip();// bufferµÄ¶ÁĞ´×ª»»È«¿¿flip·½·¨ÊµÏÖ
+        // è¯»å–æ•°æ®
+        intBuffer.flip();// bufferçš„è¯»å†™è½¬æ¢å…¨é flipæ–¹æ³•å®ç°
         while (intBuffer.hasRemaining()) {
             System.out.println(intBuffer.get());
         }
@@ -67,8 +67,8 @@ public class ForByteBuffer {
         System.out.println("before flip position is : " + intBuffer.position());
 
         intBuffer.flip();
-        // Èç¹û²»µ÷ÓÃflip·½·¨½øĞĞÊä³ö,ÔòÊä³öµÄÊÇbufferÀïÃæµÄ¿ÕÎ»ÖÃµÄÄ¬ÈÏÖµ ±ÈÈçintµÄÄ¬ÈÏÖµÊÇ0
-        // ¾ÍËã·ÅÂúÁËÒ²²»»áÊä³ö·ÅÈëµÄÖµ
+        // å¦‚æœä¸è°ƒç”¨flipæ–¹æ³•è¿›è¡Œè¾“å‡º,åˆ™è¾“å‡ºçš„æ˜¯bufferé‡Œé¢çš„ç©ºä½ç½®çš„é»˜è®¤å€¼ æ¯”å¦‚intçš„é»˜è®¤å€¼æ˜¯0
+        // å°±ç®—æ”¾æ»¡äº†ä¹Ÿä¸ä¼šè¾“å‡ºæ”¾å…¥çš„å€¼
         // enter while loop: 0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
         // enter while loop: 18-12-3-11-3-
 

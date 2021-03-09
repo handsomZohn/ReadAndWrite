@@ -1,7 +1,7 @@
 package com.javaHightRanking.thread.lock;
 
 /**
- * @Description 死锁demo
+ * @Description 姝婚攣demo
  * @Author z
  * @Date 2020\8\19 0019 13:55
  * @Param 
@@ -13,36 +13,36 @@ public class DeadLockDemo {
 
     public void methodA() {
         synchronized (locka) {
-            System.out.println("我是A方法中获得了锁A" + Thread.currentThread().getName());
-            //让出CPU执行权，不释放锁
+            System.out.println("鎴戞槸A鏂规硶涓幏寰椾簡閿丄" + Thread.currentThread().getName());
+            //璁╁嚭CPU鎵ц鏉冿紝涓嶉噴鏀鹃攣
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             synchronized (lockb) {
-                System.out.println("我是A方法中获得了锁B" + Thread.currentThread().getName());
+                System.out.println("鎴戞槸A鏂规硶涓幏寰椾簡閿丅" + Thread.currentThread().getName());
             }
         }
     }
 
     public void methodB() {
         synchronized (lockb) {
-            System.out.println("我是B方法中获得了锁B" + Thread.currentThread().getName());
-            //让出CPU执行权，不释放锁
+            System.out.println("鎴戞槸B鏂规硶涓幏寰椾簡閿丅" + Thread.currentThread().getName());
+            //璁╁嚭CPU鎵ц鏉冿紝涓嶉噴鏀鹃攣
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             synchronized (locka) {
-                System.out.println("我是B方法中获得了锁A" + Thread.currentThread().getName());
+                System.out.println("鎴戞槸B鏂规硶涓幏寰椾簡閿丄" + Thread.currentThread().getName());
             }
         }
     }
 
     public static void main(String[] args) {
-        System.out.println("主线程运行开始：" + Thread.currentThread().getName());
+        System.out.println("涓荤嚎绋嬭繍琛屽紑濮嬶細" + Thread.currentThread().getName());
         DeadLockDemo deadLockDemo = new DeadLockDemo();
         new Thread(() -> {
             deadLockDemo.methodA();
@@ -50,6 +50,6 @@ public class DeadLockDemo {
         new Thread(() -> {
             deadLockDemo.methodB();
         }).start();
-        System.out.println("主线程运行结束：" + Thread.currentThread().getName());
+        System.out.println("涓荤嚎绋嬭繍琛岀粨鏉燂細" + Thread.currentThread().getName());
     }
 }

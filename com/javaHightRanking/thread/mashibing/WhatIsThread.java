@@ -3,7 +3,7 @@ package com.javaHightRanking.thread.mashibing;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 示例什么是线程
+ * 绀轰緥浠�涔堟槸绾跨▼
  *
  * @author Administrator
  */

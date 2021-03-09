@@ -1,7 +1,7 @@
 package com.javase.programmer;
 
 /**
- * @Description ËÀÑ­»·
+ * @Description æ­»å¾ªç¯
  * @Author zohn
  * @Date 2020\1\6 0006 15:07
  * @Param 
@@ -10,7 +10,7 @@ package com.javase.programmer;
 public class Endlessloop {
     public static void main(String[] args) {
 
-        // ÎŞÏŞÑ­»·µÄÓÖÒ»ÖÖĞ´·¨
+        // æ— é™å¾ªç¯çš„åˆä¸€ç§å†™æ³•
         for (;;) {
             System.out.println(110);
             break;

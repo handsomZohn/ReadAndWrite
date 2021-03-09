@@ -1,11 +1,13 @@
 package com.thePublic.importNew;
 
+
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
 /**
- * @Description javaÓï·¨ÌÇÒÔ¼°ForeachÑ­»·µÄÔ­Àí
+ * @Description javaè¯­æ³•ç³–ä»¥åŠForeachå¾ªç¯çš„åŸç†
  * @CreateDate 18/10/24 14:23
  * @Author zohn
  * @Version 1.0
@@ -20,20 +22,20 @@ public class Javayft {
     }
 
 
-    //java Óï·¨ÌÇ--¿É±ä³¤²ÎÊı
+    //java è¯­æ³•ç³–--å¯å˜é•¿å‚æ•°
     public static void kbccs(int a, int b, @NotNull String... args) {
-        System.out.println("---------zohn-----------aÖµ=" + a + ", bÖµ=" + b + ", argsÖµ=" + args + ", µ±Ç°Àà=Javayft.kbccs()");
-        // ---------zohn-----------aÖµ=1, bÖµ=2, argsÖµ=[Ljava.lang.String;@6d6f6e28, µ±Ç°Àà=Javayft.kbccs()
-        // ¿ÉÒÔ¿´µ½´òÓ¡µÄÄÚ´æµØÖ·Ç°ÃæÓĞÒ»¸ö[
-        // ¿ÉÒÔËµÃ÷£º¿É±ä²ÎÊı£¬ÊÇÀûÓÃÊı×éÊµÏÖµÄ£»
-        for (String arg : args) {// ËµÃ÷¿ÉÒÔÀûÓÃ±éÀúÊı×éµÄ·½Ê½È¥±éÀú¿É±ä²ÎÊı
+        System.out.println("---------zohn-----------aå€¼=" + a + ", bå€¼=" + b + ", argså€¼=" + args + ", å½“å‰ç±»=Javayft.kbccs()");
+        // ---------zohn-----------aå€¼=1, bå€¼=2, argså€¼=[Ljava.lang.String;@6d6f6e28, å½“å‰ç±»=Javayft.kbccs()
+        // å¯ä»¥çœ‹åˆ°æ‰“å°çš„å†…å­˜åœ°å€å‰é¢æœ‰ä¸€ä¸ª[
+        // å¯ä»¥è¯´æ˜ï¼šå¯å˜å‚æ•°ï¼Œæ˜¯åˆ©ç”¨æ•°ç»„å®ç°çš„ï¼›
+        for (String arg : args) {// è¯´æ˜å¯ä»¥åˆ©ç”¨éå†æ•°ç»„çš„æ–¹å¼å»éå†å¯å˜å‚æ•°
             System.out.print(arg + " ");
         }
 
-        // !! ¿É±ä²ÎÊı±ØĞë×÷Îª²ÎÊıÁĞ±íµÄ×îºóÒ»¸ö²ÎÊı£¬¶øÇÒÒ»¸ö²ÎÊıÁĞ±í½öÄÜÓĞÒ»¸ö¿É±ä²ÎÊı
+        // !! å¯å˜å‚æ•°å¿…é¡»ä½œä¸ºå‚æ•°åˆ—è¡¨çš„æœ€åä¸€ä¸ªå‚æ•°ï¼Œè€Œä¸”ä¸€ä¸ªå‚æ•°åˆ—è¡¨ä»…èƒ½æœ‰ä¸€ä¸ªå¯å˜å‚æ•°
     }
 
-    // foreach Ñ­»·µÄÔ­Àí
+    // foreach å¾ªç¯çš„åŸç†
     public static void feachyl() {
         ArrayList<String> strings = new ArrayList<String>() {{
             add("111");
@@ -49,22 +51,22 @@ public class Javayft {
     // javap -verbose Javayft.class
     //  9: invokevirtual #19                 // Method java/util/ArrayList.iterator:()Ljava/util/Iterator;
     // 23: invokeinterface #21,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
-    // ¿ÉÒÔ¿´µ½Iterator£ºÔÚ±àÒëµÄÊ±ºò±àÒëÆ÷»á×Ô¶¯½«¶ÔforÕâ¸ö¹Ø¼ü×ÖµÄÊ¹ÓÃ×ª»¯Îª¶ÔÄ¿±êµÄµü´úÆ÷µÄÊ¹ÓÃ£»
-    // ½ø¶øÔÙµÃ³öÁ½¸ö½áÂÛ£º
-    // 1¡¢ArrayListÖ®ËùÒÔÄÜÊ¹ÓÃforeachÑ­»·±éÀú£¬ÊÇÒòÎªArrayListËùÓĞµÄList¶¼ÊÇCollectionµÄ×Ó½Ó¿Ú£¬
-    // ¶øCollectionÊÇIterableµÄ×Ó½Ó¿Ú£¬ArrayListµÄ¸¸ÀàAbstractListÕıÈ·µØÊµÏÖÁËIterable½Ó¿ÚµÄiterator·½·¨
-    // 2¡¢ÈÎºÎÒ»¸ö¼¯ºÏ£¬ÎŞÂÛÊÇJDKÌá¹©µÄ»¹ÊÇ×Ô¼ºĞ´µÄ£¬Ö»ÒªÏëÊ¹ÓÃforeachÑ­»·±éÀú£¬¾Í±ØĞëÕıÈ·µØÊµÏÖIterable½Ó¿Ú
+    // å¯ä»¥çœ‹åˆ°Iteratorï¼šåœ¨ç¼–è¯‘çš„æ—¶å€™ç¼–è¯‘å™¨ä¼šè‡ªåŠ¨å°†å¯¹forè¿™ä¸ªå…³é”®å­—çš„ä½¿ç”¨è½¬åŒ–ä¸ºå¯¹ç›®æ ‡çš„è¿­ä»£å™¨çš„ä½¿ç”¨ï¼›
+    // è¿›è€Œå†å¾—å‡ºä¸¤ä¸ªç»“è®ºï¼š
+    // 1ã€ArrayListä¹‹æ‰€ä»¥èƒ½ä½¿ç”¨foreachå¾ªç¯éå†ï¼Œæ˜¯å› ä¸ºArrayListæ‰€æœ‰çš„Listéƒ½æ˜¯Collectionçš„å­æ¥å£ï¼Œ
+    // è€ŒCollectionæ˜¯Iterableçš„å­æ¥å£ï¼ŒArrayListçš„çˆ¶ç±»AbstractListæ­£ç¡®åœ°å®ç°äº†Iterableæ¥å£çš„iteratoræ–¹æ³•
+    // 2ã€ä»»ä½•ä¸€ä¸ªé›†åˆï¼Œæ— è®ºæ˜¯JDKæä¾›çš„è¿˜æ˜¯è‡ªå·±å†™çš„ï¼Œåªè¦æƒ³ä½¿ç”¨foreachå¾ªç¯éå†ï¼Œå°±å¿…é¡»æ­£ç¡®åœ°å®ç°Iterableæ¥å£
 
-    // Êı×é¿ÉÒÔÓÃforeach±éÀúµÄÔ­Òò
+    // æ•°ç»„å¯ä»¥ç”¨foreachéå†çš„åŸå› 
     public static void szforeachyy() {
         int[] intArr = {1, 3, 5, 7, 9};
         for (int i : intArr) {
             System.out.print(i + " ");
         }
     }
-    // ·´±àÒëÁËÒ»ÏÂ Ò²Ã»¿´¶®Ê²Ã´ÒâË¼
+    // åç¼–è¯‘äº†ä¸€ä¸‹ ä¹Ÿæ²¡çœ‹æ‡‚ä»€ä¹ˆæ„æ€
 
-    // Java½«¶ÔÓÚÊı×éµÄforeachÑ­»·×ª»»Îª  ¶ÔÓÚÕâ¸öÊı×éÃ¿Ò»¸öÔªËØµÄÑ­»·ÒıÓÃ
+    // Javaå°†å¯¹äºæ•°ç»„çš„foreachå¾ªç¯è½¬æ¢ä¸º  å¯¹äºè¿™ä¸ªæ•°ç»„æ¯ä¸€ä¸ªå…ƒç´ çš„å¾ªç¯å¼•ç”¨
 
 
 }

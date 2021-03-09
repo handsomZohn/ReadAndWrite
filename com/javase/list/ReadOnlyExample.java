@@ -3,14 +3,14 @@ package com.javase.list;
 import java.util.*;
 
 /**
- * @Description Í¨¹ıCollections.unmodifiable...ÊµÏÖ²»¿É±ä¼¯ºÏ
+ * @Description é€šè¿‡Collections.unmodifiable...å®ç°ä¸å¯å˜é›†åˆ
  * @CreateDate 18/10/10 16:17
  * @Author zohn
  * @Version 1.0
  */
 public class ReadOnlyExample {
 
-    // ²»¿É±ä¼¯ºÏ
+    // ä¸å¯å˜é›†åˆ
     public static void main(String[] args) {
         Set set = new HashSet();
         List list = new LinkedList();

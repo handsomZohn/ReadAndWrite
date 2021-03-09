@@ -6,7 +6,7 @@ import org.junit.Test;
 public class StringFormat {
 
     /**
-     * @Description ×Ö·û´®Æ´½Ó ½«2×ªÎª02 ÀàËÆ
+     * @Description å­—ç¬¦ä¸²æ‹¼æŽ¥ å°†2è½¬ä¸º02 ç±»ä¼¼
      * @Author z
      * @Date 2020\5\28 0028 15:32
      * @Param []

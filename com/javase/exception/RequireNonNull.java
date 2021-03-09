@@ -9,7 +9,7 @@ public class RequireNonNull {
         try {
             Objects.requireNonNull(user);
         } catch (NullPointerException e) {
-            System.out.println("发生了为空的异常~~~");
+            System.out.println("鍙戠敓浜嗕负绌虹殑寮傚父~~~");
         }
 
         System.out.println(user.getName());

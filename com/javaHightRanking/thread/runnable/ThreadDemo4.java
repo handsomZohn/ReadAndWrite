@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- *@Description Í¨¹ıRunnable¼ÓThreadPoolÊµÏÖ´´½¨Ïß³Ì 
+ *@Description é€šè¿‡RunnableåŠ ThreadPoolå®ç°åˆ›å»ºçº¿ç¨‹ 
  *@CreateDate 2020\3\15 0015 13:11
  *@Author zohn
  *@Version 1.0
@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 public class ThreadDemo4 implements Runnable{
     @Override
     public void run() {
-        System.out.println("Í¨¹ıÏß³Ì³Ø+runnableÊµÏÖ¶àÏß³Ì£¬Ãû³Æ£º"+Thread.currentThread().getName());
+        System.out.println("é€šè¿‡çº¿ç¨‹æ± +runnableå®ç°å¤šçº¿ç¨‹ï¼Œåç§°ï¼š"+Thread.currentThread().getName());
     }
 
 
@@ -22,8 +22,8 @@ public class ThreadDemo4 implements Runnable{
         for (int i = 0; i < 10; i++) {
             executorService.execute(new ThreadDemo4());
         }
-        System.out.println("Ö÷Ïß³ÌÃû³Æ:" + Thread.currentThread().getName());
-        //¹Ø±ÕÏß³Ì³Ø
+        System.out.println("ä¸»çº¿ç¨‹åç§°:" + Thread.currentThread().getName());
+        //å…³é—­çº¿ç¨‹æ± 
         executorService.shutdown();
     }
 

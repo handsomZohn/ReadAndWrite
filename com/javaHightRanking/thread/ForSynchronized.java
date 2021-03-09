@@ -2,11 +2,11 @@ package com.javaHightRanking.thread;
 
 /**
  * 
- * <p>Title:synchronized ·½·¨ºÍ¿éµÄÇø±ğ</p>
+ * <p>Title:synchronized æ–¹æ³•å’Œå—çš„åŒºåˆ«</p>
  * <p>Description:</p>
  * <p>Copyright: Copyright (c) 2018</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2018Äê5ÔÂ14ÈÕ</p>
+ * <p>CreateDate:2018å¹´5æœˆ14æ—¥</p>
  * @author zohn
  * @version 1.0
  */
@@ -14,19 +14,19 @@ public class ForSynchronized {
 	public static void main(String[] args) {
 		MyThread myThread = new MyThread();
 		//for (int i = 0; i < 3; i++) {
-			// new Thread(new MyThread()).start(); // ÕâÑùÃ¿´Î¶¼ÊÇĞÂÀ´Ò»¸öÏß³Ì
+			// new Thread(new MyThread()).start(); // è¿™æ ·æ¯æ¬¡éƒ½æ˜¯æ–°æ¥ä¸€ä¸ªçº¿ç¨‹
 			// new Thread(new MyThread()).start();
 			// new Thread(new MyThread()).start();
 			// new Thread(new MyThread()).start();
-			new Thread(myThread).start(); // ½á¹û:0-9
-			new Thread(myThread).start();// ÔÙÀ´Ò»¸ö ½á¹û:Á½¸öÊÇÎŞ¹æÂÉµÄ,Ã¿´ÎÔËĞĞ½á¹û²»Ò»Ñù¡£
+			new Thread(myThread).start(); // ç»“æœ:0-9
+			new Thread(myThread).start();// å†æ¥ä¸€ä¸ª ç»“æœ:ä¸¤ä¸ªæ˜¯æ— è§„å¾‹çš„,æ¯æ¬¡è¿è¡Œç»“æœä¸ä¸€æ ·ã€‚
 		//}
 	}
 }
 
 class MyThread extends Thread {
 	
-	public synchronized void run() { // ¼ÓÉÏsynchronizedÖ®ºó,¾ÍÊÇ0-9,new Thread(Obj)¶àÉÙ´Î,¾ÍÓĞ¼¸¸ö0-9
+	public synchronized void run() { // åŠ ä¸Šsynchronizedä¹‹å,å°±æ˜¯0-9,new Thread(Obj)å¤šå°‘æ¬¡,å°±æœ‰å‡ ä¸ª0-9
 			for (int i = 0; i < 10; i++) {
 				System.out.println(i);
 		}

@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**
- * @Description ¶ÁÈ¡propertiesÅäÖÃÎÄ¼ş
+ * @Description è¯»å–propertiesé…ç½®æ–‡ä»¶
  * @Author zohn
  * @Date 2020\1\14 0014 15:16
  * @Param 
@@ -17,13 +17,13 @@ public class ReadPropreties {
 
     public static void main(String[] args) throws Exception{
         String jycs_d_yxfw = getDmb("jycs_d_yxfw");
-        System.out.println("======^_^======±äÁ¿jycs_d_yxfwÖµÎª: " + jycs_d_yxfw + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ReadPropreties.main()");
+        System.out.println("======^_^======å˜é‡jycs_d_yxfwå€¼ä¸º: " + jycs_d_yxfw + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ReadPropreties.main()");
 
-        // ¸ù¾İkeyÖµĞŞ¸Ävalue
+        // æ ¹æ®keyå€¼ä¿®æ”¹value
         updateByKey("jycs_d_yxfw");
 
         String jycs_d_yxfw02 = getDmb("jycs_d_yxfw");
-        System.out.println("======^_^======±äÁ¿jycs_d_yxfw02ÖµÎª: " + jycs_d_yxfw02 + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ReadPropreties.main()");
+        System.out.println("======^_^======å˜é‡jycs_d_yxfw02å€¼ä¸º: " + jycs_d_yxfw02 + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ReadPropreties.main()");
     }
 
     public static String getDmb(String dmbm) throws Exception {
@@ -32,8 +32,8 @@ public class ReadPropreties {
         try {
             properties.load(new InputStreamReader(resourceAsStream, "utf-8"));
 
-            // ²»ÊÇÕâ¸öoh properties.contains(dmbm)
-            // ÊÇÕâ¸ö properties.containsKey(dmbm)
+            // ä¸æ˜¯è¿™ä¸ªoh properties.contains(dmbm)
+            // æ˜¯è¿™ä¸ª properties.containsKey(dmbm)
 
 
             if (properties.containsKey(dmbm)) {
@@ -62,7 +62,7 @@ public class ReadPropreties {
         String path = "./dmb.properties";
         try {
             oFile = new FileOutputStream(path);
-            //½«PropertiesÖĞµÄÊôĞÔÁĞ±í£¨¼üºÍÔªËØ¶Ô£©Ğ´ÈëÊä³öÁ÷
+            //å°†Propertiesä¸­çš„å±æ€§åˆ—è¡¨ï¼ˆé”®å’Œå…ƒç´ å¯¹ï¼‰å†™å…¥è¾“å‡ºæµ
             properties.store(oFile, "");
         } catch (IOException e) {
             e.printStackTrace();

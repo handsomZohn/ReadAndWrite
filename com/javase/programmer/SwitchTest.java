@@ -2,8 +2,8 @@ package com.javase.programmer;
 
 public class SwitchTest {
     /**
-     * switchÓï·¨£º£ºÓöµ½Æ¥ÅäµÄÏî£¬Ã»ÓĞbreak£¬ºóÃæµÄcase¿éÒ²»áÖ´ĞĞ
-     * ÒòÎªÃ»ÓĞĞ´breakµÄÊ±ºò£¬Ò»µ©Æ¥ÅäÉÏÖ®ºó£¬²»»áÔÙÈ¥Ğ£ÑéÆäÓàµÄcase£¬»áÖ±½ÓÖ´ĞĞÆäÓàµÄcase
+     * switchè¯­æ³•ï¼šï¼šé‡åˆ°åŒ¹é…çš„é¡¹ï¼Œæ²¡æœ‰breakï¼Œåé¢çš„caseå—ä¹Ÿä¼šæ‰§è¡Œ
+     * å› ä¸ºæ²¡æœ‰å†™breakçš„æ—¶å€™ï¼Œä¸€æ—¦åŒ¹é…ä¸Šä¹‹åï¼Œä¸ä¼šå†å»æ ¡éªŒå…¶ä½™çš„caseï¼Œä¼šç›´æ¥æ‰§è¡Œå…¶ä½™çš„case
      * @param args
      */
     public static void main(String[] args) {

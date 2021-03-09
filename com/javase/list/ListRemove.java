@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListRemove {
     public static void main(String[] args) {
-        //½¨Á¢Ò»¸ölist¼¯ºÏ£¬ÀïÃæÓĞ5¸öÔªËØº¬ÓĞ¡°a¡±£¬3¸ö²»º¬ÓĞ¡°a¡±
+        //å»ºç«‹ä¸€ä¸ªlisté›†åˆï¼Œé‡Œé¢æœ‰5ä¸ªå…ƒç´ å«æœ‰â€œaâ€ï¼Œ3ä¸ªä¸å«æœ‰â€œaâ€
         List<String> list = new ArrayList<>();
 
         list.add("abc");
@@ -17,16 +17,16 @@ public class ListRemove {
         list.add("gme");
         list.add("wbe");
 
-        //±éÀú¼¯ºÏ£¬ÒÆ³ıº¬ÓĞ¡°a¡±µÄÔªËØ
+        //éå†é›†åˆï¼Œç§»é™¤å«æœ‰â€œaâ€çš„å…ƒç´ 
         for(int i = 0; i < list.size();i++){
             String str = list.get(i);
             if(str.contains("a")){
                 list.remove(i);
-                i--;// ÕâÒ»ĞĞ ²ÅÄÜ°ÑËùÓĞ°üº¬aµÄ¶¼ÒÆ³ıµô
+                i--;// è¿™ä¸€è¡Œ æ‰èƒ½æŠŠæ‰€æœ‰åŒ…å«açš„éƒ½ç§»é™¤æ‰
             }
         }
 
-        //´òÓ¡£¬¿´½á¹û
+        //æ‰“å°ï¼Œçœ‹ç»“æœ
         for (Object st : list) {
             System.out.println(st+"   ");
         }

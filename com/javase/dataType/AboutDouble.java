@@ -14,20 +14,20 @@ public class AboutDouble {
 		hdxsdhlw();
 	}
 	
-	//¸øÒ»¸ödoubleÀàĞÍµÄÊı¾İ£¬»ñÈ¡µ½ Æä Æä Ğ¡Êıµã ºóÁ½Î»
+	//ç»™ä¸€ä¸ªdoubleç±»å‹çš„æ•°æ®ï¼Œè·å–åˆ° å…¶ å…¶ å°æ•°ç‚¹ åä¸¤ä½
 	public static void hdxsdhlw(){
-		//µÚÒ»ÖÖ
-		DecimalFormat decimalFormat = new DecimalFormat("#########0.0000");//.ºóÃæ0µÄ¸öÊı±íÊ¾±£ÁôÎ»Êı
+		//ç¬¬ä¸€ç§
+		DecimalFormat decimalFormat = new DecimalFormat("#########0.0000");//.åé¢0çš„ä¸ªæ•°è¡¨ç¤ºä¿ç•™ä½æ•°
 		double d1 = 1.23567;
 		System.out.println(decimalFormat.format(d1) + "formater");
-		//µÚ¶şÖÖ
+		//ç¬¬äºŒç§
 		BigDecimal bigDecimal = new BigDecimal(d1);
 		double doubleValue = bigDecimal.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
 		System.out.println(doubleValue + "BigDecimal");
-		//µÚÈıÖÖ   since 1.5
-		String result = String.format("%.2f",d1);//%.±íÊ¾.Ç°ÈÎÒâÎ»Êı 2±íÊ¾.ºóÁ½Î»
+		//ç¬¬ä¸‰ç§   since 1.5
+		String result = String.format("%.2f",d1);//%.è¡¨ç¤º.å‰ä»»æ„ä½æ•° 2è¡¨ç¤º.åä¸¤ä½
 		System.out.println(result + "%.2f");
-		//µÚËÄÖÖ
+		//ç¬¬å››ç§
 		NumberFormat numberInstance = NumberFormat.getNumberInstance();
 		numberInstance.setMaximumFractionDigits(2);
 		System.out.println(numberInstance.format(d1) + "numberFormat");

@@ -6,13 +6,13 @@ import java.util.Map;
 public class PutOfHashMap {
     public static void main(String[] args) {
         Map<String, String> map = new HashMap();
-        String key = "ÃÀÍÅ";
-        map.put(key, "Ð¡ÃÀ");
-        // µÚÒ»²½£¬ÏÈÈ¡µ½keyµÄhashCodeÖµ
+        String key = "ç¾Žå›¢";
+        map.put(key, "å°ç¾Ž");
+        // ç¬¬ä¸€æ­¥ï¼Œå…ˆå–åˆ°keyçš„hashCodeå€¼
         int i = key.hashCode();
         System.out.println("======^_^======variable i value is : " + i + ", " + " current method and class name is : PutOfHashMap.main()");
 
-        // µÚ¶þ²½£¬Í¨¹ýhashËã·¨µÄºóÁ½²½ÔËËã£¨¸ßÎ»ÔËËãºÍÈ¡Ä£ÔËËã£©À´¶¨Î»¸Ä¼üÖµ¶ÔµÄ´æ´¢Î»ÖÃ
+        // ç¬¬äºŒæ­¥ï¼Œé€šè¿‡hashç®—æ³•çš„åŽä¸¤æ­¥è¿ç®—ï¼ˆé«˜ä½è¿ç®—å’Œå–æ¨¡è¿ç®—ï¼‰æ¥å®šä½æ”¹é”®å€¼å¯¹çš„å­˜å‚¨ä½ç½®
         int i1 = i ^ (i >>> 16);
         System.out.println("======^_^======variable i1 value is : " + i1 + ", " + " current method and class name is : PutOfHashMap.main()");
 

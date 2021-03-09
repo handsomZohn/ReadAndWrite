@@ -8,7 +8,7 @@ public class T {
     private Object o = new Object();
 
     public void m() {
-        // 任何线程要想执行下面的代码，必须先拿到o的锁
+        // 浠讳綍绾跨▼瑕佹兂鎵ц涓嬮潰鐨勪唬鐮侊紝蹇呴』鍏堟嬁鍒皁鐨勯攣
         synchronized(o) {
             count--;
             System.out.println(Thread.currentThread().getName() + " count = " + count);

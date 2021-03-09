@@ -14,9 +14,9 @@ public class TransientTest {
 		
 		// String string = "string";
 		// System.out.
-		// ("%s", string);// 1.4²»Ö§³Ö
+		// ("%s", string);// 1.4ä¸æ”¯æŒ
 		
-		// ĞòÁĞ»¯
+		// åºåˆ—åŒ–
 		try {
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("e:/user.txt"));
 			oos.writeObject(user);
@@ -28,10 +28,10 @@ public class TransientTest {
 			e.printStackTrace();
 		}
 		
-		// ·´ĞòÁĞ»¯
+		// ååºåˆ—åŒ–
 		try {
-			// ·´ĞòÁĞ»¯Ö®Ç°¸ü¸ÄnameµÄÖµ
-			// User.username = "songminglu";// ·´ĞòÁĞ»¯ºóÀàÖĞstaticĞÍ±äÁ¿usernameµÄÖµÎªµ±Ç°JVMÖĞ¶ÔÓ¦static±äÁ¿µÄÖµ
+			// ååºåˆ—åŒ–ä¹‹å‰æ›´æ”¹nameçš„å€¼
+			// User.username = "songminglu";// ååºåˆ—åŒ–åç±»ä¸­staticå‹å˜é‡usernameçš„å€¼ä¸ºå½“å‰JVMä¸­å¯¹åº”staticå˜é‡çš„å€¼
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("e:/user.txt"));
 				user = (User)ois.readObject();
 				ois.close();
@@ -51,10 +51,10 @@ public class TransientTest {
 }
 
 /**
- * ¶ÔÓÚ²»ÏëĞòÁĞ»¯µÄ±äÁ¿£¬Ê¹ÓÃtransient¹Ø¼ü×ÖĞŞÊÎ
- * µ±¶ÔÏó±»ĞòÁĞ»¯ÊÇ£º×èÖ¹ÊµÀıÖĞÄÇĞ©ÓÃ´Ë¹Ø¼ü×ÖĞŞÊÎµÄ±äÁ¿ĞòÁĞ»¯
- * µ±¶ÔÏó±»·´ĞòÁĞ»¯Ê±£¬±»transientĞŞÊÎµÄ±äÁ¿Öµ²»»á±»³Ö¾Ã»¯ºÍ»Ö¸´
- * tranientÖ»ÄÜĞŞÊÎ±äÁ¿£¬²»ÄÜĞŞ¸ÄÊ±ÀàºÍ·½·¨¡£
+ * å¯¹äºä¸æƒ³åºåˆ—åŒ–çš„å˜é‡ï¼Œä½¿ç”¨transientå…³é”®å­—ä¿®é¥°
+ * å½“å¯¹è±¡è¢«åºåˆ—åŒ–æ˜¯ï¼šé˜»æ­¢å®ä¾‹ä¸­é‚£äº›ç”¨æ­¤å…³é”®å­—ä¿®é¥°çš„å˜é‡åºåˆ—åŒ–
+ * å½“å¯¹è±¡è¢«ååºåˆ—åŒ–æ—¶ï¼Œè¢«transientä¿®é¥°çš„å˜é‡å€¼ä¸ä¼šè¢«æŒä¹…åŒ–å’Œæ¢å¤
+ * tranientåªèƒ½ä¿®é¥°å˜é‡ï¼Œä¸èƒ½ä¿®æ”¹æ—¶ç±»å’Œæ–¹æ³•ã€‚
  */
 class User implements Serializable{
 	/**

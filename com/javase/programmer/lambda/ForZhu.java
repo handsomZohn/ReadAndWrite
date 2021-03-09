@@ -12,56 +12,56 @@ public class ForZhu {
             student.setAge((i + 1) + "");
             student.setId(Long.parseLong(i + ""));
             if (i < 5) {
-                student.setGrade("Ò»Äê¼¶");
+                student.setGrade("ä¸€å¹´çº§");
             } else {
-                student.setGrade("¶şÄê¼¶");
+                student.setGrade("äºŒå¹´çº§");
             }
             student.setName("zhangsan" + 2);
             students.add(student);
         }
 
-        // ·Ö×é
+        // åˆ†ç»„
         Map<String, List<Student>> collect = students.stream().collect(Collectors.groupingBy(x -> x.getGrade()));
 
-        // ·Ö×é²¢È¡³ö×îÖµ
+        // åˆ†ç»„å¹¶å–å‡ºæœ€å€¼
         Map<String, Student> packTaskOrderMap = students.stream().collect(Collectors.groupingBy(p -> p.getGrade(),
                 Collectors.collectingAndThen(Collectors.reducing((c1, c2) -> c1.getId() > c2.getId() ? c1 : c2), Optional::get)));
 
-        // ²»´æÔÚnewÒ»¸ö ´æÔÚ
-        Student student = packTaskOrderMap.putIfAbsent("¶şÄê¼¶", new Student());
+        // ä¸å­˜åœ¨newä¸€ä¸ª å­˜åœ¨
+        Student student = packTaskOrderMap.putIfAbsent("äºŒå¹´çº§", new Student());
 
         int i = 0;
-        System.out.println("======^_^======±äÁ¿iÖµÎª: " + i + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ForZhu.main()");
+        System.out.println("======^_^======å˜é‡iå€¼ä¸º: " + i + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ForZhu.main()");
 
-        // È·¶¨ÓĞÃ»ÓĞÖµ£¨one£©
-        boolean b = students.stream().anyMatch(s -> Objects.equals(s.getGrade(), "¶şÄê¼¶"));
-        System.out.println("======^_^======±äÁ¿bÖµÎª: " + b + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ForZhu.main()");
+        // ç¡®å®šæœ‰æ²¡æœ‰å€¼ï¼ˆoneï¼‰
+        boolean b = students.stream().anyMatch(s -> Objects.equals(s.getGrade(), "äºŒå¹´çº§"));
+        System.out.println("======^_^======å˜é‡bå€¼ä¸º: " + b + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ForZhu.main()");
 
-        // È·¶¨ÓĞÃ»ÓĞÖµ£¨all£©
+        // ç¡®å®šæœ‰æ²¡æœ‰å€¼ï¼ˆallï¼‰
         boolean b02 = students.stream().allMatch(s -> Objects.equals(s.getAge(), "3"));
-        System.out.println("======^_^======±äÁ¿b02ÖµÎª: " + b02 + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ForZhu.main()");
+        System.out.println("======^_^======å˜é‡b02å€¼ä¸º: " + b02 + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ForZhu.main()");
 
 
         int j = 10;
-        System.out.println("======^_^======±äÁ¿jÖµÎª: " + j + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ForZhu.main()");
+        System.out.println("======^_^======å˜é‡jå€¼ä¸º: " + j + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ForZhu.main()");
 
-        // sort ÅÅĞò
+        // sort æ’åº
         List<Student> studentList = students.stream().sorted(Comparator.comparing(Student::getGrade).reversed().thenComparing(Student::getId)).collect(Collectors.toList());
         String s = studentList.toString();
-        System.out.println("======^_^======±äÁ¿sÖµÎª: " + s + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ForZhu.main()");
+        System.out.println("======^_^======å˜é‡så€¼ä¸º: " + s + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ForZhu.main()");
 
         int k = 20;
-        System.out.println("======^_^======±äÁ¿kÖµÎª: " + k + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ForZhu.main()");
+        System.out.println("======^_^======å˜é‡kå€¼ä¸º: " + k + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ForZhu.main()");
 
-        //  ÇóÄêÁäµÄºÍ
+        //  æ±‚å¹´é¾„çš„å’Œ
         int sum = students.stream().mapToInt(r -> Integer.valueOf(r.getAge())).sum();
         // int sum02 = students.stream().mapToInt(Student::(Integer)getAge).sum();
-        System.out.println("======^_^======±äÁ¿sumÖµÎª: " + sum + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: ForZhu.main()");
+        System.out.println("======^_^======å˜é‡sumå€¼ä¸º: " + sum + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: ForZhu.main()");
 
-        // °ÑÒ»¸ö,¸ô¿ªµÄ×Ö·û´®×ª»»Îª¼¯ºÏ
+        // æŠŠä¸€ä¸ª,éš”å¼€çš„å­—ç¬¦ä¸²è½¬æ¢ä¸ºé›†åˆ
         String[] str = {"1", "2", "3"};
         List<String> stringList = Arrays.stream(str).collect(Collectors.toList());
-        // ²»ÍÆ¼öÊ¹ÓÃµÄ·½·¨
+        // ä¸æ¨èä½¿ç”¨çš„æ–¹æ³•
         // Arrays.asList(str);
     }
 }

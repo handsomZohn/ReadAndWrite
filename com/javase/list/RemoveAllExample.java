@@ -3,12 +3,12 @@ package com.javase.list;
 import java.util.ArrayList;
 
 /**
- * @Description: ²âÊÔremoveAll£¨£©
+ * @Description: æµ‹è¯•removeAllï¼ˆï¼‰
  * @Author: zohn
  * @CreateDate: 2019/1/24 19:59
  * @UpdateUser: zohn
  * @UpdateDate: 2019/1/24 19:59
- * @UpdateRemark: ÐÞ¸ÄÄÚÈÝ
+ * @UpdateRemark: ä¿®æ”¹å†…å®¹
  * @Version: 1.0
  */
 public class RemoveAllExample {
@@ -22,41 +22,41 @@ public class RemoveAllExample {
         ArrayList<User> userList01 = new ArrayList<>();
         ArrayList<User> userList02 = new ArrayList<>();
 
-        // ´´½¨Á½¸ö¶ÔÏó ¶ÔÏóµÄÊôÐÔÖµÒ»Ä£Ò»Ñù
+        // åˆ›å»ºä¸¤ä¸ªå¯¹è±¡ å¯¹è±¡çš„å±žæ€§å€¼ä¸€æ¨¡ä¸€æ ·
         User user01 = new User("username01", "01");
         User user02 = new User("username02", "02");
 
-        // ÔÙ´´½¨Á½¸ö¶ÔÏó ¶ÔÏóµÄÊôÐÔÖµÒ»Ä£Ò»Ñù
+        // å†åˆ›å»ºä¸¤ä¸ªå¯¹è±¡ å¯¹è±¡çš„å±žæ€§å€¼ä¸€æ¨¡ä¸€æ ·
         User user03 = new User("username03", "03");
         User user04 = new User("username04", "04");
 
-        // userList01ÖÐÌí¼Ó
+        // userList01ä¸­æ·»åŠ 
         userList01.add(user01);
         userList01.add(user02);
         userList01.add(user03);
         userList01.add(user04);
 
-        // userList02ÖÐÌí¼Ó
-        // userList02.add(user03);// ÒòÎªÊÇ²»Í¬µÄ¶ÔÏó£¬ËäÈ»¶ÔÏóµÄÊôÐÔÖµÒ»Ä£Ò»Ñù µ«ÊÇ¾ÍÊÇÒÆ³ý²»µô¡£
-        // userList02.add(user04);// ÄÚ´æµØÖ·²»ÔÚÒ»¸öÎ»ÖÃ
+        // userList02ä¸­æ·»åŠ 
+        // userList02.add(user03);// å› ä¸ºæ˜¯ä¸åŒçš„å¯¹è±¡ï¼Œè™½ç„¶å¯¹è±¡çš„å±žæ€§å€¼ä¸€æ¨¡ä¸€æ · ä½†æ˜¯å°±æ˜¯ç§»é™¤ä¸æŽ‰ã€‚
+        // userList02.add(user04);// å†…å­˜åœ°å€ä¸åœ¨ä¸€ä¸ªä½ç½®
         userList02.add(user01);
         userList02.add(user02);
 
 
-        // ±éÀúuserList01
+        // éåŽ†userList01
         //userList01.forEach(System.out :: print);
         userList01.forEach(x ->
-            System.out.println("username£º" + x.getUsername() + "£¬age£º" + x.getAge())
+            System.out.println("usernameï¼š" + x.getUsername() + "ï¼Œageï¼š" + x.getAge())
         );
 
         // remove
         boolean b = userList01.removeAll(userList02);
-        System.out.println(b ? "ÒÆ³ý³É¹¦" : "ÒÆ³ýÊ§°Ü");
+        System.out.println(b ? "ç§»é™¤æˆåŠŸ" : "ç§»é™¤å¤±è´¥");
 //        if (b) {
 //
 //        } else {
             userList01.forEach(x -> {
-                System.out.println("username£º" + x.getUsername() + " , age£º" + x.getAge());
+                System.out.println("usernameï¼š" + x.getUsername() + " , ageï¼š" + x.getAge());
             });
 //        }
     }

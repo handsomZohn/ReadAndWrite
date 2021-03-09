@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * @Description java »ñÈ¡¼üÅÌÊäÈëÁ÷
+ * @Description java è·å–é”®ç›˜è¾“å…¥æµ
  * @Author zohn
  * @Date 2020\1\14 0014 16:48
  * @Param
@@ -20,7 +20,7 @@ public class GetInputFromKeyboard {
     }
 
     /**
-     * @Description »ñÈ¡ÊäÈëµÄ
+     * @Description è·å–è¾“å…¥çš„
      * @Author zohn
      * @Date 2020\1\14 0014 16:49
      * @Param []
@@ -28,18 +28,18 @@ public class GetInputFromKeyboard {
      */
     public static void getInput() {
 
-        // µÚÒ»ÖÖ·½·¨
+        // ç¬¬ä¸€ç§æ–¹æ³•
         System.out.println("type your name:");
         Scanner input = new Scanner(System.in);
         String string1 = input.nextLine();
-        System.out.println("======^_^======±äÁ¿string1ÖµÎª: " + string1 + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: GetInputFromKeyboard.getInput()");
+        System.out.println("======^_^======å˜é‡string1å€¼ä¸º: " + string1 + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: GetInputFromKeyboard.getInput()");
 
-        // µÚ¶şÖÖ·½·¨
+        // ç¬¬äºŒç§æ–¹æ³•
         System.out.println("type your name002:");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         try {
             String string = bufferedReader.readLine();
-            System.out.println("======^_^======±äÁ¿stringÖµÎª: " + string + ", " + "µ±Ç°ÀàÒÔ¼°·½·¨Ãû×ÖÊÇ: GetInputFromKeyboard.getInput()");
+            System.out.println("======^_^======å˜é‡stringå€¼ä¸º: " + string + ", " + "å½“å‰ç±»ä»¥åŠæ–¹æ³•åå­—æ˜¯: GetInputFromKeyboard.getInput()");
         } catch (IOException e) {
             e.printStackTrace();
         }

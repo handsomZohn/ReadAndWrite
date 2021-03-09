@@ -1,20 +1,20 @@
 package com.javase.programmer.lambda;
 
 /**
- * @Description ÓÃ»§ĞÅÏ¢ÊµÌåÀà
+ * @Description ç”¨æˆ·ä¿¡æ¯å®ä½“ç±»
  * @Author zohn
  * @Date 2020\1\14 0014 13:59
  * @Param
  * @Return 
  */
 public class Yhxx {
-    // ĞÕÃû
+    // å§“å
     private String xm;
 
-    // Éí·İÖ¤ºÅÂë
+    // èº«ä»½è¯å·ç 
     private String sfzhm;
 
-    // ÊÖ»ú¸öÊı
+    // æ‰‹æœºä¸ªæ•°
     private Integer sjgs;
 
 

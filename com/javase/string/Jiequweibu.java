@@ -11,20 +11,20 @@ public class Jiequweibu {
 	}
 
 	public static void jiequweibu(){
-		String str = "¹ØÓÚÊ¯¾°É½Çø1¼ÒÉç»á¹«ÒæĞÔ¾ÍÒµ×éÖ¯°²ÖÃÕÅÀö¾ü118ÈËÉêÇë¹«ÒæĞÔ¸ÚÎ»²¹ÌùµÄÇëÊ¾";
-		//System.out.println(str.substring(str.indexOf("µÈ")+1, str.indexOf("ÈË")));
-		//System.out.println(str.indexOf("µÈ"));
-		if (str.indexOf("µÈ")==-1) {
-			//ÈËÊı
-			//1¸öÈË
+		String str = "å…³äºçŸ³æ™¯å±±åŒº1å®¶ç¤¾ä¼šå…¬ç›Šæ€§å°±ä¸šç»„ç»‡å®‰ç½®å¼ ä¸½å†›118äººç”³è¯·å…¬ç›Šæ€§å²—ä½è¡¥è´´çš„è¯·ç¤º";
+		//System.out.println(str.substring(str.indexOf("ç­‰")+1, str.indexOf("äºº")));
+		//System.out.println(str.indexOf("ç­‰"));
+		if (str.indexOf("ç­‰")==-1) {
+			//äººæ•°
+			//1ä¸ªäºº
 		}else{
-			//ÈËÊı
-			System.out.println(str.substring(str.indexOf("µÈ")+1, str.indexOf("ÈË")));
+			//äººæ•°
+			System.out.println(str.substring(str.indexOf("ç­‰")+1, str.indexOf("äºº")));
 		}
 	}
 	
 	public static void ascii(){
-		String str = "¹ØÓÚÊ¯¾°É½Çø11101";//7¸ö
+		String str = "å…³äºçŸ³æ™¯å±±åŒº11101";//7ä¸ª
 		
 	}
 }

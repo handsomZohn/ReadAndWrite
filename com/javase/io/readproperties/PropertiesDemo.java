@@ -10,14 +10,14 @@ public class PropertiesDemo {
     public static final String path = "./dmb.properties";
 
     /**
-     * Í¨¹ıÀà×°ÔØÆ÷ ³õÊ¼»¯Properties
+     * é€šè¿‡ç±»è£…è½½å™¨ åˆå§‹åŒ–Properties
      */
     public static void init() {
-        //×ª»»³ÉÁ÷
+        //è½¬æ¢æˆæµ
         InputStream inputStream =
                 PropertiesDemo.class.getClassLoader().getResourceAsStream(path);
         try {
-            //´ÓÊäÈëÁ÷ÖĞ¶ÁÈ¡ÊôĞÔÁĞ±í£¨¼üºÍÔªËØ¶Ô£©
+            //ä»è¾“å…¥æµä¸­è¯»å–å±æ€§åˆ—è¡¨ï¼ˆé”®å’Œå…ƒç´ å¯¹ï¼‰
             p.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
@@ -25,7 +25,7 @@ public class PropertiesDemo {
     }
 
     /**
-     * ĞŞ¸Ä»òÕßĞÂÔökey
+     * ä¿®æ”¹æˆ–è€…æ–°å¢key
      * @param key
      * @param value
      */
@@ -34,7 +34,7 @@ public class PropertiesDemo {
         FileOutputStream oFile = null;
         try {
             oFile = new FileOutputStream(path);
-            //½«PropertiesÖĞµÄÊôĞÔÁĞ±í£¨¼üºÍÔªËØ¶Ô£©Ğ´ÈëÊä³öÁ÷
+            //å°†Propertiesä¸­çš„å±æ€§åˆ—è¡¨ï¼ˆé”®å’Œå…ƒç´ å¯¹ï¼‰å†™å…¥è¾“å‡ºæµ
             p.store(oFile, "");
         } catch (IOException e) {
             e.printStackTrace();
@@ -49,7 +49,7 @@ public class PropertiesDemo {
 
 
     /**
-     * Í¨¹ıkey»ñÈ¡value
+     * é€šè¿‡keyè·å–value
      * @param key
      * @return
      */

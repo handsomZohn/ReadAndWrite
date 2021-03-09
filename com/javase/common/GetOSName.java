@@ -1,7 +1,7 @@
 package com.javase.common;
 
 /**
- *@Description »ñÈ¡µ±Ç°²Ù×÷ÏµÍ³ÀàĞÍ win »òÕß linux
+ *@Description è·å–å½“å‰æ“ä½œç³»ç»Ÿç±»å‹ win æˆ–è€… linux
  *@CreateDate 2020/4/2 21:23
  *@Author zohn
  *@Version 1.0

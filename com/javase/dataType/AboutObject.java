@@ -11,7 +11,7 @@ import java.util.Set;
  * <p>Description:</p>
  * <p>Copyright: Copyright (c) 2018</p>
  * <p>Company:bksx</p>
- * <p>CreateDate:2018Äê6ÔÂ22ÈÕ</p>
+ * <p>CreateDate:2018å¹´6æœˆ22æ—¥</p>
  * @author Administrator
  * @version 1.0
  */
@@ -21,11 +21,11 @@ public class AboutObject {
 		Set haSet = new HashSet();
 		int[] arr = new int[10];
 		User user = new User();
-		// ObjectÊı×é¿ÉÒÔ·Å»ù±¾ÀàĞÍÊı×é¾ÍÊÇ²»ÄÜ·Å»ù±¾ÀàĞÍ
+		// Objectæ•°ç»„å¯ä»¥æ”¾åŸºæœ¬ç±»å‹æ•°ç»„å°±æ˜¯ä¸èƒ½æ”¾åŸºæœ¬ç±»å‹
 		// Object[] object = new Object[]{"string", hasMap, haSet, arr, user, 10};
 		
 		Object[] object = null;
-		// ÕâÊÇÔÚÄæÌìÂğ
+		// è¿™æ˜¯åœ¨é€†å¤©å—
 		// System.out.println(object.length);
 	}
 	
